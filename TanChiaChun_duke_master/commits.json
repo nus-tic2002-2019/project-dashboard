@@ -177,8 +177,8 @@
         ]
       },
       {
-        "insertions": 385,
-        "deletions": 89,
+        "insertions": 483,
+        "deletions": 125,
         "date": "2019-11-19",
         "commitResults": [
           {
@@ -208,26 +208,33 @@
             "messageBody": "",
             "insertions": 13,
             "deletions": 9
+          },
+          {
+            "hash": "7c32670a64dfb7956b417b0b94023cf446c30795",
+            "messageTitle": "Individual Feature 1 - Pre 2",
+            "messageBody": "",
+            "insertions": 98,
+            "deletions": 36
           }
         ]
       }
     ]
   },
   "authorFinalContributionMap": {
-    "TanChiaChun": 1014
+    "TanChiaChun": 1076
   },
   "authorFileTypeContributionMap": {
     "TanChiaChun": {
-      "java": 1004,
+      "java": 1073,
       "fxml": 0,
       "sh": 0,
       "bat": 0,
       "gradle": 0,
-      "txt": 10
+      "txt": 3
     }
   },
   "authorContributionVariance": {
-    "TanChiaChun": 20567.176
+    "TanChiaChun": 22269.895
   },
   "authorDisplayNameMap": {
     "TanChiaChun": "TAN ..CHUN"

@@ -205,20 +205,6 @@
         ]
       },
       {
-        "insertions": 324160,
-        "deletions": 0,
-        "date": "2019-11-05",
-        "commitResults": [
-          {
-            "hash": "fe4e0ed157f9ebf85980b8fb31cf407969d57858",
-            "messageTitle": "individual task part2 recurring",
-            "messageBody": "",
-            "insertions": 324160,
-            "deletions": 0
-          }
-        ]
-      },
-      {
         "insertions": 46,
         "deletions": 80,
         "date": "2019-11-15",
@@ -249,11 +235,11 @@
     ]
   },
   "authorFinalContributionMap": {
-    "eunicekwang": 325096
+    "eunicekwang": 936
   },
   "authorFileTypeContributionMap": {
     "eunicekwang": {
-      "java": 325090,
+      "java": 930,
       "fxml": 0,
       "sh": 0,
       "bat": 0,
@@ -262,7 +248,7 @@
     }
   },
   "authorContributionVariance": {
-    "eunicekwang": 1.34673638E9
+    "eunicekwang": 6874.703
   },
   "authorDisplayNameMap": {
     "eunicekwang": "EUNI..TING"
