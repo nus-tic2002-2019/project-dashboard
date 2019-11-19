@@ -1,0 +1,7825 @@
+[
+  {
+    "path": "data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[T] [✘] borrow book"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[D][✘] return book (by: 2 Jan 2020, 0159)"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[E][✘] visit library (at: 23 Dec 2019, 0900)"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[T] [✘] borrow book"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[D][✘] return book (by: 10 Oct 2020, 0159)"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[E][✘] visit library (at: 12 Dec 2019, 1200)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[D][✘] ok (by: 14 Nov 2019, 0900)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[E][✘] no problem (at: 1 Jan 2020, 0000)"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 8
+    }
+  },
+  {
+    "path": "duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "[D][✘] read book (by: 28 Nov 2019, 0900)"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 1
+    }
+  },
+  {
+    "path": "src/main/java/basic/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package basic;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import command.Command;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.io.UnsupportedEncodingException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Runs basic.Duke program as long as isExit is false"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Passes tasks entered by user to Storage class"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private Ui ui;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private TaskList tasks;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    Duke() throws FileNotFoundException, UnsupportedEncodingException {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        storage \u003d new Storage();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        tasks \u003d new TaskList(storage.load());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private void run() throws FileNotFoundException, UnsupportedEncodingException {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        storage.load();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ui.showWelcome();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        boolean isExit \u003d false;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        while (!isExit) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                String fullCommand \u003d ui.readCommand();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                Command c \u003d Parser.parse(fullCommand);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                c.execute(tasks, ui, storage);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                storage.save(tasks.returnList());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                isExit \u003d c.isExit();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                ui.printException(e);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        new Duke().run();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 46
+    }
+  },
+  {
+    "path": "src/main/java/basic/DukeTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package basic;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Assertions;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.io.UnsupportedEncodingException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "class DukeTest {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void testMain() throws FileNotFoundException, UnsupportedEncodingException {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Duke duke \u003d new Duke();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Assertions.assertEquals(duke, duke);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 17
+    }
+  },
+  {
+    "path": "src/main/java/basic/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package basic;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import command.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Parses user input."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Parses user input into command for execution."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param userInput full user input string"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @return the command based on the user input"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    static Command parse(String userInput) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (userInput.toLowerCase().equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new ExitCommand();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().equals(\"list\")) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new ListCommand();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().contains(\"done\")) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new MarkAsDoneCommand(userInput);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().contains(\"after\")) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new AfterCommand(userInput);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().contains(\"find\")) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new FindCommand(userInput);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().substring(0,1).equals(\"t\")||"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                userInput.toLowerCase().contains(\"todo\") \u0026\u0026 !userInput.toLowerCase().contains(\"event\") \u0026\u0026 !userInput.toLowerCase().contains(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new AddTodoCommand(userInput);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if ((userInput.toLowerCase().substring(0,1).equals(\"d\")  \u0026\u0026 !userInput.toLowerCase().contains(\"date\") \u0026\u0026 !userInput.toLowerCase().contains(\"delete\"))||"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                userInput.toLowerCase().contains(\"deadline\") \u0026\u0026 !userInput.toLowerCase().contains(\"event\") \u0026\u0026 !userInput.toLowerCase().contains(\"todo\")) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new AddDeadlineCommand(userInput);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().substring(0,1).equals(\"e\") ||"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                userInput.toLowerCase().contains(\"event\") \u0026\u0026 !userInput.toLowerCase().contains(\"deadline\") \u0026\u0026 !userInput.toLowerCase().contains(\"todo\")) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new AddEventCommand(userInput);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().contains(\"delete\")) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new DeleteCommand(userInput);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else if (userInput.toLowerCase().contains(\"date\")) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new DateCommand(userInput);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            return new Command();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 46
+    }
+  },
+  {
+    "path": "src/main/java/basic/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package basic;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.io.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.nio.charset.StandardCharsets;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.nio.file.Files;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.nio.file.Paths;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Represents the file used to store address book data."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Loads the {@code basic.Duke} data from this storage file, and then returns it."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    ArrayList\u003cString\u003e load() throws FileNotFoundException, UnsupportedEncodingException {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        List\u003cString\u003e lines \u003d Collections.emptyList();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Boolean isFileCreated \u003d false;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        while (isFileCreated \u003d\u003d false) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                isFileCreated \u003d true;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                lines \u003d"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                        Files.readAllLines(Paths.get(System.getProperty(\"user.dir\") + \"/duke.txt\"), StandardCharsets.UTF_8);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                isFileCreated \u003d true;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                PrintWriter writer \u003d new PrintWriter(System.getProperty(\"user.dir\") + \"/duke.txt\", \"UTF-8\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                writer.println(\"The first line\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                writer.println(\"The second line\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                writer.close();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return new ArrayList\u003cString\u003e(lines);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Saves the {@code basic.Duke} data to the storage file."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param txt tasks in an array list"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void save(ArrayList\u003cTask\u003e txt) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        try (Writer writer \u003d new BufferedWriter(new OutputStreamWriter("
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                new FileOutputStream(System.getProperty(\"user.dir\")+\"/duke.txt\"), StandardCharsets.UTF_8))) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            for (Task task : txt) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                writer.write(task.toString());"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                writer.write(\"\\n\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 58
+    }
+  },
+  {
+    "path": "src/main/java/basic/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package basic;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Deadline;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Event;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Todo;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Constructs a new task list and initialises it with an empty ArrayList."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public ArrayList\u003cTask\u003e task \u003d new ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Checks if the task was marked as done"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param myString one task in the txt file"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @return true if the tasks was marked as done, else return false"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private boolean isDone(String myString) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return !myString.toLowerCase().contains(\"[✘]\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Converts all strings in the txt file to tasks"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param list task list in string form."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public TaskList(ArrayList\u003cString\u003e list) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        for (String s : list) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            int positionOfDes \u003d s.indexOf(\"]\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            int startPosition;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            if (s.contains(\"(\"))"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                startPosition \u003d s.indexOf(\"(\");"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                startPosition \u003d s.length() + 1;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                positionOfDes++;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            String description \u003d s.substring(positionOfDes + 4, startPosition - 1);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            if (s.contains(\"[T]\")) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                Todo oneTask \u003d new Todo(description);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                addTask(oneTask);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            } else if (s.contains(\"[D]\")) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                int positionOfDate \u003d s.indexOf(\"by\");"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                int endPosition \u003d s.indexOf(\")\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                String dateString \u003d s.substring(positionOfDate + 4, endPosition);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                DateTimeFormatter format \u003d DateTimeFormatter"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                        .ofPattern(\"d MMM yyyy, HHmm\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                LocalDateTime date \u003d LocalDateTime.parse(dateString, format);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                String day \u003d date.format(DateTimeFormatter.ofPattern(\"yyyy-MM-dd H:m\"));"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                Deadline oneTask \u003d new Deadline(description, day);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                addTask(oneTask);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                int positionOfDate \u003d s.indexOf(\"at\");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                int endPosition \u003d s.indexOf(\")\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                String dateString \u003d s.substring(positionOfDate + 4, endPosition);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                DateTimeFormatter format \u003d DateTimeFormatter"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                        .ofPattern(\"d MMM yyyy, HHmm\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                LocalDateTime date \u003d LocalDateTime.parse(dateString, format);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                String day \u003d date.format(DateTimeFormatter.ofPattern(\"yyyy-MM-dd H:m\"));"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                Event oneTask \u003d new Event(description, day);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                addTask(oneTask);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            if (isDone(s)) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                returnTask(sizeOfTask() - 1).isDone \u003d true;"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    ArrayList\u003cTask\u003e returnList() {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return task;"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Returns the task from the specified index from the task list."
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param num The index the task."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @return Task The task at the specified index."
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public Task returnTask(int num) {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return task.get(num);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Adds a task to the task list."
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param task1 The task that is required to be added to the task list."
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void addTask(Task task1) {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        task.add(task1);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Deletes a task from the task list."
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param num The index of a task that is required to be removed from the task list."
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void deleteTask(int num) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        task.remove(num);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Returns the size of the current task list."
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @return int  The size of the current task list."
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public int sizeOfTask() {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return task.size();"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 116
+    }
+  },
+  {
+    "path": "src/main/java/basic/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package basic;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Text UI of the application."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private void showLine() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(\"___________________________________________\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Generates and prints the welcome message upon the start of the application."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void showWelcome() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        showLine();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        showLine();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Prompts for the command and reads the text entered by the user."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @return command (full line) entered by the user"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    String readCommand() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Scanner input \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String myString \u003d \"\";"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        myString +\u003d input.nextLine();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return myString;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void showBye() {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(\"   Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        showLine();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void showDone() {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.print(\"   \" + \"Nice! I\u0027ve marked this task as done: \\n\" + \"   \");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void printEmptyLine() {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(\"\\n\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void showAdded() {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.print(\"   \" + \"Got it. I\u0027ve added this task:\\n\" + \"   \");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Shows a list of tasks to the user, formatted as an indexed list."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void printTask(TaskList tasks) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        for (int j \u003d 1; j \u003c\u003d tasks.sizeOfTask(); j++) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            System.out.print(\"   \" + j + \".\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            System.out.println(tasks.returnTask(j - 1));"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * Shows a list of tasks to the user, formatted as an indexed list."
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void printMatchingTask(Task tasks, int index) {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.print(\"   \" + index + \".\");"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(tasks.toString());"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void printTask(Task task) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(task);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void printTaskNum(TaskList tasks, Task task) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(task + \"\\n   Now you have \" + tasks.sizeOfTask() + \" tasks in the list.\\n\");"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void printDeleteCommand(Task echo, int num) {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(\"   Noted. I\u0027ve removed this task:\\n   \" + echo + \"\\n   Now you have \" + num + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void printException(Exception e) {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(e.toString());"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        printEmptyLine();"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void printMatching() {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.out.println(\"   Here are the matching tasks in your list:\");"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 98
+    }
+  },
+  {
+    "path": "src/main/java/command/AddDeadlineCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.EmptyException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Deadline;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Adds a deadline task to the task list."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class AddDeadlineCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param input A String inputted by the user."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public AddDeadlineCommand(String input) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @throws EmptyException If an empty description is inputted."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws EmptyException {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert input.contains(\"/by\") : \"wrong format \u0027/by\u0027 needed\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert !input.contains(\"/at\") : \"wrong format \u0027/at\u0027 not allowed\";"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        input \u003d input.toLowerCase();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.contains(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.replace(\"deadline\", \"\");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.replaceFirst(\"d\", \"\");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        int position \u003d input.indexOf(\"/by\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.substring(0, position - 1).equals(\"\") || input.substring(0, position - 1).equals(\" \")) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new EmptyException(\"a deadline\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            String date \u003d input.substring(position + 4);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.substring(0, position - 1);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            Deadline deadline \u003d new Deadline(input, date);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            tasks.addTask(deadline);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.showAdded();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printTaskNum(tasks, deadline);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 54
+    }
+  },
+  {
+    "path": "src/main/java/command/AddEventCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.EmptyException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Event;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Adds an event task to the task list."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class AddEventCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param input A String inputted by the user."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public AddEventCommand(String input) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @throws EmptyException If an empty description is inputted."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws EmptyException {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert input.contains(\"/at\") : \"wrong format \u0027/at\u0027 needed\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert !input.contains(\"/by\") : \"wrong format \u0027/by\u0027 not allowed\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        input \u003d input.toLowerCase();"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.contains(\"event\")){"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.replace(\"event\", \"\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.replaceFirst(\"e\", \"\");"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        int position \u003d input.indexOf(\"/at\");"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.substring(0, position - 1).equals(\"\") || input.substring(0, position - 2).equals(\" \")) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new EmptyException(\"an event\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            String date \u003d input.substring(position + 4);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.substring(0, position - 1);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            Event event \u003d new Event(input, date);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            tasks.addTask(event);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.showAdded();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printTaskNum(tasks, event);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 56
+    }
+  },
+  {
+    "path": "src/main/java/command/AddTodoCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.EmptyException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Todo;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Adds a todo task to the task list."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class AddTodoCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param input A String inputted by the user."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public AddTodoCommand(String input) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @throws EmptyException If an empty description is inputted."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws EmptyException {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert !input.contains(\"/at\") : \"wrong format \u0027/at\u0027 not allowed\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert !input.contains(\"/by\") : \"wrong format \u0027/by\u0027 not allowed\";"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        input \u003d input.toLowerCase();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.contains(\"todo\")){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.replace(\"todo\", \"\");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            input \u003d input.replaceFirst(\"t\", \"\");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.equals(\"\") || input.equals(\" \")) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new EmptyException(\"a todo\");"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            Todo todo \u003d new Todo(input);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            tasks.addTask(todo);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.showAdded();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printTaskNum(tasks, todo);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 51
+    }
+  },
+  {
+    "path": "src/main/java/command/AfterCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Todo;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.DukeException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class AfterCommand extends Command {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param input A String inputted by the user."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public AfterCommand(String input) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private TaskList subTaskList(TaskList tasks, int i, int position) throws DukeException {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ArrayList\u003cString\u003e array \u003d new ArrayList\u003cString\u003e();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        TaskList taskList \u003d new TaskList(array);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        for (int j \u003d i + 1; j \u003c tasks.sizeOfTask(); j++) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            taskList.addTask(tasks.returnTask(j));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return taskList;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private void deleteTasks(TaskList tasks, int i) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        for (int j \u003d tasks.sizeOfTask() - 1; j \u003e\u003d i + 1; j--) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            tasks.deleteTask(j);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        int position \u003d input.indexOf(\"after\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert input.substring(position + 5).contains(\" \") : \"wrong format: \u0027 \u0027 needed\";"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String editedInput \u003d input.toLowerCase().substring(position + 6);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ArrayList\u003cString\u003e array \u003d new ArrayList\u003cString\u003e();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        TaskList taskList \u003d new TaskList(array);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String empty \u003d \"\";"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Todo todo \u003d new Todo(empty);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (editedInput.equals(\"\") || editedInput.equals(\" \")) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means.\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            int count \u003d 0;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            for (int i \u003d 0; i \u003c tasks.sizeOfTask(); i++) {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                if (tasks.returnTask(i).description.contains(editedInput)) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    count++;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    taskList \u003d subTaskList(tasks, i, position);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    deleteTasks(tasks, i);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    String task \u003d input.toLowerCase().substring(0, position - 1);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    todo \u003d new Todo(task);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    tasks.addTask(todo);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            for (int i \u003d 0; i \u003c taskList.sizeOfTask(); i++) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                tasks.addTask(taskList.returnTask(i));"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            if (count \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                throw new DukeException(\"☹ Item not found.\");"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                ui.showAdded();"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                ui.printTaskNum(tasks, todo);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 81
+    }
+  },
+  {
+    "path": "src/main/java/command/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.EmptyException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Represents an executable command."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Command {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws EmptyException, DukeException {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means.\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 26
+    }
+  },
+  {
+    "path": "src/main/java/command/DateCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Converts the dates\u0027 format from \u0027yyyy-MM--dd\u0027 to \u0027dd MMMMM yyyy\u0027."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class DateCommand extends Command {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public DateCommand(String input) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert !input.toLowerCase().replace(\"date\", \"\").equals(\" \") : \"no date inserted\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert !input.toLowerCase().replace(\"date\", \"\").equals(\"\") : \"no date inserted\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (tasks.sizeOfTask() \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new DukeException(\"☹ The list is empty.\\n\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        else if (input.length() \u003c\u003d 5)"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means.\\n\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            String date \u003d input.substring(5);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            int count \u003d 0;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            for (int i \u003d 0; i \u003c tasks.sizeOfTask(); i++) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                if (tasks.returnTask(i).toString().contains(LocalDate.parse(date).format(DateTimeFormatter.ofPattern(\"d MMM yyyy\")))) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    System.out.println(tasks.returnTask(i).toString());"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    count++;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            if (count \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                throw new DukeException(\"☹ Item not found.\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printEmptyLine();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 52
+    }
+  },
+  {
+    "path": "src/main/java/command/DeleteCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Deletes a task identified using it\u0027s index from the task list."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class DeleteCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public DeleteCommand(String input) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        input \u003d input.toLowerCase();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        int num \u003d 0;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.matches(\".*\\\\d.*\"))"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            num \u003d Integer.parseInt(input.replaceAll(\"[\\\\D]\", \"\"));"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (num \u003e 0 \u0026\u0026 num \u003c\u003d tasks.sizeOfTask()) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            Task echo \u003d tasks.returnTask(num - 1);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            tasks.deleteTask(num - 1);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printDeleteCommand(echo, tasks.sizeOfTask());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new DukeException(\"☹ Item not found.\\n\");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ui.printEmptyLine();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 41
+    }
+  },
+  {
+    "path": "src/main/java/command/ExitCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Terminates the program."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class ExitCommand extends Command {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private static void exit() {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ui.showBye();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        System.exit(0);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ExitCommand exitCommand \u003d new ExitCommand();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        exit();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 31
+    }
+  },
+  {
+    "path": "src/main/java/command/FindCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class FindCommand extends Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param input A String inputted by the user."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public FindCommand(String input) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        input \u003d input.toLowerCase();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        input \u003d input.replace(\"find \", \"\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (input.equals(\"\") || input.equals(\" \")) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means.\\n\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            int count \u003d 0;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            for (int i \u003d 0; i \u003c tasks.sizeOfTask(); i++) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                if (tasks.returnTask(i).description.contains(input)) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    if (count \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                        ui.printMatching();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    ui.printMatchingTask(tasks.returnTask(i), i + 1);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                    count++;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            if (count \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "                throw new DukeException(\"☹ No matching tasks in your list.\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printEmptyLine();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 47
+    }
+  },
+  {
+    "path": "src/main/java/command/ListCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Lists all tasks in the task list to the user."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class ListCommand extends Command {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (tasks.sizeOfTask() \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new DukeException(\"☹ The list is empty.\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ui.printTask(tasks);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        ui.printEmptyLine();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 28
+    }
+  },
+  {
+    "path": "src/main/java/command/MarkAsDoneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import basic.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Marks a task identified using it\u0027s index as done."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class MarkAsDoneCommand extends Command {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    protected static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String input;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public MarkAsDoneCommand(String input) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param tasks   The tasks stored in an ArrayList."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param ui      The User Interface (UI)."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     * @param storage The storage to allow reading and storing of tasks from and to a txt file."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String editedInput \u003d input.toLowerCase().replace(\"done \", \"\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assert editedInput.replaceAll(\"[\\\\D]\", \"\").equals(editedInput) : \"wrong format key in numeric number instead\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        int num \u003d 0;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        //replacing all the non digit elements"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        num \u003d Integer.parseInt(input.replaceAll(\"[\\\\D]\", \"\"));"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (num \u003e 0 \u0026\u0026 num \u003c\u003d tasks.sizeOfTask()) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            tasks.returnTask(num - 1).isDone \u003d true;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        if (num \u003e 0 \u0026\u0026 num \u003c\u003d tasks.sizeOfTask()) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.showDone();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printTask(tasks.returnTask(num - 1));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            ui.printEmptyLine();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "            throw new DukeException(\"☹ Item not found.\");"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 44
+    }
+  },
+  {
+    "path": "src/main/java/exception/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " * Signals an error caused by missing a task\u0027s description."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public DukeException(String message) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        super(message);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 10
+    }
+  },
+  {
+    "path": "src/main/java/exception/EmptyException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class EmptyException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public EmptyException(String type) {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        super(\"☹ OOPS!!! The description of \" + type + \" cannot be empty.\");"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 7
+    }
+  },
+  {
+    "path": "src/main/java/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private LocalDateTime by;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public Deadline(String description, String by) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        DateTimeFormatter format \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd H:m\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.by \u003d LocalDateTime.parse(by, format);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \" + by.format(DateTimeFormatter.ofPattern(\"d MMM yyyy, HHmm\")) + \")\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 21
+    }
+  },
+  {
+    "path": "src/main/java/task/DeadlineTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Assertions;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.DisplayName;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "class DeadlineTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @DisplayName(\"Inserting Deadline for Test Case 1 /by 2019-01-05 00:30\")"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void TestToString() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String dateTime \u003d \"2019-01-05 00:30\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Deadline deadline \u003d new Deadline(\"To Complete Test Case 1\", dateTime);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Assertions.assertEquals(\"[D][✘]To Complete Test Case 1 (by: 5 Jan 2019, 0030)\", deadline.toString());"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 16
+    }
+  },
+  {
+    "path": "src/main/java/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private LocalDateTime at;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public Event(String description, String at) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        DateTimeFormatter format \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd H:m\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.at \u003d LocalDateTime.parse(at, format);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (at: \" + at.format(DateTimeFormatter.ofPattern(\"d MMM yyyy, HHmm\")) + \")\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 21
+    }
+  },
+  {
+    "path": "src/main/java/task/EventTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.DisplayName;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "class EventTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @DisplayName(\"Inserting Event for Test Case 1 /by 2019-01-05 00:30\")"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void TestToString() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String dateTime \u003d \"2019-01-05 00:30\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Event event \u003d new Event(\"To Complete Test Case 1\", dateTime);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assertEquals(\"[E][✘]To Complete Test Case 1 (at: 5 Jan 2019, 0030)\", event.toString());"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 17
+    }
+  },
+  {
+    "path": "src/main/java/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public String description;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public boolean isDone;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    private String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return (isDone ? \"✓\" : \"✘\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return \"[\" + getStatusIcon() + \"]\" + description;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 20
+    }
+  },
+  {
+    "path": "src/main/java/task/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public Todo(String description) {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        return \"[T] \" + super.toString();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 15
+    }
+  },
+  {
+    "path": "src/main/java/task/TodoTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.DisplayName;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "class TodoTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @DisplayName(\"Inserting Todo for Test Case 1 \")"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void TestToString() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Todo todo \u003d new Todo(\"To Complete Test Case 1\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        assertEquals(\"[T] [✘]To Complete Test Case 1\", todo.toString());"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 16
+    }
+  },
+  {
+    "path": "src/test/java/task/TestDeadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Assertions;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "class TestDeadline{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    void testToString() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        String dateTime \u003d \"2019-01-05 00:30\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Deadline deadline \u003d new Deadline(\"To Complete Test Case 1\", dateTime);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "        Assertions.assertEquals(\"[D][\\u2718]To Complete Test Case 1 (by: 5 Jan 2019, 0030)\", deadline.toString());"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 14
+    }
+  },
+  {
+    "path": "text-ui-test/runtest.bat",
+    "fileType": "bat",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "@ECHO OFF"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "REM create bin directory if it doesn\u0027t exist"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "if not exist ..\\bin mkdir ..\\bin"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "REM delete output from previous run"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "del ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "REM compile the code into the bin folder"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "javac  -cp ..\\src -Xlint:none -d ..\\bin ..\\src\\main\\java\\Duke.java"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "IF ERRORLEVEL 1 ("
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    echo ********** BUILD FAILURE **********"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "    exit /b 1"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ")"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "REM no error here, errorlevel \u003d\u003d 0"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "REM run the program, feed commands from input.txt file and redirect the output to the ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "java -classpath ..\\bin Duke \u003c input.txt \u003e ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "REM compare the output to the expected output"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chenghuiyuan"
+        },
+        "content": "FC ACTUAL.TXT EXPECTED.TXT"
+      }
+    ],
+    "authorContributionMap": {
+      "chenghuiyuan": 21
+    }
+  }
+]

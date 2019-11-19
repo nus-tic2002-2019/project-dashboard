@@ -1,0 +1,5513 @@
+[
+  {
+    "path": "data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "T | ✓ | borrow book"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "E | ✘ | party| 21-11-2019"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "D | ✓ | submit homework| 19-11-2019"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "D | ✘ | return book| 20-11-2019"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "E | ✘ | party| 21-11-2019"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 5
+    }
+  },
+  {
+    "path": "src/main/java/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.exception.CommandException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.exception.InvalidNumberException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.exception.LackOfElementException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * Create and execute user command."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class Command {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected String fullCommand;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected boolean isExit;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Create new command."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public Command(String fullCommand) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.fullCommand \u003d fullCommand;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.isExit \u003d false;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    private static void CheckFirstWord(String s) throws CommandException {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        if ( !(s.equals(\"todo\" ) || s.equals( \"deadline\") || s.equals( \"event\")"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                || s.equals( \"bye\") || s.equals( \"list\") || s.equals( \"done\")"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                || s.equals(\"delete\") || s.equals(\"find\")) ) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            throw new CommandException();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    private static void CheckNumber(int size, int index) throws InvalidNumberException {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        if (index \u003e\u003d size) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            throw new InvalidNumberException();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    private static void CheckElement(String command) throws LackOfElementException {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        if (  command.equals(\"todo\") || command.equals(\"deadline\") || command.equals(\"event\")"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                || command.equals(\"done\")|| command.equals(\"delete\") || command.equals(\"find\") ) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            throw new LackOfElementException();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Execute new command."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param tasks task list to be updated"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param storage file address to be updated"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void execute(TaskList tasks, Storage storage) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String command \u003d Parser.command(fullCommand);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        int size \u003d tasks.tasks.size();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            CheckFirstWord(command);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        } catch (CommandException e) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            System.out.println(\"OOPS!!! Pls key in the valid command\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        switch (command) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"bye\":"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                UI.byeMessage();"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                isExit \u003d true;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                UI.listMessage(tasks.tasks);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckElement(fullCommand);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckNumber(size, Parser.taskNumber(fullCommand));"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    tasks.doneCommand(storage, fullCommand);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (LackOfElementException e) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! Pls key in the number of the task\");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (InvalidNumberException e) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! The number of task is invalid! Please key in again!\");"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckElement(fullCommand);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckNumber(size, Parser.taskNumber(fullCommand));"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    tasks.deleteCommand(storage, fullCommand);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (LackOfElementException e) {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! Pls key in the number of the task\");"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (InvalidNumberException e) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! The number of task is invalid! Please key in again!\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckElement(fullCommand);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    tasks.addTodoCommand(storage, fullCommand);"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (LackOfElementException e) {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! Pls key in the description for the task\");"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckElement(fullCommand);"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    tasks.addDeadlineCommand(storage, fullCommand);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (LackOfElementException e) {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! Pls key in the description for the task\");"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckElement(fullCommand);"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    tasks.addEventCommand(storage, fullCommand);"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (LackOfElementException e) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! Pls key in the description for the task\");"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            case \"find\":"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    CheckElement(fullCommand);"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    tasks.findCommand(fullCommand);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                } catch (LackOfElementException e) {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    System.out.println(\"OOPS!!! Pls key in the description for finding\");"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 118
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    private TaskList taskList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    private String filePath;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Create new Duke with file address for loading and saving."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param filePath file address."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    private Duke(String filePath) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        ArrayList\u003cTask\u003e tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.taskList \u003d new TaskList(tasks);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    private void run() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        Storage storage \u003d new Storage(filePath);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        storage.loadFile(taskList.tasks);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assert storage.isLoad : \"File not found\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        UI.askCommand();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        boolean isExit \u003d false;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        while (!isExit) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                String fullCommand \u003d UI.readCommand();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                Command c \u003d new Command(fullCommand);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                UI.splitLine();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                c.execute(taskList, storage);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                isExit \u003d c.isExit;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                System.out.println(\"OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            } finally {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                UI.splitLine();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        UI.welcome();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        new Duke(UI.readCommand()).run();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 39,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * Stores method to understand user command."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Finding out the command keyed by user."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return user command."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static String command(String fullCommand){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return fullCommand.split(\" \")[0].toLowerCase();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Finding out the index keyed user."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return index."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static int taskNumber(String fullCommand) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        int index \u003d Integer.parseInt(fullCommand.split(\" \")[1]) - 1;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assert index \u003e\u003d 0: \"The index of task must be greater than 0\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return index;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Finding out the description keyed by user."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return description"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static String description(String fullCommand) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String[] s1 \u003d fullCommand.split(\" \");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String[] s2 \u003d fullCommand.split(\"/\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return s2[0].replace(s1[0] + \" \", \"\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Finding out the date keyed by user."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return date in string."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static String date(String fullCommand) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            String d \u003d fullCommand.split(\"/\")[1];"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            return d.split(\" \")[1];"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            System.out.println(\"Please key in date with format dd-MM-yyyy\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"0\";"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Converts date from string to Date."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param date date in string."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return date in Date."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static Date convertDate(String date) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        SimpleDateFormat format \u003d new SimpleDateFormat (\"dd-MM-yyyy\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        Date covertDate;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            covertDate \u003d format.parse(date);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            return covertDate;"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        } catch (ParseException e) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            System.out.println(\"Please use format dd-MM-yyyy for date\");"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return new Date();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 66
+    }
+  },
+  {
+    "path": "src/main/java/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Deadline;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Event;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Todo;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.io.FileOutputStream;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.io.FileReader;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * Stores method to deal with loading and saving from file."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected String filePath;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected boolean isLoad;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Create new Storage."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param filePath file address."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public Storage(String filePath) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.isLoad \u003d true;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Load file to new Duke task list."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param tasks task list to be loaded."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void loadFile(ArrayList\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            BufferedReader br \u003d new BufferedReader(new FileReader(filePath));"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            String s;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            while ((s \u003d br.readLine()) !\u003d null) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                String[] command \u003d s.split(\"\\\\|\", 0);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                switch (command[0].trim()) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    case \"T\":"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        tasks.add(new Todo(command[2].trim()));"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        if (command[1].trim().equals(\"\\u2713\"))"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                            tasks.get(tasks.size() - 1).markAsDone();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    case \"E\":"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        tasks.add(new Event(command[2].trim(), command[3].trim(),"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                                Parser.convertDate(command[3].trim())));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        if (command[1].trim().equals(\"\\u2713\"))"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                            tasks.get(tasks.size() - 1).markAsDone();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                    case \"D\":"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        tasks.add(new Deadline(command[2].trim(), command[3].trim(),"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                                Parser.convertDate(command[3].trim())));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        if (command[1].trim().equals(\"\\u2713\"))"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                            tasks.get(tasks.size() - 1).markAsDone();"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            UI.splitLine();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            System.out.println(\"Pls key in the correct file address with \u0027\\\\\u0027\" );"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            UI.splitLine();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            isLoad \u003d false;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Save updates to file."
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param tasks task list to be saved."
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void saveFile(ArrayList\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            FileOutputStream out \u003d new FileOutputStream(filePath);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            for( int i\u003d0 ; i\u003ctasks.size() ; i++ ){"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                String s \u003d tasks.get(i).save_toString() + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                byte b[]\u003d s.getBytes();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                out.write(b);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            out.close();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            UI.splitLine();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            System.out.println(\"Oops!! Cannot save file!\");"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            UI.splitLine();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 84
+    }
+  },
+  {
+    "path": "src/main/java/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Deadline;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Event;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Todo;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * Stores all methods to deal with user command."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected ArrayList\u003cTask\u003e tasks;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public TaskList(ArrayList\u003cTask\u003e tasks){"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.tasks \u003d tasks;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Method to deal with done."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param storage file address."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void doneCommand (Storage storage, String fullCommand) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        tasks.get(Parser.taskNumber(fullCommand)).markAsDone();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        storage.saveFile(tasks);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        UI.doneMessage(tasks, Parser.taskNumber(fullCommand));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Method to deal with delete."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param storage file address to be updated."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void deleteCommand (Storage storage, String fullCommand) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        int index \u003d Parser.taskNumber(fullCommand);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        UI.deleteMessage(tasks, index);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        tasks.remove(index);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        storage.saveFile(tasks);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Method to deal with add Todo."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param storage file address to be updated."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void addTodoCommand (Storage storage, String fullCommand) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String description \u003d Parser.description(fullCommand);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        Task t \u003d new Todo(description);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        tasks.add(t);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        storage.saveFile(tasks);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        UI.addMessage(t, tasks.size());"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Method to deal with add Deadline."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param storage file address to be updated."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void addDeadlineCommand (Storage storage, String fullCommand) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String description \u003d Parser.description(fullCommand);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String date \u003d Parser.date(fullCommand);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        if (!date.equals(\"0\")) {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            Date by \u003d Parser.convertDate(date);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            if (by.before(new Date())) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                System.out.println(\"Deadline date cannot be earlier than now!\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                Task t \u003d new Deadline(description, date, by);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                tasks.add(t);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                storage.saveFile(tasks);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                UI.addMessage(t, tasks.size());"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Method to deal with add Event."
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param storage file address to be updated."
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void addEventCommand (Storage storage, String fullCommand) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String description \u003d Parser.description(fullCommand);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String date \u003d Parser.date(fullCommand);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        if (!date.equals(\"0\")) {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            Date at \u003d Parser.convertDate(date);"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            if (at.before(new Date())) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                System.out.println(\"Event date cannot be earlier than now!\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                Task t \u003d new Event(description, date, at);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                tasks.add(t);"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                storage.saveFile(tasks);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                UI.addMessage(t, tasks.size());"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Method to deal with add find."
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param fullCommand user full command."
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void findCommand (String fullCommand) {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Here are the matching tasks in your list:\");"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        int index \u003d 1;"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String description \u003d Parser.description(fullCommand);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            if (tasks.get(i).toString().contains(description)) {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                System.out.println(index + \".\" + tasks.get(i).toString());"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                index++;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 107
+    }
+  },
+  {
+    "path": "src/main/java/UI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import duke.task.Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * Stores the message to interact with user."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class UI {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints welcome message of duke."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void welcome(){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        splitLine();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Pls key in the file address with \u0027\\\\\u0027\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        splitLine();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints the message to ask for command after loading file successfully."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void askCommand() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        splitLine();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Load file successfully!\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"What can I do for you?\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        splitLine();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints out split line."
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void splitLine(){"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"--------------------------------------------------------\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints list message of task list."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param tasks task list for printing."
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void listMessage(ArrayList\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "            System.out.println(i + 1 + \".\" + tasks.get(i).toString());"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints add message of duke."
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param t task to print after adding to list."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param size size of task list."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void addMessage(Task t, int size) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Got it. I\u0027ve added this task: \");"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"  \" + t.toString());"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Now you have \" + size + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints done message of duke."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param tasks task list."
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param index index of task in task list which will be marked as done."
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void doneMessage(ArrayList\u003cTask\u003e tasks, int index) {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Nice! I\u0027ve marked this task as done:\");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"  \" + tasks.get(index).toString());"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints delete message of duke."
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param tasks task list."
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param index index of task in task list which will be deleted."
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void deleteMessage(ArrayList\u003cTask\u003e tasks, int index) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        int size \u003d tasks.size() - 1;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Noted. I\u0027ve removed this task: \");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"  \"  + tasks.get(index));"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Now you have \" + size + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Prints bye message of duke."
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static void byeMessage(){"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Scan and reads the input of user."
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return user full command in string."
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public static String readCommand() {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String fullCommand \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assert fullCommand.length() \u003e 0: \"The command can\u0027t be empty!\";"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return fullCommand;"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 96
+    }
+  },
+  {
+    "path": "src/main/java/duke/exception/CommandException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class CommandException extends DukeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 4
+    }
+  },
+  {
+    "path": "src/main/java/duke/exception/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 4
+    }
+  },
+  {
+    "path": "src/main/java/duke/exception/InvalidNumberException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class InvalidNumberException extends DukeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 4
+    }
+  },
+  {
+    "path": "src/main/java/duke/exception/LackOfElementException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class LackOfElementException extends DukeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 4
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * The child class of Task."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected String date;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected Date by;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Creation of new Deadline with description."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param description description of Deadline."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param date date information for saving date."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param by date information for printing date."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public Deadline(String description, String date, Date by) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.date \u003d date;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Update the printing format by adding icon and date for deadline."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return printing format."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        SimpleDateFormat format \u003d new SimpleDateFormat (\"MMM d yyyy\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String dateString \u003d format.format(by);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \" + dateString + \")\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Update the saving format by adding icon and date for deadline."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return printing format."
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String save_toString() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"D | \" + super.save_toString() + \"| \" + date;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 40
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * The child class of Task."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected String date;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected Date at;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Creation of new Deadline with description."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param description of Event."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param date for saving date."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param at for printing date."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public Event (String description, String date, Date at) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.date \u003d date;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Update the printing format by adding icon and date for event."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return printing format."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        SimpleDateFormat format \u003d new SimpleDateFormat (\"MMM d yyyy\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        String dateString \u003d format.format(at);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (at: \" + dateString + \")\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Update the saving format by adding icon and date for event."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return printing format."
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String save_toString() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"E | \" + super.save_toString() + \"| \" + date;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 40
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * The parent class of Deadline, Event and Todo."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Creation of new Task with description."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param description description of Task."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public Task(String description){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Mark task as done."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public void markAsDone(){"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        isDone \u003d true;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Get task icon for whether the task is done."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return icon."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String getStatusIcon(){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Convert task to string in printing format."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return printing format."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"[\" + getStatusIcon() + \"] \" + description;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Covert task to string in saving format."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return saving format."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String save_toString() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return getStatusIcon() + \" | \" + description;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 43
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * The child class of Task."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Creation of new Todo with description."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @param description description of Todo."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public Todo(String description){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Update the printing format by adding icon for todo."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return printing format."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * Update the saving format by adding icon for todo."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * @return printing format."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    public String save_toString() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        return \"T | \" + super.save_toString();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 28
+    }
+  },
+  {
+    "path": "src/test/java/ParserTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class ParserTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void commandTest(){"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"todo\", Parser.command(\"todo borrow book\"));"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void taskNumberTest() {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(3, Parser.taskNumber(\"done 4\"));"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void descriptionTest(){"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"borrow book\", Parser.description(\"todo borrow book\"));"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void dateTest(){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"09-11-2019\", Parser.date(\"deadline return book /by 09-11-2019\"));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"0\", Parser.date(\"deadline return book\"));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 29
+    }
+  },
+  {
+    "path": "src/test/java/duke/task/TaskTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class TaskTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    Task task \u003d new Task(\"join sports club\");"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void getStatusIconTest() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"\\u2718\", task.getStatusIcon());"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void toStringTest() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"[\\u2718] join sports club\", task.toString());"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void save_toStringTest()  {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"\\u2718 | join sports club\", task.save_toString());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 24
+    }
+  },
+  {
+    "path": "src/test/java/duke/task/TodoTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "public class TodoTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    Todo todo \u003d new Todo(\"join sports club\");"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void getStatusIconTest() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"\\u2718\", todo.getStatusIcon());"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void toStringTest() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"[T][\\u2718] join sports club\", todo.toString());"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    void save_toStringTest()  {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "        assertEquals(\"T | \\u2718 | join sports club\", todo.save_toString());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "zyjarvis"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "zyjarvis": 25
+    }
+  }
+]

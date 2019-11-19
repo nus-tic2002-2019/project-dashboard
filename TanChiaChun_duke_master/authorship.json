@@ -1,0 +1,7255 @@
+[
+  {
+    "path": "src/main/data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "T|0|0|test"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "D|0|0|test|test"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "D|0|1|test|2019-11-19 0500"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "E|0|0|test|test"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "E|0|1|test|2019-11-19 0500"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "D|0|0|hey|ow"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "D|0|0|test10|later"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "E|0|0|sleep|soon"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "E|0|1|sleep|2019-11-20 2000"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "D|0|1|sleep|2019-11-20 1900"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 10
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.exception.DukeException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.parser.Parser;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.ui.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents class Duke of main application."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare constant variables"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STORAGE_PATH_DUKE \u003d \"src/main/data/duke.txt\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Create class"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static TaskList tasks;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static Ui ui;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static Storage storage;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static Parser parser;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Duke() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tasks \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        ui \u003d new Ui(tasks);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        storage \u003d new Storage(STORAGE_PATH_DUKE, ui, tasks);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Runs application of class Duke."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Until user exits."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void runApp() {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        boolean isExit \u003d false;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        while (!isExit) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String input \u003d ui.getUserInput();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                parser \u003d new Parser(ui, input, tasks, storage);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                parser.runCommand();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                isExit \u003d parser.getIsExit();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } catch (DukeException e) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                ui.displayErrorDuke();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Duke duke \u003d new Duke();"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        duke.runApp();"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 50,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/exception/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 4
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/parser/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.storage.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.Deadline;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.Event;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.TaskList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.Todo;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.ui.Ui;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents Parser class"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Deals interaction with user."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare constant variables"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_BYE \u003d \"bye\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_LIST \u003d \"list\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_CLEAR \u003d \"clear\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_DONE \u003d \"done\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_DELETE \u003d \"delete\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_TODO \u003d \"todo\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_DEADLINE \u003d \"deadline\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String STRING_EVENT \u003d \"event\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String SEPARATOR_BY \u003d \"/by\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String SEPARATOR_AT \u003d \"/at\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String DATE_TIME_FORMAT \u003d \"yyyy-MM-dd HHmm\";"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Store keywords\u0027 number of characters"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static int doneStrLen \u003d STRING_DONE.length();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static int deleteStrLen \u003d STRING_DELETE.length();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static int todoStrLen \u003d STRING_TODO.length();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static int deadlineStrLen \u003d STRING_DEADLINE.length();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static int eventStrLen \u003d STRING_EVENT.length();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static int byStrLen \u003d SEPARATOR_BY.length();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static int atStrLen \u003d SEPARATOR_AT.length();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare variables"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static Ui currentUi;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static Storage currentStorage;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private String currentInput;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private TaskList tasksList;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private boolean isExit \u003d false;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Parser(Ui currentUi, String currentInput, TaskList tasksList, Storage currentStorage) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.currentUi \u003d currentUi;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.currentStorage \u003d currentStorage;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.currentInput \u003d currentInput;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.tasksList \u003d tasksList;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Getter"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns isExit boolean of Parser class."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return Boolean."
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public boolean getIsExit() {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return isExit;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Checks and returns true if input String is a valid date."
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Based on custom format."
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param dateTimeInput"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return Boolean"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public boolean isDateTime(String dateTimeInput) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            LocalDateTime.parse(dateTimeInput, DateTimeFormatter.ofPattern(DATE_TIME_FORMAT) );"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } catch (DateTimeParseException e) {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns parsed LocalDateTime from input String."
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Based on custom format."
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * No checking of string validity."
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param dateTimeInput"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return LocalDateTime"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public LocalDateTime parseStringToDateTime(String dateTimeInput) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return LocalDateTime.parse(dateTimeInput, DateTimeFormatter.ofPattern(DATE_TIME_FORMAT) );"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Execute functions"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Executes different actions based on user input."
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Display appropriate messages back to user."
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @throws DukeException to reject non-standard inputs."
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void runCommand() throws DukeException {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (currentInput.equals(STRING_BYE) ) {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Bye"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.byeUser();"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            isExit \u003d true;"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            return;"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else if (currentInput.equals(STRING_LIST) ) {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //List tasks"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayMessageTasksList();"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else if (currentInput.equals(STRING_CLEAR) ) {"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Clear tasks"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tasksList.clearTask();"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentStorage.clearFile();"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentUi.displayErrorIo();"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayMessageClear();"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else if (currentInput.length() \u003e\u003d doneStrLen \u0026\u0026 (currentInput.substring(0, doneStrLen) ).equals(STRING_DONE) ) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Mark task as done"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Get task index"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            String taskIndex \u003d currentInput.substring(doneStrLen + 1);"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            int taskNum \u003d Integer.parseInt(taskIndex) - 1;"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Set task as done"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tasksList.getTask(taskNum).setDone();"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Write (update) to file"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentStorage.writeToFile(tasksList);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentUi.displayErrorIo();"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Print completed task"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayMessageDone(taskNum);"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else if (currentInput.length() \u003e\u003d deleteStrLen \u0026\u0026 (currentInput.substring(0, deleteStrLen) ).equals(STRING_DELETE) ){"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Delete task"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Get task index"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            String taskIndex \u003d currentInput.substring(deleteStrLen + 1);"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            int taskNum \u003d Integer.parseInt(taskIndex) - 1;"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Reset task done status"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tasksList.getTask(taskNum).resetDone();"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Print task to be deleted"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayMessageDelete(taskNum);"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Delete task"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tasksList.deleteTask(taskNum);"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            //Write (update) to file"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentStorage.writeToFile(tasksList);"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentUi.displayErrorIo();"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            if (currentInput.length() \u003e\u003d todoStrLen \u0026\u0026 (currentInput.substring(0, todoStrLen) ).equals(STRING_TODO) ) {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                //Add to-do"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String inputExtract \u003d currentInput.substring(todoStrLen + 1);"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                tasksList.addTask(new Todo(inputExtract) );"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentStorage.appendTaskToFile(tasksList.getTask(tasksList.getListSize() -1) );"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } else if (currentInput.length() \u003e\u003d deadlineStrLen \u0026\u0026 (currentInput.substring(0, deadlineStrLen) ).equals(STRING_DEADLINE) ) {"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                //Add deadline"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String inputExtract \u003d currentInput.substring(deadlineStrLen + 1);"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String taskExtract \u003d inputExtract.substring(0, inputExtract.indexOf(SEPARATOR_BY) - 1);"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String timeExtract \u003d inputExtract.substring(inputExtract.indexOf(SEPARATOR_BY) + 1 + byStrLen);"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                if (isDateTime(timeExtract) ) {"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    LocalDateTime timeConvert \u003d parseStringToDateTime(timeExtract);"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tasksList.addTask(new Deadline(taskExtract, timeConvert) );"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tasksList.addTask(new Deadline(taskExtract, timeExtract) );"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentStorage.appendTaskToFile(tasksList.getTask(tasksList.getListSize() -1) );"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } else if (currentInput.length() \u003e\u003d eventStrLen \u0026\u0026 (currentInput.substring(0, eventStrLen) ).equals(STRING_EVENT) ) {"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                //Add event"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String inputExtract \u003d currentInput.substring(eventStrLen + 1);"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String taskExtract \u003d inputExtract.substring(0, inputExtract.indexOf(SEPARATOR_AT) - 1);"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                String timeExtract \u003d inputExtract.substring(inputExtract.indexOf(SEPARATOR_AT) + 1 + atStrLen);"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                if (isDateTime(timeExtract) ) {"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    LocalDateTime timeConvert \u003d parseStringToDateTime(timeExtract);"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tasksList.addTask(new Event(taskExtract, timeConvert) );"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tasksList.addTask(new Event(taskExtract, timeExtract) );"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                currentStorage.appendTaskToFile(tasksList.getTask(tasksList.getListSize() -1) );"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                throw new DukeException();"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayMessageAddTask();"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 212
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/storage/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.storage;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.Deadline;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.Event;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.TaskList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.Todo;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.ui.Ui;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents Storage class."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Deals with loading tasks from file and saving tasks back."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare constant variables"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String CHAR_FALSE \u003d \"0\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String CHAR_TRUE \u003d \"1\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String CHAR_TODO \u003d \"T\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String CHAR_DEADLINE \u003d \"D\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String CHAR_EVENT \u003d \"E\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String DATE_TIME_FORMAT \u003d \"yyyy-MM-dd HHmm\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare variables"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static Ui currentUi;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static String filePath;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static File currentFile;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private ArrayList\u003c ArrayList\u003cString\u003e \u003e fileExtract;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Storage(String filePath, Ui currentUi, TaskList tasksList) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.currentUi \u003d currentUi;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        currentFile \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            fileExtract \u003d readFile();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayErrorFileNotFound();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        appendTaskToArray(fileExtract, tasksList);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Getter"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns String ArrayList, that contains all elements of a line."
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Delimited by custom separator."
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Requisite for readFile function."
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param currentLine as input String."
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return String."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static ArrayList\u003cString\u003e readLine(String currentLine) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        ArrayList\u003cString\u003e lineElements \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Scanner s \u003d new Scanner(currentLine);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        s.useDelimiter(\"[|]\");"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        while (s.hasNext() ) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            lineElements.add(s.next() );"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            lineElements.add(s.next() );"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            lineElements.add(s.next() );"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            lineElements.add(s.next() );"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            if (s.hasNext() ) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                lineElements.add(s.next() );"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        s.close();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return lineElements;"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns ArrayList of String ArrayList, that contains all lines in a file."
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return ArrayList of String ArrayList."
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @throws FileNotFoundException if file does not exist."
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public ArrayList\u003c ArrayList\u003cString\u003e \u003e readFile() throws FileNotFoundException {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        ArrayList\u003c ArrayList\u003cString\u003e \u003e lineList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            Scanner s \u003d new Scanner(currentFile);"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            while (s.hasNextLine() ) {"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                lineList.add(readLine(s.nextLine() ) );"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayErrorFileNotFound();"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return lineList;"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Setter"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Appends String to file."
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param textToAppend as String to input."
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void appendToFile(String textToAppend) throws IOException {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        FileWriter fw \u003d new FileWriter(filePath, true);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        fw.write(textToAppend + \"\\n\");"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        fw.close();"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Writes list of Strings to file."
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param tasksList as ArrayList of Task."
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void writeToFile(TaskList tasksList) throws IOException {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        FileWriter fw \u003d new FileWriter(filePath);"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        for (int i \u003d 0; i \u003c tasksList.getListSize(); i++) {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            fw.write(tasksList.getTask(i).printToFile() + \"\\n\");"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        fw.close();"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Clears file."
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void clearFile() throws IOException {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        FileWriter fw \u003d new FileWriter(filePath);"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        fw.write(\"\");"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        fw.close();"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Execute functions"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Executes appending Tasks to file, using appendTaskToFile function."
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param currentTask"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void appendTaskToFile(Task currentTask) {"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            appendToFile(currentTask.printToFile() );"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentUi.displayErrorIo();"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Sub-function to initialize Done and add to Task ArrayList"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private void initDoneAddArray (TaskList currentTasksArray, Task currentTask, String doneStatus) {"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (doneStatus.equals(CHAR_FALSE) ) {"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentTask.resetDone();"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else if (doneStatus.equals(CHAR_TRUE) ) {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            currentTask.setDone();"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        currentTasksArray.addTask(currentTask);"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Initializes and add tasks into Task ArrayList."
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Retrieves from saved file data."
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Assume integrity of file to be always good."
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * No checking if file has been modified."
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param fromLineList as ArrayList of StringArrayList, retrieved from saved file."
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param toTasksArray as Task ArrayList."
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void appendTaskToArray(ArrayList\u003c ArrayList\u003cString\u003e \u003e fromLineList, TaskList toTasksArray) {"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        for (int i \u003d 0; i \u003c fromLineList.size(); i++) {"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            if (fromLineList.get(i).get(0).equals(CHAR_TODO) ) {"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                //Add todo from file"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                Todo tempTodo \u003d new Todo(fromLineList.get(i).get(3) );"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                if (fromLineList.get(i).get(1).equals(CHAR_FALSE) ) {"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tempTodo.resetDone();"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                } else if (fromLineList.get(i).get(1).equals(CHAR_TRUE) ) {"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tempTodo.setDone();"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                toTasksArray.addTask(tempTodo);"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } else if (fromLineList.get(i).get(0).equals(CHAR_DEADLINE) ) {"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                //Add deadline from file"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                if (fromLineList.get(i).get(2).equals(CHAR_FALSE) ) {"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    Deadline tempDeadline \u003d new Deadline(fromLineList.get(i).get(3), fromLineList.get(i).get(4) );"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tempDeadline.resetBoolDateTime();"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    initDoneAddArray(toTasksArray, tempDeadline, fromLineList.get(i).get(1) );"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                } else if (fromLineList.get(i).get(2).equals(CHAR_TRUE) ) {"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    LocalDateTime timeConvert \u003d LocalDateTime.parse(fromLineList.get(i).get(4), DateTimeFormatter.ofPattern(DATE_TIME_FORMAT) );"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    Deadline tempDeadline \u003d new Deadline(fromLineList.get(i).get(3), timeConvert);"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tempDeadline.setBoolDateTime();"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    initDoneAddArray(toTasksArray, tempDeadline, fromLineList.get(i).get(1) );"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            } else if (fromLineList.get(i).get(0).equals(CHAR_EVENT) ) {"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                //Add event from file"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                if (fromLineList.get(i).get(2).equals(CHAR_FALSE) ) {"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    Event tempEvent \u003d new Event(fromLineList.get(i).get(3), fromLineList.get(i).get(4) );"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tempEvent.resetBoolDateTime();"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    initDoneAddArray(toTasksArray, tempEvent, fromLineList.get(i).get(1) );"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                } else if (fromLineList.get(i).get(2).equals(CHAR_TRUE) ) {"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    LocalDateTime timeConvert \u003d LocalDateTime.parse(fromLineList.get(i).get(4), DateTimeFormatter.ofPattern(DATE_TIME_FORMAT) );"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    Event tempEvent \u003d new Event(fromLineList.get(i).get(3), timeConvert);"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    tempEvent.setBoolDateTime();"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                    initDoneAddArray(toTasksArray, tempEvent, fromLineList.get(i).get(1) );"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 223
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents Deadline sub-class, inherited from Task class."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare constant variables"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected final String STRING_BY \u003d \"by\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare variables"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected String deadlineByString;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected LocalDateTime deadlineDateTime;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Deadline(String taskDescription, String taskTime) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        deadlineByString \u003d taskTime;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        typeIdt \u003d CHAR_DEADLINE;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Deadline(String taskDescription, LocalDateTime taskDateTime) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        deadlineDateTime \u003d taskDateTime;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        typeIdt \u003d CHAR_DEADLINE;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        isDateTimeFormat \u003d true;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Getter"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Combine and return String for writing into file, for Deadline class."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return String"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String printToFile() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d super.printToFile() + CHAR_SEPARATOR_WRITE;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (isDateTimeFormat) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d DateTimeFormatter.ofPattern(DATE_TIME_FORMAT).format(deadlineDateTime);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d deadlineByString;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return tempString;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d \"[\" + typeIdt + \"][\" + getStatusIcon() + \"] \" + taskDescription + \" (\" + STRING_BY + \": \";"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (isDateTimeFormat) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d DateTimeFormatter.ofPattern(DATE_TIME_FORMAT_OUTPUT).format(deadlineDateTime);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d deadlineByString;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d \")\";"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return tempString;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 63
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents Event sub-class, inherited from Task class."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare constant variables"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected final String STRING_AT \u003d \"at\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare variables"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected String eventAtString;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected LocalDateTime eventDateTime;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Event(String taskDescription, String taskTime) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        eventAtString \u003d taskTime;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        typeIdt \u003d CHAR_EVENT;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Event(String taskDescription, LocalDateTime taskDateTime) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        eventDateTime \u003d taskDateTime;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        typeIdt \u003d CHAR_EVENT;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        isDateTimeFormat \u003d true;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Getter"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Combine and return String for writing into file, for Event class."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return String"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String printToFile() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d super.printToFile() + CHAR_SEPARATOR_WRITE;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (isDateTimeFormat) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d DateTimeFormatter.ofPattern(DATE_TIME_FORMAT).format(eventDateTime);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d eventAtString;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return tempString;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d \"[\" + typeIdt + \"][\" + getStatusIcon() + \"] \" + taskDescription + \" (\" + STRING_AT + \": \";"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (isDateTimeFormat) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d DateTimeFormatter.ofPattern(DATE_TIME_FORMAT_OUTPUT).format(eventDateTime);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d eventAtString;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d \")\";"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return tempString;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 63
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents Task class."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public abstract class Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare constant variables"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final char CHAR_TODO \u003d \u0027T\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final char CHAR_DEADLINE \u003d \u0027D\u0027;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final char CHAR_EVENT \u003d \u0027E\u0027;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final String CHAR_SEPARATOR_WRITE \u003d \"|\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final String CHAR_FALSE \u003d \"0\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final String CHAR_TRUE \u003d \"1\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final String DATE_TIME_FORMAT \u003d \"yyyy-MM-dd HHmm\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected static final String DATE_TIME_FORMAT_OUTPUT \u003d \"d MMMM yyyy, h:mm a\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare variables"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected String taskDescription;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected char typeIdt;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    protected boolean isDateTimeFormat \u003d false;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Task(String taskDescription) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.taskDescription \u003d taskDescription;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        isDone \u003d false;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Getter"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns appropriate symbol of Task status."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return String"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Combine and return String for writing into file, for Task class."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return String"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String printToFile() {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String output \u003d typeIdt + CHAR_SEPARATOR_WRITE;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (isDone) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            output +\u003d CHAR_TRUE;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            output +\u003d CHAR_FALSE;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        output +\u003d CHAR_SEPARATOR_WRITE;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        if (isDateTimeFormat) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            output +\u003d CHAR_TRUE;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            output +\u003d CHAR_FALSE;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        output +\u003d CHAR_SEPARATOR_WRITE + taskDescription;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return output;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Setter"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Sets isDone boolean of Task class to true."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void setDone() {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        isDone \u003d true;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Sets isDone boolean of Task class to false."
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void resetDone() {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        isDone \u003d false;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Sets isDateTimeFormat boolean of Task class to true."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void setBoolDateTime() {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        isDateTimeFormat \u003d true;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Sets isDateTimeFormat boolean of Task class to false."
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void resetBoolDateTime() {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        isDateTimeFormat \u003d false;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return \"[\" + typeIdt + \"][\" + getStatusIcon() + \"] \" + taskDescription;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 99
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/task/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents TaskList class."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare variables"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private ArrayList\u003cTask\u003e taskList;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public TaskList() {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        taskList \u003d new ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Getter"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns size of Task ArrayList."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return int"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public int getListSize() {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return taskList.size();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns Task by the given index number."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param i as index number to search."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return Task"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Task getTask(int i) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return taskList.get(i);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Setter"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Adds new Task to Task ArrayList."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param currentTask"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void addTask(Task currentTask) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        taskList.add(currentTask);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Removes Task by given index number from Task ArrayList."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param i as index number to remove"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void deleteTask(int i) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        taskList.remove(i);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Clears TaskList."
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void clearTask() {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        taskList.clear();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 62
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/task/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents Todo sub-class, inherited from Task class."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Todo(String taskDescription) {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        typeIdt \u003d CHAR_TODO;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 12
+    }
+  },
+  {
+    "path": "src/main/java/tic2002/ui/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import tic2002.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Represents Ui class."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " * Deals with interactions with the user."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare constant variables"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String DUKE_LOGO \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String LINE_SEPARATOR \u003d \"____________________________________________________________\\n\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String USER_INSTRUCTIONS \u003d \"Instructions: [list | todo {} | deadline {} /by {} | event {} /at {} | done {} | delete {} | clear | bye]\\n\""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            + \"Format: [Date\u0026Time {yyyy-MM-dd HHmm}]\\n\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_GREET \u003d DUKE_LOGO + LINE_SEPARATOR + \"Hello! I\u0027m Duke\\n\" + \"What can I do for you?\\n\" + USER_INSTRUCTIONS + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_BYE \u003d LINE_SEPARATOR + \"Bye. Hope to see you again soon!\\n\" + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_LIST \u003d LINE_SEPARATOR + \"Here are the tasks in your list:\\n\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_CLEAR \u003d LINE_SEPARATOR + \"All tasks cleared!\\n\" + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_DONE \u003d LINE_SEPARATOR + \"Nice! I\u0027ve marked this task as done:\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_DELETE \u003d LINE_SEPARATOR + \"Noted. I\u0027ve removed this task:\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_PRE_TASK \u003d LINE_SEPARATOR + \"Got it. I\u0027ve added this task:\\n\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_POST_TASK_1 \u003d \"Now you have \";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String MSG_POST_TASK_2 \u003d \" tasks in the list.\\n\" + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String ERROR_MSG_IO \u003d LINE_SEPARATOR + \"Input or output failure!\\n\" + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String ERROR_MSG_INDEX \u003d LINE_SEPARATOR + \"OOPS!!! The description of a done/todo/deadline/event cannot be empty.\\n\" + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String ERROR_MSG_DUKE \u003d LINE_SEPARATOR + \"OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\\n\" + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static final String ERROR_MSG_FILE_NOT_EXIST \u003d LINE_SEPARATOR + \"File not found!\\n\" + LINE_SEPARATOR;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare error inputs in an array"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private static String[] errorInputList \u003d {\"blah\"};"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Declare variables"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    private TaskList tasksList;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public Ui(TaskList tasksList) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        this.tasksList \u003d tasksList;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        greetUser();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    //Getter"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints greeting message to user."
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void greetUser() {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(MSG_GREET);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints bye message to user."
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void byeUser() {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(MSG_BYE);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints clear message to user."
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void displayMessageClear() {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(MSG_CLEAR);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints message + list of Tasks to user."
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void displayMessageTasksList() {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d MSG_LIST;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        for (int i \u003d 0; i \u003c tasksList.getListSize(); i++) {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d (i + 1);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d \".\";"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            tempString +\u003d (tasksList.getTask(i) + \"\\n\");"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d (LINE_SEPARATOR + USER_INSTRUCTIONS + LINE_SEPARATOR);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(tempString);"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints done message + Task done to user."
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param currentTaskNum"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void displayMessageDone(int currentTaskNum) {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d MSG_DONE;"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d (tasksList.getTask(currentTaskNum) + \"\\n\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d (LINE_SEPARATOR + USER_INSTRUCTIONS + LINE_SEPARATOR);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(tempString);"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints delete message + Task deleted to user."
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @param currentTaskNum"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void displayMessageDelete(int currentTaskNum) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d MSG_DELETE;"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d (tasksList.getTask(currentTaskNum) + \"\\n\");"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d (LINE_SEPARATOR + USER_INSTRUCTIONS + LINE_SEPARATOR);"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(tempString);"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints success message after adding Task to TaskList"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void displayMessageAddTask() {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String tempString \u003d MSG_PRE_TASK;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d (tasksList.getTask(tasksList.getListSize() -1) + \"\\n\");"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d MSG_POST_TASK_1;"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d tasksList.getListSize();"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        tempString +\u003d (MSG_POST_TASK_2 + USER_INSTRUCTIONS + LINE_SEPARATOR);"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(tempString);"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns String of error message file not found"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return String"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String displayErrorFileNotFound() {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return ERROR_MSG_IO;"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints error message IO"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void displayErrorIo() {"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(ERROR_MSG_FILE_NOT_EXIST);"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Prints error message Duke"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void displayErrorDuke() {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        System.out.print(ERROR_MSG_DUKE);"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * Returns String of user input."
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @return String"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     * @throws DukeException for error inputs"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public String getUserInput() throws DukeException {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        String input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        //Check if input is error"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        for (String s : errorInputList) {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            if (s.equals(input) ) {"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "                throw new DukeException();"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        return input;"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 165
+    }
+  },
+  {
+    "path": "src/test/java/tic2002/task/DeadlineTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class DeadlineTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void constructorTest() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Deadline d1 \u003d new Deadline(\"test\", \"test\");"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"[D][✘] test (by: test)\", d1.toString() );"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"D|0|0|test|test\", d1.printToFile() );"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Deadline d2 \u003d new Deadline(\"test\", LocalDateTime.parse(\"2019-11-19T05:00\"));"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"[D][✘] test (by: 19 November 2019, 5:00 AM)\", d2.toString() );"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"D|0|1|test|2019-11-19 0500\", d2.printToFile() );"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 19
+    }
+  },
+  {
+    "path": "src/test/java/tic2002/task/EventTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class EventTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void constructorTest() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Event e1 \u003d new Event(\"test\", \"test\");"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"[E][✘] test (at: test)\", e1.toString() );"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"E|0|0|test|test\", e1.printToFile() );"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Event e2 \u003d new Event(\"test\", LocalDateTime.parse(\"2019-11-19T05:00\"));"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"[E][✘] test (at: 19 November 2019, 5:00 AM)\", e2.toString() );"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"E|0|1|test|2019-11-19 0500\", e2.printToFile() );"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 19
+    }
+  },
+  {
+    "path": "src/test/java/tic2002/task/TodoTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "package tic2002.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "public class TodoTest {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    public void constructorTest() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        Todo t \u003d new Todo(\"test\");"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"[T][✘] test\", t.toString() );"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "        assertEquals(\"T|0|0|test\", t.printToFile() );"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "TanChiaChun"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "TanChiaChun": 13
+    }
+  }
+]

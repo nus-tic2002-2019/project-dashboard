@@ -1,0 +1,4456 @@
+[
+  {
+    "path": "src/main/java/Deadlines.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.temporal.ChronoUnit;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class Deadlines extends Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    //protected String by;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    protected LocalDate by;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public Deadlines(String description, String by) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        this.by \u003d LocalDate.parse(by);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //return \"[D]\" + super.toString() + \" (by: \" + by.format(DateTimeFormatter.ofPattern(\"MMM dd yyyy\")) + \")\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void print_Task() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\"[D]\" + super.toString() + \"by\" + by.format(DateTimeFormatter.ofPattern(\"MMM dd yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 25
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    static String horizontal_line \u003d (\"____________________________________\\n\");"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            run();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public static void run()  throws  FileNotFoundException {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        Storage pFile \u003d new Storage();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        Ui display \u003d new Ui();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        Parser userInput \u003d new Parser();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        TaskList updateInput \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //Variables Definition"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        ArrayList\u003cTask\u003e myArr_list \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        String filePath \u003d \"/Users/laiping/Documents/Duke/todo_record.txt\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        String tempPath \u003d \"/Users/laiping/Documents/Duke/temp.txt\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int count \u003d 0;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //First Initializing the Page and loading data from txt file"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        display.welcome_note();"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            myArr_list \u003d pFile.load(filePath);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } catch (IOException e) {//| ClassNotFoundException e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        String line;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        line \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        count \u003d myArr_list.size();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        String command \u003d userInput.user_input(line);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        while (command !\u003d \"bye\") {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            switch (command) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                display.print_Arry(myArr_list);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"find\" :"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                display.Print_Find_Result(myArr_list, line.substring(5));"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"edit\" :"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                updateInput.edit_data(myArr_list, line);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    int position \u003d Integer.parseInt(line.substring(5));"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    // (myArr_list.get(position-1)).setDone();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    myArr_list.add(myArr_list.get(position - 1));"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    myArr_list.get(myArr_list.size() - 1).setDone();"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    myArr_list.remove(position - 1);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    try {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                        pFile.Update_Arry_to_List(filePath, tempPath, myArr_list);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                        //Update_New_Data_to_File(FilePath, TempPath, myArr_list);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                        System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    System.out.println(horizontal_line + \"Nice! I\u0027ve marked this task as done: \");"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    //System.out.println(myArr_list.get(position-1));"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    // System.out.println(\u0027[\u0027 + list[position - 1].getStatusIcon() + \"] \" +"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    //        list[position - 1].description + \u0027\\n\u0027 + horizontal_line);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    System.out.println(\u0027[\u0027 + myArr_list.get(myArr_list.size() - 1).getStatusIcon() + \"] \" +"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                            myArr_list.get(myArr_list.size() - 1).description + \u0027\\n\u0027 + horizontal_line);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    System.out.println(\"☹ OOPS!!! The description of a done cannot be empty.\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    updateInput.append_Todo(myArr_list, line, count);"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    display.Print_input(count, myArr_list.get(count));"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    count ++;"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    System.out.println(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            //deadline return book  (by: 2019-12-01)"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    updateInput.append_Deadline(myArr_list, line, count);"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    display.Print_input(count, myArr_list.get(count));"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    count++;"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    System.out.println(\"☹ OOPS!!! The description of a deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            //event project meeting /at Mon 2-4pm"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    updateInput.append_Event(myArr_list, line, count, filePath);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    display.Print_input(count, myArr_list.get(count));"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    count++;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    System.out.println(\"☹ OOPS!!! The description of a event cannot be empty.\");"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                int delete_input \u003d Integer.parseInt(line.substring(7));"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    //myArr_list \u003d delete_item(FilePath, delete_input, myArr_list);"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    myArr_list \u003d updateInput.delete_item(filePath, delete_input, myArr_list);"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    try {"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                        //Update_New_Data_to_File(FilePath, TempPath, myArr_list);"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                        pFile.Update_Arry_to_List(filePath, tempPath, myArr_list);"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                        System.out.println(\"Something went wrong: \" + e.getMessage());"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                System.out.println(horizontal_line + \"\\n☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-( \\n\" + horizontal_line);"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            line \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            command \u003d userInput.user_input(line);"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_line + \"Bye. Hope to see you again soon!\" +\u0027\\n\u0027+ horizontal_line);"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            pFile.Update_Arry_to_List(filePath, tempPath, myArr_list);"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.exit(0);"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 149,
+      "-": 5
+    }
+  },
+  {
+    "path": "src/main/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 3
+    }
+  },
+  {
+    "path": "src/main/java/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    //protected  String by;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    protected LocalDate by;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    //protected LocalDateTime timing;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    protected String timing;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Declare the"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param description store the information of the content of the task"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param by store the timing where the task to be completed"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public Event (String description, String by) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        super(description) ;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //this.by \u003d by;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        this.by \u003d LocalDate.parse(by.substring(0,10));"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        this.timing \u003d by.substring(11);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (at: \" + by + \" \" +  timing + \")\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //return \"[E]\" + super.toString() + \" (by: \" + by.format(DateTimeFormatter.ofPattern(\"MMM dd yyyy\")) + timing + \")\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void print_Task() {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\"[E]\" + super.toString() + \" (at: \" + by + \")\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //System.out.println(\"[E]\" + super.toString() + \" (by: \" + by.format(DateTimeFormatter.ofPattern(\"MMM dd yyyy\")) + timing + \")\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 35
+    }
+  },
+  {
+    "path": "src/main/java/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * To return the type of command from Users for easy reference in main program"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public String user_input(String input) {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        String input_Action \u003d \"\" ;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        if(input.toLowerCase().contains(\"bye\")) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"bye\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"list\")){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"list\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"done\")) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"done\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"todo\")) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"todo\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"deadline\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"event\")) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"event\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"delete\")) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"delete\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"find\")) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"find\" ;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if(input.toLowerCase().contains(\"edit\")) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"edit\" ;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            input_Action \u003d \"unknown\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return input_Action;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 33
+    }
+  },
+  {
+    "path": "src/main/java/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    String FilePath \u003d \"/Users/laiping/Documents/Duke/todo_record.txt\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    String TempPath \u003d  \"/Users/laiping/Documents/Duke/temp.txt\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    String horizontal_line \u003d (\"____________________________________\\n\");"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Load data from the txt file to Array List whenever program launched"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * return Array List to the main program for other functions"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param FilePath a default link to where the txt file is saved"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public ArrayList\u003cTask\u003e load (String FilePath) throws IOException {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        ArrayList\u003cTask\u003e myArr_List \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        File f \u003d new File(FilePath);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        Scanner s \u003d new Scanner(f);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        while (s.hasNextLine()) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            String input \u003d s.nextLine();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            char first_W \u003d input.charAt(1);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            int index_Position \u003d 0;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            switch (first_W) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \u0027T\u0027:"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                myArr_List.add(new Todo(input.substring(7)));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \u0027E\u0027 :"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                index_Position \u003d input.indexOf(\"at\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                myArr_List.add(new Event(input.substring(7, index_Position-2), input.substring(index_Position+4, input.length()-1)));"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            case \u0027D\u0027 :"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                index_Position \u003d input.indexOf(\"by\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                myArr_List.add(new Deadlines (input.substring(7, index_Position-2), (input.substring((index_Position+4),input.length()-1))));"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                continue;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return myArr_List;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Write content in the Array back to txt file whenever the program is closed"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param filePath a default link to where all data is currently saved"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param tempPath a temperory file used to store the new data, this file will then be rename back to FilePath;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param my_Arr_List the list where all Task is stored during the main program run"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void Update_Arry_to_List(String filePath, String tempPath, ArrayList my_Arr_List) throws IOException{"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        File f \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        FileWriter f1 \u003d new FileWriter(filePath, false);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        File tem \u003d new File(tempPath);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        FileWriter temp \u003d new FileWriter(tempPath, false);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        for(int i \u003d 0; i \u003c my_Arr_List.size(); i++) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            temp.write(my_Arr_List.get(i) + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        f1.close();"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        temp.close();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        tem.renameTo(f);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 80
+    }
+  },
+  {
+    "path": "src/main/java/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * To set the Task to completed status upon Users input"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void setDone() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Return the icon based on done status: Done or Not Done"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Return the Task format to String format"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public String toString () {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return \"[\" + this.getStatusIcon() + \"] \" +  this.description ;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void print_Task() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\"[D]\" + super.toString() + \")\");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 38
+    }
+  },
+  {
+    "path": "src/main/java/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.PrintWriter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    String horizontal_line \u003d (\"____________________________________\\n\");"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public ArrayList\u003cTask\u003e list;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void append_new_data (String FilePath, String textToAdd) throws IOException {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        FileWriter ft \u003d new FileWriter(FilePath, true);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        PrintWriter fw \u003d new PrintWriter(ft);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        fw.print(textToAdd);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        fw.close();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    //Remove items from ArrayList (Not updated to txt File)"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public ArrayList\u003cTask\u003e delete_item(String filePath , int del_Index, ArrayList myArr_List) throws FileNotFoundException {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        File f \u003d new File(filePath); // create a File for the given file path"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        Scanner s \u003d new Scanner(f); // create a Scanner using the File as the source"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int count \u003d 0;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        while (s.hasNextLine()) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            if ((count + 1) \u003d\u003d del_Index) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                System.out.println(horizontal_line + \"Noted. I\u0027ve removed this task: \" + \u0027\\n\u0027 + \u0027\\t\u0027 + myArr_List.get(del_Index - 1)"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                        + \"\\nNow you have \" + (myArr_List.size() - 1) + \" tasks in the list.\\n\" + horizontal_line);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                myArr_List.remove(count);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            s.nextLine();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            count++;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return myArr_List;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Add on the Todo Task input by Users into Array List and print out for display"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param count  size of Array passed from main function."
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param line input by users"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void append_Todo(ArrayList\u003cTask\u003e myArr_List, String line, int count) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "       // try {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            myArr_List.add(new Todo(line.substring(5))); //new"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //} catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "         //   System.out.println(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //}"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Add on the Deadlines Task input by Users into Array List and print out for display"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param count  size of Array passed from main function."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param line input by users"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void append_Deadline (ArrayList\u003cTask\u003e myArr_List, String line, int count) {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int position \u003d line.indexOf(\"by\");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        myArr_List.add(new Deadlines(line.substring(9, position - 1), (line.substring((position + 3))))); //new"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Add on the Event Task input by Users into Array List and print out for display"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param count  size of Array passed from main function."
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param line input by users"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void append_Event (ArrayList\u003cTask\u003e myArr_list, String line, int count, String FilePath) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int position_By \u003d line.indexOf(\"at\");"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        // int position_time \u003d line.indexOf(\" \", position_slash);"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        myArr_list.add(new Event(line.substring(6, position_By - 1), line.substring(position_By + 3))); //new"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        // try {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //     append_new_data(FilePath, myArr_list.get(count).toString() + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //     //writeToFile(FilePath, myArr_list.get(count).toString() + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        // } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //     System.out.println(\"Something went wrong: \" + e.getMessage());"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        // }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Edit content of the existing Task in Array List"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Input format : edit 10 \u003e\u003e new content"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param myArr_List  Array of Task passed over from main program"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param line input by users"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void edit_data (ArrayList\u003cTask\u003e myArr_List, String line) {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int position \u003d 0;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int new_Content \u003d line.indexOf(\"\u003e\u003e\");"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int position_By;"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        if(line.charAt(6) !\u003d \u0027 \u0027) {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            position \u003d Integer.parseInt(line.substring(5,7));"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            position \u003d Integer.parseInt(line.substring(5,6));"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        Task contents \u003d null;"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        char taskType \u003d  myArr_List.get(position-1).toString().charAt(1);"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        switch (taskType) {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        case \u0027T\u0027 :"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            contents \u003d new Todo(line.substring(new_Content + 3));"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            break;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        case \u0027E\u0027 :"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            position_By \u003d line.indexOf(\"by\");"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            contents \u003d new Event(line.substring(new_Content+3, position_By- 1), line.substring(position_By +3));"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            break;"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        case \u0027D\u0027 :"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            position_By \u003d line.indexOf(\"by\");"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            int close_bracket \u003d line.indexOf(\u0027)\u0027);"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            contents \u003d new Deadlines(line.substring(new_Content+3, position_By - 1), (line.substring((position_By + 4), close_bracket)));"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            break;"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        default :"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            System.out.println(\"Invalid Task Type\");"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            return;"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\u0027\\n\u0027 + horizontal_line + \"Item before replace: \" + myArr_List.get(position-1));"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        myArr_List.set(position-1, contents);"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\"Item after Replace: \" + myArr_List.get(position-1) + \u0027\\n\u0027 + horizontal_line);"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    private static String set_Task_done(Task myArr_list, int position) throws IOException {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        myArr_list.setDone();"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return (myArr_list.getStatusIcon());"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 147
+    }
+  },
+  {
+    "path": "src/main/java/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public Todo (String description) {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        super(description) ;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        return \"[T]\" + super.toString() ;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        //+ \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 12
+    }
+  },
+  {
+    "path": "src/main/java/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    String horizontal_Line \u003d (\"____________________________________\\n\");"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Display the logo during Startup"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void welcome_note() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_Line);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_Line + \"Hello I\u0027m Duke\\nWhat can I do for you? \\n\" + horizontal_Line);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Print out everything in the Array List, for display."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Used when List is called by Users."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param my_Arr_List list of array passed from the main functions"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void print_Arry (ArrayList\u003cTask\u003e my_Arr_List) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_Line + \u0027\\n\u0027 + \"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        for(int i \u003d 0; i \u003c my_Arr_List.size() ; i++) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            System.out.println( i+1 + \". \" + my_Arr_List.get(i).toString());"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_Line);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Printout whenever new stuff Users had just input. \u003e\u003e"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Just printing for display whenever todo, event, or deadline is called and added"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param input content of user_input"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void Print_input (int count, Task input) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_Line + \"Got it. I\u0027ve added this task: \");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\" \" + input);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\"Now you have \" + (count + 1) + \" tasks in the list.\\n\" + horizontal_Line);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * Print out result which contain similar words based on user input"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param input is the words users want to search for"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     * @param my_Arr_List Array of Task that is pass over from the main program"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void Print_Find_Result (ArrayList\u003cTask\u003e my_Arr_List, String input) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int count \u003d0;"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_Line + \"Here are the matching tasks in your list: \");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        for (int i \u003d 0; i \u003c my_Arr_List.size(); i++) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            String line \u003d my_Arr_List.get(i).toString();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            if(line.contains(input)) {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                count ++;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                System.out.println(count + \". \" + my_Arr_List.get(i));"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        if(count \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            System.out.println(\"No Result Found\");"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(horizontal_Line);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    public void showLoadingError() {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(\"File Not Found\");"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 79
+    }
+  },
+  {
+    "path": "todo_record.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✘] sleep"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[D][✘] submit repor (by:     1 (by: 2019 5pm))))))"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[D][✘] retun boo (by:     2 (by: 2019 4pm))))))"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[E][✘] maths class on  (by:      2019 7-9pm))))))"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[E][✘] team project meeting on  (by:      2019 2-4pm))))))"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[D][✘] team project meeting on  (by:      2019 2-4pm))))))"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[D][✘] ubmit repor (by:     1 (by: 2019 5pm))))))"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✘] watching movie"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✓] gaming"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✓] sleeping "
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✓] thinking"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✘] waiting"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✓] dreaming"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✓] reading "
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✘] doing maths"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "[T][✓] book flight ticket"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 16
+    }
+  }
+]

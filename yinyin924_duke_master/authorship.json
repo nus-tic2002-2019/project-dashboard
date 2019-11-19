@@ -1,0 +1,8256 @@
+[
+  {
+    "path": "data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 0 | hello | "
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "E | 0 | wedding | 3pm"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "D | 0 | project | 5pm"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 0 | byebye | "
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 4
+    }
+  },
+  {
+    "path": "data/tasks.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 0 | hello | "
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "E | 1 | wedding | 2019-10-11 00:15"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 1 | first entry | "
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "E | 0 | meeting | 2019-11-12 09:35"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "D | 0 | assignment | 2019-10-10 10:10"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 1 | more task | "
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 1 | update task | "
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 7
+    }
+  },
+  {
+    "path": "data/tasks_bk.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 0 | hello | "
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "E | 1 | wedding | 3pm"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 0 | first entry | "
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 3
+    }
+  },
+  {
+    "path": "duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "E | 0 | wedding | 3pm"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "D | 0 | proj | today"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "T | 0 | hello | "
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 3
+    }
+  },
+  {
+    "path": "src/main/java/AddCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  AddCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027Add\u0027 action flow to insert tasks."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class AddCommand extends Command {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    protected Task task;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Add Command object with parsed task."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param Parsed task."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public AddCommand(Task task) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.task \u003d task;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and display message"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after successfully inserting task."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //add task into task list"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        tasks.addTask(task);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //display successful message and task count"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tGot it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\t \" + task.toString());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tNow you have \" + tasks.getTaskSize() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns not to exit program."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after add command."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 44
+    }
+  },
+  {
+    "path": "src/main/java/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Command.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the abstract Command class that all commands have the following method."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public abstract class Command {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public abstract void execute(TaskList tasks, UI ui, Storage storage);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns to or not to exit program."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return Command \u0027Duke\u0027 to or not to exit"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public abstract boolean isExit();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 19
+    }
+  },
+  {
+    "path": "src/main/java/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Deadline.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the Deadline task."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    protected String by;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Deadline object"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param by Task\u0027s deadline in datetime."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public Deadline(String description, String by) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(by,formatter);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.by \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Deadline object"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param by Task\u0027s deadline in datetime."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param status Task\u0027s completion status."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public Deadline(String status,String description, String by) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(by,formatter);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.by \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.setStatus(status);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns Deadline task"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return \u0027D\u0027 Deadline task."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public char getTaskType() {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \u0027D\u0027;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns Deadline message"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return details of Deadline task."
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by:\" + by + \")\";"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns Deadline Datetime"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return Datetime in yyyy-MM-dd HH:mm format."
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String getLast(){"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(by,formatter);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.by \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return by;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Set Deadline\u0027s date and Time."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void setLast(String by) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(by,formatter);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.by \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 75
+    }
+  },
+  {
+    "path": "src/main/java/DeleteCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  DeleteCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027Delete\u0027 action flow to delete tasks."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class DeleteCommand extends Command{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Delete Command object with parsed task."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param Parsed task."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public DeleteCommand(int index){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.index \u003d index;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and display message"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after successfully deleting task."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //delete task from task list"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        Task task \u003d tasks.deleteTask(index-1);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //display successful message and task count"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tNoted. I\u0027ve removed this task:\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\t\" + task.toString());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tNow you have \" + tasks.getTaskSize() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns not to exit program."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after delete command."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 44
+    }
+  },
+  {
+    "path": "src/main/java/DoneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  DoneCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027Done\u0027 action flow to mark tasks"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  as completed or done."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class DoneCommand extends Command{"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Done Command object with task index."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param index Parsed task index."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public DoneCommand(int index){"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.index \u003d index;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and display message"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after successfully marking task as completed."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //mark task as completed"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        Task task \u003d tasks.doneTask(index-1);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //display successful message"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tNice! I\u0027ve marked this task as done:\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\t  \" + task.toString());"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns not to exit program."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after done command."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 43
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Duke.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  This is a simple TO-DO program named \u0027Duke\u0027."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Fork source: https://github.com/nus-tic2002-2019/duke"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Runs the \u0027Duke\u0027 program."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private TaskList tasks;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private UI ui;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  Constructs Duke object."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  @param filePath Define file location."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public Duke(String filePath) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        ui \u003d new UI();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        storage \u003d new Storage(filePath);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            tasks \u003d new TaskList(storage.load());"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        } catch (DukeException e) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            ui.showLoadingError();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            tasks \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  This method shows the flow of \u0027Duke\u0027."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void run() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        ui.showWelcome();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        boolean isExit \u003d false;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        while (!isExit) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                String fullCommand \u003d ui.readCommand();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                ui.showLine(); // show the divider line (\"_______\")"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                Command c \u003d Parser.parse(fullCommand);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                c.execute(tasks, ui, storage);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                isExit \u003d c.isExit();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                storage.save(tasks.getTaskList());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            } catch (DukeException e) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                ui.displayError(e.getMessage());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            } finally {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                ui.showLine();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  This is the main method"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  @param args Arguments."
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        new Duke(\"data/tasks.txt\").run();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 53,
+      "-": 2
+    }
+  },
+  {
+    "path": "src/main/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  DukeException.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the Exception of \u0027Duke\u0027."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    //default exception message thrown"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private String message \u003d \"\\t☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\";"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns exception message when description of task is empty."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param message Type of task."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public DukeException(String message) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.message \u003d \"\\t☹ OOPS!!! The description of a \" + message + \" cannot be empty.\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  Constructs Duke object."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  @return default message"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public DukeException() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "      this.message \u003d message;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns exception message."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return message Exception message."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String getMessage(){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "      return message;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 33
+    }
+  },
+  {
+    "path": "src/main/java/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Event.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the Event task."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    protected String at;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Event object"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param at Task\u0027s event date and time."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public Event(String description, String at) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(at,formatter);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.at \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Event object"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param at Task\u0027s event date and time."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param status Task\u0027s completion status."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public Event(String status, String description, String at) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(at,formatter);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.at \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.setStatus(status);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns Event task"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return \u0027E\u0027 Event task."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public char getTaskType() {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \u0027E\u0027;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns Event message"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return details of Event task."
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (at:\" + at + \")\";"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns Event Date and time"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return Datetime in yyyy-MM-dd HH:mm format."
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String getLast(){"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(at,formatter);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.at \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return at;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Set Event\u0027s date and Time."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void setLast(String at) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        LocalDateTime dateTime \u003d LocalDateTime.parse(at,formatter);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.at \u003d dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 76
+    }
+  },
+  {
+    "path": "src/main/java/ExitCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  ExitCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027Exit\u0027 action flow to exit program."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class ExitCommand extends Command{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  Constructs Exit Command object."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public ExitCommand(){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  display \u0027Goodbye\u0027 message."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //save and store all tasks."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        storage.save(tasks.getTaskList());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //display goodbye message"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tBye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns to exit program."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after exit command."
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 38
+    }
+  },
+  {
+    "path": "src/main/java/FindCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  FindCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027Find\u0027 action to search tasks using keywords."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class FindCommand extends Command{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private String keyWord;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  Constructs Find Command object."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public FindCommand(String keyWord){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.keyWord \u003d keyWord;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  display searched tasks in the task list."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tHere are the matching tasks in your list:\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //print all tasks in task list"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        for (int i \u003d 1; i \u003c tasks.getTaskSize() + 1; i++) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            Task task \u003d tasks.getTaskList().get(i - 1);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            String description \u003d task.getDescription();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            if(description.contains(keyWord)){"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                System.out.println(\"\\t\"+String.format(i + \".\" + task, task.getStatusIcon()));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns not to exit program."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after list command."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 43
+    }
+  },
+  {
+    "path": "src/main/java/ListCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  ListCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027List\u0027 action flow to list tasks."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class ListCommand extends Command{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  Constructs List Command object."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public ListCommand(){"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  display all tasks in the task list."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tHere are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //print all tasks in task list"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        for (int i \u003d 1; i \u003c tasks.getTaskSize() + 1; i++) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            Task task \u003d tasks.getTaskList().get(i - 1);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            System.out.println(\"\\t\"+String.format(i + \".\" + task, task.getStatusIcon()));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns not to exit program."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after list command."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 39
+    }
+  },
+  {
+    "path": "src/main/java/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Parser.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the flow of commands parse from user\u0027s input."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param command Command from user\u0027s input."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return Command object."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @throws DukeException Exception handled."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    static Command parse(String command) throws DukeException{"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //task split by the first spacing"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        String[] task \u003d command.split(\" \",2);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //stores task size"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        int taskLen \u003d task.length;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //command defined by user"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        command \u003d task[0];"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        "
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        switch (command){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                return new ListCommand();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"bye\":"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                return new ExitCommand();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                return new DoneCommand(Integer.parseInt(task[1]));"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"update\":"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if(taskLen \u003c 2) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    throw new DukeException(command);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    assert task[1].contains(\"/to\") : \"Missing /to arguments for update\";"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    String[] descrip \u003d task[1].split(\" /to \", 2);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    UpdateCommand upCommand \u003d new UpdateCommand(Integer.parseInt(descrip[0]), descrip[1]);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    return upCommand;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"find\":"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if(taskLen \u003c 2) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    throw new DukeException(command);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    return new FindCommand(task[1]);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"view\":"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if(taskLen \u003c 2) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    throw new DukeException(command);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    return new ViewCommand(task[1]);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if(taskLen \u003c 2) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    throw new DukeException(command);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    return new DeleteCommand(Integer.parseInt(task[1]));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if(taskLen \u003c 2) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    throw new DukeException(command);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    return new AddCommand(new ToDo(task[1]));"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if(taskLen \u003c 2) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    throw new DukeException(command);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    assert task[1].contains(\"/at\") : \"Missing /at arguments for event\";"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    String[] descrip \u003d task[1].split(\" /at \", 2);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    AddCommand addCommand \u003d new AddCommand(new Event(descrip[0], descrip[1]));"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    return addCommand;"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if(taskLen \u003c 2) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    throw new DukeException(command);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    assert task[1].contains(\"/by\") : \"Missing /by arguments for deadline\";"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    String[] descrip \u003d task[1].split(\" /by \", 2);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    AddCommand addCommand \u003d new AddCommand(new Deadline(descrip[0], descrip[1]));"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    return addCommand;"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                throw new DukeException();"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 85
+    }
+  },
+  {
+    "path": "src/main/java/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Storage.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines method to load and save tasks."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.io.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private String filePath;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private BufferedReader reader;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Storage object"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param filePath Define file location."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    Storage(String filePath){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            reader \u003d new BufferedReader(new FileReader(\"data/tasks.txt\"));"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /* This method loads task list with tasks in file."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return tasks Task object."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @throws DukeException Exception handled."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public ArrayList\u003cTask\u003e load() throws DukeException {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //initialize Array list as tasks."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        ArrayList\u003cTask\u003e tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            String line;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            //reads all task written in the file"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            while ((line \u003d reader.readLine()) !\u003d null) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                String[] readData \u003d line.split(\" \\\\| \");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                Task newTask \u003d null;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if (readData[0].equals(\"T\")) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    newTask \u003d new ToDo(readData[1], readData[2]);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else if (readData[0].equals(\"D\")) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    newTask \u003d new Deadline(readData[1], readData[2], readData[3]);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                } else if (readData[0].equals(\"E\")) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    newTask \u003d new Event(readData[1], readData[2], readData[3]);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if (newTask !\u003d null) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    tasks.add(newTask);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            reader.close();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            //prints exception message."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return tasks;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /* This method save task list with tasks in file."
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param task Task stored in array list."
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void save(ArrayList\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            BufferedWriter writer \u003d new BufferedWriter(new FileWriter(\"data/tasks.txt\"));"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            //writes all tasks into file"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            for (Task task : tasks) {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                char type \u003d task.getTaskType();"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                String status \u003d (task.getStatusIcon().equals(\"[\\u2713]\")) ? \"1\" : \"0\";"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                String description \u003d task.getDescription();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                String last \u003d \"\";"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                if (type !\u003d \u0027T\u0027){"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                    last \u003d task.getLast();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                writer.write(type + \" | \" + status + \" | \" + description + \" | \" + last);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                writer.newLine();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            writer.close();"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        } catch (IOException e){"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            //prints exception message."
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 81
+    }
+  },
+  {
+    "path": "src/main/java/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Task.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines task."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private String description;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Task object"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.setDescription(description);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Task object"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param isDone Task\u0027s completion status."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public Task(String description,boolean isDone) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.setDescription(description);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.isDone \u003d isDone;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Return Task\u0027s completion status in tick or cross symbol."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return Task\u0027s completion status in tick or cross symbol."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \"[\" +(isDone ? \"\\u2713\" : \"\\u2718\")+\"]\" ; //return tick or X symbols"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Set Task\u0027s completion status."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void setStatus(String status) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.isDone \u003d (status.equals(\"1\")) ? true : false;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Set Task\u0027s completion status as completed or done."
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String markAsDone() {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return (getStatusIcon()); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns default task"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return \u0027n\u0027 task."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public char getTaskType() {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \u0027n\u0027;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns task details"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return details of task."
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override "
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return getStatusIcon() + \" \" + this.getDescription();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns task description"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return description of task."
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String getDescription() {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return description;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Set Task\u0027s description."
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void setDescription(String description) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns task date and time"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return date and time of task."
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String getLast() {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return getLast();"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 91
+    }
+  },
+  {
+    "path": "src/main/java/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  TaskList.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines task list."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private static ArrayList\u003cTask\u003e taskList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs TaskList object"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    TaskList(){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        taskList\u003dnew ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs TaskList object"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasklist List of task."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    TaskList(ArrayList\u003cTask\u003e taskList){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.taskList\u003dtaskList;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method add task into task list."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param s Object of Task class."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public static void addTask(Task s){"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        taskList.add(s);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method delete task from task list."
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param index Task\u0027s index ."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return task Deleted Task object."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public static Task deleteTask(int index){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        Task task \u003d taskList.get(index);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        taskList.remove(index);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return task;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method mark task as done."
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param index Task\u0027s index ."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return task Task object marked as done."
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public static Task doneTask(int index){"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        Task task \u003d taskList.get(index);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        task.markAsDone();"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return task;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method updates task\u0027s date and time."
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param index Task\u0027s index ."
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param datetime Task\u0027s updated date and time."
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return task Updated Task object."
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public static Task updateTask(int index,String datetime){"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        Task task \u003d taskList.get(index);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        if(task.getTaskType()\u003d\u003d\u0027E\u0027){"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            Event event;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            event \u003d (Event) taskList.get(index);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            event.setLast(datetime);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        if(task.getTaskType()\u003d\u003d\u0027D\u0027){"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            Deadline deadline;"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            deadline \u003d (Deadline) taskList.get(index);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            deadline.setLast(datetime);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return task;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns number of tasks in task list."
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    int getTaskSize(){"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return taskList.size();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method returns all task in task list."
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return task All task object stored in task list."
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public static ArrayList\u003cTask\u003e getTaskList() {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return taskList;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 90
+    }
+  },
+  {
+    "path": "src/main/java/ToDo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  ToDo.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the ToDo task."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class ToDo extends Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    protected String by;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs ToDo object"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public ToDo(String description) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Todo object"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param description Task description."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param status Task\u0027s completion status."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public ToDo(String status, String description){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.setStatus(status);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns ToDo task"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return \u0027T\u0027 ToDo task."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public char getTaskType() {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \u0027T\u0027;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns ToDo message"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return details of ToDo task."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 46
+    }
+  },
+  {
+    "path": "src/main/java/UI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  UI.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the UI - User Interface of \u0027Duke\u0027."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class UI {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    UI() {}"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method shows the Duke\u0027s Welcome message"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    void showWelcome(){"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        showLine();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"What can I do for you?\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        showLine();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method show the divider line."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    void showLine(){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\t_____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns input from user"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return myObj Input from user"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    String readCommand(){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        Scanner myObj \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return myObj.nextLine();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method show error during loading."
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    void showLoadingError() {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"No record loaded into task list.\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method display error message."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param message Error message"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    void displayError(String message){"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(message);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 57
+    }
+  },
+  {
+    "path": "src/main/java/UpdateCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  UpdateCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027update\u0027 action flow to update"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Date and Time of Event or Deadline Object."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class UpdateCommand extends Command{"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private String dateTime;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Constructs Update Command object with task index."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param index Parsed task index."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param datetime Updated data and time"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public UpdateCommand(int index,String dateTime){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.index \u003d index;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.dateTime \u003d dateTime;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and display message"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after successfully updated date and time."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //mark task as completed"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        Task task \u003d tasks.updateTask(index-1,dateTime);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //display successful message"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tNice! I\u0027ve updated this task:\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\t  \" + task.toString());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns not to exit program."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after done command."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 46
+    }
+  },
+  {
+    "path": "src/main/java/ViewCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  ViewCommand.java"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  Defines the \u0027View\u0027 action to view"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " *  schedule for a specific date."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class ViewCommand extends Command{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    private String keyWord;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  Constructs View Command object."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public ViewCommand(String keyWord){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        this.keyWord \u003d keyWord;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * This method \u0027Executes\u0027 the command and"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     *  display searched tasks in the task list."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param tasks Object of Task class."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param ui Object of UI class - User Interface."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @param storage Object of Storage class."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void execute(TaskList tasks, UI ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        System.out.println(\"\\tHere are the matching tasks in your list:\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        //print all tasks in task list"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        for (int i \u003d 1; i \u003c tasks.getTaskSize() + 1; i++) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            Task task \u003d tasks.getTaskList().get(i - 1);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            String dateTime \u003d \"\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            if(task.getTaskType()\u003d\u003d\u0027E\u0027){"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                Event event;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                event \u003d (Event) tasks.getTaskList().get(i - 1);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                dateTime \u003d event.getLast();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            if(task.getTaskType()\u003d\u003d\u0027D\u0027){"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                Deadline deadline;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                deadline \u003d (Deadline) tasks.getTaskList().get(i - 1);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                dateTime \u003d deadline.getLast();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            if(dateTime.contains(keyWord)){"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "                System.out.println(\"\\t\"+String.format(i + \".\" + task, task.getStatusIcon()));"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    /*"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * Returns not to exit program."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * @return false Command \u0027Duke\u0027 not to exit"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     * after list command."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 54
+    }
+  },
+  {
+    "path": "src/test/java/DeadlineTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class DeadlineTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void taskTypeTest(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        assertEquals(\u0027D\u0027,new Deadline(\"Project\",\"2019-10-20 08:40\").getTaskType());"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void eventDateTimeTest(){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        assertEquals(\"2019-10-20 08:40\",new Event(\"Project\",\"2019-10-20 08:40\").getLast());"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 15
+    }
+  },
+  {
+    "path": "src/test/java/DukeTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class DukeTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void dummyTest(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        assertEquals(2,2);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 11
+    }
+  },
+  {
+    "path": "src/test/java/EventTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class EventTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void taskTypeTest(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        assertEquals(\u0027E\u0027,new Event(\"Wedding\",\"2019-10-17 06:30\").getTaskType());"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void eventDateTimeTest(){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        assertEquals(\"2019-10-17 06:30\",new Event(\"Wedding\",\"2019-10-17 06:30\").getLast());"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 15
+    }
+  },
+  {
+    "path": "src/test/java/ExitCommandTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class ExitCommandTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void ExitCommand_Return_ExitIsTrue_ByDefault_Test(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        assertEquals(true,new ExitCommand().isExit());"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 12
+    }
+  },
+  {
+    "path": "src/test/java/ParserTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "public class ParserTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    public void invalidCommand_throwsDukeException_ByDefault_Test(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            Parser.parse(\"hey yoo\");"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            } catch (DukeException e){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "            assertEquals(\"\\t☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\", e.getMessage());"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yinyin924"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yinyin924": 14
+    }
+  }
+]

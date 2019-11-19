@@ -1,0 +1,179 @@
+{
+  "authorDailyContributionsMap": {
+    "Icynopeople": [
+      {
+        "insertions": 26,
+        "deletions": 1,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "a46708edd34066651346015b977bad3ba1c009d4",
+            "messageTitle": "Updated Level1",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 13,
+        "deletions": 2,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "a056241722cfd3ff8c92f8a0c35706f13d6cc0bd",
+            "messageTitle": "Level 2 function without beautify",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 86,
+        "deletions": 7,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "a8dfcc3d2ccefa63c31dfe039df271f7785c783d",
+            "messageTitle": "Level 3",
+            "messageBody": "",
+            "insertions": 86,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 73,
+        "deletions": 5,
+        "date": "2019-10-01",
+        "commitResults": [
+          {
+            "hash": "ae3492b2f1032833d4167a4dbace45852b7d09b3",
+            "messageTitle": "Phase 1 level 4",
+            "messageBody": "",
+            "insertions": 73,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 207,
+        "deletions": 21,
+        "date": "2019-10-26",
+        "commitResults": [
+          {
+            "hash": "dfb82fbb83787f3237f67a6ab40a3505e6e8c70d",
+            "messageTitle": "Update OOP",
+            "messageBody": "",
+            "insertions": 207,
+            "deletions": 21
+          }
+        ]
+      },
+      {
+        "insertions": 482,
+        "deletions": 71,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "b401f4ccd11a54da55cbeb65bc782428c50237f3",
+            "messageTitle": "Update again: added time and date",
+            "messageBody": "",
+            "insertions": 482,
+            "deletions": 71
+          }
+        ]
+      },
+      {
+        "insertions": 97,
+        "deletions": 54,
+        "date": "2019-11-13",
+        "commitResults": [
+          {
+            "hash": "d7982064186ff5df422f319aabe048a014a9d010",
+            "messageTitle": "Updated more",
+            "messageBody": "",
+            "insertions": 97,
+            "deletions": 54
+          }
+        ]
+      },
+      {
+        "insertions": 831,
+        "deletions": 459,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "74de7d387b0350330169279670effc1f84998006",
+            "messageTitle": "Bug fixing",
+            "messageBody": "",
+            "insertions": 250,
+            "deletions": 109
+          },
+          {
+            "hash": "55875d4f5feb73b1845215dd7348bf3121e3461b",
+            "messageTitle": "updated J unit",
+            "messageBody": "",
+            "insertions": 581,
+            "deletions": 350
+          }
+        ]
+      },
+      {
+        "insertions": 1131,
+        "deletions": 259,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "9ff5ab6fde315c6b799bce1f10a40cd4f236132f",
+            "messageTitle": "Update J unit",
+            "messageBody": "",
+            "insertions": 672,
+            "deletions": 36
+          },
+          {
+            "hash": "660eb78f7c7b9447dbe556a0c4d38b76676679e4",
+            "messageTitle": "Added assertion",
+            "messageBody": "",
+            "insertions": 41,
+            "deletions": 5
+          },
+          {
+            "hash": "fa33528b3cc495e3a4858aa7088004604cc7214e",
+            "messageTitle": "Update Java doc",
+            "messageBody": "",
+            "insertions": 204,
+            "deletions": 191
+          },
+          {
+            "hash": "907013cf38192338ea045e042147323f5a9e7d08",
+            "messageTitle": "finally update",
+            "messageBody": "",
+            "insertions": 214,
+            "deletions": 27
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Icynopeople": 1914
+  },
+  "authorFileTypeContributionMap": {
+    "Icynopeople": {
+      "java": 1886,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 28
+    }
+  },
+  "authorContributionVariance": {
+    "Icynopeople": 48780.883
+  },
+  "authorDisplayNameMap": {
+    "Icynopeople": "LEOW.. HUI"
+  }
+}

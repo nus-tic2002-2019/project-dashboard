@@ -1,0 +1,221 @@
+{
+  "authorDailyContributionsMap": {
+    "Elxyng": [
+      {
+        "insertions": 27,
+        "deletions": 0,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "df583f58fd824e17c6101a8f6806fe0e5c191eda",
+            "messageTitle": "LVL 2 done.",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 33,
+        "deletions": 3,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "0a7d4ebf919cd2bed9de11ad8ae8c2216e22202b",
+            "messageTitle": "Level 3",
+            "messageBody": "",
+            "insertions": 33,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 22,
+        "deletions": 5,
+        "date": "2019-09-22",
+        "commitResults": [
+          {
+            "hash": "2e22a1a28388d1528c8296ba4d49847529afe8c1",
+            "messageTitle": "Level 4",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 87,
+        "deletions": 31,
+        "date": "2019-10-18",
+        "commitResults": [
+          {
+            "hash": "2a913bcc07c368cf8e7855df3b2f134bc19e2868",
+            "messageTitle": "Level 4 using Inheritance",
+            "messageBody": "",
+            "insertions": 87,
+            "deletions": 31
+          }
+        ]
+      },
+      {
+        "insertions": 125,
+        "deletions": 50,
+        "date": "2019-11-07",
+        "commitResults": [
+          {
+            "hash": "5ab781a93e40a2a33fd7059289b42ff6d8a2deb8",
+            "messageTitle": "Level 5 Exceptions Handling",
+            "messageBody": "",
+            "insertions": 78,
+            "deletions": 26
+          },
+          {
+            "hash": "815d59ec4fb43257ed14a7ae0c1364f11d410ecd",
+            "messageTitle": "Level 5 Exceptions Handling",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 0
+          },
+          {
+            "hash": "dbc565f9248a3458348a18309208dd31880263c5",
+            "messageTitle": "Level 6 using ArrayList delete",
+            "messageBody": "",
+            "insertions": 39,
+            "deletions": 24
+          }
+        ]
+      },
+      {
+        "insertions": 409,
+        "deletions": 158,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "a1bf829c57164819e1bd98defbc5c1d63ac267e0",
+            "messageTitle": "Level 7",
+            "messageBody": "",
+            "insertions": 409,
+            "deletions": 158
+          }
+        ]
+      },
+      {
+        "insertions": 33,
+        "deletions": 16,
+        "date": "2019-11-11",
+        "commitResults": [
+          {
+            "hash": "4a18d8c2b4c331e49f1264907357dfad5f0f9562",
+            "messageTitle": "Level 8",
+            "messageBody": "",
+            "insertions": 33,
+            "deletions": 16
+          }
+        ]
+      },
+      {
+        "insertions": 787,
+        "deletions": 241,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "1262de02185ded4e1aa605da9df03f7726360da0",
+            "messageTitle": "Level 9 Search Keyword with implementation of B-ViewSchedules and C-MassOps and refine code.",
+            "messageBody": "",
+            "insertions": 511,
+            "deletions": 195
+          },
+          {
+            "hash": "c86b31ab34069be85eaf42b8ee69b6c5c93aad99",
+            "messageTitle": "A-CodingStandard, A-CodeQuality",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 29
+          },
+          {
+            "hash": "3d30b34e94c3243386ebc356c3292311812d5379",
+            "messageTitle": "A-JavaDoc",
+            "messageBody": "",
+            "insertions": 230,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 484,
+        "deletions": 164,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "60fad62114d44d4a89141713a8db639528952de4",
+            "messageTitle": "A-Assertions",
+            "messageBody": "",
+            "insertions": 114,
+            "deletions": 75
+          },
+          {
+            "hash": "f88304029fe3d464cd20908de935854d1ec88606",
+            "messageTitle": "A-JUnit",
+            "messageBody": "",
+            "insertions": 288,
+            "deletions": 0
+          },
+          {
+            "hash": "816b3d6f6c94ec8652030e0dd7955e328a29dd4d",
+            "messageTitle": "Enhance C-MassOps",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 34
+          },
+          {
+            "hash": "857e6c6fda1c8300750ac2794bda5ff4b81c25e5",
+            "messageTitle": "refine code",
+            "messageBody": "",
+            "insertions": 36,
+            "deletions": 55
+          }
+        ]
+      },
+      {
+        "insertions": 162,
+        "deletions": 175,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "13d03eb497981c6fc74dc1cb16c11fa035db1b36",
+            "messageTitle": "refine code",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 31
+          },
+          {
+            "hash": "a0543cac901edb7a3a9e6d4dc9abdf314fee20ca",
+            "messageTitle": "final",
+            "messageBody": "",
+            "insertions": 130,
+            "deletions": 144
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Elxyng": 1333
+  },
+  "authorFileTypeContributionMap": {
+    "Elxyng": {
+      "java": 1323,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 10
+    }
+  },
+  "authorContributionVariance": {
+    "Elxyng": 23655.648
+  },
+  "authorDisplayNameMap": {
+    "Elxyng": "NG X..N YI"
+  }
+}

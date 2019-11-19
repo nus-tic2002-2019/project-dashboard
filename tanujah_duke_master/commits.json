@@ -1,0 +1,88 @@
+{
+  "authorDailyContributionsMap": {
+    "tanujah": [
+      {
+        "insertions": 2,
+        "deletions": 0,
+        "date": "2019-09-16",
+        "commitResults": [
+          {
+            "hash": "e001f0613a179014f5791378b3db9bd280637a5a",
+            "messageTitle": "test for push",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 53,
+        "deletions": 3,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "3588e7e4207e2cbd30bb0784f14832480b16b0d8",
+            "messageTitle": "Level 1 to 3",
+            "messageBody": "",
+            "insertions": 53,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 68,
+        "deletions": 14,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "15509949f046aaa32a8db6ba7eb5303edc3ce2ac",
+            "messageTitle": "level 4",
+            "messageBody": "",
+            "insertions": 68,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 964,
+        "deletions": 248,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "f5841c1986307ce0294195a60c84182bd46b76b8",
+            "messageTitle": "Till Level 6",
+            "messageBody": "",
+            "insertions": 161,
+            "deletions": 54
+          },
+          {
+            "hash": "7fae84aad9ca7731823a9cbd83a1a12a9c16b10f",
+            "messageTitle": "full project till level 8",
+            "messageBody": "",
+            "insertions": 803,
+            "deletions": 194
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "tanujah": 829
+  },
+  "authorFileTypeContributionMap": {
+    "tanujah": {
+      "java": 829,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "tanujah": 18658.63
+  },
+  "authorDisplayNameMap": {
+    "tanujah": "TANU..THAN"
+  }
+}

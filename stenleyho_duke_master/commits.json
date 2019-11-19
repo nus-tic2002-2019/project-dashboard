@@ -1,0 +1,333 @@
+{
+  "authorDailyContributionsMap": {
+    "stenleyho": [
+      {
+        "insertions": 67,
+        "deletions": 24,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "e56130914cb3c5d02d73f3ae650f186d22a34896",
+            "messageTitle": "Level-1",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 0
+          },
+          {
+            "hash": "d50212af196d3adb653fbb8056cd256ddecee3f5",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 13
+          },
+          {
+            "hash": "bc242005fb4dbeb344481d2da96bb21868d66a4e",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 72,
+        "deletions": 12,
+        "date": "2019-09-15",
+        "commitResults": [
+          {
+            "hash": "68ed1aa1d679793a08b0e2264a100d9075f8ebbb",
+            "messageTitle": "level 3",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 377,
+        "deletions": 74,
+        "date": "2019-09-22",
+        "commitResults": [
+          {
+            "hash": "768de131b4ddac7345d6b1f4cc23187ba629a6bf",
+            "messageTitle": "level 4",
+            "messageBody": "",
+            "insertions": 169,
+            "deletions": 74
+          },
+          {
+            "hash": "7d425e72ad44912f1fffe205b83ef216ec260716",
+            "messageTitle": "Add files via upload",
+            "messageBody": "level 4",
+            "insertions": 208,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 232,
+        "deletions": 166,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "7063885a60d66070a34b51264136098100d6a09e",
+            "messageTitle": "level 5",
+            "messageBody": "",
+            "insertions": 51,
+            "deletions": 29
+          },
+          {
+            "hash": "59c2deaf87cdc15ad56aa19c7b07a7643adb9e36",
+            "messageTitle": "Add files via upload",
+            "messageBody": "level 5",
+            "insertions": 51,
+            "deletions": 29
+          },
+          {
+            "hash": "557da66842faef15b135be63d2a12da76f87774f",
+            "messageTitle": "Add files via upload",
+            "messageBody": "level 5",
+            "insertions": 130,
+            "deletions": 108
+          }
+        ]
+      },
+      {
+        "insertions": 99,
+        "deletions": 93,
+        "date": "2019-10-01",
+        "commitResults": [
+          {
+            "hash": "6246897cb583320acacf2c9f922edc756a599020",
+            "messageTitle": "Add files via upload",
+            "messageBody": "level 6",
+            "insertions": 63,
+            "deletions": 60
+          },
+          {
+            "hash": "7fdc1d925ee9e833bcec87747b355210f7d3ec20",
+            "messageTitle": "Add files via upload",
+            "messageBody": "level 6",
+            "insertions": 36,
+            "deletions": 33
+          }
+        ]
+      },
+      {
+        "insertions": 335,
+        "deletions": 142,
+        "date": "2019-10-28",
+        "commitResults": [
+          {
+            "hash": "bc540209b159fa45233fb0ae30ac39274b9b9ba8",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 158,
+            "deletions": 63
+          },
+          {
+            "hash": "9aec22151d86fe92503ded5dec94cba05b2c0e71",
+            "messageTitle": "level 7",
+            "messageBody": "",
+            "insertions": 177,
+            "deletions": 79
+          }
+        ]
+      },
+      {
+        "insertions": 31,
+        "deletions": 1628,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "0566fad445f2e2a3be40a4f0a7d1aec0898cb9f5",
+            "messageTitle": "Delete Deadlines.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 23
+          },
+          {
+            "hash": "17a6a1db0f3c9a7b9f05c3af6643321eaaeb51ea",
+            "messageTitle": "Delete Duke.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 350
+          },
+          {
+            "hash": "629e9167a41873d1e90aaea19e80ac57e13b7cc4",
+            "messageTitle": "Delete DukeException.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 17
+          },
+          {
+            "hash": "f7bc00e7745fd9223f1441b987f167f4736b5a85",
+            "messageTitle": "Delete Events.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 22
+          },
+          {
+            "hash": "ab85e32540ef987c91e4f197d9d66f87f5e8aedd",
+            "messageTitle": "Delete Task.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 66
+          },
+          {
+            "hash": "73ea4b8f5e6640e6f5a4c30468bd01da97982f64",
+            "messageTitle": "Delete Todo.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 21
+          },
+          {
+            "hash": "9bb4ec412731196200a16fd8dc76eeeef63863ee",
+            "messageTitle": "Delete Deadlines.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 23
+          },
+          {
+            "hash": "476f1a88a68eaa3fb5a4f421cd4bf60ee621225a",
+            "messageTitle": "Delete Duke.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 221
+          },
+          {
+            "hash": "58d32667c08452e6aeee79e8998dc9d8eed553f4",
+            "messageTitle": "Delete Events.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 22
+          },
+          {
+            "hash": "5b849bb8c3d27f75a9169826e442b424d5873194",
+            "messageTitle": "Delete DukeException.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 7
+          },
+          {
+            "hash": "f08a9fd5130933539bb13909b3fd321e85462e5b",
+            "messageTitle": "Delete Task.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 34
+          },
+          {
+            "hash": "1677426aa5854871120d22ba37eba6dfe2c544e9",
+            "messageTitle": "Delete Todo.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 21
+          },
+          {
+            "hash": "e6aa2dff34b5dcbf709ab887177bae4aec74e41a",
+            "messageTitle": "delete",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 801
+          }
+        ]
+      },
+      {
+        "insertions": 2028,
+        "deletions": 616,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "12e4f3e82f8fb3e0142c58ed8c686294c95fb17c",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 75,
+            "deletions": 31
+          },
+          {
+            "hash": "6367613b43ba9ae6e97fd8bd6fd6504e0ad2bf16",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 58,
+            "deletions": 51
+          },
+          {
+            "hash": "96fad8058f07bcf836c8516b6aa0e15ae830f205",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 227,
+            "deletions": 0
+          },
+          {
+            "hash": "2d51fc16bf06b553d274a0d1569f2a7e5ab0a16b",
+            "messageTitle": "final",
+            "messageBody": "",
+            "insertions": 997,
+            "deletions": 3
+          },
+          {
+            "hash": "236e7263f215ed7e05366528e6559ebe1906f73f",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 226,
+            "deletions": 148
+          },
+          {
+            "hash": "009498c4e9fadc2cdfd58473a793cbb462f1963f",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 8
+          },
+          {
+            "hash": "444622b9fa1d1000cbd47a97e5cd71f100a8b7e8",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 135,
+            "deletions": 72
+          },
+          {
+            "hash": "e6e8307c255b171446e879e1b2a9e1bed89d79fa",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 41,
+            "deletions": 39
+          },
+          {
+            "hash": "6d3ae68e67821b74439365977a982da6cc66fb4b",
+            "messageTitle": "final",
+            "messageBody": "",
+            "insertions": 260,
+            "deletions": 37
+          },
+          {
+            "hash": "052b4d35a43d775d5c0194545db262f21223b209",
+            "messageTitle": "Delete Parser.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 227
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "stenleyho": 2561
+  },
+  "authorFileTypeContributionMap": {
+    "stenleyho": {
+      "java": 2556,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 5
+    }
+  },
+  "authorContributionVariance": {
+    "stenleyho": 127226.0
+  },
+  "authorDisplayNameMap": {
+    "stenleyho": "HO C.. FAN"
+  }
+}

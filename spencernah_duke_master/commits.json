@@ -1,0 +1,249 @@
+{
+  "authorDailyContributionsMap": {
+    "spencernah": [
+      {
+        "insertions": 55,
+        "deletions": 4,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "27d22781a2a49aa61ff68ce734fd159c8c8dd027",
+            "messageTitle": "Level-1",
+            "messageBody": "",
+            "insertions": 35,
+            "deletions": 1
+          },
+          {
+            "hash": "8bb8e76a9181e5db9abf50534471dbdd21224a6c",
+            "messageTitle": "Level-2",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 3
+          },
+          {
+            "hash": "38ecc9469f29146e1575a015dc96b978491f31ed",
+            "messageTitle": "Level-3: Mark As Done",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 10,
+        "deletions": 0,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "96ae95fa3a15fbc601d864f332922093c208373f",
+            "messageTitle": "Level-4: ToDos,Events,Deadlines",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 235,
+        "deletions": 35,
+        "date": "2019-11-11",
+        "commitResults": [
+          {
+            "hash": "313191e00c175fbd3c9b3fa6b053563471eeb060",
+            "messageTitle": "Level-5: Handle Errors",
+            "messageBody": "",
+            "insertions": 20,
+            "deletions": 3
+          },
+          {
+            "hash": "674750538984bfce44c2aeb28c0e56c552b7d2d3",
+            "messageTitle": "Level-6: Delete",
+            "messageBody": "",
+            "insertions": 215,
+            "deletions": 32
+          }
+        ]
+      },
+      {
+        "insertions": 179,
+        "deletions": 41,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "c80c7ee024e028130d28b6b2915089529330918c",
+            "messageTitle": "Level-7: Save",
+            "messageBody": "",
+            "insertions": 179,
+            "deletions": 41
+          }
+        ]
+      },
+      {
+        "insertions": 1105,
+        "deletions": 535,
+        "date": "2019-11-14",
+        "commitResults": [
+          {
+            "hash": "ba5ab77cbb673e7ef4964e7f4789c41132137b27",
+            "messageTitle": "A-MoreOOP",
+            "messageBody": "",
+            "insertions": 825,
+            "deletions": 297
+          },
+          {
+            "hash": "a8d4b173ad4bc252bac11512826915de449bdf16",
+            "messageTitle": "A-Packages",
+            "messageBody": "",
+            "insertions": 159,
+            "deletions": 95
+          },
+          {
+            "hash": "38b245adb163f4bd2074df7a790864cb404b25ae",
+            "messageTitle": "A-Packages",
+            "messageBody": "",
+            "insertions": 91,
+            "deletions": 89
+          },
+          {
+            "hash": "378da9a7853a66a29c37ca1ef00a2f1bd5798a61",
+            "messageTitle": "A-Packages",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 19
+          },
+          {
+            "hash": "d4c29f8177ba6c3fd9c227b7cdd96808da01ae19",
+            "messageTitle": "A-CodingStandard",
+            "messageBody": "",
+            "insertions": 20,
+            "deletions": 35
+          }
+        ]
+      },
+      {
+        "insertions": 922,
+        "deletions": 473,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "7fb3c14f4adfff7847162db352a50206e862ba35",
+            "messageTitle": "Level-8: Dates and Times",
+            "messageBody": "",
+            "insertions": 166,
+            "deletions": 360
+          },
+          {
+            "hash": "46600d02ffefa344923eeb2d3abbd1d017dde3eb",
+            "messageTitle": "A-JavaDoc",
+            "messageBody": "",
+            "insertions": 439,
+            "deletions": 77
+          },
+          {
+            "hash": "35b9b30c80b3f26ac82a0e2977e8eb189fc094bd",
+            "messageTitle": "A-JUnit",
+            "messageBody": "",
+            "insertions": 152,
+            "deletions": 17
+          },
+          {
+            "hash": "dab852af0a24db80c15cb6dc3e7583b56cb5b26b",
+            "messageTitle": "Level-9: Find",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 15
+          },
+          {
+            "hash": "6ffd7326061900e5ab1b672d8fa9b219c00e4a94",
+            "messageTitle": "B-Reminders",
+            "messageBody": "",
+            "insertions": 93,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 374,
+        "deletions": 84,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "646ce021d2524be2e0f43d35f3219f355e51e185",
+            "messageTitle": "B-DoAfterTasks",
+            "messageBody": "",
+            "insertions": 200,
+            "deletions": 33
+          },
+          {
+            "hash": "276bd08da7f23f33ed220bbbd6d2bfc26f64ccb1",
+            "messageTitle": "A-CodingStandard \u0026 A-JUnit",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 0
+          },
+          {
+            "hash": "821bae7eead56e43ed1e497c176747e9b5f7f00c",
+            "messageTitle": "A-CodingStandard \u0026 A-JUnit",
+            "messageBody": "",
+            "insertions": 119,
+            "deletions": 18
+          },
+          {
+            "hash": "d8a31b82724e56e457d108dff11f5f642ee84975",
+            "messageTitle": "A-JUnit: Cleaning up directories",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 31
+          },
+          {
+            "hash": "7444df2bc1609fec50eb80e871288a1e137ff36e",
+            "messageTitle": "Minor code changes",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 0
+          },
+          {
+            "hash": "3cdbdf090a3a6c54d915f32efe1448dc0fcdd35f",
+            "messageTitle": "Minor refractor",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 2,
+        "date": "2019-11-19",
+        "commitResults": [
+          {
+            "hash": "a24a7e627f7c5be3f12c71a536fc51be87255d8a",
+            "messageTitle": "Minor changes",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 2
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "spencernah": 1725
+  },
+  "authorFileTypeContributionMap": {
+    "spencernah": {
+      "java": 1691,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 4,
+      "gradle": 22,
+      "txt": 8
+    }
+  },
+  "authorContributionVariance": {
+    "spencernah": 59553.613
+  },
+  "authorDisplayNameMap": {
+    "spencernah": "SPEN.. HAO"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "authorDailyContributionsMap": {
+    "e0373895": [
+      {
+        "insertions": 97,
+        "deletions": 11,
+        "date": "2019-09-08",
+        "commitResults": [
+          {
+            "hash": "7b630b60611c8a88e47e6ee955af73e7888ee77e",
+            "messageTitle": "Level 1. Greet, Echo, Exit.",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 0
+          },
+          {
+            "hash": "423083ea8c35ca3607b6bca42fe319b10cf3fb57",
+            "messageTitle": "Level 2. Add, List.",
+            "messageBody": "",
+            "insertions": 74,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 52,
+        "deletions": 46,
+        "date": "2019-09-16",
+        "commitResults": [
+          {
+            "hash": "9e58650dddd24fbf9cf027cb0f58446e50b95176",
+            "messageTitle": "Level 3. Mark as Done.",
+            "messageBody": "",
+            "insertions": 52,
+            "deletions": 46
+          }
+        ]
+      },
+      {
+        "insertions": 92,
+        "deletions": 51,
+        "date": "2019-10-20",
+        "commitResults": [
+          {
+            "hash": "6ee9d1b6fc250020bfe830a30823ba89df974f68",
+            "messageTitle": "Level 4. ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 92,
+            "deletions": 51
+          }
+        ]
+      },
+      {
+        "insertions": 25,
+        "deletions": 14,
+        "date": "2019-10-23",
+        "commitResults": [
+          {
+            "hash": "0c643c4c747ecb8f540c4100f9a03d16f7b1b088",
+            "messageTitle": "Level 5. Handle ErrorsLevel 5. Handle Errors",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 45,
+        "deletions": 41,
+        "date": "2019-10-24",
+        "commitResults": [
+          {
+            "hash": "bee928750f7ec0929309ad53d89a6b8d757120e7",
+            "messageTitle": "Level 6. Delete",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 41
+          }
+        ]
+      },
+      {
+        "insertions": 326,
+        "deletions": 129,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "5556f9216508dac4efa567ddfc47658d2e5fbcfd",
+            "messageTitle": "Level 7. Save, A-MoreOOP, A-Packages",
+            "messageBody": "",
+            "insertions": 178,
+            "deletions": 97
+          },
+          {
+            "hash": "ffa4c859d0baa0e7100ad138bcdfacc34220df68",
+            "messageTitle": "Level 8.Dates and Times, A-JavaDoc, A-Gradle optional, A-JUnit",
+            "messageBody": "",
+            "insertions": 124,
+            "deletions": 29
+          },
+          {
+            "hash": "192b8032edb1cfe87289e519578caba61ca4ff7f",
+            "messageTitle": "Level 9. Find, A-CodingStandard, A-CodeQuality, A-Libraries",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 3
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "e0373895": 346
+  },
+  "authorFileTypeContributionMap": {
+    "e0373895": {
+      "java": 346,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "e0373895": 3161.4666
+  },
+  "authorDisplayNameMap": {
+    "e0373895": "RABA..RROT"
+  }
+}

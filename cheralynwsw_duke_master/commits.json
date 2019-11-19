@@ -1,0 +1,165 @@
+{
+  "authorDailyContributionsMap": {
+    "cheralynwsw": [
+      {
+        "insertions": 628,
+        "deletions": 119,
+        "date": "2019-11-08",
+        "commitResults": [
+          {
+            "hash": "a07ef43d70211cd541891da54fc426547cd875c8",
+            "messageTitle": "hello",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 0
+          },
+          {
+            "hash": "7a7ba78dfab84163cdc5de95bd08ce6607b6c51f",
+            "messageTitle": "Level 1 Complete",
+            "messageBody": "",
+            "insertions": 42,
+            "deletions": 2
+          },
+          {
+            "hash": "134b63d4073b3e1797550e9af0d014caf425d7dc",
+            "messageTitle": "Level 1 Updated",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 18
+          },
+          {
+            "hash": "b28af8efd120477a3e499753f5739934ae00523a",
+            "messageTitle": "Level 2 - Complete",
+            "messageBody": "",
+            "insertions": 30,
+            "deletions": 13
+          },
+          {
+            "hash": "50e03b94e3fd96198ecfe9efcef76f1a90d40689",
+            "messageTitle": "Level 2 - Modify \u0026 Fixed bugs",
+            "messageBody": "",
+            "insertions": 58,
+            "deletions": 8
+          },
+          {
+            "hash": "1b0694e07f13433f845040443244e44309c1c894",
+            "messageTitle": "Level 3 - Completed",
+            "messageBody": "",
+            "insertions": 29,
+            "deletions": 13
+          },
+          {
+            "hash": "48929ff61aa48704911180fb8fbdf7e31f8bbc01",
+            "messageTitle": "Level 4 - Completed",
+            "messageBody": "",
+            "insertions": 91,
+            "deletions": 62
+          },
+          {
+            "hash": "bbd98eb991a5436f17beb899152738a86cbc9da7",
+            "messageTitle": "Level 5 - Completed",
+            "messageBody": "",
+            "insertions": 220,
+            "deletions": 0
+          },
+          {
+            "hash": "546fc3d54c186bb02df2fc7304d8e8a7abc2733b",
+            "messageTitle": "Level 6 (Delete) - Completed",
+            "messageBody": "",
+            "insertions": 28,
+            "deletions": 0
+          },
+          {
+            "hash": "173752b43af418da8fdd6a56eb6abed14627c638",
+            "messageTitle": "Level 7 - Completed",
+            "messageBody": "",
+            "insertions": 117,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 1013,
+        "deletions": 519,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "6ec665883450efc9656472ba944bffd855db75b8",
+            "messageTitle": "Level 7 - Update",
+            "messageBody": "",
+            "insertions": 1013,
+            "deletions": 519
+          }
+        ]
+      },
+      {
+        "insertions": 76,
+        "deletions": 20,
+        "date": "2019-11-13",
+        "commitResults": [
+          {
+            "hash": "962e73a8af7fc86a268ac402c84372d8f98d3a60",
+            "messageTitle": "Level 8 - Completed",
+            "messageBody": "",
+            "insertions": 76,
+            "deletions": 20
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 0,
+        "date": "2019-11-14",
+        "commitResults": [
+          {
+            "hash": "415d8c45a96e8c3504017ce8b433bd650aab1188",
+            "messageTitle": "Level 9 - Added Find Function",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 161,
+        "deletions": 0,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "6f3c515b93659531f6d8853391ed77ca627bda74",
+            "messageTitle": "Added Better Search Function",
+            "messageBody": "",
+            "insertions": 91,
+            "deletions": 0
+          },
+          {
+            "hash": "e8dc73f6f421df0ebeff2b50e079d8c4394e173c",
+            "messageTitle": "JUnit Testing",
+            "messageBody": "",
+            "insertions": 70,
+            "deletions": 0
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "cheralynwsw": 1231
+  },
+  "authorFileTypeContributionMap": {
+    "cheralynwsw": {
+      "java": 1103,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 100,
+      "gradle": 28,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "cheralynwsw": 37098.465
+  },
+  "authorDisplayNameMap": {
+    "cheralynwsw": "CHER.. WEN"
+  }
+}

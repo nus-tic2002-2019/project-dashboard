@@ -1,0 +1,130 @@
+{
+  "authorDailyContributionsMap": {
+    "chengxiangpng": [
+      {
+        "insertions": 88,
+        "deletions": 15,
+        "date": "2019-09-08",
+        "commitResults": [
+          {
+            "hash": "b361a6da84e6dc6b58d6143b4e7c1056d821c610",
+            "messageTitle": "Level 1 -- Greet, Echo, Exit.",
+            "messageBody": "",
+            "insertions": 40,
+            "deletions": 1
+          },
+          {
+            "hash": "4220c48f19500f21348826f9f45f62f5ec38d793",
+            "messageTitle": "Level 2. Add, List",
+            "messageBody": "",
+            "insertions": 48,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 83,
+        "deletions": 29,
+        "date": "2019-10-06",
+        "commitResults": [
+          {
+            "hash": "d14dcad920e07ebc843a0cad163ea799dd2aa20f",
+            "messageTitle": "[+] Refined Code [+] Added Task Class [+] Added \"Level 3. Mark as Done\"",
+            "messageBody": "",
+            "insertions": 83,
+            "deletions": 29
+          }
+        ]
+      },
+      {
+        "insertions": 157,
+        "deletions": 25,
+        "date": "2019-10-13",
+        "commitResults": [
+          {
+            "hash": "be1435d04602780ef134f5a4987ba8e240d71e32",
+            "messageTitle": "[+] Level 4. ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 157,
+            "deletions": 25
+          }
+        ]
+      },
+      {
+        "insertions": 314,
+        "deletions": 108,
+        "date": "2019-10-20",
+        "commitResults": [
+          {
+            "hash": "48f3ebaab28aae56d4a86d8fbaeed847a9a71fe3",
+            "messageTitle": "Level 5 + Level 6",
+            "messageBody": "",
+            "insertions": 314,
+            "deletions": 108
+          }
+        ]
+      },
+      {
+        "insertions": 244,
+        "deletions": 63,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "7bf3db979f5ba1052f4b50f386fd72174db7d20e",
+            "messageTitle": "Level 7 -- Save",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 0
+          },
+          {
+            "hash": "6055b8d305be387985121f64ab5ded90ca748ee8",
+            "messageTitle": "[+] Individual Feature (C-Detect Duplicates)",
+            "messageBody": "",
+            "insertions": 227,
+            "deletions": 57
+          },
+          {
+            "hash": "e58f5c968d975b7a9126a539ebfbcd32bd54e008",
+            "messageTitle": "Level-9",
+            "messageBody": "",
+            "insertions": 17,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 32,
+        "deletions": 23,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "2f7bb54ebbbc62db12443599598091f2e462e9ac",
+            "messageTitle": "Refine Code",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 23
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "chengxiangpng": 657
+  },
+  "authorFileTypeContributionMap": {
+    "chengxiangpng": {
+      "java": 657,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "chengxiangpng": 4394.234
+  },
+  "authorDisplayNameMap": {
+    "chengxiangpng": "PNG ..IANG"
+  }
+}

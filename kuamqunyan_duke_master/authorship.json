@@ -1,0 +1,7856 @@
+[
+  {
+    "path": "src/main/java/duke/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "/***"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " * class created to store deadline tasks"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class Deadline extends Task{"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    protected LocalDateTime by;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * constructor with by string"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskName name of the task"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskDone whether the task is done"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param by date and time of deadline task"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Deadline (String taskName, boolean taskDone, String by) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super(taskName, taskDone); // calls the parent constructor"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d hh:mma\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        this.by \u003d LocalDateTime.parse(by, formatter);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        //to ensure that the event date is in the future"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assert this.by.compareTo(LocalDateTime.now()) \u003e 0 : \"Cannot put deadline in the past\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * constructor using LocalDateTime to parse in date"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskName name of the task"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskDone whether the task is done"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param date date and time of deadline task in LocalDateTime format"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Deadline (String taskName, boolean taskDone, LocalDateTime date) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super(taskName, taskDone); // calls the parent constructor"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        by \u003d date;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * default constructor"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Deadline() {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to return input as a converted string output"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"MMM d yyyy hh:mm a\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \"+ by.format(formatter) + \")\";"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * write deadline task into storage"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void write(FileWriter storage) throws IOException {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        storage.write(\"D\\n\"); //to represent as todo"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super.write(storage);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d HH:mma\");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        storage.write(by.format(formatter) + \"\\n\");"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to read deadline task from storage file"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param fileRead"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void read(BufferedReader fileRead) throws IOException {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "          super.read(fileRead);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String date \u003d fileRead.readLine();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d HH:mma\");"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        this.by \u003d LocalDateTime.parse(date, formatter);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 82
+    }
+  },
+  {
+    "path": "src/main/java/duke/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * Duke application allows users to create a task list and add tasks based on 3 categories:"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * todo, deadline and event"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * Users are also able make their event and deadline tasks recurring by adding more inputs to the back of the task input"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param args"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DukeApp application \u003d new DukeApp();"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        application.run();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 11,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/duke/DukeApp.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class DukeApp {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    UI ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    Storage storage \u003d new Storage();"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public DukeApp() {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        ui \u003d new UI();"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to run the application by calling the parser, UI and storage classes"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void run() {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        ui.printWelcomeMessage();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String input \u003d \"\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        TaskList line \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        storage.load(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        //if string doesn\u0027t equal to bye"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        while (!input.equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            input \u003d ui.getUserInput();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            parser.parseCommand(input, ui, line, storage);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        ui.printBye();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 29
+    }
+  },
+  {
+    "path": "src/main/java/duke/EmptyDescriptionException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class EmptyDescriptionException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method for emptydescriptionexception to be called"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * this exception is used when descriptions of tasks are empty"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param message"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public EmptyDescriptionException(String message) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super(message);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 12
+    }
+  },
+  {
+    "path": "src/main/java/duke/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "/***"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " * class created to store event tasks"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class Event extends Task{"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        protected LocalDateTime at;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * constructor to create event task"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskName name of the task"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskDone whether the task is done"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param at date and time of event"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        public Event (String taskName, boolean taskDone, String at) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            super(taskName, taskDone); // calls the parent constructor"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d hh:mma\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            this.at \u003d LocalDateTime.parse(at, formatter);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            //to ensure that the event date is in the future"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            assert this.at.compareTo(LocalDateTime.now()) \u003e 0 : \"Cannot put event in the past\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * constructor to create event task with date in LocalDateTime format being parsed in"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskName name of the task"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskDone whether the task is done"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param date date and time of event task in LocalDateTime format"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Event (String taskName, boolean taskDone, LocalDateTime date) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super(taskName, taskDone); // calls the parent constructor"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d hh:mma\");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        at \u003d date;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * default constructor"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Event() {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to return input as a converted string output"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"MMM d yyyy hh:mm a\"); //changing to format"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            return \"[E]\" + super.toString() + \" (at: \"+ at.format(formatter) + \")\";"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * write event task into storage"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void write(FileWriter storage) throws IOException {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        storage.write(\"E\\n\"); //to represent as todo"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super.write(storage);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d hh:mma\"); //to format date to save file"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        storage.write(at.format(formatter) + \"\\n\");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to read event task from storage file"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param fileRead"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void read(BufferedReader fileRead) throws IOException {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super.read(fileRead);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String date \u003d fileRead.readLine();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d hh:mma\");"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        this.at \u003d LocalDateTime.parse(date, formatter);"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 83
+    }
+  },
+  {
+    "path": "src/main/java/duke/InvalidCommandException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "/***"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " * method for invalidcommandexception to be called"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class InvalidCommandException extends Exception {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 7
+    }
+  },
+  {
+    "path": "src/main/java/duke/MockStorage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "/***"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " * class created as a mock storage for testing"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class MockStorage extends Storage {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * mock storage to save duke test tasks into mock task list"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param filename"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param serializable"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void save(String filename, Serializable serializable) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * mock load method for duke test tasks to be loaded from mock tasklist"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param filename"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param serializable"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void load(String filename, Serializable serializable) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 24
+    }
+  },
+  {
+    "path": "src/main/java/duke/MockUI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "/***"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " * mock UI class created to override main UI methods during testing"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class MockUI extends UI {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * mock printDone method to ove ride main printDone method during testing"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param index"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printDone(TaskList line, int index) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * mock printTodo method to over ride main printTodo method during testing"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printTodo(TaskList line, int count) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * mock print Deadline method to over ride main printDeadline method during testing"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printDeadline(TaskList line, int count) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * mock printEvent method to over ride main printEvent method during testing"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printEvent(TaskList line, int count) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * mock printDelete method to over ride main print Delete method during testing"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param t"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param index"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printDelete(Task t, int count, int index) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 52
+    }
+  },
+  {
+    "path": "src/main/java/duke/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.DateTimeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to parse commands into dukeapp"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param input"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param ui"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void parseCommand(String input, UI ui, TaskList line, Storage storage) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                String[] arrOfString \u003d input.split(\" \");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                if (input.equals(\"list\")) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    ui.printTaskList(line.getCount(), line);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                } else if (arrOfString[0].equals(\"done\")) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if(arrOfString.length \u003c 2) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        throw new EmptyDescriptionException(\"Oops. The description of a done cannot be empty\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    int index \u003d Integer.parseInt(arrOfString[1]);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    line.get(index-1).markAsDone();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    ui.printDone(line, index);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    storage.save(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                else if (arrOfString[0].equals(\"todo\")) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if(arrOfString.length \u003c 2) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        throw new EmptyDescriptionException(\"Oops. The description of a todo cannot be empty\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    String replaceString \u003d input.replace(\"todo \", \"\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    line.newTodoTask(replaceString, false);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    ui.printTodo(line, line.getCount()-1);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    storage.save(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                else if (arrOfString[0].equals(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if (arrOfString.length \u003c 2) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        throw new EmptyDescriptionException(\"Oops. The description of a deadline cannot be empty\");"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    String replaceString \u003d input.replace(\"deadline \", \"\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    String[] splitBy \u003d replaceString.split(\" /by \");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if (splitBy.length \u003c 2) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        throw new EmptyDescriptionException(\"Oops. The date of a deadline cannot be empty\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    String[] repeatChunk \u003d splitBy[1].split(\"/repeat\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if (repeatChunk.length \u003d\u003d 1) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        if (replaceString.contains(\"/repeat\")) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            throw new EmptyDescriptionException(\"Oops. Please place the amount of days between each repeated event. e.g. /repeat 7\");"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        line.newDeadlineTask(splitBy[0], false, splitBy[1]);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        ui.printDeadline(line, line.getCount() - 1);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        storage.save(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    } else {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        String[] timesChunk \u003d repeatChunk[1].split(\"/times\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        if (timesChunk.length \u003d\u003d 1) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            throw new EmptyDescriptionException(\"Oops. Please place number of times event is to be repeated. e.g. /times 7\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        String daysString \u003d timesChunk[0].trim();"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        int days \u003d Integer.parseInt(daysString); // get number of days"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        String timesString \u003d timesChunk[1].trim();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        int times \u003d Integer.parseInt(timesString);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d HH:mma\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        LocalDateTime date \u003d LocalDateTime.parse(repeatChunk[0].trim(), formatter);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        for (int i \u003d 0; i \u003c times; i++) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            line.newDeadlineTask(splitBy[0], false, date);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            date \u003d date.plusDays(days);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            ui.printDeadline(line, line.getCount() - 1);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        storage.save(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                else if (arrOfString[0].equals(\"event\")) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if(arrOfString.length \u003c 2) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        throw new EmptyDescriptionException(\"Oops. The description of a event cannot be empty\");"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    String replaceString \u003d input.replace(\"event \", \"\");"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    String [] splitAt \u003d replaceString.split(\" /at \");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if(splitAt.length \u003c 2) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        throw new EmptyDescriptionException(\"Oops. The date of a event cannot be empty\");"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    String[] repeatChunk \u003d splitAt[1].split(\"/repeat\");"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if (repeatChunk.length \u003d\u003d 1) {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        if (replaceString.contains(\"/repeat\")) {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            throw new EmptyDescriptionException(\"Oops. Please place the amount of days between each repeated event. e.g. /repeat 7\");"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        line.newEventTask(splitAt[0], false, splitAt[1]);"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        ui.printEvent(line, line.getCount() - 1);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        storage.save(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    } else {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        String[] timesChunk \u003d repeatChunk[1].split(\"/times\");"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        if (timesChunk.length \u003d\u003d 1) {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            throw new EmptyDescriptionException(\"Oops. Please place number of times event is to be repeated. e.g. /times 7\");"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        String daysString \u003d timesChunk[0].trim();"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        int days \u003d Integer.parseInt(daysString); // get number of days"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        String timesString \u003d timesChunk[1].trim();"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        int times \u003d Integer.parseInt(timesString);"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-d hh:mma\");"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        LocalDateTime date \u003d LocalDateTime.parse(repeatChunk[0].trim(), formatter);"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        for(int i \u003d0; i\u003ctimes; i++) {"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            line.newEventTask(splitAt[0], false, date);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                             date\u003d date.plusDays(days);"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                            ui.printEvent(line, line.getCount() - 1);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        storage.save(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                else if (arrOfString[0].equals(\"delete\")) {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    if(arrOfString.length \u003c 2) {"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                        throw new EmptyDescriptionException(\"Oops. The description of a delete cannot be empty\");"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    int index \u003d Integer.parseInt(arrOfString[1]);"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    Task t \u003d line.removeTask(index);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    ui.printDelete(t, line.getCount()+1, index);"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    storage.save(\"listData.txt\", line);"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                else if (arrOfString[0].equals(\"find\")) {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    TaskList results \u003d line.find(input.replace(\"find\", \"\").trim());"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    ui.printTaskList(results.getCount(), results);"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                else if(!arrOfString[0].equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    throw new InvalidCommandException();"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            catch (InvalidCommandException e) {"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                ui.printInvalidCommandMessage();"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            catch (EmptyDescriptionException e) {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            catch(DateTimeParseException e) {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                ui.printDateTimeExceptionMessage();"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 151
+    }
+  },
+  {
+    "path": "src/main/java/duke/Serializable.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.FileReader;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public interface Serializable {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * create write function so that task list is able to be saved into storage"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    void write(FileWriter storage) throws IOException;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * create read function so that task list is able to be read from storage"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param fileRead"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    void read(BufferedReader fileRead) throws IOException;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 23
+    }
+  },
+  {
+    "path": "src/main/java/duke/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to initalize storage saving"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param filename"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param serializable"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        public void save(String filename, Serializable serializable)"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            FileWriter storage \u003d null;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            try"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                storage \u003d new FileWriter(filename);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                serializable.write(storage);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            catch (IOException e)"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                e.printStackTrace();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            finally"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    storage.close(); //close filewriter"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                    e.printStackTrace();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to initialize loading the file in storage"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param filename"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param serializable"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void load(String filename, Serializable serializable) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        BufferedReader r \u003d null;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        File file \u003d new File(filename);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        if(!file.exists()) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            return;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            r \u003d new BufferedReader(new FileReader(file));"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            serializable.read(r);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "          e.printStackTrace();"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        catch (IOException e) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        } finally {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                r.close();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                e.printStackTrace();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 65
+    }
+  },
+  {
+    "path": "src/main/java/duke/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class Task implements Serializable {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    protected String taskName;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    protected boolean taskDone;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * constructor of Task class"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskName"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskDone"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Task (String taskName, boolean taskDone)"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        this.taskName \u003d taskName;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        this.taskDone \u003d taskDone;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * deaful constructor"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Task() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to get taskname variable"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public String getTaskName() {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return taskName;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to set task name"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskName"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void setTaskName(String taskName) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        this.taskName \u003d taskName;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to get taskdone variable"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public boolean getTaskDone() {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return taskDone;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to set task done variable"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskDone"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void setTaskDone(boolean taskDone) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        this.taskDone \u003d taskDone;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to return input as a converted string output"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String s \u003d \"[\" + getStatusIcon() + \"] \" + taskName;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return s;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to get status icon"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return (taskDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to set task done to true"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void markAsDone() {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        taskDone \u003d true;"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to search keyword"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param keyword"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public boolean contains(String keyword) {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return taskName.contains(keyword);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     *write tasks into storage"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void write(FileWriter storage) throws IOException {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        storage.write(taskName + \"\\n\");"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        if(taskDone) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            storage.write(\"true\\n\");"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            storage.write(\"false\\n\");"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * read tasks in storage"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param fileRead"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void read(BufferedReader fileRead) throws IOException {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        taskName \u003d fileRead.readLine();"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String done \u003d fileRead.readLine();"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        if(done.equals(\"true\")) {"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            taskDone \u003d true;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            taskDone \u003d false;"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 126
+    }
+  },
+  {
+    "path": "src/main/java/duke/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "/***"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " * created class for task actions"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class TaskList implements Serializable{"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    ArrayList\u003cTask\u003e line \u003d new ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    int count \u003d 0;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public int getCount() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return count;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Task get(int index) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return line.get(index);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void add(Task t) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        line.add(t);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        count++;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * create new task"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param x task name"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param done whether task is done"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void newTodoTask(String x, boolean done) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Todo t \u003d new Todo(x, done);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        line.add(t);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        count++;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * create new deadline task"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param name name of the task"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param done whether the task is done"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param by date and time of deadline task"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void newDeadlineTask(String name, boolean done, String by) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Deadline d \u003d new Deadline(name, false, by);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        line.add(d);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        count++;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param name name of the task"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param done whether the task is done"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param date date and time of deadline task in LocalDateTime format"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void newDeadlineTask(String name, boolean done, LocalDateTime date) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Deadline d \u003d new Deadline(name, false, date);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        line.add(d);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        count ++;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * create new event task"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param name name of the task"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param done whether the task is done"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param at date and time of event task"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void newEventTask(String name, boolean done, String at) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Event e \u003d new Event(name, false, at);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        line.add(e);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        count ++;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param name name of the task"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param done whether the task is done"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param date date and time of event task using LocalDateTime format"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void newEventTask(String name, boolean done, LocalDateTime date) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Event e \u003d new Event(name, false, date);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        line.add(e);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        count ++;"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * remove task from task list"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param index"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Task removeTask(int index) {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        //to ensure that the event date is in the future"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assert index \u003e 0 : \"Cannot delete negative index\";"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assert index \u003c\u003d count:\"Cannot choose a number more than number of tasks\";"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        count --;"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return line.remove(index-1);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to find keyword in task list"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param keyword keyword to be searched through the whole task list"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return all tasks containing the keyword"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public TaskList find(String keyword) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(keyword);"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        TaskList results \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        for(int i\u003d 0; i\u003cline.size(); i++) {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            if(line.get(i).contains(keyword)) {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                results.add(line.get(i));"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return results;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * add task list into storage"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void write(FileWriter storage) throws IOException {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        for(int i\u003d0; i\u003cline.size(); i++) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            line.get(i).write(storage); //write entire task list to storage"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * read task list"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param fileRead"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void read(BufferedReader fileRead) throws IOException {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String type \u003d null;"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        line.clear();"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        while ((type \u003d fileRead.readLine()) !\u003d null) {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            if (type.equals(\"T\")) {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                Todo t \u003d new Todo();"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                t.read(fileRead);"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                line.add(t);"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                count++;"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            } else if (type.equals(\"D\")) {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                Deadline d \u003d new Deadline();"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                d.read(fileRead);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                line.add(d);"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                count++;"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            } else if (type.equals(\"E\")) {"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                Event e;"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                e \u003d new Event();"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                e.read(fileRead);"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                line.add(e);"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                count++;"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 160
+    }
+  },
+  {
+    "path": "src/main/java/duke/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * overloaded constructor from task name and task done"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskName name of the task"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param taskDone whether the task is done"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Todo (String taskName, boolean taskDone) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super(taskName, taskDone); // calls the parent constructor"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * default constructor"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public Todo() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        super();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * converting todo task input into string format"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        return \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void write(FileWriter storage) throws IOException {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        storage.write(\"T\\n\"); //to represent as todo"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "      super.write(storage);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 34
+    }
+  },
+  {
+    "path": "src/main/java/duke/UI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class UI {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    Scanner sc \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * to print the welcome message when duke app is called"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printWelcomeMessage() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"What can I do for you?\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To add a new todo task, please input: todo \u003ctaskname\u003e\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To add a new deadline task, please input : deadline \u003ctaskname\u003e /by yyyy-mm-dd hh:mm\u003cAM/PM\u003e e.g. yyyy-mm-dd hh:mmAM\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To add a new event task, please input: event \u003ctaskname\u003e /at yyyy-mm-dd\u003cAM/PM\u003e e.g. yyyy-mm-dd hh:mmAM\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To add a recurring event task, please input: event \u003ctaskname\u003e /at yyyy-mm-dd\u003cAM/PM\u003e e.g. yyyy-mm-dd hh:mmAM /repeat \u003cno. of days in between\u003e /times \u003cno. of times\u003e\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To add a recurring deadline task, please input: deadline \u003ctaskname\u003e /by yyyy-mm-dd\u003cAM/PM\u003e e.g. yyyy-mm-dd hh:mmAM /repeat \u003cno. of days in between\u003e /times \u003cno. of times\u003e\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To print out task list, please input: list \");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To mark task as done, please input: done \");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"To delete, please input: delete \u003ctask number\u003e e.g. delete 2\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        System.out.println(\"Please enter user input:\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to print the task list"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count number of tasks in list"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line number of lines in list"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public void printTaskList(int count, TaskList line) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         for (int i \u003d 0; i \u003c count; i++) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "             System.out.println(i+1 + \". \" + line.get(i));"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Now you have \" + count + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public void printDone(TaskList line, int index) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Nice! I\u0027ve marked this task as done: \");"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"\\t[\"+ line.get(index-1));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     *method to print a new to do task after they have been created by user"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count number of tasks in list"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line number of lines in list"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public void printTodo(TaskList line, int count) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"\\t\" + line.get(count));"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         count ++;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Now you have \" + count + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     *method to print a new deadline task after they have been created by user"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count number of tasks in list"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line number of lines in list"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public void printDeadline(TaskList line, int count) {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"\\t\" + line.get(count));"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         count ++;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Now you have \" + count + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     *method to print a new event task after they have been created by user"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count number of tasks in list"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param line number of lines in list"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public void printEvent(TaskList line, int count) {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"\\t\" + line.get(count));"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         count ++;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Now you have \" + count + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to delete task from task list"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param t task to delete"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param count number of tasks in list"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @param index number of line of task to be deleted"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public void printDelete(Task t, int count, int index) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Noted. I\u0027ve removed this task:\");"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(index + \". \" + t);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         count --;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Now you have \" + count + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"_______________________________________________\");"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to print invalidCommandMessage exceptions"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printInvalidCommandMessage() {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Oops sorry, I don\u0027t know what that means :( \");"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to print DateTimeException messages"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public void printDateTimeExceptionMessage() {"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"date not recognized. Please input in this format: yyyy-mm-dd hh:mm\u003cAM/PM\u003e\");"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to print ending message when application is closed"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void printBye()"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         System.out.println(\"Bye. Hope to see you again soon !\");"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * method to get user input"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * @return input made by user"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     public String getUserInput() {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         String input \u003d sc.nextLine();"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "         return input;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 144
+    }
+  },
+  {
+    "path": "src/main/java/duke/package-info.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 1
+    }
+  },
+  {
+    "path": "src/test/java/duke/DukeTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "import static junit.framework.TestCase.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "public class DukeTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * testing to add a todo task"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void addOneTaskTest() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Todo t \u003d new Todo(\"read book\", false);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        TaskList list \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        list.add(t);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(1, list.getCount());"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * testing to add a todo task using parser"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void addOneTaskByParserTest(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        TaskList list \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        parser.parseCommand(\"todo read books\", new MockUI(), list, new MockStorage());"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(1, list.getCount());"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(list.get(0).getTaskName(), \"read books\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * testing to add a deadline task using parser"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void addOneDeadlineTaskByParserTest() {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        TaskList list \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        parser.parseCommand(\"deadline read books /by 2019-11-17 11:30PM\", new MockUI(), list, new MockStorage());"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(1, list.getCount());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(list.get(0).getTaskName(), \"read books\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String expectedDate \u003d \"Nov 17 2019 11:30 PM\";"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Task firstTask \u003d list.line.get(0);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        String[] line \u003d firstTask.toString().replace(\"(\", \"\").replace(\")\", \"\").split(\"by: \"); // get date from task"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(line[1], expectedDate);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * testing to add one event task using parser"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void addOneEventTaskByParserTest(){"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            TaskList list \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            parser.parseCommand(\"event project meeting /at 2019-11-24 11:30AM\", new MockUI(), list, new MockStorage());"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            assertEquals(1, list.getCount());"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            assertEquals(\"project meeting\", list.get(0).getTaskName());"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            String expectedDate \u003d \"Nov 24 2019 11:30 AM\";"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            Task firstTask \u003d list.line.get(0);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            String[] line \u003d firstTask.toString().replace(\"(\", \"\").replace(\")\", \"\").split(\"at: \"); // get date from task"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "            assertEquals(expectedDate, line[1]);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * testing to set a task to done"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void taskDoneByParserTest(){"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        TaskList list \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Task task \u003d new Task(\"read book\", false);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        list.add(task);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(1, list.getCount());"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        parser.parseCommand(\"done 1\", new MockUI(), list, new MockStorage());"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(true, list.get(0).getTaskDone());"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     * testing to delete a task"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    public void deleteTaskByParser(){"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        TaskList list \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        Task task \u003d new Task(\"read book\", false);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        list.add(task);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(1, list.getCount());"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        parser.parseCommand(\"delete 1\", new MockUI(), list, new MockStorage());"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "        assertEquals(0, list.getCount());"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kuamqunyan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kuamqunyan": 92
+    }
+  }
+]

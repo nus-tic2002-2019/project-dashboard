@@ -1,0 +1,4667 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static final String LOGO \u003d"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static final String DIVIDER \u003d \"\\n\" + \"    \" + \"____________________________________________________________\" + \"\\n\" + \"    \";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static final String graphicalFormatStart \u003d (\"    \" + \"____________________________________________________________\" + \"\\n\" + \"    \");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static final String graphicalFormatEnd \u003d (\"\\n\" + \"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//    String line \u003d \"____________________________________________________________\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//    String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//    String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Public UI class."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " **********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static void textUI() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        System.out.print("
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                \"Hello from\" + \"\\n\" + LOGO + DIVIDER"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"Hello! I\u0027m Duke\" + \"\\n\" + \"    \""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"What can I do for you?\" +"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                DIVIDER);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "* Task Class [Superclass]"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "**********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static class Task {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Variables"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        private String description;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        private boolean isDone;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Constructors."
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public Task(String description) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            this.description \u003d description;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Methods."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            return (isDone ? \"[\\u2713]\" : \"[\\u2718]\"); // return tick or cross symbol."
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String getTask() {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            return description;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public void markAsDone() {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            isDone \u003d true;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String toString() { return getStatusIcon() + \" \" + getTask();}"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "* todo [Subclass] , Parent : Task"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "**********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static class Todo extends Task {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Variables."
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        protected boolean isTodo;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Constructors."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public Todo(String Description) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            super(Description);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Methods."
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String toString() {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            return \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String getTodoIcon() {return \"[T]\";}"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "* deadline [Subclass] , Parent : Task"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "**********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Variables."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String by;"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Constructors."
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public Deadline(String description, String by) {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            super(description);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            this.by \u003d by;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Methods."
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String toString() {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String getBy() {return by;}"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "* Events [Subclass] , Parent : Task"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "**********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static class Events extends Task {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Variables."
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String at;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Constructors."
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public Events(String description, String at) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            // Constructor"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            super(description);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            this.at \u003d at;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // Methods."
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String toString() {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            return \"[E]\" + super.toString() + \" (at: \" + at +\") \";"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        public String getBy() {return at;}"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "// My arraylist was of type Task. Hence to access subclasses, downcasting is required to access the subclass-methods."
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static void downcastToTodo(Task abc) {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Todo taskAssigned \u003d (Todo) abc;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static void downcastToDeadline(Task abc) {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Deadline taskAssigned \u003d (Deadline) abc;"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static void downcastToEvents(Task abc) {"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Events taskAssigned \u003d (Events) abc;"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static Todo downcastToTodo_1(Task abc) {"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        return (Todo) abc;"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static Deadline downcastToDeadline_1(Task abc) {"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        return (Deadline) abc;"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static Events downcastToEvents_1(Task abc) {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        return (Events) abc;"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * list Function."
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " **********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "public static void list(ArrayList\u003cTask\u003e ultimateStorage, String userResponse) {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatStart \u003d (\"    \""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"____________________________________________________________\""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"\\n\""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"    \");"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatEnd \u003d (\"\\n\" + \"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    System.out.println(graphicalFormatStart);"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    for(Task ele : ultimateStorage) {"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        System.out.printf(spaces); //formatting."
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if(ele instanceof Todo ) {"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            downcastToTodo(ele);"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(ultimateStorage.indexOf(ele)+1"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + \".\""
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + ele.toString()"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            );"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        } else if (ele instanceof Deadline) {"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            downcastToDeadline(ele);"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(ultimateStorage.indexOf(ele)+1"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + \".\""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + ele.toString());"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        } else if (ele instanceof Events) {"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            downcastToEvents(ele);"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(ultimateStorage.indexOf(ele) + 1"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + \".\""
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + ele.toString());"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            // This could change into a function call printList. For reuse-and better code readability."
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(ultimateStorage.indexOf(ele)+1 + \".\""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + ele.toString()"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            );"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    } System.out.println(\"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Done Function."
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " **********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "public static void Done(ArrayList\u003cTask\u003e ultimateStorage, String userResponse) {"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatStart \u003d (\"    \""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"____________________________________________________________\""
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"\\n\""
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"    \");"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatEnd \u003d (\"\\n\" + \"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    if(userResponse.matches(\".*\\\\d.*\")) {"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // done 3 -\u003e will get 3."
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        int value \u003d Integer.parseInt(userResponse.replaceAll(\"[^0-9]\", \"\"));"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // real index in the array is in fact 2."
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        int realIndex \u003d value - 1;"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        //for verification of the items."
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        //System.out.println(ultimateStorage.get(realIndex).getTask());"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        ultimateStorage.get(realIndex).markAsDone();"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        System.out.println("
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                graphicalFormatEnd + \"\\n\""
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + spaces"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + \"Nice! I\u0027ve marked this task as done: \\n\""
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + spaces"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + ultimateStorage.get(realIndex).toString()"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        );"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Delete Function."
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " **********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static void Delete(ArrayList\u003cTask\u003e ultimateStorage, String itemToDelete) {"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String graphicalFormatStart \u003d (\"    \""
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"____________________________________________________________\""
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"\\n\""
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"    \");"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String graphicalFormatEnd \u003d (\"\\n\" + \"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String tempWord \u003d \"delete \";"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String indexToDeleteStringFormat \u003d itemToDelete.replaceAll(tempWord, \"\");"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        int value \u003d Integer.parseInt(indexToDeleteStringFormat.replaceAll(\"[^0-9]\", \"\")) - 1;"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        System.out.println(graphicalFormatStart"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + \"Noted. I\u0027ve removed this task: \""
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + spaces + nextLine + spaces + \"  \""
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + ultimateStorage.get(value).toString()"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                          );"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        ultimateStorage.remove(value);"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        System.out.println(spaces + \"Now you have \" + ultimateStorage.size() + \" in the list.\" + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * parseStoreAndPrintEventsTask Function."
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " **********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "public static void parseStoreAndPrintEventTask(ArrayList\u003cTask\u003e ultimateStorage, String userResponse, String[] eventKeywords) {"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatStart \u003d (\"    \""
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"____________________________________________________________\""
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"\\n\""
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"    \");"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatEnd \u003d (\"\\n\" + \"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    Boolean eventKeywordFound \u003d false;"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String keyword \u003d null;"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//    Boolean todoKeywordFound \u003d false;"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//    Boolean deadlineKeywordFound \u003d false;"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    for(String item : eventKeywords) {"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if(userResponse.startsWith(item)) {"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            eventKeywordFound \u003d true;"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            keyword \u003d item;"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    if (eventKeywordFound) {"
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Boolean duplicates \u003d false;"
+      },
+      {
+        "lineNumber": 272,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String reSentence \u003d userResponse.replaceAll(keyword, \"\");"
+      },
+      {
+        "lineNumber": 273,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        //To filter out relevant words."
+      },
+      {
+        "lineNumber": 274,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String eventDesc \u003d reSentence.substring(0,reSentence.indexOf(\"at\") - 1);"
+      },
+      {
+        "lineNumber": 275,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String eventAt \u003d reSentence.substring(reSentence.indexOf(\"at\")+ 3);"
+      },
+      {
+        "lineNumber": 276,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Events event \u003d new Events(eventDesc,eventAt);"
+      },
+      {
+        "lineNumber": 277,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 278,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        for (Task task : ultimateStorage) {"
+      },
+      {
+        "lineNumber": 279,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            if (event.getTask().equals(task.getTask())){"
+      },
+      {
+        "lineNumber": 280,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                System.out.println(spaces + \"You have the same task in list. It\u0027s a duplicate!\" + nextLine"
+      },
+      {
+        "lineNumber": 281,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 282,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                duplicates \u003d true;"
+      },
+      {
+        "lineNumber": 283,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 284,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 285,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 286,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if(!duplicates) {"
+      },
+      {
+        "lineNumber": 287,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 288,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            ultimateStorage.add(event);"
+      },
+      {
+        "lineNumber": 289,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 290,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println("
+      },
+      {
+        "lineNumber": 291,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 292,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + \"\\n\""
+      },
+      {
+        "lineNumber": 293,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + spaces + \"Got it. I\u0027ve added this task: \\n  \" + spaces"
+      },
+      {
+        "lineNumber": 294,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + ultimateStorage.get(ultimateStorage.indexOf(event)).toString()"
+      },
+      {
+        "lineNumber": 295,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + \"\\n\" + spaces + \"Now you have \" + ultimateStorage.size() + \" tasks in the list.\""
+      },
+      {
+        "lineNumber": 296,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 297,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            );"
+      },
+      {
+        "lineNumber": 298,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 299,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 300,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 301,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 302,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 303,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "* parseStoreAndPrintTodoTask Function."
+      },
+      {
+        "lineNumber": 304,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "**********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 305,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 306,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static void parseStoreAndPrintTodoTask(ArrayList\u003cTask\u003e ultimateStorage, String userResponse, String[] todoKeywords) {"
+      },
+      {
+        "lineNumber": 307,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 308,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String graphicalFormatStart \u003d (\"    \""
+      },
+      {
+        "lineNumber": 309,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"____________________________________________________________\""
+      },
+      {
+        "lineNumber": 310,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"\\n\""
+      },
+      {
+        "lineNumber": 311,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + \"    \");"
+      },
+      {
+        "lineNumber": 312,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 313,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String graphicalFormatEnd \u003d (\"\\n\" + \"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 314,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 315,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 316,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String keyword \u003d null;"
+      },
+      {
+        "lineNumber": 317,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Boolean todoKeywordFound \u003d false;"
+      },
+      {
+        "lineNumber": 318,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Boolean duplicates \u003d false;"
+      },
+      {
+        "lineNumber": 319,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//    Boolean deadlineKeywordFound \u003d false;"
+      },
+      {
+        "lineNumber": 320,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 321,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        for(String item : todoKeywords) {"
+      },
+      {
+        "lineNumber": 322,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            if(userResponse.startsWith(item)) {"
+      },
+      {
+        "lineNumber": 323,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                todoKeywordFound \u003d true;"
+      },
+      {
+        "lineNumber": 324,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                keyword \u003d item;"
+      },
+      {
+        "lineNumber": 325,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 326,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 327,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 328,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if (todoKeywordFound) {"
+      },
+      {
+        "lineNumber": 329,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            String reSentence \u003d userResponse.replaceAll(keyword, \"\");"
+      },
+      {
+        "lineNumber": 330,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            //To filter out relevant words."
+      },
+      {
+        "lineNumber": 331,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            Todo td \u003d new Todo(reSentence);"
+      },
+      {
+        "lineNumber": 332,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 333,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            for (Task task : ultimateStorage) {"
+      },
+      {
+        "lineNumber": 334,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                if (td.getTask().equals(task.getTask())){"
+      },
+      {
+        "lineNumber": 335,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    System.out.println(spaces + \"You have the same task in list. It\u0027s a duplicate!\" + nextLine"
+      },
+      {
+        "lineNumber": 336,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                        + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 337,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    duplicates \u003d true;"
+      },
+      {
+        "lineNumber": 338,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 339,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 340,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 341,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            if(!duplicates) {"
+      },
+      {
+        "lineNumber": 342,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                ultimateStorage.add(td);"
+      },
+      {
+        "lineNumber": 343,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                System.out.println("
+      },
+      {
+        "lineNumber": 344,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 345,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + \"\\n\""
+      },
+      {
+        "lineNumber": 346,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + spaces + \"Got it. I\u0027ve added this task: \\n  \" + spaces"
+      },
+      {
+        "lineNumber": 347,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + ultimateStorage.get(ultimateStorage.indexOf(td)).toString()"
+      },
+      {
+        "lineNumber": 348,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + \"\\n\" + spaces + \"Now you have \" + ultimateStorage.size() + \" tasks in the list.\""
+      },
+      {
+        "lineNumber": 349,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 350,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                );"
+      },
+      {
+        "lineNumber": 351,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 352,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 353,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 354,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 355,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 356,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * parseStoreAndPrintTodoTask Function."
+      },
+      {
+        "lineNumber": 357,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " **********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 358,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 359,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "public static void  parseStoreAndPrintDeadlineTask(ArrayList\u003cTask\u003e ultimateStorage, String userResponse, String[] deadlineKeywords) {"
+      },
+      {
+        "lineNumber": 360,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 361,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatStart \u003d (\"    \""
+      },
+      {
+        "lineNumber": 362,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"____________________________________________________________\""
+      },
+      {
+        "lineNumber": 363,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"\\n\""
+      },
+      {
+        "lineNumber": 364,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            + \"    \");"
+      },
+      {
+        "lineNumber": 365,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 366,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String graphicalFormatEnd \u003d (\"\\n\" + \"    \" + \"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 367,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 368,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 369,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String keyword \u003d null;"
+      },
+      {
+        "lineNumber": 370,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    Boolean deadlineKeywordFound \u003d false;"
+      },
+      {
+        "lineNumber": 371,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    Boolean duplicates \u003d false;"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    for (String item : deadlineKeywords) {"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if (userResponse.startsWith(item)) {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            deadlineKeywordFound \u003d true;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            keyword \u003d item;"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String reSentence \u003d userResponse.replaceAll(keyword, \"\");"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    // To filter out relevant words."
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String deadlineDesc \u003d reSentence.substring(0,reSentence.indexOf(\"by\") - 1);"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String by \u003d reSentence.substring(reSentence.indexOf(\"by\")+ 3);"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    //System.out.println(deadlineDesc);"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    Deadline deadline \u003d new Deadline(deadlineDesc,by);"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/************************************************************************"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Check if there is duplicates."
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "************************************************************************/"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    for (Task task : ultimateStorage) {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if (deadline.getTask().equals(task.getTask())){"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(spaces + \"You have the same task in list. It\u0027s a duplicate!\" + nextLine"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            duplicates \u003d true;"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    if(!duplicates) {"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        ultimateStorage.add(deadline);"
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        System.out.println("
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + \"\\n\""
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + spaces + \"Got it. I\u0027ve added this task: \\n  \" + spaces"
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + ultimateStorage.get(ultimateStorage.indexOf(deadline)).toString()"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + \"\\n\" + spaces + \"Now you have \" + ultimateStorage.size() + \" tasks in the list.\""
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        );"
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 414,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Exceptions"
+      },
+      {
+        "lineNumber": 415,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "**********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 416,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 417,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "public static class DukeExceptions extends Exception {"
+      },
+      {
+        "lineNumber": 418,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 419,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static boolean TodoError(String Sentence) {"
+      },
+      {
+        "lineNumber": 420,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String check \u003d Sentence;"
+      },
+      {
+        "lineNumber": 421,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if (check.equals(\"todo\") || check.equals(\"Todo\") || check.equals(\"TODO\")) {"
+      },
+      {
+        "lineNumber": 422,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 423,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        } else return false;"
+      },
+      {
+        "lineNumber": 424,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 425,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 426,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 427,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static boolean funnyWords(String word) {"
+      },
+      {
+        "lineNumber": 428,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        ArrayList\u003cString\u003e funnyWords \u003d new ArrayList\u003cString\u003e();"
+      },
+      {
+        "lineNumber": 429,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        funnyWords.add(\"Blah\");"
+      },
+      {
+        "lineNumber": 430,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        funnyWords.add(\"blah\");"
+      },
+      {
+        "lineNumber": 431,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        funnyWords.add(\"BLAH\");"
+      },
+      {
+        "lineNumber": 432,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        funnyWords.add(\"bleh\");"
+      },
+      {
+        "lineNumber": 433,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        funnyWords.add(\"Bleh\");"
+      },
+      {
+        "lineNumber": 434,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 435,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        for (String item : funnyWords) {"
+      },
+      {
+        "lineNumber": 436,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            if (word.equals(item)) {"
+      },
+      {
+        "lineNumber": 437,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                return true;"
+      },
+      {
+        "lineNumber": 438,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 439,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 440,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 441,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 442,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 443,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 444,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static boolean DeadlineError(String Sentence) {"
+      },
+      {
+        "lineNumber": 445,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String check \u003d Sentence;"
+      },
+      {
+        "lineNumber": 446,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if (check.equals(\"deadline\") || check.equals(\"Deadline\") || check.equals(\"DEADLINE\")) {"
+      },
+      {
+        "lineNumber": 447,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 448,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        } else return false;"
+      },
+      {
+        "lineNumber": 449,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 450,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 451,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 452,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 453,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "* writetoFile"
+      },
+      {
+        "lineNumber": 454,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "***********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 455,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 456,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "private static void writeToFile(String filePath, String textToAdd) throws IOException {"
+      },
+      {
+        "lineNumber": 457,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    FileWriter fw \u003d new FileWriter(filePath);"
+      },
+      {
+        "lineNumber": 458,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    fw.write(textToAdd);"
+      },
+      {
+        "lineNumber": 459,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    fw.close();"
+      },
+      {
+        "lineNumber": 460,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 461,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 462,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 463,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "* Find."
+      },
+      {
+        "lineNumber": 464,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "**********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 465,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "public static void find(ArrayList\u003cTask\u003e ultimateStorage, String userResponse) {"
+      },
+      {
+        "lineNumber": 466,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 467,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 468,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 469,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 470,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    String thingsToFind \u003d userResponse.substring(5);"
+      },
+      {
+        "lineNumber": 471,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    //System.out.println(thingsToFind);"
+      },
+      {
+        "lineNumber": 472,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    for(Task task : ultimateStorage) {"
+      },
+      {
+        "lineNumber": 473,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if(task.getTask().contains(thingsToFind)) {"
+      },
+      {
+        "lineNumber": 474,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.print(spaces);"
+      },
+      {
+        "lineNumber": 475,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.print(task.toString());"
+      },
+      {
+        "lineNumber": 476,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.print(\"\\n\");"
+      },
+      {
+        "lineNumber": 477,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 478,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    }System.out.println(graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 479,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 480,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 481,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "    public static void main(String[] args) throws DukeExceptions, IOException {"
+      },
+      {
+        "lineNumber": 482,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/**********************************************************************************************************************"
+      },
+      {
+        "lineNumber": 483,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Variables."
+      },
+      {
+        "lineNumber": 484,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " **********************************************************************************************************************/"
+      },
+      {
+        "lineNumber": 485,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 486,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String logo \u003d"
+      },
+      {
+        "lineNumber": 487,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                  \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 488,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 489,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 490,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 491,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 492,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 493,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String line \u003d \"____________________________________________________________\";"
+      },
+      {
+        "lineNumber": 494,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String spaces \u003d \"    \";"
+      },
+      {
+        "lineNumber": 495,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String nextLine \u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 496,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Scanner scanInput \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 497,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        // 08-Sep-2019."
+      },
+      {
+        "lineNumber": 498,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Task[] content \u003d new Task[100];"
+      },
+      {
+        "lineNumber": 499,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        ArrayList\u003cTask\u003e ultimateStorage \u003d new ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 500,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String[] eventKeywords \u003d new String[]{\"Event \", \"event \", \"EVENTS \"};"
+      },
+      {
+        "lineNumber": 501,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String[] todoKeywords \u003d new String[]{\"Todo \", \"todo \", \"TODO \"};"
+      },
+      {
+        "lineNumber": 502,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String[] deadlineKewords \u003d new String[]{\"Deadline \", \"deadline \", \"DEADLINE \"};"
+      },
+      {
+        "lineNumber": 503,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        //writeToFile test \u003d new writeToFile();"
+      },
+      {
+        "lineNumber": 504,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        String pathToStore \u003d \"C:/Users/Lucas/Desktop/Duke/dukey.txt\";"
+      },
+      {
+        "lineNumber": 505,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        Boolean duplicates \u003d false;"
+      },
+      {
+        "lineNumber": 506,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 507,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 508,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/*********************************************************"
+      },
+      {
+        "lineNumber": 509,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Formatting"
+      },
+      {
+        "lineNumber": 510,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " *********************************************************/"
+      },
+      {
+        "lineNumber": 511,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 512,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        textUI();"
+      },
+      {
+        "lineNumber": 513,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 514,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "/*********************************************************"
+      },
+      {
+        "lineNumber": 515,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Level One + Level Two + To be honest..."
+      },
+      {
+        "lineNumber": 516,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * all the levels are in between being mixed up.."
+      },
+      {
+        "lineNumber": 517,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " *********************************************************/"
+      },
+      {
+        "lineNumber": 518,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 519,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        while (true) {"
+      },
+      {
+        "lineNumber": 520,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 521,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            String userResponse \u003d scanInput.nextLine();"
+      },
+      {
+        "lineNumber": 522,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            // if response is \"bye\""
+      },
+      {
+        "lineNumber": 523,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            if (userResponse.equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 524,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 525,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 526,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            // if response is \"list\""
+      },
+      {
+        "lineNumber": 527,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (userResponse.equals(\"list\")) {"
+      },
+      {
+        "lineNumber": 528,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                list(ultimateStorage,userResponse);"
+      },
+      {
+        "lineNumber": 529,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 530,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (userResponse.startsWith(\"DELETE\") || userResponse.startsWith(\"Delete\") || userResponse.startsWith(\"delete\")) {"
+      },
+      {
+        "lineNumber": 531,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                Delete(ultimateStorage,userResponse);"
+      },
+      {
+        "lineNumber": 532,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 533,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (userResponse.startsWith(\"find\")) {"
+      },
+      {
+        "lineNumber": 534,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                find(ultimateStorage, userResponse);"
+      },
+      {
+        "lineNumber": 535,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 536,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (userResponse.startsWith(\"done\") || userResponse.startsWith(\"DONE\") || userResponse.startsWith(\"Done\")) {"
+      },
+      {
+        "lineNumber": 537,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                Done(ultimateStorage, userResponse);"
+      },
+      {
+        "lineNumber": 538,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 539,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if ( userResponse.startsWith(\"event\") || userResponse.startsWith(\"Event\") || userResponse.startsWith(\"EVENT\")) {"
+      },
+      {
+        "lineNumber": 540,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                parseStoreAndPrintEventTask(ultimateStorage,userResponse,eventKeywords);"
+      },
+      {
+        "lineNumber": 541,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 542,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (DukeExceptions.TodoError(userResponse)) { // Exceptions Handling TODO"
+      },
+      {
+        "lineNumber": 543,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                System.out.println("
+      },
+      {
+        "lineNumber": 544,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 545,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + \"\\n\" + spaces"
+      },
+      {
+        "lineNumber": 546,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        +\"OPSS Please type in a task for Todo!\""
+      },
+      {
+        "lineNumber": 547,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + \"\\n\""
+      },
+      {
+        "lineNumber": 548,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 549,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 550,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (userResponse.startsWith(\"todo\") || userResponse.startsWith(\"TODO\") || userResponse.startsWith(\"Todo\")) {"
+      },
+      {
+        "lineNumber": 551,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                parseStoreAndPrintTodoTask(ultimateStorage,userResponse,todoKeywords);"
+      },
+      {
+        "lineNumber": 552,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 553,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (DukeExceptions.DeadlineError(userResponse)) { // Exceptions Handling DEADLINE"
+      },
+      {
+        "lineNumber": 554,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                System.out.println("
+      },
+      {
+        "lineNumber": 555,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 556,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + \"\\n\" + spaces"
+      },
+      {
+        "lineNumber": 557,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                +\"OPSS Please type in a task for deadline!\""
+      },
+      {
+        "lineNumber": 558,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + \"\\n\""
+      },
+      {
+        "lineNumber": 559,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 560,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 561,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else if (userResponse.startsWith(\"Deadline\") || userResponse.startsWith(\"DEADLINE\") || userResponse.startsWith(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 562,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                parseStoreAndPrintDeadlineTask(ultimateStorage,userResponse,deadlineKewords);"
+      },
+      {
+        "lineNumber": 563,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 564,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 565,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                if(DukeExceptions.funnyWords(userResponse)) { // Exceptions Handling"
+      },
+      {
+        "lineNumber": 566,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    System.out.println("
+      },
+      {
+        "lineNumber": 567,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            graphicalFormatEnd"
+      },
+      {
+        "lineNumber": 568,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + \"\\n\" + spaces"
+      },
+      {
+        "lineNumber": 569,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + \"\\u2639\" + \" OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :(\""
+      },
+      {
+        "lineNumber": 570,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + \"\\n\""
+      },
+      {
+        "lineNumber": 571,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 572,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 573,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                else {"
+      },
+      {
+        "lineNumber": 574,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    Task t \u003d new Task(userResponse);"
+      },
+      {
+        "lineNumber": 575,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 576,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    for (Task task : ultimateStorage) {"
+      },
+      {
+        "lineNumber": 577,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 578,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        if (t.getTask().equals(task.getTask())){"
+      },
+      {
+        "lineNumber": 579,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            System.out.println(spaces + \"You have the same task in list. It\u0027s a duplicate!\" + nextLine"
+      },
+      {
+        "lineNumber": 580,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 581,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            duplicates \u003d true;"
+      },
+      {
+        "lineNumber": 582,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 583,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 584,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    if(!duplicates) {"
+      },
+      {
+        "lineNumber": 585,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        ultimateStorage.add(t);"
+      },
+      {
+        "lineNumber": 586,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                        System.out.println("
+      },
+      {
+        "lineNumber": 587,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                graphicalFormatStart"
+      },
+      {
+        "lineNumber": 588,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                        + \"added: \""
+      },
+      {
+        "lineNumber": 589,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                        + ultimateStorage.get(ultimateStorage.indexOf(t)).getTask()"
+      },
+      {
+        "lineNumber": 590,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                        + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 591,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 592,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 593,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 594,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 595,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        System.out.println(graphicalFormatStart"
+      },
+      {
+        "lineNumber": 596,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                +\"Bye. Hope to see you again soon!\""
+      },
+      {
+        "lineNumber": 597,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                + graphicalFormatEnd);"
+      },
+      {
+        "lineNumber": 598,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 599,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 600,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " /*********************************************************"
+      },
+      {
+        "lineNumber": 601,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " * Write to File."
+      },
+      {
+        "lineNumber": 602,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": " *********************************************************/"
+      },
+      {
+        "lineNumber": 603,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        File file \u003d new File(pathToStore);"
+      },
+      {
+        "lineNumber": 604,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        if (file.createNewFile()) {"
+      },
+      {
+        "lineNumber": 605,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(\"File is created!\");"
+      },
+      {
+        "lineNumber": 606,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 607,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(\"File already exists.\");"
+      },
+      {
+        "lineNumber": 608,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 609,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 610,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        FileWriter writer \u003d new FileWriter(file);"
+      },
+      {
+        "lineNumber": 611,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 612,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 613,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            for(Task task: ultimateStorage) {"
+      },
+      {
+        "lineNumber": 614,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 615,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                int doneStatus \u003d 0;"
+      },
+      {
+        "lineNumber": 616,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                if (task.isDone) {"
+      },
+      {
+        "lineNumber": 617,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    doneStatus \u003d 1;"
+      },
+      {
+        "lineNumber": 618,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 619,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    doneStatus \u003d 0;"
+      },
+      {
+        "lineNumber": 620,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 621,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                if (task.getClass().getSimpleName().equals(\"Todo\")) {"
+      },
+      {
+        "lineNumber": 622,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    Todo temp \u003d downcastToTodo_1(task);"
+      },
+      {
+        "lineNumber": 623,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    writer.write("
+      },
+      {
+        "lineNumber": 624,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                \"Todo    \""
+      },
+      {
+        "lineNumber": 625,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + \" | \""
+      },
+      {
+        "lineNumber": 626,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + doneStatus +  \" | \""
+      },
+      {
+        "lineNumber": 627,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + temp.getTask() + \"|\""
+      },
+      {
+        "lineNumber": 628,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 629,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 630,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                else if (task.getClass().getSimpleName().equals(\"Deadline\")) {"
+      },
+      {
+        "lineNumber": 631,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    Deadline temp \u003d downcastToDeadline_1(task);"
+      },
+      {
+        "lineNumber": 632,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    writer.write("
+      },
+      {
+        "lineNumber": 633,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                \"Deadline\""
+      },
+      {
+        "lineNumber": 634,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + \" | \""
+      },
+      {
+        "lineNumber": 635,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + doneStatus +  \" | \""
+      },
+      {
+        "lineNumber": 636,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + temp.getTask() + \" | \""
+      },
+      {
+        "lineNumber": 637,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + temp.getBy()"
+      },
+      {
+        "lineNumber": 638,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 639,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 640,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                else if (task.getClass().getSimpleName().equals(\"Events\")) {"
+      },
+      {
+        "lineNumber": 641,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    Events temp \u003d downcastToEvents_1(task);"
+      },
+      {
+        "lineNumber": 642,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    writer.write("
+      },
+      {
+        "lineNumber": 643,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            \"Events  \""
+      },
+      {
+        "lineNumber": 644,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + \" | \""
+      },
+      {
+        "lineNumber": 645,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + doneStatus +  \" | \""
+      },
+      {
+        "lineNumber": 646,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + temp.getTask() + \" | \""
+      },
+      {
+        "lineNumber": 647,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + temp.getBy()"
+      },
+      {
+        "lineNumber": 648,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                                    + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 649,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 650,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                    writer.write(\"Normal  \""
+      },
+      {
+        "lineNumber": 651,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + \" | \""
+      },
+      {
+        "lineNumber": 652,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + doneStatus +  \" | \""
+      },
+      {
+        "lineNumber": 653,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + task.getTask() + \" | \""
+      },
+      {
+        "lineNumber": 654,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                            + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 655,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 656,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 657,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 658,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "            System.out.println(\"Something went wrong: \" + e.getMessage());"
+      },
+      {
+        "lineNumber": 659,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 660,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "        writer.close();"
+      },
+      {
+        "lineNumber": 661,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 662,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//        System.out.println(Arrays.toString(content)); // use to check variables in arrays."
+      },
+      {
+        "lineNumber": 663,
+        "author": {
+          "gitId": "chengxiangpng"
+        },
+        "content": "//        test.writeToFile(ultimateStorage);"
+      },
+      {
+        "lineNumber": 664,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 665,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chengxiangpng": 657,
+      "-": 8
+    }
+  }
+]

@@ -1,0 +1,291 @@
+{
+  "authorDailyContributionsMap": {
+    "e0260237": [
+      {
+        "insertions": 3,
+        "deletions": 3,
+        "date": "2019-09-01",
+        "commitResults": [
+          {
+            "hash": "51968177cda01eafb72a6a2cbef5017389a3361f",
+            "messageTitle": "Level 1 \u0026 Level 2 task v2",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 116,
+        "deletions": 70,
+        "date": "2019-09-07",
+        "commitResults": [
+          {
+            "hash": "de74e02c5ca5bc288276b249c29aa9de444b0f58",
+            "messageTitle": "Level 3 v1",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 6
+          },
+          {
+            "hash": "c17f6e4ebcec3c14d89d07c8feddf663bbb7c7af",
+            "messageTitle": "Level 3 V2",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 7
+          },
+          {
+            "hash": "2056b57788a2175c2d233470c9f342668327f558",
+            "messageTitle": "Level 4 ToDo",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 4
+          },
+          {
+            "hash": "ec269725078b43aa8508e9f2843aa979cd05c7b5",
+            "messageTitle": "Level 4 Deadline",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 1
+          },
+          {
+            "hash": "98ee5e0934a45ed77a8dbdeedf5af44408cf8ff2",
+            "messageTitle": "Level 4 Event",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 2
+          },
+          {
+            "hash": "81ca3961e01ffde66ce85066b1c500ab300afa3b",
+            "messageTitle": "Level 5 Except Handling v1",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 42
+          },
+          {
+            "hash": "29ab23ab6da5d6e3bc03706d7f058c7c379da7a1",
+            "messageTitle": "Level 5 Exception handling v2 + some minor edits to previous conditions",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 82,
+        "deletions": 56,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "f4b8cb6739796a4ba99c31a5ac7daf912be4d4d1",
+            "messageTitle": "Added in switch and cases to make it more accurate on exception handling.",
+            "messageBody": "",
+            "insertions": 75,
+            "deletions": 56
+          },
+          {
+            "hash": "715a22c454b7034843daafe7f16a75aa98264efb",
+            "messageTitle": "Level 7 added in \"Delete\"",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 86,
+        "deletions": 2,
+        "date": "2019-09-12",
+        "commitResults": [
+          {
+            "hash": "b265ef8bb1fa6df0e206e5be54d71580995313a1",
+            "messageTitle": "Level 7 save function v1",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 0
+          },
+          {
+            "hash": "bb1ad8838fb8a5ca5c4c799a461e35d1d26de879",
+            "messageTitle": "Level 7 Save function v2",
+            "messageBody": "",
+            "insertions": 68,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 473,
+        "deletions": 44,
+        "date": "2019-09-20",
+        "commitResults": [
+          {
+            "hash": "004de51663354a2c8d84f24ab5a98d56992e89ba",
+            "messageTitle": "OOP Refactoring V1",
+            "messageBody": "",
+            "insertions": 447,
+            "deletions": 28
+          },
+          {
+            "hash": "0c0dc03f930be30baf1e7cf6d8279c45bca60c61",
+            "messageTitle": "Change of save pathing",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 2
+          },
+          {
+            "hash": "219d67703eb56d7c46c48473c718a3676ad4403c",
+            "messageTitle": "Revert \"Change of save pathing\"",
+            "messageBody": "This reverts commit 0c0dc03f930be30baf1e7cf6d8279c45bca60c61.\n",
+            "insertions": 2,
+            "deletions": 1
+          },
+          {
+            "hash": "41a3b79dd567cb8c5132e50397fe1df5472f1bc0",
+            "messageTitle": "OOP Refactoring V2",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 13
+          }
+        ]
+      },
+      {
+        "insertions": 377,
+        "deletions": 310,
+        "date": "2019-09-27",
+        "commitResults": [
+          {
+            "hash": "a554e47f63f0f599ac4b7182ecfd6914373de992",
+            "messageTitle": "Refactoring OOP - Added in Command Classes",
+            "messageBody": "",
+            "insertions": 250,
+            "deletions": 281
+          },
+          {
+            "hash": "86be906c5d872c88d95e7f25864bc0780e39ff57",
+            "messageTitle": "Level 8 Dates and times added",
+            "messageBody": "",
+            "insertions": 53,
+            "deletions": 10
+          },
+          {
+            "hash": "178c77cd0e090bf80c0d0fbd5abdf6a5218d2afe",
+            "messageTitle": "Level 9 Find added",
+            "messageBody": "",
+            "insertions": 64,
+            "deletions": 19
+          },
+          {
+            "hash": "564f8e8c643c1199419c1e0564536fd2c89a38ed",
+            "messageTitle": "Testing A-JUnit tests",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 220,
+        "deletions": 17,
+        "date": "2019-10-01",
+        "commitResults": [
+          {
+            "hash": "f6116524d247de98a60526128465a3fa684d43e0",
+            "messageTitle": "A-JUnit added v1",
+            "messageBody": "",
+            "insertions": 220,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 1010,
+        "deletions": 68,
+        "date": "2019-10-12",
+        "commitResults": [
+          {
+            "hash": "c9c5ebab889aff308fb3e0db0fdb5e65f9189700",
+            "messageTitle": "Added JavaDoc \u0026 coding standard",
+            "messageBody": "",
+            "insertions": 1010,
+            "deletions": 68
+          }
+        ]
+      },
+      {
+        "insertions": 308,
+        "deletions": 684,
+        "date": "2019-10-29",
+        "commitResults": [
+          {
+            "hash": "0f91b78e7d3b7aa40c6687ab6be5101590602d95",
+            "messageTitle": "Level 10 v1 GUI",
+            "messageBody": "",
+            "insertions": 308,
+            "deletions": 684
+          }
+        ]
+      },
+      {
+        "insertions": 149,
+        "deletions": 19,
+        "date": "2019-11-01",
+        "commitResults": [
+          {
+            "hash": "0d7198deb8dc82799e4419a8e795c974bdd35112",
+            "messageTitle": "Additional Command Features v1",
+            "messageBody": "",
+            "insertions": 149,
+            "deletions": 19
+          }
+        ]
+      },
+      {
+        "insertions": 132,
+        "deletions": 77,
+        "date": "2019-11-02",
+        "commitResults": [
+          {
+            "hash": "4e38f0a7746c15055eb9f37fba344982a41850fc",
+            "messageTitle": "Added in help and undo features.",
+            "messageBody": "",
+            "insertions": 132,
+            "deletions": 77
+          }
+        ]
+      },
+      {
+        "insertions": 146,
+        "deletions": 140,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "557ac77993aaedc62413e3e14aa04e1647996520",
+            "messageTitle": "Revert back without GUI - got some bugs with GUI.",
+            "messageBody": "",
+            "insertions": 146,
+            "deletions": 140
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "e0260237": 1648
+  },
+  "authorFileTypeContributionMap": {
+    "e0260237": {
+      "java": 1471,
+      "fxml": 35,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 142
+    }
+  },
+  "authorContributionVariance": {
+    "e0260237": 37439.562
+  },
+  "authorDisplayNameMap": {
+    "e0260237": "DESM..YANG"
+  }
+}

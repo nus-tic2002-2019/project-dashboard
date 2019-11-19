@@ -1,0 +1,4247 @@
+[
+  {
+    "path": "data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "1: [T][❌] dance"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "2: [E][❌] tp visit (at: thursday)"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "3: [D][✓] tic2002 (by: wed)"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 3
+    }
+  },
+  {
+    "path": "src/main/duke/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.command.Command;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.storage.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.*;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.ui.Ui;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private TaskList tasks;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private Ui ui;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private Parser parser;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Duke() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        storage \u003d new Storage();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            tasks \u003d new TaskList(storage);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        } catch (DukeException e){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            ui.printErrorMsg(e);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void run(){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        boolean running \u003d true;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        ui.printHelloMsg();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        while (running) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                String fullCommand \u003d ui.readCommand();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                Command c \u003d parser.parseInput(fullCommand);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                c.execute(tasks, ui, storage);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                running \u003d !c.isExit();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            } catch (DukeException e){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                ui.printErrorMsg(e);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        new Duke().run();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 43
+    }
+  },
+  {
+    "path": "src/main/duke/command/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.ui.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public abstract class Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    protected boolean bExit \u003d false;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public boolean isExit(){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return bExit;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public abstract void execute(TaskList tasks, Ui ui, Storage storage);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 15
+    }
+  },
+  {
+    "path": "src/main/duke/command/ExitCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.ui.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class ExitCommand extends Command {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        storage.writeToSaveFile(tasks.listTasks());"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        ui.printByeMsg();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public ExitCommand() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        bExit \u003d true;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 18
+    }
+  },
+  {
+    "path": "src/main/duke/command/ListCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.ui.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class ListCommand extends Command {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        tasks.printTasks();"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 13
+    }
+  },
+  {
+    "path": "src/main/duke/command/UpdateCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeUnknownException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.storage.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.ui.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class UpdateCommand extends Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public enum Operation {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        Done, Delete, Add;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private Operation operation;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private int position;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private Task task;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void execute(TaskList tasks, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        switch (operation) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case Add:"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                tasks.add(task);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                ui.printAddMsg(tasks);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case Done:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                ui.printDoneMsg(tasks, position);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                tasks.done(position);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case Delete:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                ui.printDeleteMsg(tasks.remove(position), tasks);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                ui.printErrorMsg(new DukeUnknownException());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public UpdateCommand(Operation operation, int pos) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        this.operation \u003d operation;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        position \u003d pos;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public UpdateCommand(Operation operation, Task task) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        this.operation \u003d operation;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        this.task \u003d task;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 48
+    }
+  },
+  {
+    "path": "src/main/duke/exception/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public abstract class DukeException extends Exception  {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 5
+    }
+  },
+  {
+    "path": "src/main/duke/exception/DukeMissingDescException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class DukeMissingDescException extends DukeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private String message;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public DukeMissingDescException(String classStr) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        this.message \u003d String.format(\"OOPS!!! The description of %s cannot be empty.\", classStr);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String getMessage() {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return message;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 12
+    }
+  },
+  {
+    "path": "src/main/duke/exception/DukeUnknownException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class DukeUnknownException extends DukeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String getMessage() {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return \"OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\";"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 8
+    }
+  },
+  {
+    "path": "src/main/duke/storage/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.storage;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private static final String path_str \u003d \"data/duke.txt\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "     * @param t"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "     * @return false means no saved data, true means has saved data."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void readSaveFile(TaskList t) throws DukeException {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        File f \u003d new File(path_str);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        if (!f.exists()) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            System.out.println(\"Save file not found. Creating new file!\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            f \u003d writeToSaveFile(\"\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            System.out.println(f.getAbsolutePath());"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        loadSaveFile(f, t);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void loadSaveFile(File f, TaskList t) throws DukeException {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            Scanner s \u003d new Scanner(f);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            while (s.hasNext()) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                t.add(s.nextLine());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public File writeToSaveFile(String s) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        File f \u003d new File(path_str);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            if (!f.exists()) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                f.createNewFile();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            FileWriter fw \u003d new FileWriter(path_str);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            fw.write(s);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            fw.close();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return f;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Storage() {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 59
+    }
+  },
+  {
+    "path": "src/main/duke/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeMissingDescException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class Deadline extends Task{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private String deadline;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String getDeadline() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return deadline;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void setDeadline(String deadline) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        this.deadline \u003d deadline;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Deadline(String description, String deadline) throws DukeMissingDescException {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        setDeadline(deadline);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return String.format(\"[D]%s (by: %s)\", super.toString(), getDeadline());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 25
+    }
+  },
+  {
+    "path": "src/main/duke/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeMissingDescException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class Event extends Task{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private String start_endTime;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String getStart_endTime() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return start_endTime;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void setStart_endTime(String start_endTime) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        this.start_endTime \u003d start_endTime;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Event(String description, String start_endTime) throws DukeMissingDescException {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        setStart_endTime(start_endTime);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return String.format(\"[E]%s (at: %s)\", super.toString(), getStart_endTime());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 25
+    }
+  },
+  {
+    "path": "src/main/duke/task/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.command.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeMissingDescException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeUnknownException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Command parseInput(String inputStr) throws DukeUnknownException, DukeMissingDescException {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        Command parsedCommand;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        String[] strings \u003d inputStr.split(\" \");"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        String firstStr \u003d strings[0].strip().toLowerCase();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        switch (firstStr) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \"bye\":"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                parsedCommand \u003d new ExitCommand();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                parsedCommand \u003d new ListCommand();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                int pos \u003d Integer.parseInt(strings[1]) - 1; //System.out.println(\"inputted index is not valid. Try again.\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                UpdateCommand.Operation op \u003d UpdateCommand.Operation.valueOf(firstStr.substring(0, 1).toUpperCase() + firstStr.substring(1));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                parsedCommand \u003d new UpdateCommand(op, pos);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            default:    //task processing."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                    if (firstStr.isBlank() || firstStr.isEmpty())"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                        throw new DukeUnknownException();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                    parsedCommand \u003d new UpdateCommand(UpdateCommand.Operation.Add, processTask(strings));"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return parsedCommand;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Task processTask(String[] inputStrs) throws DukeUnknownException, DukeMissingDescException {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        String tempStr \u003d \"\";"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        Task createdTask;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        switch (inputStrs[0]) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                throw new DukeUnknownException();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                for (int i \u003d 1; i \u003c inputStrs.length; i++) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                    tempStr \u003d tempStr.concat(String.format(\"%s \", inputStrs[i]));"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                createdTask \u003d new ToDo(tempStr.stripTrailing()); //remove extra space added on last elem."
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                createdTask \u003d parseEventOrDeadline(inputStrs);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return createdTask;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private static Task parseEventOrDeadline(String[] inputStrs) throws DukeMissingDescException {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        String tempStr1 \u003d \"\", tempStr2 \u003d \"\";"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        int delimiterIndex \u003d Arrays.asList(inputStrs).indexOf((inputStrs[0].equals(\"event\")) ? \"/at\" : \"/by\");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        for (int i \u003d 1; i \u003c delimiterIndex; i++) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            tempStr1 \u003d tempStr1.concat(String.format(\"%s \", inputStrs[i]));"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        for (int i \u003d delimiterIndex + 1; i \u003c inputStrs.length; i++) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            tempStr2 \u003d tempStr2.concat(String.format(\"%s \", inputStrs[i]));"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        tempStr1 \u003d tempStr1.strip();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        tempStr2 \u003d tempStr2.strip();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return (inputStrs[0].equals(\"event\")) ? new Event(tempStr1, tempStr2) : new Deadline(tempStr1, tempStr2);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Parser() {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 73
+    }
+  },
+  {
+    "path": "src/main/duke/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeMissingDescException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public abstract class Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public static final char checkmark \u003d \u0027\\u2713\u0027, crossmark \u003d \u0027\\u274C\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public boolean isDone() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return isDone;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void setDone(boolean done) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        isDone \u003d done;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String getDescription() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return description;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void setDescription(String description) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Task(String description) throws DukeMissingDescException {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        setDescription(description);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        if(description.isEmpty() || description.isBlank())"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            throw new DukeMissingDescException(getClass().getSimpleName().toLowerCase());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        setDone(false);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return String.format(\"[%s] %s\", (isDone) ? checkmark : crossmark, getDescription());"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 37
+    }
+  },
+  {
+    "path": "src/main/duke/task/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeUnknownException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.storage.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private ArrayList\u003cTask\u003e tasks;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String listTasks() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        String tasksStr \u003d \"\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        int i \u003d 0;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        for (Task t : tasks) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            tasksStr +\u003d String.format(\"%d: %s\\n\", ++i, t);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return tasksStr;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void printTasks() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.print(listTasks());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public boolean add(String s) throws DukeException {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        Task t;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        boolean done \u003d true;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        String[] str_arr \u003d s.split(\" \");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        int startDescIndex \u003d s.indexOf(String.format(\"[%c]\", Task.checkmark));  // done"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        int lastDescIndex \u003d s.length();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        if(startDescIndex \u003d\u003d -1){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            startDescIndex \u003d s.indexOf(String.format(\"[%c]\", Task.crossmark));  //not done"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            done \u003d false;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        switch (str_arr[1].charAt(1)){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \u0027D\u0027:"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                //1: [D][❌] tic2002 (by: today)"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                lastDescIndex \u003d s.lastIndexOf(\" (by: \");"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                t \u003d new Deadline(s.substring(startDescIndex + 4, lastDescIndex), s.substring(lastDescIndex + 6, s.length() - 1));"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \u0027E\u0027:"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                //2: [E][❌] tp visit (at: today)"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                lastDescIndex \u003d s.lastIndexOf(\" (at: \");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                t \u003d new Event(s.substring(startDescIndex + 4, lastDescIndex), s.substring(lastDescIndex + 6, s.length() - 1));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            case \u0027T\u0027:"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                //234: [T][❌] awd"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                t \u003d new ToDo(s.substring(startDescIndex + 4, lastDescIndex));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                throw new DukeUnknownException();"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        t.setDone(done);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return tasks.add(t);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public boolean add(Task t) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return tasks.add(t);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Task remove(int i) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        if (i \u003c this.size())"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            return tasks.remove(i);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        else throw new IndexOutOfBoundsException(\"Index out of bounds\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public boolean remove(Task t) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return tasks.remove(t);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Task get(int i) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return tasks.get(i);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void done(int i) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        Task currTask \u003d get(i);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        currTask.setDone(true);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public int size() {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return tasks.size();"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public TaskList(Storage s) throws DukeException {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        s.readSaveFile(this);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 88
+    }
+  },
+  {
+    "path": "src/main/duke/task/ToDo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.exception.DukeMissingDescException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class ToDo extends Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public ToDo(String description) throws DukeMissingDescException {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return String.format(\"[T]%s\", super.toString());"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 15
+    }
+  },
+  {
+    "path": "src/main/duke/ui/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "package main.duke.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import main.duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    private Scanner input;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void printAddMsg(TaskList tasks) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.println(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.println(tasks.get(tasks.size() - 1).toString());   //increment size after printing the task added."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.println(String.format(\"Now you have %d %s in the list.\", tasks.size(), (tasks.size() \u003e 1) ? \"tasks\" : \"task\"));"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void printByeMsg() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void printDeleteMsg(Task currTask, TaskList tasks) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.println(String.format(\"Noted. I\u0027ve removed this task:\\n %s\\nNow you have %d tasks in the list.\", currTask, tasks.size()));"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void printDoneMsg(TaskList t, int pos) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        Task currTask \u003d t.get(pos);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        if (currTask.isDone()) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            System.out.println(\"Task is already done.\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            System.out.println(String.format(\"Nice! I\u0027ve marked this task as done:\\n%s\", currTask));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void printErrorMsg(Exception e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public void printHelloMsg() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\\n\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public String readCommand() {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        String inputStr \u003d \"\";"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        while (inputStr.isBlank() || inputStr.isEmpty()) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                inputStr \u003d input.nextLine().strip();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "                System.out.println(\"Error parsing input. Try again.\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        return inputStr;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    public Ui() {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "        input \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 60
+    }
+  },
+  {
+    "path": "text-ui-test/input.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "bye"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 1
+    }
+  },
+  {
+    "path": "text-ui-test/runtest.sh",
+    "fileType": "sh",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "#!/usr/bin/env bash"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "# create bin directory if it doesn\u0027t exist"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "if [ ! -d \"../bin\" ]"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "then"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    mkdir ../bin"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "fi"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "# delete output from previous run"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "if [ -e \"./ACTUAL.TXT\" ]"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "then"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    rm ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "fi"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "# compile the code into the bin folder, terminates if error occurred"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "if ! /snap/intellij-idea-community/172/jbr/bin/javac -cp ../src -Xlint:none -d ../bin ../src/main/java/Duke.java"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "then"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    echo \"********** BUILD FAILURE **********\""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    exit 1"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "fi"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "# run the program, feed commands from input.txt file and redirect the output to the ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "/snap/intellij-idea-community/172/jbr/bin/java -classpath ../bin main.duke.Duke \u003c ./input.txt \u003e ./ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "# compare the output to the expected output"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "diff ./ACTUAL.TXT ./EXPECTED.TXT"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "if [ $? -eq 0 ]"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "then"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    echo \"Test result: PASSED\""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    exit 0"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "else"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    echo \"Test result: FAILED\""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "    exit 1"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ivanhlb"
+        },
+        "content": "fi"
+      }
+    ],
+    "authorContributionMap": {
+      "ivanhlb": 34
+    }
+  }
+]

@@ -1,0 +1,333 @@
+{
+  "authorDailyContributionsMap": {
+    "kohks": [
+      {
+        "insertions": 45,
+        "deletions": 6,
+        "date": "2019-09-04",
+        "commitResults": [
+          {
+            "hash": "02cd437fa23684934390c591382364aab2f23b6f",
+            "messageTitle": "Level-1 : Greet, Echo, Exit",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 0
+          },
+          {
+            "hash": "d6f62943c3cadac5ef6d496fd56dae78892a6bf8",
+            "messageTitle": "Corrected Level-1",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 2
+          },
+          {
+            "hash": "f1d60ad93f1adde71b160bf3b69193fef43f5db8",
+            "messageTitle": "Completed Level-2: Add, List",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 17,
+        "deletions": 0,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "09fbed670a99d9afa89932f6114f357ac30f12d5",
+            "messageTitle": "add new class Task",
+            "messageBody": "",
+            "insertions": 17,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 36,
+        "deletions": 6,
+        "date": "2019-09-12",
+        "commitResults": [
+          {
+            "hash": "51279ebae49ae4d08f4736d5d7ffb3873ddba07a",
+            "messageTitle": "added Task class. add recognition for \"done x\" add printout of task with status.",
+            "messageBody": "",
+            "insertions": 36,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 121,
+        "deletions": 32,
+        "date": "2019-09-22",
+        "commitResults": [
+          {
+            "hash": "1cbf39edf6e06996d78803173022612c39205660",
+            "messageTitle": "Level-3",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 10
+          },
+          {
+            "hash": "0f81cf7900fa2880bdba1b683fb5af08eac32aff",
+            "messageTitle": "added Message class for welcome and bye messages",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 5
+          },
+          {
+            "hash": "78e34682efe8b2f2cae98fd27c9f7a2b50506e8f",
+            "messageTitle": "level-3 with switch and case code",
+            "messageBody": "",
+            "insertions": 86,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 195,
+        "deletions": 62,
+        "date": "2019-09-23",
+        "commitResults": [
+          {
+            "hash": "b84673612988ddc3ef9672c17682f9352129396f",
+            "messageTitle": "Level-4",
+            "messageBody": "",
+            "insertions": 63,
+            "deletions": 12
+          },
+          {
+            "hash": "56dbbcfbbbbcfb23d51911fb599aff01c1a17fc1",
+            "messageTitle": "exceptions",
+            "messageBody": "",
+            "insertions": 132,
+            "deletions": 50
+          }
+        ]
+      },
+      {
+        "insertions": 94,
+        "deletions": 115,
+        "date": "2019-09-24",
+        "commitResults": [
+          {
+            "hash": "fad3f0db2a2b90086d086993f7e3844f7178a48f",
+            "messageTitle": "Level-5",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 102
+          },
+          {
+            "hash": "888a9b254adaa901e58bbd550dc58b2afe41bb46",
+            "messageTitle": "Level-6 Delete",
+            "messageBody": "",
+            "insertions": 70,
+            "deletions": 13
+          }
+        ]
+      },
+      {
+        "insertions": 108,
+        "deletions": 73,
+        "date": "2019-09-25",
+        "commitResults": [
+          {
+            "hash": "60decf2de2deb961353ed65b890780e478199510",
+            "messageTitle": "Level-7 Save file",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 31
+          },
+          {
+            "hash": "e7184950bb2e205b1c59761ed322dd1b2e6f0a33",
+            "messageTitle": "Level-7 improve on save and load file",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          },
+          {
+            "hash": "857fe097a10f2327860e6fe4c422e1beddb89b79",
+            "messageTitle": "Level-7 save function improvement",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 1
+          },
+          {
+            "hash": "348fddd86c7f7575b5b6677fcdbb83b4b4bf2c60",
+            "messageTitle": "Level-7 new save and load function",
+            "messageBody": "",
+            "insertions": 60,
+            "deletions": 40
+          }
+        ]
+      },
+      {
+        "insertions": 215,
+        "deletions": 119,
+        "date": "2019-10-17",
+        "commitResults": [
+          {
+            "hash": "50b489c605438c0f4bdb9cf254ef49e1f6b93237",
+            "messageTitle": "packages and OOP",
+            "messageBody": "",
+            "insertions": 215,
+            "deletions": 119
+          }
+        ]
+      },
+      {
+        "insertions": 248,
+        "deletions": 60,
+        "date": "2019-10-23",
+        "commitResults": [
+          {
+            "hash": "6ba944556552e55546ca197ba2c7e358ae6789bf",
+            "messageTitle": "date and time included in deadline and event command",
+            "messageBody": "",
+            "insertions": 248,
+            "deletions": 60
+          }
+        ]
+      },
+      {
+        "insertions": 45,
+        "deletions": 0,
+        "date": "2019-10-25",
+        "commitResults": [
+          {
+            "hash": "f8673f30a7258f6ae3179d01cdd7d74ea0301b94",
+            "messageTitle": "added Find function",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 248,
+        "deletions": 163,
+        "date": "2019-10-26",
+        "commitResults": [
+          {
+            "hash": "945ac5c98c050e7278e99522d33c27b8e5159fe4",
+            "messageTitle": "added feature 2 (help page). improve coding standards.",
+            "messageBody": "",
+            "insertions": 243,
+            "deletions": 158
+          },
+          {
+            "hash": "59da388108ced75d8f53b8fc4c77e433ad100d92",
+            "messageTitle": "added assertions at Parse class, dateparser() method to check date.lenght() validity",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 128,
+        "deletions": 11,
+        "date": "2019-10-27",
+        "commitResults": [
+          {
+            "hash": "2c4a07768a8423f54146351388e0357f1a9b1aaf",
+            "messageTitle": "added more assertions.",
+            "messageBody": "",
+            "insertions": 29,
+            "deletions": 5
+          },
+          {
+            "hash": "f4b070c3a768892baccb276a18471585218ab365",
+            "messageTitle": "added JUnit test",
+            "messageBody": "",
+            "insertions": 99,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 32,
+        "deletions": 27,
+        "date": "2019-10-28",
+        "commitResults": [
+          {
+            "hash": "7b23e3cb0b82696d1649037c814a9103ba13cac1",
+            "messageTitle": "modify √ and X. Created jar file",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 5
+          },
+          {
+            "hash": "99743f5d7f572ede640398025ad16f9bb71456f4",
+            "messageTitle": "improved find and modify help page.",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 22
+          }
+        ]
+      },
+      {
+        "insertions": 50,
+        "deletions": 53,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "789c233845944b83aee98394ec718fbfd6bbd668",
+            "messageTitle": "improved UI and Parse logic and flow. reduce some lines of code and catch some user input error.",
+            "messageBody": "",
+            "insertions": 50,
+            "deletions": 53
+          }
+        ]
+      },
+      {
+        "insertions": 35,
+        "deletions": 34,
+        "date": "2019-11-11",
+        "commitResults": [
+          {
+            "hash": "1bff0175ed04f8c93e0aedeee27bf78c89275f35",
+            "messageTitle": "tidy up OOP stuff.",
+            "messageBody": "",
+            "insertions": 35,
+            "deletions": 34
+          }
+        ]
+      },
+      {
+        "insertions": 4,
+        "deletions": 4,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "ab565e083aa6c576d1d9f1e84fd0278b0f1a0906",
+            "messageTitle": "tidy OOP stuff. rename method to camelCase.",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 4
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "kohks": 866
+  },
+  "authorFileTypeContributionMap": {
+    "kohks": {
+      "java": 866,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "kohks": 6961.2334
+  },
+  "authorDisplayNameMap": {
+    "kohks": "KOH ..SUAN"
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "authorDailyContributionsMap": {
+    "derrickyap": [
+      {
+        "insertions": 34,
+        "deletions": 0,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "846616fd26a355cd799bdbb602a431b813ff44e6",
+            "messageTitle": "Add runtest.sh",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 60,
+        "deletions": 14,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "35e57f7ad5eee235ce3ccf401ce1a95d238e5c87",
+            "messageTitle": "Added Task.java and creating Tasks array in Duke",
+            "messageBody": "",
+            "insertions": 17,
+            "deletions": 0
+          },
+          {
+            "hash": "923b718029a6fc673e60cefedf359b1e6f140421",
+            "messageTitle": "Added TodoList.java (but not in use) Successfully change ArrayList to Task Array",
+            "messageBody": "",
+            "insertions": 29,
+            "deletions": 10
+          },
+          {
+            "hash": "6fc83a52d2dc6525f715be807f9e583877208c78",
+            "messageTitle": "added markAsDone method in task.java logic error in duke.java",
+            "messageBody": "",
+            "insertions": 11,
+            "deletions": 3
+          },
+          {
+            "hash": "5dcc592e6abbda11cb4a31de120be64fdc9e38f5",
+            "messageTitle": "Test todo.java",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
+          },
+          {
+            "hash": "7b84d0a9203f2f35948f8d664b4fc39c3b776a81",
+            "messageTitle": "Remove test line",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 9,
+        "deletions": 11,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "406eeb7fee99d1116041dbe105aa293f44590672",
+            "messageTitle": "Able to mark done.",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 77,
+        "deletions": 23,
+        "date": "2019-09-26",
+        "commitResults": [
+          {
+            "hash": "713ad3369fa134d24ef9f62f3b22f8ec97ad978d",
+            "messageTitle": "Added Todo.java and Deadline.java. Todo tasks can be added.",
+            "messageBody": "",
+            "insertions": 77,
+            "deletions": 23
+          }
+        ]
+      },
+      {
+        "insertions": 49,
+        "deletions": 14,
+        "date": "2019-09-27",
+        "commitResults": [
+          {
+            "hash": "1a5c4dccce7d4b0c0e5baf9fa5625694087cb470",
+            "messageTitle": "change from if,else to Switch and added Deadline.java",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 14
+          },
+          {
+            "hash": "16a699a7bcf87cda3201786bd39706836227e408",
+            "messageTitle": "Added Event.java",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 141,
+        "deletions": 33,
+        "date": "2019-09-28",
+        "commitResults": [
+          {
+            "hash": "fee1113f3cfa3deb39cd9915adac60639f889b80",
+            "messageTitle": "exceptions",
+            "messageBody": "",
+            "insertions": 141,
+            "deletions": 33
+          }
+        ]
+      },
+      {
+        "insertions": 159,
+        "deletions": 162,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "c85e065fd43ea071e51882719fac191746a904b6",
+            "messageTitle": "use DukeException replies within DukeException class",
+            "messageBody": "",
+            "insertions": 61,
+            "deletions": 116
+          },
+          {
+            "hash": "074341084ec4db55d39a46d719057715ff74493d",
+            "messageTitle": "added /at and /by exceptions",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 26
+          },
+          {
+            "hash": "81f56e35ee52e6c7ad93f46a33dabda94f70d05d",
+            "messageTitle": "Change to ArrayList for Tasks and add Delete feature",
+            "messageBody": "",
+            "insertions": 76,
+            "deletions": 20
+          }
+        ]
+      },
+      {
+        "insertions": 214,
+        "deletions": 175,
+        "date": "2019-10-12",
+        "commitResults": [
+          {
+            "hash": "d6dd0b4ea517f18c715bf71188ac1477b75e2078",
+            "messageTitle": "Extracted to Tasklist and Ui Class. Created Storage Class",
+            "messageBody": "",
+            "insertions": 214,
+            "deletions": 175
+          }
+        ]
+      },
+      {
+        "insertions": 97,
+        "deletions": 11,
+        "date": "2019-10-13",
+        "commitResults": [
+          {
+            "hash": "347c23ef6e11e06476a901d7f812a6b98e679627",
+            "messageTitle": "Able to load file Option to choose text input or load file for tasks basic Run method",
+            "messageBody": "",
+            "insertions": 97,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 64,
+        "deletions": 29,
+        "date": "2019-10-20",
+        "commitResults": [
+          {
+            "hash": "00649bfc5cbc55b12f5e1ce94ab90eee3efd6e7d",
+            "messageTitle": "Trying to do save",
+            "messageBody": "",
+            "insertions": 64,
+            "deletions": 29
+          }
+        ]
+      },
+      {
+        "insertions": 100,
+        "deletions": 17,
+        "date": "2019-10-28",
+        "commitResults": [
+          {
+            "hash": "ff3e6cd558ecb0733a40d61857b3287525d0bb68",
+            "messageTitle": "Able to save after each additional task. Now working on save as a list",
+            "messageBody": "",
+            "insertions": 100,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 31,
+        "deletions": 53,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "c6d3212ecd0d70e49430fa750fadad8ec3b357fe",
+            "messageTitle": "Save to File automatically",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 53
+          }
+        ]
+      },
+      {
+        "insertions": 171,
+        "deletions": 72,
+        "date": "2019-11-04",
+        "commitResults": [
+          {
+            "hash": "d4335d269a425387c329bb41d37ddf6226a30fd0",
+            "messageTitle": "Completed Parser Class",
+            "messageBody": "",
+            "insertions": 171,
+            "deletions": 72
+          }
+        ]
+      },
+      {
+        "insertions": 83,
+        "deletions": 38,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "e61641fd2af73cd28dc8d401f2079ae7cb581db3",
+            "messageTitle": "With date and time",
+            "messageBody": "",
+            "insertions": 83,
+            "deletions": 38
+          }
+        ]
+      },
+      {
+        "insertions": 210,
+        "deletions": 236,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "83ca81f4f7cfc47e470a8f398767a0e64c9bcd98",
+            "messageTitle": "Date and time for tasks completed.",
+            "messageBody": "",
+            "insertions": 160,
+            "deletions": 134
+          },
+          {
+            "hash": "09eac44448f1e02e5e01dc4d7f09836a82599a17",
+            "messageTitle": "Partial javadoc",
+            "messageBody": "",
+            "insertions": 50,
+            "deletions": 102
+          }
+        ]
+      },
+      {
+        "insertions": 239,
+        "deletions": 75,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "624934e091b50dc1c7f1838ccb066834bd29ea1f",
+            "messageTitle": "Enum Priority",
+            "messageBody": "",
+            "insertions": 193,
+            "deletions": 44
+          },
+          {
+            "hash": "579645549770437b90a859ea7762504ccd175d85",
+            "messageTitle": "Priority completed",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 31
+          }
+        ]
+      },
+      {
+        "insertions": 78,
+        "deletions": 18,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "1002ea9b81cf2b11026059da3fbd88880c9db9cd",
+            "messageTitle": "Find completed",
+            "messageBody": "",
+            "insertions": 78,
+            "deletions": 18
+          }
+        ]
+      },
+      {
+        "insertions": 935,
+        "deletions": 631,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "9a42fae3702e0736b7b3db4083485c1d046530a7",
+            "messageTitle": "Repackage",
+            "messageBody": "",
+            "insertions": 546,
+            "deletions": 428
+          },
+          {
+            "hash": "2f46216795a9f3958ca07fe90357d687f581ee76",
+            "messageTitle": "Updated JavaDoc",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 36
+          },
+          {
+            "hash": "7c497b737a80d3f7011f8079ad0170698944f515",
+            "messageTitle": "JavaDoc Completed",
+            "messageBody": "",
+            "insertions": 71,
+            "deletions": 35
+          },
+          {
+            "hash": "49ce84cdd067b64131c3b70be354d03641794b4d",
+            "messageTitle": "Added overdue and help",
+            "messageBody": "",
+            "insertions": 146,
+            "deletions": 39
+          },
+          {
+            "hash": "97e541cec01e38939a8999665769db371a18abbb",
+            "messageTitle": "Final submission",
+            "messageBody": "",
+            "insertions": 127,
+            "deletions": 93
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "derrickyap": 1211
+  },
+  "authorFileTypeContributionMap": {
+    "derrickyap": {
+      "java": 1174,
+      "fxml": 0,
+      "sh": 34,
+      "bat": 0,
+      "gradle": 1,
+      "txt": 2
+    }
+  },
+  "authorContributionVariance": {
+    "derrickyap": 37633.617
+  },
+  "authorDisplayNameMap": {
+    "derrickyap": "YAP ..HOCK"
+  }
+}

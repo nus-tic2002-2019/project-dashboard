@@ -1,0 +1,2583 @@
+[
+  {
+    "path": "src/main/java/duke/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke;                                           //list the package that this class is in"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "import duke.exception.*;                                //duke\u0027s exception packages (SoC)"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "import duke.task.*;                                     //duke\u0027s task packages"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "import java.util.Scanner;                               //Scanner library"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "import java.util.regex.*;                               //Regular Expressions library"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "import java.util.ArrayList;                             //ArrayList library"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public static void updateStore(ArrayList\u003cTask\u003e storage, String reply, int i) throws NoClassException, DukeException"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        String replied \u003d reply;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            if (reply.startsWith(\"todo\"))"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                reply \u003d reply.replace(\"todo\", \"\");      //replacing the task with nothing"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                if (reply.isBlank())"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    throw new DukeException(replied);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                storage.add(new ToDo(reply));"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            else if (reply.startsWith(\"deadline\"))"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                reply \u003d reply.replace(\"deadline\", \"\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                if (reply.isBlank())"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    throw new DukeException(replied);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                String[] input \u003d reply.split(\"/\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                storage.add(new Deadline(input[0], input[1]));"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            else if (reply.startsWith(\"event\"))"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                reply \u003d reply.replace(\"event\", \"\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                if (reply.isBlank())"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    throw new DukeException(replied);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                String[] input \u003d reply.split(\"/\");"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                storage.add(new Event(input[0],input[1]));"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                throw new NoClassException();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public static void printStore(ArrayList\u003cTask\u003e storage, int count)"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        for (int i \u003d 0; i \u003c count; i++)"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            System.out.println((i+1) + \". \" + storage.get(i).printTask());"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public static void main(String[] args)"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        System.out.println(logo);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        ArrayList\u003cTask\u003e storage \u003d new ArrayList\u003c\u003e();    //Create ArrayList for tasks"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        int storeCount \u003d 0;                             //Create counter for items within storage"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        int num \u003d 0;                                    //Store for the integer input"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        Scanner myObj \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m duke.Duke\\n What can I do for you?\");"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        String reply \u003d myObj.nextLine();                //Reads the next line which is the input"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        reply \u003d reply.toLowerCase();                    //Avoid error on input due to input of upper/lower casing"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        while (!reply.equals(\"bye\"))"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            if (reply.equals(\"list\"))                   //Checks if user asks for stored strings"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                if (storage.size() \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"No tasks in there lah\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    reply \u003d myObj.nextLine();           //Reads the next line for next input"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    printStore(storage, storeCount);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    reply \u003d myObj.nextLine();           //Reads the next line for next input"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            else if (reply.startsWith(\"done\"))          //if user is adding marking items as done"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                Pattern p \u003d Pattern.compile(\"\\\\d+\");    //Using pattern to find digit"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                Matcher m \u003d p.matcher(reply);           //Find pattern as stipulated in reply"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                while (m.find())"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    String temp \u003d m.group();            //Store the patterns found"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    num \u003d Integer.parseInt(temp);       //Changes into integer"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                if (num \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"There is no task in there!\");"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    reply \u003d myObj.nextLine();           //Reads the next line for next input"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    num \u003d num-1;                        //Aligns numbering with stored array[]"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    try"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        storage.get(num).markDone();    //Update duke.task.Task as done"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        System.out.println(\"Nice! I\u0027ve marked this task as done:\\n\" + storage.get(num).printTask());"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        num \u003d 0;"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    catch (IndexOutOfBoundsException e)"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        System.out.println(\"Is there such a task?\");"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    reply \u003d myObj.nextLine();           //Reads the next line for next input"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            else if (reply.startsWith(\"delete\"))        //User trying to delete item"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                Pattern p \u003d Pattern.compile(\"\\\\d+\");"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                Matcher m \u003d p.matcher(reply);"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                while (m.find())"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    String temp \u003d m.group();"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    num \u003d Integer.parseInt(temp);"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                if (num \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"No Tasks to delete T.T\");"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    reply \u003d myObj.nextLine();           //Reads the next line for next input"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    try"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        num \u003d num - 1;"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        String deleted \u003d storage.get(num).printTask();"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        storage.remove(num);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        storeCount--;"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        num \u003d 0;"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        System.out.println(\"Noted. I\u0027ve removed this task: \\n\" + deleted + \"\\nNow you have \" + storeCount + \" tasks in the list\");"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    catch (IndexOutOfBoundsException e)"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                        System.out.println(\"There might be no such task?\");"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    reply \u003d myObj.nextLine();               //Reads the next line for next input"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                try"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    updateStore(storage, reply, storeCount);"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    storeCount++;"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"Got it. I\u0027ve added this task:\\n\" + reply + \"\\nNow you have \" + storeCount + \" in the list.\");  //Prints out echo + reply"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                catch (NoClassException e)"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"Please input type of task..\");"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                catch (ArrayIndexOutOfBoundsException e)"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"Please input the correct format of task : [duke.task.Task Type] [duke.task.Task] / [date]\");"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                catch (DukeException e)"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    DukeException exceptional \u003d new DukeException(reply);"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"☹ OOPS!!! The description of a \" + exceptional.printtask() + \" cannot be empty.\");"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                catch (NumberFormatException e)"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                    System.out.println(\"Please input valid task number to delete!\");"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                reply \u003d myObj.nextLine();               //Reads the next line for next input"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 186,
+      "-": 8
+    }
+  },
+  {
+    "path": "src/main/java/duke/exception/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    protected String output;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     * Taking in the user input thrown into the exception to generate the class of Task creating the error."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     * This method is set within the call function to catch exceptions,"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     * The method uses switch cases to find the type of Task error."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     * @param input error input that falls into the exception case"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     * @return The Task class where error falls into"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public DukeException(String input)"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        this.output \u003d input;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public String printtask()"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        switch(this.output)"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                this.output \u003d \"todo\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                this.output \u003d \"deadline\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                this.output \u003d \"event\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                this.output \u003d \"delete\";"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        return this.output;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 38
+    }
+  },
+  {
+    "path": "src/main/java/duke/exception/NoClassException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public class NoClassException extends Exception{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    //no definition for now"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 5
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "import duke.task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    protected String by;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public Deadline(String input, String by) {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        by \u003d by.trim();"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    //Accessor"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public String printTask() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        return \"[D]\" + super.printTask() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 19
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    protected String startend;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public Event(String input, String startend)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        startend \u003d startend.trim();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        this.startend \u003d startend;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public String printTask()"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        return \"[E]\" + super.printTask() + \" (at: \" + startend + \")\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 19
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public abstract class Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    protected String task;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    protected Boolean done;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public Task(String input)"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        input \u003d input.trim();"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        this.task \u003d input;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        this.done \u003d false;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     * Method to return and print the description of the task with the completion status."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     * @return task printed in format of [status] task description"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public String printTask()"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        return \"[\" + this.getIcon() + \"] \" + this.task;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public Boolean isDone()"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        return this.done;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public String getIcon() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        return (done ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    //Modifier"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public void markDone()"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        this.done \u003d true;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 40
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "//WIP"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    protected ArrayList\u003cTask\u003e tasks;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public enum act{"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        DELETE"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public TaskList()"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        this.tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 17
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/ToDo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public class ToDo extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    protected String task;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    //Constructor"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public ToDo(String input)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    //Accessor"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    public String printTask()"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "        return \"[T]\" + super.printTask();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 21
+    }
+  },
+  {
+    "path": "src/main/java/duke/ui/ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "package duke.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "public class ui {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ahjimomo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ahjimomo": 4
+    }
+  }
+]

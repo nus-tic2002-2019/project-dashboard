@@ -1,0 +1,186 @@
+{
+  "authorDailyContributionsMap": {
+    "e0260253": [
+      {
+        "insertions": 18,
+        "deletions": 0,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "b276eba7a81c8d7e1671a3bbc9ad2f23a5285f13",
+            "messageTitle": "level 1",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 31,
+        "deletions": 4,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "d63c0590c5837e95a6727a28b0f8561dfa7f15b9",
+            "messageTitle": "level 2",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 143,
+        "deletions": 15,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "73094880095c217d6d936e0066c2d00df35a83f6",
+            "messageTitle": "level 3: mark as done",
+            "messageBody": "",
+            "insertions": 52,
+            "deletions": 12
+          },
+          {
+            "hash": "9ac9a4a33876d9b37f434d76658354bb49eb2062",
+            "messageTitle": "level 4: todos, events, deadlines",
+            "messageBody": "",
+            "insertions": 91,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 72,
+        "deletions": 27,
+        "date": "2019-11-14",
+        "commitResults": [
+          {
+            "hash": "02d4bb2bad7a1935383e3d071b134bc43b827010",
+            "messageTitle": "level 5: handle errors",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 27
+          }
+        ]
+      },
+      {
+        "insertions": 22,
+        "deletions": 18,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "40887b97ee6737b6d62b6a1a78837b1180360923",
+            "messageTitle": "change to ArrayList.",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 18
+          }
+        ]
+      },
+      {
+        "insertions": 82,
+        "deletions": 11,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "b2f416e6d97ae7b8e4e32c4ff424a21ab45e6d87",
+            "messageTitle": "level 6: delete",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 0
+          },
+          {
+            "hash": "3378cf681d6abcd12be9f5b5868b39c9638d0764",
+            "messageTitle": "level 7: save",
+            "messageBody": "",
+            "insertions": 41,
+            "deletions": 2
+          },
+          {
+            "hash": "22a1637ab7dd10e4133c889d83622ba8d12cdc0f",
+            "messageTitle": "Java packages",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 9
+          }
+        ]
+      },
+      {
+        "insertions": 189,
+        "deletions": 29,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "dd555d5f87eeefe483490f9254787e560c6dc304",
+            "messageTitle": "level 8: dates and times",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 7
+          },
+          {
+            "hash": "6ba7663eacceec7fce34c94fe100373bbe9424e1",
+            "messageTitle": "javadoc",
+            "messageBody": "",
+            "insertions": 109,
+            "deletions": 7
+          },
+          {
+            "hash": "7b4c7940d46afc9fb84c2f85e9a23f9cab0a1164",
+            "messageTitle": "level 9: find",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 0
+          },
+          {
+            "hash": "3b84c90d5594d98fe48d7f0c8f6152982dbfecde",
+            "messageTitle": "assertion",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 8
+          },
+          {
+            "hash": "265cb980c3c11d602b41655593744a280803b346",
+            "messageTitle": "individual feature: empty entire task list.",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 2
+          },
+          {
+            "hash": "799438967e79278e5c925c5e3abbf21ab1051e8f",
+            "messageTitle": "fix bug.",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 3
+          },
+          {
+            "hash": "7dc2ac5296e21eb55675b5dd722d701ce4130499",
+            "messageTitle": "fix bugs.",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "e0260253": 453
+  },
+  "authorFileTypeContributionMap": {
+    "e0260253": {
+      "java": 453,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "e0260253": 1134.4288
+  },
+  "authorDisplayNameMap": {
+    "e0260253": "XU C..JIAN"
+  }
+}

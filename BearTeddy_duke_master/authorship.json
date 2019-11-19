@@ -1,0 +1,5687 @@
+[
+  {
+    "path": "Duke_Save_File.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "T | false | task1"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "T | false | task2"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "D | true | dead1 | not specified"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "D | true | dead2  |  sunday"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 4
+    }
+  },
+  {
+    "path": "build.gradle",
+    "fileType": "gradle",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "plugins {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027java\u0027"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027application\u0027"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "group \u0027seedu.duke\u0027"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "version \u00270.1.0\u0027"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "repositories {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    mavenCentral()"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "application {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Change this to your main class."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    mainClassName \u003d \"seedu.duke.Duke\""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "dependencies{"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    compile group: \u0027org.apache.commons\u0027, name: \u0027commons-lang3\u0027, version: \u00273.9\u0027"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "run {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    standardInput \u003d System.in"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 6,
+      "-": 20
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003ch\u003eDuke\u003c/h\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003cp\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * This is the Tasks List Scheduler/Handler console based Application."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003c/p\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * @author BearTeddy"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * @version 1.0"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * @since 2019-Nov-01"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.storage.Storage;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.ui.Process;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.ui.Utility;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * Main Method of the Project, uses Utility Class and Storage Class"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * @param args"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * @throws FileNotFoundException"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void main(String[] args) throws FileNotFoundException, ParseException {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        Utility.WelcomeMessage();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        Storage.LoadFile();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        while (Process.Task(Utility.ReadText())) ;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 30,
+      "-": 3
+    }
+  },
+  {
+    "path": "src/main/java/MyClasses/storage/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Class for saving the tasks into file and reading the tasks from file"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * @author BearTeddy"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "package MyClasses.storage;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.tasks.DeadLines;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.tasks.Events;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.tasks.TaskList;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.ui.Process;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.io.FileInputStream;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Filepath of the txt file we are saving the tasklists"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private static final String FILEPATH \u003d \"/Users/HtunHtetMyat/IdeaProjects/duke/src/main/java/data/duke.txt\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To save the tasks into the file in specified file path"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void SaveFile(ArrayList\u003cTaskList\u003e tasks) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            FileWriter fw \u003d new FileWriter(FILEPATH);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            for (TaskList task : tasks) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                fw.write(task.Save() + \"\\n\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            fw.close();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To load the saved tasks from the file into the tasklist array"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void LoadFile() {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            FileInputStream fis \u003d new FileInputStream(FILEPATH);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            Scanner sc \u003d new Scanner(fis);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            while (sc.hasNextLine()) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                LoadCommand(sc.nextLine());"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            sc.close();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To process the String Line and split into tasktypes into the tasklist array"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private static void LoadCommand(String s) {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        ArrayList\u003cString\u003e commands \u003d new java.util.ArrayList\u003cString\u003e(Arrays.asList(s.split(\" \", 7)));"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        TaskList task \u003d null;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            if (commands.get(0).equals(\"Task\")) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                task \u003d new TaskList(commands.get(4), Boolean.parseBoolean(commands.get(2)));"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            } else if (commands.get(0).equals(\"Deadline\")) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                if (commands.size() \u003e\u003d 5) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    task \u003d new DeadLines(commands.get(4), commands.get(6), Boolean.parseBoolean(commands.get(2)));"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    task \u003d new DeadLines(commands.get(4), Boolean.parseBoolean(commands.get(2)));"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            } else if (commands.get(0).equals(\"Event\")) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                if (commands.size() \u003e\u003d 5) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    task \u003d new Events(commands.get(4), commands.get(6), Boolean.parseBoolean(commands.get(2)));"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    task \u003d new Events(commands.get(4), Boolean.parseBoolean(commands.get(2)));"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            Process.AddTask(task);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 83
+    }
+  },
+  {
+    "path": "src/main/java/MyClasses/tasks/DeadLines.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Child Class of TaskList class define the type of Deadline tasklist"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Deadline TaskList"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "package MyClasses.tasks;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.ui.Utility;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateFormatUtils;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateUtils;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "public class DeadLines extends TaskList {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private Date deadLine \u003d null;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private String Type \u003d \"Deadline\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified without time"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public DeadLines(String Task) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified with time"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public DeadLines(String Task, String by) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            this.deadLine \u003d DateUtils.parseDateStrictly(by.trim(),Utility.possibleDateFormats);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }catch (ParseException e){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "           this.deadLine\u003d  null;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified with time and status"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public DeadLines(String Task, String by, boolean Status) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task, Status);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            this.deadLine \u003d DateUtils.parseDateStrictly(by,Utility.possibleDateFormats);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }catch (ParseException e){"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            this.deadLine\u003d  null;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified without time but with status"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public DeadLines(String Task, boolean Status) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task, Status);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public void ListTask(int i) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String temp \u003d this.taskStatus ? \"\\u2713\" : \"\\u2613\";"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String time;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if (deadLine!\u003d null){"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            time \u003d DateFormatUtils.format(this.deadLine,\"dd-MMM-yyyy hh:mm a\");"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }else{"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            time \u003d\"not specified\";"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(i + 1 + \".[\" + Type.charAt(0) + \"]\" + \"[\" + temp + \"] \" + this.taskList + \" (by: \" + time + \")\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public String Save() {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if(this.deadLine !\u003d null){"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return Type.trim() + \" | \" + this.taskStatus + \" | \" + this.taskList.trim() + \" | \" + Utility.DatetoString(this.deadLine);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }else{"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return Type.trim() + \" | \" + this.taskStatus + \" | \" + this.taskList.trim() + \" | not specified\";"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To determine if the paramter task is the correct deadline in this deadline class object"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public boolean FindTask(String searchCriteria, String type){"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if(type.contains(\"D\")){"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            String field \u003d searchCriteria.substring(searchCriteria.indexOf(\"\u003c\") + 1, searchCriteria.indexOf(\"\u003e\"));"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            if(searchCriteria.contains(\"on\")){"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                Date date \u003d null;"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    String datestr \u003d searchCriteria.substring(searchCriteria.indexOf(\"(\") + 1, searchCriteria.indexOf(\")\"));"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    date \u003d DateUtils.parseDateStrictly(datestr,Utility.possibleDateFormats);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                } catch (ParseException e) {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    e.printStackTrace();"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                if(this.deadLine!\u003dnull){"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    return this.taskList.contains(field) \u0026\u0026 DateUtils.isSameDay(this.deadLine, date);"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                } else return false;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            else{"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                return this.taskList.contains(field);"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 99
+    }
+  },
+  {
+    "path": "src/main/java/MyClasses/tasks/Events.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Child Class of TaskList class define the type of Event tasklist"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Event TaskList"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "package MyClasses.tasks;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.ui.Utility;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateFormatUtils;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateUtils;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "public class Events extends TaskList {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private Date eventDeadLine \u003d null;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private String Type \u003d \"Event\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified without time"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public Events(String Task) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified with time"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public Events(String Task, String at) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            this.eventDeadLine \u003d DateUtils.parseDateStrictly(at, Utility.possibleDateFormats);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }catch (ParseException e){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            this.eventDeadLine\u003d  null;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified with status and time"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public Events(String Task, String at, boolean Status) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task, Status);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            this.eventDeadLine \u003d DateUtils.parseDateStrictly(at, Utility.possibleDateFormats);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }catch (ParseException e){"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            this.eventDeadLine\u003d  null;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified with status but without time"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public Events(String Task, Boolean Status) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        super(Task, Status);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public void ListTask(int i) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String temp \u003d this.taskStatus ? \"\\u2713\" : \"\\u2613\";"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String time;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if (this.eventDeadLine!\u003d null){"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            time \u003d DateFormatUtils.format(this.eventDeadLine,\"dd-MMM-yyyy hh:mm a\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }else{"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            time \u003d\"not specified\";"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(i + 1 + \".[\" + Type.charAt(0) + \"]\" + \"[\" + temp + \"] \" + this.taskList + \" (at: \" + time + \")\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public String Save() {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if(this.eventDeadLine !\u003d null){"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return Type.trim() + \" | \" + this.taskStatus + \" | \" + this.taskList.trim() + \" | \" + Utility.DatetoString(this.eventDeadLine);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }else{"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return Type.trim() + \" | \" + this.taskStatus + \" | \" + this.taskList.trim() + \" | not specified\";"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To determine if the parameter task is the correct deadline in this event class object"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public boolean FindTask(String searchCriteria,String type){"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if(type.contains(\"E\")){"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            String field \u003d searchCriteria.substring(searchCriteria.indexOf(\"\u003c\") + 1, searchCriteria.indexOf(\"\u003e\"));"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            if(searchCriteria.contains(\"on\") ){"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                Date date \u003d null;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    String datestr \u003d searchCriteria.substring(searchCriteria.indexOf(\"(\") + 1, searchCriteria.indexOf(\")\"));"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    date \u003d DateUtils.parseDateStrictly(datestr,Utility.possibleDateFormats);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                } catch (ParseException e) {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    e.printStackTrace();"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                if(this.eventDeadLine!\u003dnull){"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    return this.taskList.contains(field) \u0026\u0026 DateUtils.isSameDay(this.eventDeadLine, date);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                } else return false;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            else{"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                return this.taskList.contains(field);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 97
+    }
+  },
+  {
+    "path": "src/main/java/MyClasses/tasks/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Parent Class of TaskList Object class define the type of TaskList"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Normal TaskList"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "package MyClasses.tasks;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private static final String HoriLine \u003d \"--------------------------------------------------\\n\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    protected String taskList;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    protected Boolean taskStatus;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private String Type \u003d \"Task\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public TaskList(String Task) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        this.taskList \u003d Task;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        this.taskStatus \u003d false;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"Added : \" + Task + \"\\n\" + HoriLine);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Constructor when the task is specified including the status of the task"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public TaskList(String Task, Boolean Status) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        this.taskList \u003d Task;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        this.taskStatus \u003d Status;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //to return the task when requested"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public void ListTask(int i) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String temp \u003d this.taskStatus ? \"\\u2713\" : \"\\u2613\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(i + 1 + \".[\" + Type.charAt(0) + \"]\" + \"[\" + temp + \"] \" + this.taskList);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To format the task into saving format"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public String Save() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return Type.trim() + \" | \" + this.taskStatus + \" | \" + this.taskList.trim();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To mark the task as done"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public void DoneTask() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        this.taskStatus \u003d true;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\" Nice! I\u0027ve marked this task as done : \");"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"[\\u2713] \" + this.taskList);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"\\n\" + HoriLine);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To determine if the paramter task is the correct task in this task class object"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public boolean FindTask(String searchCriteria,String type){"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String field \u003d searchCriteria.substring(searchCriteria.indexOf(\"\u003c\") + 1, searchCriteria.indexOf(\"\u003e\"));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if (searchCriteria.contains(\"on\") \u0026\u0026 searchCriteria.contains(\"(\") \u0026\u0026 searchCriteria.contains(\")\")){"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        else if (type.contains(\"T\")){"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return this.taskList.contains(field);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 58
+    }
+  },
+  {
+    "path": "src/main/java/MyClasses/ui/Process.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Main Process of the program that deals with listing of Tasks"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * @author BearTeddy"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "package MyClasses.ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.storage.Storage;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.tasks.DeadLines;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.tasks.Events;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import MyClasses.tasks.TaskList;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateUtils;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateFormatUtils;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "public class Process {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Temporary ArrayList to store Task List Objects"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private static ArrayList\u003cTaskList\u003e tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To Add task into tasks array if the parameter task is not null"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void AddTask(TaskList task) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if (task !\u003d null) tasks.add(task);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * To Figure out what type of tasks it represents"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * Task -t \u003d normal tasks"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * Deadline -d \u003d Deadline tasks"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * Events -e \u003d Event tasks"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * @param commands"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void AllocateTaskType(ArrayList\u003cString\u003e commands) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if (commands.size() \u003e 2 \u0026\u0026 commands.get(2) !\u003d null \u0026\u0026 !(commands.get(2).trim().isBlank())) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            if (commands.get(1).equals(\"-t\") || commands.get(1).equals(\"task\")) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                AddTask(new TaskList(commands.get(2)));"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            else if (commands.get(1).equals(\"-d\") || commands.get(1).equals(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                String[] taskTime \u003d commands.get(2).split(\"/by\");"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    taskTime[1] \u003d Utility.ProcessTime(taskTime[1]);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    if(taskTime[1].equals(\"null\"))"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        System.out.println(\"Incorrect Time format.\\n Please see sample format by typing \u0027help time\u0027\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }else{"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        try {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            AddTask(new DeadLines(taskTime[0], taskTime[1]));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            AddTask(new DeadLines(taskTime[0]));"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    try {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        AddTask(new DeadLines(taskTime[0], taskTime[1]));"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    } catch (IndexOutOfBoundsException err) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        AddTask(new DeadLines(taskTime[0]));"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            else if (commands.get(1).equals(\"-e\") || commands.get(1).equals(\"event\")) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                String[] taskTime \u003d commands.get(2).split(\"/at\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                taskTime[1] \u003d Utility.ProcessTime(taskTime[1]);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                if(taskTime[1].equals(\"null\")){"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    System.out.println(\"Incorrect Time format.\\n Please see sample format by typing \u0027help time\u0027\");"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }else{"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    try {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        AddTask(new Events(taskTime[0], taskTime[1]));"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        AddTask(new Events(taskTime[0]));"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }catch (IndexOutOfBoundsException err){"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    try {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        AddTask(new Events(taskTime[0], taskTime[1]));"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        AddTask(new Events(taskTime[0]));"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            System.out.println(\"OOPS!! Please type descriptions\");"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //TO Exit the Duke process by exiting Infinite Loop in Duke.java -\u003e Main"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static boolean ExitProcess() {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        Storage.SaveFile(tasks);"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"I have saved the current tasks. \\n Bye Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To List out all the tasks avalible in temp tasklist"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void ListTasks() {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            tasks.get(i).ListTask(i);"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To mark the specific task as done"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private static void MarkTest(ArrayList\u003cString\u003e commands) {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            if (Utility.isNumeric(commands.get(1))) {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                tasks.get((Integer.parseInt(commands.get(1)) - 1)).DoneTask();"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                System.out.println(\"Please provide the index number\");"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            System.out.println(\"Item at the specified index does not exist\");"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To Remove the specific tasks at the specified index"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private static void RemoveTask(ArrayList\u003cString\u003e commands) {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"Noted! I have removed this task:\");"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            if (Utility.isNumeric(commands.get(1))) {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                tasks.get(Integer.parseInt(commands.get(1)) - 1).ListTask(0);"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                tasks.remove(Integer.parseInt(commands.get(1)) - 1);"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                System.out.println((\"Please type numeric only!\"));"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            System.out.println(\"OOPS! the task number you specified does not exists\");"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * to find the tasks,deadlines and event using two types of input inside \u003c\u003e and ()."
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * need \u003cb\u003eon\u003c/b\u003e Keyword when trying to find date."
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * \u003c\u003e \u003d text that trying to find"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * () \u003d date/time trying to find"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * for example command will be \u003d find \u003cHello\u003e on (10-10-2019)"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     * @param commands"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    private  static void FindTask(ArrayList\u003cString\u003e commands){"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        ArrayList\u003cTaskList\u003e foundTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        if (commands.size() \u003e 1 \u0026\u0026 commands.get(1) !\u003d null \u0026\u0026 !(commands.get(1).trim().isBlank())) {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            if (commands.get(1).equals(\"-t\") || commands.get(1).equals(\"task\")) {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                //Find inside tasks"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        if(tasks.get(i).FindTask(commands.get(2),\"T\")){"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            foundTasks.add(tasks.get(i));"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                     System.out.println(\"Unknown Command\");"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                     Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            } else if (commands.get(1).equals(\"-d\") || commands.get(1).equals(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                //Find inside deadline"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        if(tasks.get(i).FindTask(commands.get(2),\"D\")){"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            foundTasks.add(tasks.get(i));"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    System.out.println(\"Unknown Command\");"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            } else if (commands.get(1).equals(\"-t\") || commands.get(1).equals(\"event\")) {"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                //find inside event"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        if(tasks.get(i).FindTask(commands.get(2),\"E\")){"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            foundTasks.add(tasks.get(i));"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    System.out.println(\"Unknown Command\");"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            } else if (commands.get(1).equals(\"on\") || commands.get(1).equals(\"at\")) {"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                //find inside deadline and event"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        if(tasks.get(i).FindTask(commands.get(2),\"DE\")){"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            foundTasks.add(tasks.get(i));"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    System.out.println(\"Unknown Command\");"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }else{"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        if(tasks.get(i).FindTask(commands.get(1)+commands.get(2),\"TDE\")){"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            foundTasks.add(tasks.get(i));"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        if(tasks.get(i).FindTask(commands.get(1),\"TDE\")){"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                            foundTasks.add(tasks.get(i));"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            for (int i \u003d 0; i \u003c foundTasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                foundTasks.get(i).ListTask(i);"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            System.out.println(\"Please type something to find\");"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Main process to make sense of what the command is trying to say"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static boolean Task(String Cmmd) {"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        ArrayList\u003cString\u003e commands \u003d Utility.ReadCommand(Cmmd);"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        switch (commands.get(0).toLowerCase()) {"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"bye\":"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"quit\":"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"close\":"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"exit\":"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                return ExitProcess();"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                ListTasks();"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"finish\":"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                MarkTest(commands);"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"add\":"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                AllocateTaskType(commands);"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"find\":"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"search\":"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    FindTask(commands);"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"remove\":"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                RemoveTask(commands);"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"save\":"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"save file\":"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                Storage.SaveFile(tasks);"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"help time\":"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            case \"time\":"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                Utility.TimeFormats();"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                System.out.println(\"OOPS!! I\u0027m Sorry. I do not know what you meant by \\\" \" + Cmmd + \" \\\" (╥﹏╥) .\");"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 270
+    }
+  },
+  {
+    "path": "src/main/java/MyClasses/ui/Utility.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003ch1\u003eUtility Class\u003c/h1\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003cp\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * Class contains several utilities functions for the Main Process"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003c/p\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003cb\u003eMethods\u003c/b\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003cul\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *     \u003cli\u003eWelcomeMesssag\u003c/li\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *     \u003cli\u003eReadText\u003c/li\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *     \u003cli\u003eReadCommand\u003c/li\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *     \u003cli\u003eisNumeric\u003c/li\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * \u003c/ul\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " * @author BearTeddy"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "package MyClasses.ui;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateFormatUtils;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import org.apache.commons.lang3.time.DateUtils;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "public class Utility {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static String[] possibleDateFormats \u003d {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy\","
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd/MM/yyyy\","
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd\","
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy/MM/dd\","
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MMM-yyyy hh:mm a\","
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd HH:mm\","
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy/MM/dd HH:mm\","
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd HH:mm:ss\","
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy/MM/dd HH:mm:ss\","
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd/MM/yyyy HH:mm\","
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd/MM/yyyy HH:mm:ss\","
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy HH:mm:ss\","
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy HH:mm\","
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy\u0027T\u0027HH:mm:ss\","
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy\u0027T\u0027HH:mm\","
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd\u0027T\u0027HH:mm\","
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd\u0027T\u0027HH:mm:ss\","
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd hh:mm a\","
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy/MM/dd hh:mm a\","
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd hh:mm:ss a\","
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy/MM/dd hh:mm:ss a\","
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd/MM/yyyy hh:mm a\","
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd/MM/yyyy hh:mm:ss a\","
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy hh:mm:ss a\","
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy hh:mm a\","
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy\u0027T\u0027hh:mm:ss a\","
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"dd-MM-yyyy\u0027T\u0027hh:mm a\","
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd\u0027T\u0027hh:mm a\","
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            \"yyyy-MM-dd\u0027T\u0027hh:mm:ss a\""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    } ;"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static String ProcessTime(String TimeinString){"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            Date date \u003d DateUtils.parseDateStrictly(TimeinString,possibleDateFormats);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return DateFormatUtils.format(date,\"dd-MMM-yyyy hh:mm a\");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }catch (ParseException e){"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            return \"null\" ;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static String DatetoString(Date date){"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return DateFormatUtils.format(date, \"dd-MMM-yyyy hh:mm a\");"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void TimeFormats(){"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"Below are the possible Time formats you can use. \\n Priority format is by descending order\");"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        for (String s: possibleDateFormats){"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "            System.out.println(s);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        Utility.PrintHL();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To run at the start of the program for welcoming the user"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void WelcomeMessage() {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        PrintHL();"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        PrintHL();"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To print the constant Line of HoriLine"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static void PrintHL() {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        final String HoriLine \u003d \"--------------------------------------------------\\n\";"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        System.out.println(HoriLine);"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To read the Console input text;"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static String ReadText() {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        Scanner sc \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        String data \u003d sc.nextLine();"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        PrintHL();"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return data;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //To split the console input text into each command to process"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static ArrayList\u003cString\u003e ReadCommand(String command) {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        ArrayList\u003cString\u003e commands \u003d new java.util.ArrayList\u003cString\u003e(Arrays.asList(command.split(\" \", 3)));"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return commands;"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    //Check if String numeric"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    public static boolean isNumeric(String s) {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "        return s !\u003d null \u0026\u0026 s.matches(\"[-+]?\\\\d*\\\\.?\\\\d+\");"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 120
+    }
+  },
+  {
+    "path": "src/main/java/data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Task | false | task1"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Task | true | task2"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Event | false | birthday | not specified"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Deadline | false | dead | 10-Oct-2019 12:00 AM"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Event | false | eeasdf | 11-Oct-2019 12:00 AM"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Deadline | false | deadline | 10-Oct-2019 12:00 AM"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Deadline | false | deadline1 | 11-Oct-2019 12:00 AM"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Event | false | event1 | 10-Oct-2019 12:00 AM"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BearTeddy"
+        },
+        "content": "Event | false | event2 | 11-Oct-2019 12:00 AM"
+      }
+    ],
+    "authorContributionMap": {
+      "BearTeddy": 9
+    }
+  }
+]

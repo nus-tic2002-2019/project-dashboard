@@ -1,0 +1,375 @@
+{
+  "authorDailyContributionsMap": {
+    "asmaww": [
+      {
+        "insertions": 15,
+        "deletions": 6,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "6a3d80d3a0bc3c8822867d0e9616ef0a726dd2d6",
+            "messageTitle": "testing for overloading toString()",
+            "messageBody": "",
+            "insertions": 15,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 148,
+        "deletions": 36,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "4943b2bf685c9f819e8c629ac3caa938453885fe",
+            "messageTitle": "level-1 echo",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 4
+          },
+          {
+            "hash": "89b96a888d1c9c345605b08d1dba76369ffa7888",
+            "messageTitle": "formating a bit",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 4
+          },
+          {
+            "hash": "f5a76898d707f66a0b4e14abdaba4bddf204a919",
+            "messageTitle": "level-2 need to fix size in front using Array, so LinkedList is used",
+            "messageBody": "",
+            "insertions": 20,
+            "deletions": 3
+          },
+          {
+            "hash": "94e363e2a66004098325fdc981b2e62d233ff830",
+            "messageTitle": "level-3-beta1 make task a class, feature mark \"done\" not implemented in this version",
+            "messageBody": "",
+            "insertions": 44,
+            "deletions": 8
+          },
+          {
+            "hash": "5a4ec156415e59e53eb9ec193ab9f3a74e00fe1d",
+            "messageTitle": "level-3-beta2 refactoring to abstract method, and get print the isDone mark done btw",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 4
+          },
+          {
+            "hash": "9705263e456e838230ea3d7dd8c13a416839dddf",
+            "messageTitle": "level-3-beta3 decided to use ArrayList to replace LinkedList as referring to an index is convenient; optimised the printing formatting; completed the mark done feature",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 4
+          },
+          {
+            "hash": "d16ef6318708e8e3ca7bdeef7772dbff67034e7e",
+            "messageTitle": "level-3 refactoring the code in if \"done\" command, getIntStringSpace(String echo), printMarkDone(ArrayList\u003cTask\u003e list, int listIndex), then put them in cmdMarkDone(String echo, ArrayList\u003cTask\u003e list)",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 9
+          }
+        ]
+      },
+      {
+        "insertions": 114,
+        "deletions": 10,
+        "date": "2019-09-30",
+        "commitResults": [
+          {
+            "hash": "01430b4fefafd7ed012bcb4be9165a43f1965e14",
+            "messageTitle": "mainly refactoring: str.constains() may be confused when the input is \"event set deadline\", the command is always before the first space, so containsKeyword() is introduced, together when removeKeyword() to remove the command text before the first space.",
+            "messageBody": "",
+            "insertions": 69,
+            "deletions": 2
+          },
+          {
+            "hash": "e467fb7299763ae33963d137f79bdb5d2a9212f0",
+            "messageTitle": "level-4",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 157,
+        "deletions": 104,
+        "date": "2019-10-26",
+        "commitResults": [
+          {
+            "hash": "b0bd0e91868c84e5da57ab62e8b7e8471bcdf7bf",
+            "messageTitle": "Keywords in String[] is slower (need a loop to go thru and run) compared to HashMap",
+            "messageBody": "",
+            "insertions": 94,
+            "deletions": 32
+          },
+          {
+            "hash": "ee17fa5303e09af85e95ad3e0008d53b1fb23098",
+            "messageTitle": "used HashMap to directly match and run the commands, dramatically reduce the code in while loop logic, remove if match keyword largely.",
+            "messageBody": "",
+            "insertions": 36,
+            "deletions": 40
+          },
+          {
+            "hash": "48cc42bb7f98c01d4a7ccdfe99b89842f041f4fb",
+            "messageTitle": "commented wrongly in last commit",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          },
+          {
+            "hash": "fd1de40739bcd224f2f87a85b35acfe84656f071",
+            "messageTitle": "replace variable name \"echo\" since level-1 to \"userInput\"",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 31
+          }
+        ]
+      },
+      {
+        "insertions": 125,
+        "deletions": 62,
+        "date": "2019-10-30",
+        "commitResults": [
+          {
+            "hash": "088b61812d056eaeaea24bf19f0f35d94237c120",
+            "messageTitle": "level-5 DukeException",
+            "messageBody": "",
+            "insertions": 117,
+            "deletions": 54
+          },
+          {
+            "hash": "dc660cbc0c33a11116c2c8a6ace589bce5123996",
+            "messageTitle": "decide not to use Exception(String msg), otherwise when catch the exception, the output will show \"PackageName Exception: \" in front of error message",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 19,
+        "deletions": 6,
+        "date": "2019-10-31",
+        "commitResults": [
+          {
+            "hash": "ef1fcd2cb78a72085ad5b1fec682d7e4df45f0f2",
+            "messageTitle": "1. Add new Exception: when user mark tasks with \"done\" command  followed by invade number \"-1\" or number that is larger than total task number; 2. Also notice a small bug, when type \"bye\" to exit, \"bye\" was not in the command HashMap, DuckException would catch it as an invalid command to print error message.",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 87,
+        "deletions": 15,
+        "date": "2019-11-01",
+        "commitResults": [
+          {
+            "hash": "560fb5dfdfd668d65159e14a87f79d7cdf960f67",
+            "messageTitle": "add some packages",
+            "messageBody": "",
+            "insertions": 87,
+            "deletions": 15
+          }
+        ]
+      },
+      {
+        "insertions": 275,
+        "deletions": 188,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "62abe22419ee58efd2afaee52ebfea8ad7c40bfe",
+            "messageTitle": "add new packages",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 10
+          },
+          {
+            "hash": "7db1a7344e17302d761942f6d047c99dbb36ffcb",
+            "messageTitle": "add more: replace ArrayList to have Class in Storage called TempTaskList, as a temporary storage before file access.",
+            "messageBody": "",
+            "insertions": 47,
+            "deletions": 12
+          },
+          {
+            "hash": "cb9cff3649a6d57b8117b1afd07a3cd9b07b28e3",
+            "messageTitle": "more ui.message refinement",
+            "messageBody": "",
+            "insertions": 203,
+            "deletions": 166
+          }
+        ]
+      },
+      {
+        "insertions": 97,
+        "deletions": 45,
+        "date": "2019-11-04",
+        "commitResults": [
+          {
+            "hash": "fe206154dfd2de6591906d9963d987401610ba64",
+            "messageTitle": "finally get the storage (file) class work, but read and write file logic yet to start",
+            "messageBody": "",
+            "insertions": 97,
+            "deletions": 45
+          }
+        ]
+      },
+      {
+        "insertions": 104,
+        "deletions": 56,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "7d739a3688ab361abbd6f4425d99963274e682da",
+            "messageTitle": "storage.read(), read from file to list",
+            "messageBody": "",
+            "insertions": 104,
+            "deletions": 56
+          }
+        ]
+      },
+      {
+        "insertions": 149,
+        "deletions": 33,
+        "date": "2019-11-14",
+        "commitResults": [
+          {
+            "hash": "c7ce5138c22d0fd9e94792b0c6873f615953bda6",
+            "messageTitle": "file.Write() succeed, shouldn\u0027t have forgotten filewrite.close() Level-7, A-MoreOOP, A-Packages",
+            "messageBody": "",
+            "insertions": 111,
+            "deletions": 32
+          },
+          {
+            "hash": "c3135369e36a66660bbe326ba15d9c60b6970624",
+            "messageTitle": "level-6 delete",
+            "messageBody": "",
+            "insertions": 38,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 7,
+        "deletions": 2,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "b1fdef8120c86724ae5be9fd440a561c852e0c6e",
+            "messageTitle": "1. sometimes users may hit the space bar or enter, it\u0027s stupid to keep showing alerts (invalid command) for that 2. push the LaTeX report folder to git as well",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 324,
+        "deletions": 106,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "352acfea27ca812ee5b5cb78b6cedd3aae30c454",
+            "messageTitle": "level-8 date/time",
+            "messageBody": "",
+            "insertions": 108,
+            "deletions": 18
+          },
+          {
+            "hash": "62fe670363f7ed474473b98ea9524621f93bdc31",
+            "messageTitle": "level-8 fix a bug when reading from the file, event endtime will be captured as starttime improve exception on date/time",
+            "messageBody": "",
+            "insertions": 30,
+            "deletions": 10
+          },
+          {
+            "hash": "23d5af260f31c0802b17bdce4f6efe2f25e86523",
+            "messageTitle": "level-9",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 2
+          },
+          {
+            "hash": "8194ec75fce86281aa9f50df7637d0de1b2723ea",
+            "messageTitle": "Individual Feature C-Sort deadlines",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 3
+          },
+          {
+            "hash": "88bc62fa7602085090f1b4bb65df72d238df16d0",
+            "messageTitle": "undone command \"do\"",
+            "messageBody": "",
+            "insertions": 44,
+            "deletions": 6
+          },
+          {
+            "hash": "90055ba7c480a8edd6d78640f700b846521c9996",
+            "messageTitle": "bug fixing for sort deadlines",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 15
+          },
+          {
+            "hash": "3ba601bacb99a83e7514c09cb57c95f0881b7085",
+            "messageTitle": "put all package into duke folder",
+            "messageBody": "",
+            "insertions": 47,
+            "deletions": 51
+          },
+          {
+            "hash": "c9c9ce53077f75e4b7fe380a5bc3ab50c47332de",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 15,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 184,
+        "deletions": 41,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "2d38cd8471f955e1ff4ca1f186f22d1e02775ca1",
+            "messageTitle": "include report latex files bug fix to duke",
+            "messageBody": "",
+            "insertions": 59,
+            "deletions": 39
+          },
+          {
+            "hash": "dbccb040ae56f5f5811e50f80aebe5ce665fd387",
+            "messageTitle": "submission",
+            "messageBody": "",
+            "insertions": 125,
+            "deletions": 2
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "asmaww": 1103
+  },
+  "authorFileTypeContributionMap": {
+    "asmaww": {
+      "java": 1082,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 21
+    }
+  },
+  "authorContributionVariance": {
+    "asmaww": 7754.2896
+  },
+  "authorDisplayNameMap": {
+    "asmaww": "LI S..IHAO"
+  }
+}

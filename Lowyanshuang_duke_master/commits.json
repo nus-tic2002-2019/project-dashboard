@@ -1,0 +1,158 @@
+{
+  "authorDailyContributionsMap": {
+    "Lowyanshuang": [
+      {
+        "insertions": 74,
+        "deletions": 10,
+        "date": "2019-09-14",
+        "commitResults": [
+          {
+            "hash": "64494871cc56c56d433b3d474207e85b7954d580",
+            "messageTitle": "Level-1: Greet, Echo, Exit",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 0
+          },
+          {
+            "hash": "75e27de6eff72b59aa247ba80b4f80589fc1e3cc",
+            "messageTitle": "Level 2. Add, List",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 1
+          },
+          {
+            "hash": "f07912913a8b06d00cee4f890d90eb4435853a3b",
+            "messageTitle": "Level 3. Mark as Done",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 9
+          }
+        ]
+      },
+      {
+        "insertions": 60,
+        "deletions": 16,
+        "date": "2019-09-28",
+        "commitResults": [
+          {
+            "hash": "06d09c2046209c7aa912d48f515497db663218e6",
+            "messageTitle": "Level 4: ToDo, Event, Deadline",
+            "messageBody": "",
+            "insertions": 28,
+            "deletions": 3
+          },
+          {
+            "hash": "ccb3c3a6d964c8fb0f6c3ce295f4dbcab57960fa",
+            "messageTitle": "Level 5: Handle Errors",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 13
+          }
+        ]
+      },
+      {
+        "insertions": 47,
+        "deletions": 34,
+        "date": "2019-10-12",
+        "commitResults": [
+          {
+            "hash": "62235d0495a840bdf456ac3dd1daff2f43f821ba",
+            "messageTitle": "Level 6. Delete",
+            "messageBody": "",
+            "insertions": 47,
+            "deletions": 34
+          }
+        ]
+      },
+      {
+        "insertions": 66,
+        "deletions": 7,
+        "date": "2019-10-28",
+        "commitResults": [
+          {
+            "hash": "4177c56661add3cf624e33cc4420b06c89fae079",
+            "messageTitle": "Level 7: Save",
+            "messageBody": "",
+            "insertions": 66,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 64,
+        "deletions": 80,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "1aeda8240e9d0706778cbc401fd978cec9277d06",
+            "messageTitle": "Level 7: Save Updated",
+            "messageBody": "",
+            "insertions": 64,
+            "deletions": 80
+          }
+        ]
+      },
+      {
+        "insertions": 61,
+        "deletions": 17,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "a52f84df4e442419ce34f3c7cc6f3f7cda408112",
+            "messageTitle": "Level 8. Dates and Times",
+            "messageBody": "",
+            "insertions": 35,
+            "deletions": 8
+          },
+          {
+            "hash": "26d40805a06357613faca4d47e5f7aa0d36e1f9d",
+            "messageTitle": "Level 8. Dates and Times Updated",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 4
+          },
+          {
+            "hash": "320235d54a6bef0ea660f85de28425f285901a1d",
+            "messageTitle": "Level 9. Find",
+            "messageBody": "",
+            "insertions": 21,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 274,
+        "deletions": 9,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "030e35ffbe9fff1a4d053fc2e3d96f231c6c6b28",
+            "messageTitle": "The rest",
+            "messageBody": "",
+            "insertions": 274,
+            "deletions": 9
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Lowyanshuang": 473
+  },
+  "authorFileTypeContributionMap": {
+    "Lowyanshuang": {
+      "java": 473,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "Lowyanshuang": 1558.7386
+  },
+  "authorDisplayNameMap": {
+    "Lowyanshuang": "LOW ..UANG"
+  }
+}

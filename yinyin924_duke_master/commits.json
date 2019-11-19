@@ -1,0 +1,263 @@
+{
+  "authorDailyContributionsMap": {
+    "yinyin924": [
+      {
+        "insertions": 44,
+        "deletions": 19,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "f4f6146aa9f3c0720deb660cc5297b0fa31662d6",
+            "messageTitle": "Level-1 Completed.",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 0
+          },
+          {
+            "hash": "a636941d0a349725aa9a1323c7094fb3af741af3",
+            "messageTitle": "Revert \"Level-1 Completed.\"",
+            "messageBody": "This reverts commit f4f6146aa9f3c0720deb660cc5297b0fa31662d6.\n",
+            "insertions": 0,
+            "deletions": 14
+          },
+          {
+            "hash": "7c76ea08ef8232dd81929c7ac1b90a46a6c924a5",
+            "messageTitle": "commit changes",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 0
+          },
+          {
+            "hash": "c38c6461e62c04e41bc937fc43e6916bbdaa8161",
+            "messageTitle": "added Level-2 changes",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 201,
+        "deletions": 74,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "42adfce2b9758021d16f337fb5418faef52798fc",
+            "messageTitle": "Level 3 commit",
+            "messageBody": "",
+            "insertions": 58,
+            "deletions": 7
+          },
+          {
+            "hash": "e8bbd42db99d18ac86b4f722141c19e968445e95",
+            "messageTitle": "Level 3 - completed",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 2
+          },
+          {
+            "hash": "a559e5cdd69005d53bee304612be3107474f936f",
+            "messageTitle": "Level 4 commit",
+            "messageBody": "",
+            "insertions": 65,
+            "deletions": 9
+          },
+          {
+            "hash": "63323e3a58daab9d2660167fcddb043ad0450b87",
+            "messageTitle": "Level 4 completed",
+            "messageBody": "",
+            "insertions": 17,
+            "deletions": 7
+          },
+          {
+            "hash": "20ff61c0d456351f670d01aefd494c3a707730bb",
+            "messageTitle": "Level 5 in progress",
+            "messageBody": "",
+            "insertions": 57,
+            "deletions": 49
+          }
+        ]
+      },
+      {
+        "insertions": 286,
+        "deletions": 244,
+        "date": "2019-10-01",
+        "commitResults": [
+          {
+            "hash": "5ce03a8e2c1c73694504159fdbcfece223434331",
+            "messageTitle": "Completed Level-5",
+            "messageBody": "",
+            "insertions": 65,
+            "deletions": 35
+          },
+          {
+            "hash": "203b7009bd60817c50046461e07302f7bd5dc2a0",
+            "messageTitle": "Revert \"Completed Level-5\"",
+            "messageBody": "This reverts commit 5ce03a8e2c1c73694504159fdbcfece223434331.\n",
+            "insertions": 35,
+            "deletions": 65
+          },
+          {
+            "hash": "898654ee1163a5de8d527b5bef87a5aa492f9483",
+            "messageTitle": "Completed Level-5",
+            "messageBody": "",
+            "insertions": 76,
+            "deletions": 34
+          },
+          {
+            "hash": "63691e82aa934b5f43c4517bc158eeab2341eaf7",
+            "messageTitle": "Revert \"Completed Level-5\"",
+            "messageBody": "This reverts commit 898654ee1163a5de8d527b5bef87a5aa492f9483.\n",
+            "insertions": 34,
+            "deletions": 76
+          },
+          {
+            "hash": "dc06be3aa88954fac6343d65067e30ba2b38c9ed",
+            "messageTitle": "completed level-5",
+            "messageBody": "",
+            "insertions": 63,
+            "deletions": 34
+          },
+          {
+            "hash": "a7b8f7bf1553db377601b0b6a17eba6e2d4e2d2f",
+            "messageTitle": "complete level-6",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 29,
+        "deletions": 2,
+        "date": "2019-10-30",
+        "commitResults": [
+          {
+            "hash": "491d9f42ab9847141c6f5dc77dafe8f091bd2833",
+            "messageTitle": "Update Duke.java",
+            "messageBody": "Save file",
+            "insertions": 28,
+            "deletions": 1
+          },
+          {
+            "hash": "1e3a9c22ecf41a14d9bf00e3261f7eccb2805451",
+            "messageTitle": "Level 7 - Save",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 664,
+        "deletions": 240,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "f391b2ffa6d0e3ab1caa0f18f58194925cba105b",
+            "messageTitle": "Completed A-MoreOOP",
+            "messageBody": "",
+            "insertions": 613,
+            "deletions": 226
+          },
+          {
+            "hash": "e98c75d7977e39515153234d42e77de91296d4a2",
+            "messageTitle": "Updated and completed A-MoreOOP",
+            "messageBody": "",
+            "insertions": 20,
+            "deletions": 10
+          },
+          {
+            "hash": "5d5abb981ca373fda7485b5381db8ebf005db670",
+            "messageTitle": "Completed A-MoreOOP",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 727,
+        "deletions": 239,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "2ff466fc94e9fed909eef8caf9f03a50744a8b64",
+            "messageTitle": "Completed Level 8 - Read Date Time",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 8
+          },
+          {
+            "hash": "22814ebddd36489f8249433741122b8595cb4682",
+            "messageTitle": "Completed A-JavaDoc",
+            "messageBody": "",
+            "insertions": 370,
+            "deletions": 180
+          },
+          {
+            "hash": "e30278f050b30c96f3fb67af71c57a1f6532814f",
+            "messageTitle": "Completed A-JUnit",
+            "messageBody": "",
+            "insertions": 67,
+            "deletions": 0
+          },
+          {
+            "hash": "89fdf049d9a3e599c7749eb677dde31e43d0621c",
+            "messageTitle": "Completed C-Update",
+            "messageBody": "",
+            "insertions": 100,
+            "deletions": 3
+          },
+          {
+            "hash": "24eb0f3a13b2d4307d3a1be7f36b13a8af40e647",
+            "messageTitle": "Completed Level-9",
+            "messageBody": "",
+            "insertions": 49,
+            "deletions": 0
+          },
+          {
+            "hash": "95f0530a3a011f49805b76add403f0f5bc1ed7d4",
+            "messageTitle": "Completed A-CodingStandard",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 47
+          },
+          {
+            "hash": "dd1818108c0c0d56b24b86fa9db480e95115d69d",
+            "messageTitle": "Completed another individual feature B-ViewSchedules",
+            "messageBody": "",
+            "insertions": 61,
+            "deletions": 1
+          },
+          {
+            "hash": "6c44e1bd9d49c8d117c346162a7040072d614863",
+            "messageTitle": "Completed A-Assertions",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 0
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "yinyin924": 1141
+  },
+  "authorFileTypeContributionMap": {
+    "yinyin924": {
+      "java": 1124,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 17
+    }
+  },
+  "authorContributionVariance": {
+    "yinyin924": 25814.455
+  },
+  "authorDisplayNameMap": {
+    "yinyin924": "LIM .. YIN"
+  }
+}

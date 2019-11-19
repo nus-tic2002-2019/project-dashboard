@@ -1,0 +1,235 @@
+{
+  "authorDailyContributionsMap": {
+    "TanChiaChun": [
+      {
+        "insertions": 1,
+        "deletions": 0,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "1a410aca7675cc8d61c1cf969420afcc36681c8c",
+            "messageTitle": "Commit test.",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 59,
+        "deletions": 8,
+        "date": "2019-09-09",
+        "commitResults": [
+          {
+            "hash": "15663693e0632223aa857b6d245dcf2471f4971c",
+            "messageTitle": "Greet, Echo, Exit",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 0
+          },
+          {
+            "hash": "fe7e6d9a6b9f154a511cd99457cf7fbb847b7a24",
+            "messageTitle": "Add, List",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 57,
+        "deletions": 13,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "72c82f05f1c273782166d530d95091c38e9513d2",
+            "messageTitle": "Level 3. Mark as Done",
+            "messageBody": "",
+            "insertions": 57,
+            "deletions": 13
+          }
+        ]
+      },
+      {
+        "insertions": 158,
+        "deletions": 32,
+        "date": "2019-09-30",
+        "commitResults": [
+          {
+            "hash": "2618377a6891e690d58196c933c4be34db8b7caf",
+            "messageTitle": "Before string override of Task class.",
+            "messageBody": "",
+            "insertions": 79,
+            "deletions": 14
+          },
+          {
+            "hash": "324b9ba008c88f9e2cb6f88d1ca36922c491b0ff",
+            "messageTitle": "Level 4. ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 48,
+            "deletions": 16
+          },
+          {
+            "hash": "467eabff97d9bc4b2c7437c42423b95f75b81de5",
+            "messageTitle": "Level-5: Handle Errors Complete exception handling for done, todo, deadline, event and blah.",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 35,
+        "deletions": 17,
+        "date": "2019-10-14",
+        "commitResults": [
+          {
+            "hash": "20fc9481401861fcdb27a9f6848931ce7514c1e7",
+            "messageTitle": "Level-6: Delete",
+            "messageBody": "",
+            "insertions": 35,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 499,
+        "deletions": 266,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "daa25e1d36c65149fe8eb470ead10524320778f9",
+            "messageTitle": "Level 7 - Pre 1",
+            "messageBody": "",
+            "insertions": 92,
+            "deletions": 72
+          },
+          {
+            "hash": "938f604faef83567674abc09b19213ab750077cb",
+            "messageTitle": "Level 7 - Pre 2 - Further refactoring for coding standards",
+            "messageBody": "",
+            "insertions": 71,
+            "deletions": 68
+          },
+          {
+            "hash": "82467b45c8e26d54e38b0c7103d025b72ecb6e9a",
+            "messageTitle": "Level 7 - Pre 3 - Buffer",
+            "messageBody": "",
+            "insertions": 144,
+            "deletions": 38
+          },
+          {
+            "hash": "7c27ef4772e62a2ac8ed2ae30ef892b2dd9c1875",
+            "messageTitle": "Level 7: Save",
+            "messageBody": "",
+            "insertions": 121,
+            "deletions": 27
+          },
+          {
+            "hash": "c9f69c463a0985afd7544a4c5e258ce86985e0a9",
+            "messageTitle": "A-MoreOOP - Pre 1",
+            "messageBody": "",
+            "insertions": 71,
+            "deletions": 61
+          }
+        ]
+      },
+      {
+        "insertions": 586,
+        "deletions": 346,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "17518bbd6a4d6846e2a36366bff04cfa089ca68b",
+            "messageTitle": "A-MoreOOP: More OOP",
+            "messageBody": "",
+            "insertions": 347,
+            "deletions": 263
+          },
+          {
+            "hash": "928e2b81991049e553db312dc99ea2a2d09ef1c7",
+            "messageTitle": "A-Packages: Java Packages",
+            "messageBody": "",
+            "insertions": 48,
+            "deletions": 8
+          },
+          {
+            "hash": "e1540064f14f63f17239eb7988db23f6c332a6f6",
+            "messageTitle": "Level 8 - Pre 1",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 0
+          },
+          {
+            "hash": "53ffc15ec9dcee5411f2be3aa1075292325029d6",
+            "messageTitle": "Level 8: Dates and Times",
+            "messageBody": "",
+            "insertions": 177,
+            "deletions": 73
+          },
+          {
+            "hash": "661415c3b5a3e15277cc3c86596b5fec699d8d8d",
+            "messageTitle": "A-JavaDoc - Pre 1",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 385,
+        "deletions": 89,
+        "date": "2019-11-19",
+        "commitResults": [
+          {
+            "hash": "98614d4688ac77987b6452e181707806c0ab69f9",
+            "messageTitle": "A-JavaDoc - Pre 2",
+            "messageBody": "",
+            "insertions": 127,
+            "deletions": 9
+          },
+          {
+            "hash": "370f2fff648e618e1f266ab5adf7245430a81e81",
+            "messageTitle": "A-JavaDoc",
+            "messageBody": "",
+            "insertions": 189,
+            "deletions": 71
+          },
+          {
+            "hash": "8722e9562f3209617b997b1da1b5dfc1e4949bdd",
+            "messageTitle": "A-JUnit",
+            "messageBody": "",
+            "insertions": 56,
+            "deletions": 0
+          },
+          {
+            "hash": "67b1f3b5bad20302fb152b338fec8de1eebde685",
+            "messageTitle": "Individual Feature 1 - Pre 1",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 9
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "TanChiaChun": 1014
+  },
+  "authorFileTypeContributionMap": {
+    "TanChiaChun": {
+      "java": 1004,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 10
+    }
+  },
+  "authorContributionVariance": {
+    "TanChiaChun": 20567.176
+  },
+  "authorDisplayNameMap": {
+    "TanChiaChun": "TAN ..CHUN"
+  }
+}

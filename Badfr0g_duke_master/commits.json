@@ -1,0 +1,179 @@
+{
+  "authorDailyContributionsMap": {
+    "Badfr0g": [
+      {
+        "insertions": 22,
+        "deletions": 5,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "59269d8030debd8252fc2d92d695a58e90fddbec",
+            "messageTitle": "added scanner and while loop",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 34,
+        "deletions": 4,
+        "date": "2019-09-04",
+        "commitResults": [
+          {
+            "hash": "90c095ea49c1cb149bba8d30e67e324d14c39b4b",
+            "messageTitle": "level two",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 46,
+        "deletions": 8,
+        "date": "2019-09-19",
+        "commitResults": [
+          {
+            "hash": "54c823d53e44a1f47c00d920d7c0032f38389d5e",
+            "messageTitle": "level 3",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 105,
+        "deletions": 10,
+        "date": "2019-10-09",
+        "commitResults": [
+          {
+            "hash": "f262e9225136c2681a9eff187741ff57c6cb3bb3",
+            "messageTitle": "LEVEL 4",
+            "messageBody": "",
+            "insertions": 105,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 71,
+        "deletions": 81,
+        "date": "2019-10-14",
+        "commitResults": [
+          {
+            "hash": "0ef559cf960c942ada3bcbb6cbae5479060c8491",
+            "messageTitle": "level 5",
+            "messageBody": "",
+            "insertions": 71,
+            "deletions": 81
+          }
+        ]
+      },
+      {
+        "insertions": 40,
+        "deletions": 15,
+        "date": "2019-10-16",
+        "commitResults": [
+          {
+            "hash": "64177f868c102350f495eb7a706834d8910b12e2",
+            "messageTitle": "level 6",
+            "messageBody": "",
+            "insertions": 40,
+            "deletions": 15
+          }
+        ]
+      },
+      {
+        "insertions": 184,
+        "deletions": 79,
+        "date": "2019-10-21",
+        "commitResults": [
+          {
+            "hash": "2ef057225904e06245aa91d1037ff12335945479",
+            "messageTitle": "LEVEL7",
+            "messageBody": "",
+            "insertions": 180,
+            "deletions": 79
+          },
+          {
+            "hash": "5e98cac1511dfb172a364ace1e0d2b6d0cade42e",
+            "messageTitle": "level7",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 647,
+        "deletions": 262,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "6d1bef3613eca7c0c0f2cbd191003bf35d9054b5",
+            "messageTitle": "MORE OOP",
+            "messageBody": "",
+            "insertions": 459,
+            "deletions": 221
+          },
+          {
+            "hash": "ff003ffe5ceca94baa611bb3a48084887d199d70",
+            "messageTitle": "level 8 date time",
+            "messageBody": "",
+            "insertions": 75,
+            "deletions": 30
+          },
+          {
+            "hash": "3bd02c55fa1795579c166299a782e455ae08efdf",
+            "messageTitle": "level 9 find",
+            "messageBody": "",
+            "insertions": 61,
+            "deletions": 1
+          },
+          {
+            "hash": "398e9fa6b5d839889a97c0e1864048f9e58225ff",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 52,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 88,
+        "deletions": 35,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "c05b91b358ca38619d3d2ce1e1b09b6ef2b41349",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 88,
+            "deletions": 35
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Badfr0g": 745
+  },
+  "authorFileTypeContributionMap": {
+    "Badfr0g": {
+      "java": 740,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 5
+    }
+  },
+  "authorContributionVariance": {
+    "Badfr0g": 11748.524
+  },
+  "authorDisplayNameMap": {
+    "Badfr0g": "JOSE..YANG"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "authorDailyContributionsMap": {
+    "sohwkjames": [
+      {
+        "insertions": 87,
+        "deletions": 1,
+        "date": "2019-09-08",
+        "commitResults": [
+          {
+            "hash": "57ce0d6c45450d5e5a46f49e077c919a1054de1d",
+            "messageTitle": "Added InteractionsManager class, Operations class, Task class as new architecture",
+            "messageBody": "",
+            "insertions": 87,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 42,
+        "deletions": 46,
+        "date": "2019-09-13",
+        "commitResults": [
+          {
+            "hash": "c6e15c411c1cf4319042982f0adccc5247035901",
+            "messageTitle": "Added set done function",
+            "messageBody": "",
+            "insertions": 42,
+            "deletions": 46
+          }
+        ]
+      },
+      {
+        "insertions": 146,
+        "deletions": 23,
+        "date": "2019-09-15",
+        "commitResults": [
+          {
+            "hash": "d3bcc0d966b222f7fad36171195f2902db81ebd3",
+            "messageTitle": "Level 4 started work on Todo, Deadline, and Event class",
+            "messageBody": "",
+            "insertions": 146,
+            "deletions": 23
+          }
+        ]
+      },
+      {
+        "insertions": 0,
+        "deletions": 1,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "338c6e3076d3517bc567162699bfcb1dd16a4e30",
+            "messageTitle": "removed .class files from java folder",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 26,
+        "deletions": 16,
+        "date": "2019-10-01",
+        "commitResults": [
+          {
+            "hash": "15c346b6887b8e5ed2c4767270206bab6914585d",
+            "messageTitle": "Fixed bug in deadline and event",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 16
+          }
+        ]
+      },
+      {
+        "insertions": 22,
+        "deletions": 3,
+        "date": "2019-10-08",
+        "commitResults": [
+          {
+            "hash": "2fa5934ec956e0dcf5370f40e3f120e3e656157c",
+            "messageTitle": "Added error handling",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 19,
+        "deletions": 14,
+        "date": "2019-10-12",
+        "commitResults": [
+          {
+            "hash": "80a28832ea65e9db63ed3f2d18a18458f7d836e7",
+            "messageTitle": "Added delete function",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 66,
+        "deletions": 7,
+        "date": "2019-10-18",
+        "commitResults": [
+          {
+            "hash": "5ec95132d2d38fbfa4844aa3d3e0178442bcdcc3",
+            "messageTitle": "Trying out storage but not working",
+            "messageBody": "",
+            "insertions": 66,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 65,
+        "deletions": 14,
+        "date": "2019-10-26",
+        "commitResults": [
+          {
+            "hash": "e175b638f235e4513659769e330917fa6f8656c1",
+            "messageTitle": "Implemeted Storage class. User can now append to text file.",
+            "messageBody": "",
+            "insertions": 65,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 151,
+        "deletions": 82,
+        "date": "2019-10-28",
+        "commitResults": [
+          {
+            "hash": "c947b5c6413e2ba01641a3a877ea2ff632d6eecb",
+            "messageTitle": "Updated storage",
+            "messageBody": "",
+            "insertions": 30,
+            "deletions": 8
+          },
+          {
+            "hash": "14120f23b7ffcedbc5a6a9253e0ff372bccd0734",
+            "messageTitle": "Implemented \u0027main\u0027, \u0027task\u0027, \u0027storage\u0027, \u0027interactions\u0027 packages.",
+            "messageBody": "",
+            "insertions": 121,
+            "deletions": 74
+          }
+        ]
+      },
+      {
+        "insertions": 26,
+        "deletions": 2,
+        "date": "2019-10-29",
+        "commitResults": [
+          {
+            "hash": "d47321fb5d3230a8a6f413d31cf6a8e3698ecf08",
+            "messageTitle": "Added simple java documentation",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 2
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "sohwkjames": 474
+  },
+  "authorFileTypeContributionMap": {
+    "sohwkjames": {
+      "java": 471,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 3
+    }
+  },
+  "authorContributionVariance": {
+    "sohwkjames": 1723.127
+  },
+  "authorDisplayNameMap": {
+    "sohwkjames": "SOH ..AMES"
+  }
+}

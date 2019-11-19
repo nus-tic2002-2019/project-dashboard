@@ -1,0 +1,298 @@
+{
+  "authorDailyContributionsMap": {
+    "KaydenKhor": [
+      {
+        "insertions": 34,
+        "deletions": 3,
+        "date": "2019-09-01",
+        "commitResults": [
+          {
+            "hash": "5a5b94a234dcd4f092e9913edd5629e3bf9f7676",
+            "messageTitle": "Level-2: Add, List by E0373956, Khor KY",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "3e156af9129e73d7e2ead40ee92b028d9ff052a1",
+            "messageTitle": "Installed Gradle into project",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 50,
+        "deletions": 5,
+        "date": "2019-09-08",
+        "commitResults": [
+          {
+            "hash": "3260fbea1f32311a1456124520a2ae132033df05",
+            "messageTitle": "Level-3, Mark as Done, Done By E0373956, Khor KY",
+            "messageBody": "",
+            "insertions": 50,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 75,
+        "deletions": 8,
+        "date": "2019-09-16",
+        "commitResults": [
+          {
+            "hash": "1f7e0ef7ae6201464bea8a43f46a154d8bcab623",
+            "messageTitle": "Level-4: ToDos, Events, Deadlines - Done by: E0373956, Khor KY",
+            "messageBody": "",
+            "insertions": 75,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 100,
+        "deletions": 56,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "7f9a5d409471ba7da8607f1658a7b97fc47eec6f",
+            "messageTitle": "Level-5, Error handling implemented. Done by E0373956, Khor Ky",
+            "messageBody": "",
+            "insertions": 100,
+            "deletions": 56
+          }
+        ]
+      },
+      {
+        "insertions": 104,
+        "deletions": 70,
+        "date": "2019-10-07",
+        "commitResults": [
+          {
+            "hash": "f040891f4a97a123167aa24ebd9c7849b72238a2",
+            "messageTitle": "Level-6 Delete function implemented, Changed all Array task into collection class as ArrayList\u003cTask\u003e history, Removed count variable. Done by E0373956, Khor KY",
+            "messageBody": "",
+            "insertions": 104,
+            "deletions": 70
+          }
+        ]
+      },
+      {
+        "insertions": 12,
+        "deletions": 0,
+        "date": "2019-10-22",
+        "commitResults": [
+          {
+            "hash": "b278e3139d0726efdd76d5bca4d57aa3933b7c18",
+            "messageTitle": "Task and sub-classes package into task package.",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 403,
+        "deletions": 97,
+        "date": "2019-10-31",
+        "commitResults": [
+          {
+            "hash": "2ef26951ab53cec0157ac6fb6b59b94e144bb8fe",
+            "messageTitle": "Remodel whole project to various class. Ui, Parser, Tasklists, Duke",
+            "messageBody": "",
+            "insertions": 403,
+            "deletions": 97
+          }
+        ]
+      },
+      {
+        "insertions": 141,
+        "deletions": 21,
+        "date": "2019-11-04",
+        "commitResults": [
+          {
+            "hash": "299668febfea0f17b1ae08380f252af4b3e7698e",
+            "messageTitle": "Implemented Save and Load function, hard coded. Level 1-7 Done by E0373956, Khor KY",
+            "messageBody": "",
+            "insertions": 96,
+            "deletions": 4
+          },
+          {
+            "hash": "42df65653345bec507e5f98e59bcf791ccafcf8d",
+            "messageTitle": "Level 1-8,Implemented Date and Time function for deadline type task. Done by: E0373956 Khor KY",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 180,
+        "deletions": 245,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "39eb860718fa6c3660db0a6c8ba5595941e2cae4",
+            "messageTitle": "Implemented Individual feature B-DoAfterTasks. Done By: E0373956, Khor Ky",
+            "messageBody": "",
+            "insertions": 90,
+            "deletions": 31
+          },
+          {
+            "hash": "4ab8ee642d3efe2bc1df8e2b590f0bb11f04c94e",
+            "messageTitle": "Level-9 Find function implemented. A-Junit implemented. Done By: E0373956 Khor KY",
+            "messageBody": "",
+            "insertions": 90,
+            "deletions": 214
+          }
+        ]
+      },
+      {
+        "insertions": 45,
+        "deletions": 8,
+        "date": "2019-11-06",
+        "commitResults": [
+          {
+            "hash": "6d35f236f136cc04a8e657bb0f8da55a0eab1258",
+            "messageTitle": "Implemented indvidual feature 2, C-NaturalDates. Fixed readFile function to be able to read DoAfter Task. Done by: E0373956 Khor KY",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 292,
+        "deletions": 67,
+        "date": "2019-11-08",
+        "commitResults": [
+          {
+            "hash": "7783a760c5545ff2deb170ceccf0218057ddfe4a",
+            "messageTitle": "Fixed C-NaturalDates.",
+            "messageBody": "",
+            "insertions": 82,
+            "deletions": 20
+          },
+          {
+            "hash": "f78a7c6e450d5ab67aac76d5f721ef7d1d3d88c5",
+            "messageTitle": "Implemented A-JavaDoc to duke. All of the methods from duke.",
+            "messageBody": "",
+            "insertions": 138,
+            "deletions": 4
+          },
+          {
+            "hash": "3667ed55e93457824b2fcdca222cb6ef8a5a44db",
+            "messageTitle": "A-CodingStandard, A-CodeQuality. Improved codes in accodance with coding standards and quality.",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 43
+          }
+        ]
+      },
+      {
+        "insertions": 130,
+        "deletions": 85,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "f49a5b4c675cdc4e729a7d658e230c38ca994c0f",
+            "messageTitle": "Fixed my DateTime formatting. Tried A-Jar",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 29
+          },
+          {
+            "hash": "ed57ac130d2951a2d84d212e4db3b3d7eb39374d",
+            "messageTitle": "Improved find function",
+            "messageBody": "",
+            "insertions": 111,
+            "deletions": 56
+          }
+        ]
+      },
+      {
+        "insertions": 36,
+        "deletions": 28,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "49310f58d956303915f1bb31c13cf3f29171016f",
+            "messageTitle": "Implemented 3 x JUnit test \u0026 2 x Assertion test",
+            "messageBody": "",
+            "insertions": 36,
+            "deletions": 28
+          }
+        ]
+      },
+      {
+        "insertions": 24,
+        "deletions": 13,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "6ea38ebcba5511dc77d31b9edbc39e8fb8ada7e7",
+            "messageTitle": "Found out event bug and fix event empty description bug",
+            "messageBody": "",
+            "insertions": 11,
+            "deletions": 1
+          },
+          {
+            "hash": "356d93ab6c175a1d02552dd030dac8c83bda44da",
+            "messageTitle": "Changed duke.txt to a relative file path instead of my personal file path",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 16,
+        "deletions": 14,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "683d066dd38892b81ddcaaf1e1937d8648bddfe5",
+            "messageTitle": "Changed file path. FINAL SUBMISSION",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 7
+          },
+          {
+            "hash": "e1097d526098381538fa2324d775b85cadf8925d",
+            "messageTitle": "Fix file path problem FINAL SUBMISSION HERE!",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 7
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "KaydenKhor": 943
+  },
+  "authorFileTypeContributionMap": {
+    "KaydenKhor": {
+      "java": 923,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 1,
+      "txt": 19
+    }
+  },
+  "authorContributionVariance": {
+    "KaydenKhor": 8241.742
+  },
+  "authorDisplayNameMap": {
+    "KaydenKhor": "KHOR..YONG"
+  }
+}

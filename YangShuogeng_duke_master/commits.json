@@ -1,0 +1,263 @@
+{
+  "authorDailyContributionsMap": {
+    "YangShuogeng": [
+      {
+        "insertions": 85,
+        "deletions": 2,
+        "date": "2019-09-04",
+        "commitResults": [
+          {
+            "hash": "adb8f804d040068e5a93d3359756915bfd4d0b93",
+            "messageTitle": "Level 1_Greet_Echo_Exit",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 0
+          },
+          {
+            "hash": "f3fafd9d373d627b037438d9252ee69df2d79147",
+            "messageTitle": "Level 2. Add, List",
+            "messageBody": "",
+            "insertions": 39,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 109,
+        "deletions": 12,
+        "date": "2019-09-08",
+        "commitResults": [
+          {
+            "hash": "d0ff49be2382b81c0aacaede5a048d974387c43f",
+            "messageTitle": "Level 3. Mark as Done",
+            "messageBody": "",
+            "insertions": 109,
+            "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 257,
+        "deletions": 79,
+        "date": "2019-09-15",
+        "commitResults": [
+          {
+            "hash": "fbc63fe4242b46b9ffe1627e54ed1c38bdf3e33f",
+            "messageTitle": "Level 4. ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 256,
+            "deletions": 78
+          },
+          {
+            "hash": "36292f30ed4559d2e619bf6b4ecd125602bafe3f",
+            "messageTitle": "Gradle setting change a little bit",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 105,
+        "deletions": 53,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "72539a06bffcfde54cb37cb39eb7d0dc768c2386",
+            "messageTitle": "Level 5. Handle Errors",
+            "messageBody": "",
+            "insertions": 105,
+            "deletions": 53
+          }
+        ]
+      },
+      {
+        "insertions": 115,
+        "deletions": 126,
+        "date": "2019-10-09",
+        "commitResults": [
+          {
+            "hash": "6cbae2b76835960cfbaa7a5cd993a1b937d0cede",
+            "messageTitle": "Level 6. Delete, Changed to switch.",
+            "messageBody": "",
+            "insertions": 115,
+            "deletions": 126
+          }
+        ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 2,
+        "date": "2019-10-14",
+        "commitResults": [
+          {
+            "hash": "a3f346fed91ef60f91ae0b2f800b29fa24d188b2",
+            "messageTitle": "Re-import the project.",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 353,
+        "deletions": 239,
+        "date": "2019-10-15",
+        "commitResults": [
+          {
+            "hash": "67f4d5a48b903f20b305925e6e780805f5a1f329",
+            "messageTitle": "Classes creation",
+            "messageBody": "",
+            "insertions": 353,
+            "deletions": 239
+          }
+        ]
+      },
+      {
+        "insertions": 678,
+        "deletions": 466,
+        "date": "2019-10-20",
+        "commitResults": [
+          {
+            "hash": "9aaa78d6eaf2848d193f07eab8870f7ef140ac2e",
+            "messageTitle": "Level 7 Tasks, Rearrange packages.",
+            "messageBody": "",
+            "insertions": 490,
+            "deletions": 317
+          },
+          {
+            "hash": "7c8ed4547a2d3ed9359e67de3228ab9efa6551ea",
+            "messageTitle": "Level 8 Update the input timing format to yyyy-mm-dd hrs:minutes",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 125
+          },
+          {
+            "hash": "0889e4f3ac870cf7ba3c4d0ca6eae70d939fd015",
+            "messageTitle": "Level 8 Changed the input timing format to YYYY-MM-DD HRS:MINUTES",
+            "messageBody": "",
+            "insertions": 178,
+            "deletions": 24
+          }
+        ]
+      },
+      {
+        "insertions": 1219,
+        "deletions": 227,
+        "date": "2019-10-27",
+        "commitResults": [
+          {
+            "hash": "18ffa8a681a9e6f32ef484868cdb93e1e2174994",
+            "messageTitle": "Level 8 Dates and Times with full JavaDoc",
+            "messageBody": "",
+            "insertions": 1219,
+            "deletions": 227
+          }
+        ]
+      },
+      {
+        "insertions": 302,
+        "deletions": 16,
+        "date": "2019-10-31",
+        "commitResults": [
+          {
+            "hash": "1eab1ea429d7b9b261dd57dd29daba832fb21648",
+            "messageTitle": "Added ToDoAfter function. Debugging",
+            "messageBody": "",
+            "insertions": 302,
+            "deletions": 16
+          }
+        ]
+      },
+      {
+        "insertions": 678,
+        "deletions": 204,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "30f394be62922d6bcb8aac5f08af696237e97dd9",
+            "messageTitle": "Added Search Function.",
+            "messageBody": "",
+            "insertions": 678,
+            "deletions": 204
+          }
+        ]
+      },
+      {
+        "insertions": 837,
+        "deletions": 467,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "cbf5ad0eea11a35f2a3221f59cbcfa1347a7d82a",
+            "messageTitle": "Level 10 finished and added change date type and time type again by user.",
+            "messageBody": "",
+            "insertions": 837,
+            "deletions": 467
+          }
+        ]
+      },
+      {
+        "insertions": 363,
+        "deletions": 70,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "bf001ad4b7bc591404db9b56119e34cefe45eba1",
+            "messageTitle": "Update bugs",
+            "messageBody": "",
+            "insertions": 336,
+            "deletions": 69
+          },
+          {
+            "hash": "2b98319c7a8f3add260b09eebb654f8a23e0ee26",
+            "messageTitle": "Added unmark function. User command:  \u0027processing\u0027",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 348,
+        "deletions": 82,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "6c595696120f51e7ec21a74d418c50304d6bfcb7",
+            "messageTitle": "Added JUnit testing method and arrange printing output",
+            "messageBody": "",
+            "insertions": 329,
+            "deletions": 71
+          },
+          {
+            "hash": "398f9ae0f928119a6f702cec7fe5247b51a69c61",
+            "messageTitle": "Updated Jar file",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 11
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "YangShuogeng": 3415
+  },
+  "authorFileTypeContributionMap": {
+    "YangShuogeng": {
+      "java": 3403,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 1,
+      "txt": 11
+    }
+  },
+  "authorContributionVariance": {
+    "YangShuogeng": 79481.625
+  },
+  "authorDisplayNameMap": {
+    "YangShuogeng": "YANG..GENG"
+  }
+}

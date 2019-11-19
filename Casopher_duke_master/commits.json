@@ -1,0 +1,116 @@
+{
+  "authorDailyContributionsMap": {
+    "Casopher": [
+      {
+        "insertions": 1,
+        "deletions": 0,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "3c74b892c3e0d97bb61f303c63c7557301a29598",
+            "messageTitle": "Update Duke.java",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 33,
+        "deletions": 1,
+        "date": "2019-09-07",
+        "commitResults": [
+          {
+            "hash": "21e059f50aaf82773da20d4bd7030f68ce8641fe",
+            "messageTitle": "Update Duke.java",
+            "messageBody": "",
+            "insertions": 33,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 29,
+        "deletions": 7,
+        "date": "2019-09-09",
+        "commitResults": [
+          {
+            "hash": "d05d1d2be15b37ee561dd4342a0c1ab42dec19a0",
+            "messageTitle": "Update Duke.java",
+            "messageBody": "",
+            "insertions": 29,
+            "deletions": 4
+          },
+          {
+            "hash": "eb1cd79018cdc27e6c40c6f6b53a888eedb6f38f",
+            "messageTitle": "Duke Level 1 Completed",
+            "messageBody": "Duke Level 1 Completed",
+            "insertions": 0,
+            "deletions": 2
+          },
+          {
+            "hash": "91165fcdbc39ced18b8d1c3e96eb9acd2013ba02",
+            "messageTitle": "Duke Level 2 Completed",
+            "messageBody": "Duke Level 2 Completed",
+            "insertions": 0,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 68,
+        "deletions": 10,
+        "date": "2019-10-01",
+        "commitResults": [
+          {
+            "hash": "bd7df1c3a864a3553338413f488d9f5173a5f76f",
+            "messageTitle": "Add files via upload",
+            "messageBody": "",
+            "insertions": 39,
+            "deletions": 0
+          },
+          {
+            "hash": "c69bdba7928365aafc611c5df085244cac9db421",
+            "messageTitle": "Update Duke.java",
+            "messageBody": "",
+            "insertions": 29,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 2,
+        "date": "2019-10-15",
+        "commitResults": [
+          {
+            "hash": "2c2af3eddc5b2d386f2bc2f587399975da01723e",
+            "messageTitle": "Update Duke.java",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 2
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Casopher": 111
+  },
+  "authorFileTypeContributionMap": {
+    "Casopher": {
+      "java": 111,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "Casopher": 178.5017
+  },
+  "authorDisplayNameMap": {
+    "Casopher": "TAN .. HAO"
+  }
+}

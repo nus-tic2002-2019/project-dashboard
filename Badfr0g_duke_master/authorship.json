@@ -1,0 +1,5419 @@
+[
+  {
+    "path": "src/main/java/ByeCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class ByeCommand extends Command{"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static final String MESSAGE_BYE_ACKNOWLEDGEMENT \u003d \"Bye. Hope to see you again soon!\";"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public ByeCommand(String input){"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException{"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ui.goodbyeMessage();"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        System.exit(0);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 14
+    }
+  },
+  {
+    "path": "src/main/java/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class Command{"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    protected String input;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Command(String input){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException, IOException{"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        throw new UnsupportedOperationException(\"This method is to be implemented by child classes\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 14
+    }
+  },
+  {
+    "path": "src/main/java/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Date by;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * Constructs a new Deadline and initialise with the specified input and time by the user ."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param description user input"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param by date time"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Deadline(String description, Date by) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        Date now \u003d new Date();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        assert by.after(now):\"Deadline cannot be earlier than now!\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void markAsDone() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        isDone \u003d true;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 28
+    }
+  },
+  {
+    "path": "src/main/java/DeadlineCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class DeadlineCommand extends Command {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private Deadline deadline;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public DeadlineCommand(String input) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * to convert time string to Date when user key in the time"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param deadline"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws ParseException"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws DukeException"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static Date convertDateTime(String time) throws ParseException, DukeException {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        SimpleDateFormat format \u003d new SimpleDateFormat (\"dd-MM-yyyy HH:mm:ss\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        Date date;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                date \u003d format.parse(time);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return date;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            } catch (ParseException e) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                System.out.println(\"Please use format \\\"dd-MM-yyyy HH:mm:ss\\\" \");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                System.out.println(\"Default date will be inserted instead.\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                System.out.println(e);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return new Date();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * save the key in task to array list and to file"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws  DukeException, IOException {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        String time \u003d input.split(\" \")[2] + \" \" + input.split(\" \")[3];"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if (input.split(\" \")[3] \u003d\u003d \" \") {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                throw new DukeException(\"☹ OOPS!!! The date of a event cannot be empty.\");"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            deadline \u003d new Deadline(input.split(\" \")[1],convertDateTime(time));"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            TaskList.addList(deadline);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            ui.showOutputToUser(\"Got it. I\u0027ve added this task:\\n\\t  \" + deadline.toString() + \"\\n\\t Now you have \" + TaskList.getSize() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            storage.saveToFile();"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        } catch (IndexOutOfBoundsException | DukeException | ParseException e) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            System.out.println(\"☹ OOPS!!! The description of a deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 55
+    }
+  },
+  {
+    "path": "src/main/java/DeleteCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class DeleteCommand extends Command{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static final String DoneMessage\u003d \"Noted. I\u0027ve removed this task:\\n\\t  \";"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public DeleteCommand(String input){"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * Delete item from the array list"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException, IOException{"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        index \u003d prepareIndex(input.split(\" \")[1]);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ui.showOutputToUser(DoneMessage + TaskList.getTask(index).toString());"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        TaskList.deleteList(index);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        storage.saveToFile();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        catch (NumberFormatException e){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            throw new DukeException(\"The task selected must be a numerical value.\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            throw new DukeException(\"The tasks list cannot be empty.\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private int prepareIndex(String args){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return Integer.parseInt(input.split(\" \")[1])-1;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 34
+    }
+  },
+  {
+    "path": "src/main/java/DoneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class DoneCommand extends Command{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static final String DoneMessage \u003d \"Nice! I\u0027ve marked this task as done:\\n\\t  \";"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public DoneCommand(String input){"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * to mark the task in the array list as done"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException, IOException{"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        if((input.substring(4).trim()).isEmpty()){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            throw new DukeException(\"The selector of a done cannot be empty.\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        index \u003d prepareIndex(input);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        (TaskList.getTask(index)).markAsDone();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ui.showOutputToUser(DoneMessage + TaskList.getTask(index).toString());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        storage.saveToFile();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        catch (NumberFormatException e){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            throw new DukeException(\"The task selected must be a numerical value.\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            throw new DukeException(\"The tasks list cannot be empty.\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private int prepareIndex(String args){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return Integer.parseInt(input.split(\" \")[1])-1;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 38
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private TaskList taskList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private UI ui;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Duke(String filePath) throws IOException, ParseException, DukeException {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ui \u003d new UI();"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        storage \u003d new Storage(filePath);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        taskList \u003d new TaskList(storage.readFile());"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void run() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ui.welcomeMessage();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        while (true) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                String fullCommand \u003d ui.readUserInput();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                Command command \u003d Parser.parseInput(fullCommand);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                command.execute(taskList, ui, storage);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            catch (Exception e) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                ui.showError(e.getMessage());"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static void main(String[] args) throws IOException, ParseException, DukeException {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        new Duke(\"/Users/joseph/Desktop/tic2002Duke/src/main/java/data/List.txt\").run();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 30,
+      "-": 3
+    }
+  },
+  {
+    "path": "src/main/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class DukeException extends Exception{"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "\t/**"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "\t *"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "\t */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "\tprivate static final long serialVersionUID \u003d 1L;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "\t"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "\tpublic DukeException(String string) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 9
+    }
+  },
+  {
+    "path": "src/main/java/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Date at;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * Constructs a new Event and initialise with the specified input and time by the user ."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param description user input"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param by date time"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Event(String description, Date at) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        Date now \u003d new Date();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        assert at.after(now):\"Event date cannot be earlier than now!\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void markAsDone() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        isDone \u003d true;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (at: \" + at + \")\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 25
+    }
+  },
+  {
+    "path": "src/main/java/EventCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class EventCommand extends Command{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private Event event;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public EventCommand(String input){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * to convert time string to Date when user key in the time"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param deadline"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws ParseException"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws DukeException"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static Date convertDateTime(String time) throws ParseException, DukeException {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        SimpleDateFormat format \u003d new SimpleDateFormat (\"dd-MM-yyyy HH:mm:ss\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        Date date;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                date \u003d format.parse(time);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return date;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            } catch (ParseException e) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                System.out.println(\"Please use format \\\"dd-MM-yyyy HH:mm:ss\\\" \");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                System.out.println(\"Default date will be inserted instead.\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                System.out.println(e);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return new Date();"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * save the key in task to array list and to file"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param taskList"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param ui"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws DukeException"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException, IOException {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        String time \u003d input.split(\" \")[2] + \" \" + input.split(\" \")[3];"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if (input.split(\" \")[3] \u003d\u003d \"\") {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                throw new DukeException(\"☹ OOPS!!! The date of a event cannot be empty.\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            event \u003d new Event( input.split(\" \")[1],convertDateTime(time));"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            TaskList.addList(event);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            ui.showOutputToUser(\"Got it. I\u0027ve added this task:\\n\\t  \" + event.toString() + \"\\n\\t Now you have \" + TaskList.getSize() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            storage.saveToFile();"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        } catch (IndexOutOfBoundsException | DukeException | ParseException e) {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            System.out.println(e);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            System.out.println(\"☹ OOPS!!! The description of a deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "           "
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 63
+    }
+  },
+  {
+    "path": "src/main/java/FindCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class FindCommand extends Command{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static final String FailMessage \u003d \"There are no matching tasks in your list.\";"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static final int DISPLAYED_INDEX_OFFSET \u003d 1;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static final String ListItemMessage \u003d \"%1$d. %2$s\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static String output;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public FindCommand(String input){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     *  look for the key work from array list and show to user"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException{"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        if(input.split(\" \")[1].trim().isEmpty()){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            throw new DukeException(\"The selector of a find cannot be empty.\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        input \u003d input.substring(5);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        boolean isMatch \u003d false;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        List\u003cString\u003e matchedTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        output \u003d \"\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        for(int i\u003d0;i\u003cTaskList.getSize();i++){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            Task task \u003d TaskList.getTask(i);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if(task.description.contains(input)){"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                matchedTasks.add(task.toString());"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                isMatch \u003d true;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        if(isMatch){"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            ui.showOutputToUser(showUserIndexedList(matchedTasks));"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            ui.showOutputToUser(FailMessage);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private String showUserIndexedList(List\u003cString\u003e list) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return getListForViewing(list);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static String getListForViewing(List\u003cString\u003e listItems) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        int displayIndex \u003d 0 + DISPLAYED_INDEX_OFFSET;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        output +\u003d \" Here are the matching tasks in your list:\";"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        for (String listItem : listItems) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            output +\u003d \" \\n\\t\" + getListItem(displayIndex, listItem);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            displayIndex++;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return output;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static String getListItem(int visibleIndex, String listItem) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return String.format(ListItemMessage, visibleIndex, listItem);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 62
+    }
+  },
+  {
+    "path": "src/main/java/ListCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class ListCommand extends Command{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static final int DISPLAYED_INDEX_OFFSET \u003d 1;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static final String MESSAGE_INDEXED_LIST_ITEM \u003d \"%1$d. %2$s\";"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static String output;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public ListCommand(String input){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private String showTaskListView(TaskList taskList) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        output \u003d \"\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        List\u003cString\u003e formattedTask \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        for (int i\u003d0;i\u003cTaskList.getSize();i++) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            formattedTask.add(TaskList.getTask(i).toString());"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return showToUserAsIndexedList(formattedTask);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private String showToUserAsIndexedList(List\u003cString\u003e list) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return getIndexedListForViewing(list);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static String getIndexedListForViewing(List\u003cString\u003e listItems) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        int displayIndex \u003d 0 + DISPLAYED_INDEX_OFFSET;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        output +\u003d \" Here are the tasks in your list:\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        for (String listItem : listItems) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            output +\u003d \" \\n\\t\" + getIndexedListItem(displayIndex, listItem);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            displayIndex++;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return output;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static String getIndexedListItem(int visibleIndex, String listItem) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return String.format(MESSAGE_INDEXED_LIST_ITEM, visibleIndex, listItem);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException{"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        if(TaskList.getSize() \u003d\u003d 0){"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            throw new DukeException(\"The tasks list cannot be empty.\");"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ui.showOutputToUser(showTaskListView(taskList));"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 48
+    }
+  },
+  {
+    "path": "src/main/java/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class Parser{"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * to determint which command to run"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param userInput"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws DukeException"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static Command parseInput(String userInput) throws DukeException{"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        String input \u003d userInput;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        switch(input.split(\" \")[0]){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new DeadlineCommand(input);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new EventCommand(input);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new ToDoCommand(input);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new ListCommand(\"\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new DeleteCommand(input);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new DoneCommand(input);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"find\":"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new FindCommand(input);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            case \"bye\":"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                return new ByeCommand(\"\");  "
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                throw new DukeException(\"I\u0027m sorry, but I don\u0027t know what that means :-(\");   "
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 31
+    }
+  },
+  {
+    "path": "src/main/java/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.FileReader;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private File file;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private BufferedReader fileRead;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Storage(String filePath) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            this.file \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            fileRead \u003d new BufferedReader(new FileReader(filePath));"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            createFile();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /** "
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * create a file when storage file is not found"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void createFile() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if (file.getParentFile().mkdirs()) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if (file.createNewFile()) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            new IOException(\"The file \" + file.getAbsolutePath() + \" is unable to be create.\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * save input from user to file"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void saveToFile() throws IOException {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        FileWriter fileWriter \u003d new FileWriter(file.getAbsolutePath());"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        String add \u003d \"\";"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        for (int i \u003d 0; i \u003c TaskList.getSize(); ++i) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            Task task \u003d TaskList.getTask(i);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            String taskClass \u003d \"\";"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            int isDone \u003d 0;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            String description \u003d task.description;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            Date date \u003d null;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if (task instanceof Todo) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                taskClass \u003d \"T\";"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            } else if (task instanceof Event) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                taskClass \u003d \"E\";"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                date \u003d ((Event) task).at;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            } else if (task instanceof Deadline) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                taskClass \u003d \"D\";"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                date \u003d ((Deadline) task).by;"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if (task.isDone) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                isDone \u003d 1;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                isDone \u003d 0;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            if (date.equals(null)) {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                add +\u003d taskClass + \" | \" + Integer.toString(isDone) + \" | \" + description + \"\\n\";"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                add +\u003d taskClass + \" | \" + Integer.toString(isDone) + \" | \" + description + \" | \" + date + \"\\n\";"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            fileWriter.write(add);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            fileWriter.close();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            new IOException(\"The file \" + file.getAbsolutePath() + \" has encountered an error writing.\" + e);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * Read file and add item to array list when start of Duke"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws DukeException"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @throws ParseException"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public ArrayList\u003cTask\u003e readFile() throws IOException, ParseException, DukeException {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ArrayList\u003cTask\u003e TaskList \u003d new ArrayList\u003c\u003e(100);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        String line \u003d fileRead.readLine();"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        while(line !\u003d null){"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            String[] splitLine \u003d line.split(\" \\\\| \");"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            switch(splitLine[0]){"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                case \"E\":"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    Event newEvent \u003d new Event(splitLine[2], EventCommand.convertDateTime(splitLine[3]));"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    if(splitLine[1].equals(\"1\")){"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                        newEvent.markAsDone();"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    TaskList.add(newEvent);"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                case \"D\":"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    Deadline newDeadline \u003d new Deadline(splitLine[2], DeadlineCommand.convertDateTime(splitLine[3]));"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    if(splitLine[1].equals(\"1\")){"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                        newDeadline.markAsDone();"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    TaskList.add(newDeadline);"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                case \"T\":"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    Todo newTodo \u003d new Todo(splitLine[2]);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    if(splitLine[1].equals(\"1\")){"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    newTodo.markAsDone();"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    TaskList.add(newTodo);"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            line \u003d fileRead.readLine();"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }   "
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        fileRead.close();"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return TaskList;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 117
+    }
+  },
+  {
+    "path": "src/main/java/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String description;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public boolean isDone;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * Constructs a new Task and initialise with the specified inputby the user ."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param description"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return (isDone ? \"[\\u2713] \" : \"[\\u2718] \"); "
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return getStatusIcon() + description;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void markAsDone() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        isDone \u003d true;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 26
+    }
+  },
+  {
+    "path": "src/main/java/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class TaskList{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private static ArrayList\u003cTask\u003e taskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * Constructs new arraylist"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public TaskList() {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        TaskList.taskList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * "
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param tasks"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public TaskList(ArrayList\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        TaskList.taskList \u003d tasks;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * add task in to list"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static void addList(Task task) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        TaskList.taskList.add(task);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * remove task in list"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static Task deleteList(int task) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return TaskList.taskList.remove(task);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * return total number of item in list"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static int getSize() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return taskList.size();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * gets the name of the task in the location "
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public static Task getTask(int task) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return taskList.get(task);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * list out all the tasks in array list"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public ArrayList\u003cTask\u003e getAllTasks(){"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return taskList;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 57
+    }
+  },
+  {
+    "path": "src/main/java/ToDoCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class ToDoCommand extends Command{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private Todo todo;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public ToDoCommand(String input){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws IOException{"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        todo \u003d new Todo(input.substring(5));"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        TaskList.addList(todo);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        ui.showOutputToUser(\"Got it. I\u0027ve added this task:\\n\\t\" + todo.toString() + \"\\n\\t Now you have \" + TaskList.getSize() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        storage.saveToFile();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "} "
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 18
+    }
+  },
+  {
+    "path": "src/main/java/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public Todo(String description) {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void markAsDone() {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        isDone \u003d true;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 15
+    }
+  },
+  {
+    "path": "src/main/java/UI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "import java.io.InputStream;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "public class UI{"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private final Scanner in;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public UI(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        this(System.in);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public UI(InputStream in){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        this.in \u003d new Scanner(in);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String constantString(String output){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return \"\\t____________________________________________________________\\n\\t\""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        + output"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        + \"\\n\\t____________________________________________________________ \";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    private boolean shouldIgnore(String rawInputLine) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return rawInputLine.trim().isEmpty();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void welcomeMessage(){"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        String logo \u003d \"____         _        \\n\" "
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    + \"\\t   _ \\\\ _   _| | _____ \\n\" "
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    + \"\\t| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    + \"\\t| |_| | |_| |   \u003c  __/\\n\" "
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "                    + \"\\t|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        System.out.println(constantString(logo + \"\\tHello! I\u0027m Duke\\n\\tWhat can I do for you?\"));"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void goodbyeMessage(){"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        System.out.println(constantString(\"Bye. Hope to see you again soon!\"));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * get input from user"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public String readUserInput(){"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        String input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        while(shouldIgnore(input)){"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "            input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        return input;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void showOutputToUser(String output) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        System.out.println(constantString(output));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    public void showError(String errorMessage){"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "        System.out.println(constantString(\"☹ OOPS!!! \" + errorMessage));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 56
+    }
+  },
+  {
+    "path": "src/main/java/data/List.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "T | 1 | read book"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "D | 0 | report | Fri Dec 20 23:00:00 SGT 2019"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "E | 0 | meeting | Fri Dec 20 23:00:00 SGT 2019"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "T | 1 | join sports club"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Badfr0g"
+        },
+        "content": "T | 0 | read book"
+      }
+    ],
+    "authorContributionMap": {
+      "Badfr0g": 5
+    }
+  }
+]

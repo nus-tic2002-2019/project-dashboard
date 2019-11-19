@@ -1,0 +1,7983 @@
+[
+  {
+    "path": "gradlew.bat",
+    "fileType": "bat",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@if \"%DEBUG%\" \u003d\u003d \"\" @echo off"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem ##########################################################################"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem  Gradle startup script for Windows"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem ##########################################################################"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem Set local scope for the variables with windows NT shell"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if \"%OS%\"\u003d\u003d\"Windows_NT\" setlocal"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set DIRNAME\u003d%~dp0"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if \"%DIRNAME%\" \u003d\u003d \"\" set DIRNAME\u003d."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set APP_BASE_NAME\u003d%~n0"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set APP_HOME\u003d%DIRNAME%"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set DEFAULT_JVM_OPTS\u003d\"-Xmx64m\""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem Find java.exe"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if defined JAVA_HOME goto findJavaFromJavaHome"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set JAVA_EXE\u003djava.exe"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "%JAVA_EXE% -version \u003eNUL 2\u003e\u00261"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if \"%ERRORLEVEL%\" \u003d\u003d \"0\" goto init"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo ERROR: JAVA_HOME is not set and no \u0027java\u0027 command could be found in your PATH."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo Please set the JAVA_HOME variable in your environment to match the"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo location of your Java installation."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "goto fail"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":findJavaFromJavaHome"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set JAVA_HOME\u003d%JAVA_HOME:\"\u003d%"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set JAVA_EXE\u003d%JAVA_HOME%/bin/java.exe"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if exist \"%JAVA_EXE%\" goto init"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo Please set the JAVA_HOME variable in your environment to match the"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "echo location of your Java installation."
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "goto fail"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":init"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem Get command-line arguments, handling Windows variants"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if not \"%OS%\" \u003d\u003d \"Windows_NT\" goto win9xME_args"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":win9xME_args"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem Slurp the command line arguments."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set CMD_LINE_ARGS\u003d"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set _SKIP\u003d2"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":win9xME_args_slurp"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if \"x%~1\" \u003d\u003d \"x\" goto execute"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set CMD_LINE_ARGS\u003d%*"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":execute"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem Setup the command line"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "set CLASSPATH\u003d%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem Execute Gradle"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "\"%JAVA_EXE%\" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% \"-Dorg.gradle.appname\u003d%APP_BASE_NAME%\" -classpath \"%CLASSPATH%\" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":end"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@rem End local scope for the variables with windows NT shell"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if \"%ERRORLEVEL%\"\u003d\u003d\"0\" goto mainEnd"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":fail"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "rem the _cmd.exe /c_ return code!"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if  not \"\" \u003d\u003d \"%GRADLE_EXIT_CONSOLE%\" exit 1"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "exit /b 1"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":mainEnd"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "if \"%OS%\"\u003d\u003d\"Windows_NT\" endlocal"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ":omega"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 84
+    }
+  },
+  {
+    "path": "src/data/tasks_2019-11-17.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "E|0|adding an event task |2019-01-01"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "D|0|addding a deadline task 2| No Deadline Given"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "E|1|adding an event task 2| No Location Given"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 3
+    }
+  },
+  {
+    "path": "src/main/java/main/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.parsers.ParserText;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Task;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "//TODO - Implement individual Features"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " * [2] Provide a way to archive items so that the user can remove items from the app but still keep a record of them somewhere"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " * e.g., archive all tasks in the list into a file so that the user can start over with a clean slate."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " * \u003cp\u003e"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static ArrayList\u003cTask\u003e Tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void main(String[] args) throws DukeException, IOException {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Storage storage \u003d new Storage(\"C:\\\\Users\\\\yralle.lesly.gimpaya\\\\Desktop\\\\duke\\\\src\\\\data\\\\current_tasks.txt\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        ParserText response \u003d new ParserText();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI interaction \u003d new UI();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        interaction.welcome(storage.start());"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        while (response.isTrue) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            String input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            response.parsetext(input);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        storage.save();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 45
+    }
+  },
+  {
+    "path": "src/main/java/main/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public DukeException(String message) {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        super(message);"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 7
+    }
+  },
+  {
+    "path": "src/main/java/main/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.parsers.ParserText;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.*;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private static File file;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private String filepath;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public Storage(String filepath) throws IOException {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.filepath \u003d filepath;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Method creates file at specified directory, if it already exists it tries to load its contents to the"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Array List"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public Boolean start() throws IOException {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.file \u003d new File(filepath);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        //Create the file"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (file.createNewFile()) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "           return this.load();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Loads contents of Text file into ArrayList"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public Boolean load() throws IOException {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        BufferedReader br \u003d new BufferedReader(new FileReader(file));"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String read;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (file.length() \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            while ((read \u003d br.readLine()) !\u003d null)"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                Tasks.add(ParserText.inputParse(read));"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void load(File load) throws IOException {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        BufferedReader br \u003d new BufferedReader(new FileReader(load));"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String read;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (load.length() \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            while ((read \u003d br.readLine()) !\u003d null)"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                Tasks.add(ParserText.inputParse(read));"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.listTasks(true);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *  Archives current list of tasks into a Dated file"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void archive() throws IOException, DukeException {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Date date \u003d new Date() ;"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        SimpleDateFormat dateFormat \u003d new SimpleDateFormat(\"yyyy-MM-dd\") ;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        File file \u003d new File(\"C:\\\\Users\\\\yralle.lesly.gimpaya\\\\Desktop\\\\duke\\\\src\\\\data\\\\tasks_\" + dateFormat.format(date) + \".txt\") ;"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        BufferedWriter out \u003d new BufferedWriter(new FileWriter(file));"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        writeToFile(out);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void loadview() {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        File folder \u003d new File(\"C:\\\\Users\\\\yralle.lesly.gimpaya\\\\Desktop\\\\duke\\\\src\\\\data\\\\\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        File[] listoffiles \u003d folder.listFiles();"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        int count \u003d 1;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (listoffiles.length !\u003d 0) {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            System.out.println(\"\\tHere are the files in Archive:\");"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        for (int i \u003d 0; i \u003c listoffiles.length; i++) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            if (listoffiles[i].isFile()) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                System.out.println(\"\\tFile \" + count +\" \" + listoffiles[i].getName());"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            } else if (listoffiles[i].isDirectory()) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                System.out.println(\"\\tDirectory \" + count +\" \" + listoffiles[i].getName());"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            count++;"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void loadFile(int input){"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        File folder \u003d new File(\"C:\\\\Users\\\\yralle.lesly.gimpaya\\\\Desktop\\\\duke\\\\src\\\\data\\\\\");"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        File[] listoffiles \u003d folder.listFiles();"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            Storage.load(listoffiles[input -1]);"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } catch(Exception e){"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            UI.dukePrint(\"\\tOpps, something Unexpected happened!\");"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *  Utility Function to Copy Contents to a specified file"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @param"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private static void writeToFile(BufferedWriter buffer) throws IOException {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        for (Object input : Tasks) {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            buffer.write(ParserText.outputParse((Task) input));"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            buffer.newLine();"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        buffer.close();"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Method Clears existing data in text file and writes a new set based"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * on the current ArrayList"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void save() throws IOException {"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        //Delete Existing Content"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        PrintWriter writer \u003d new PrintWriter(file);"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        writer.print(\"\");"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        writer.close();"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        //Write Content"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        try (FileWriter fritter \u003d new FileWriter(file, true);"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "             BufferedWriter buffer \u003d new BufferedWriter(fritter)) {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "           writeToFile(buffer);"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            System.err.format(\"IOException: %s%n\", e);"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 169
+    }
+  },
+  {
+    "path": "src/main/java/main/UI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "/*"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " *   User Interface Class"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " *   Displays results and processed user commands"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " * */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class UI {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    UI() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    //TODO Create UI Methods for displaying duke Exception Messages"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void dukePrint(String input) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(input);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void completeTask(int index) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tNice! I\u0027ve changed the status of this Task:\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t\" + Tasks.get(index));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    // TODO Refactor Count later on"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void deletedCommand(Task t) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tNoted. I\u0027ve removed this Task:\");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t\" + t.toString());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        int count \u003d 0;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        for (Object ignored : Tasks) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            count++;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tNow you have \" + count + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    static void line() {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void bye() {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tBye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void echo(String input) {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t \" + input);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void addedCommand(Task input) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tGot it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t\" + input.toString());"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void listTasks(boolean b) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        int count \u003d 0;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (Tasks.size() \u003e 0) {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            if (b){"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                System.out.println(\"\\tAdded these Tasks into your List:\");"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                System.out.println(\"\\tHere are the Tasks in your List:\");"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            for (Object input : Tasks) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                System.out.println(\"\\t\" + (count + 1) + \". \" +"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                        input.toString());"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                count++;"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            System.out.println(\"\\tNow you have \" + count + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            System.out.println(\"\\tOh, you don\u0027t seem to be very busy huh?\");"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void listTasks(Set\u003cTask\u003e seached_set) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (seached_set.size() \u003e 0) {"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            System.out.println(\"\\tHere are the matching tasks in your list:\");"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            int count \u003d 0;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            for (Task element : seached_set) {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                System.out.println(\"\\t\" + (count + 1) + \". \" +"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                        element.toString());"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                count++;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            System.out.println(\"\\tOh, Nothing matches that description.\");"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void clear() {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tI\u0027ve cleared all your tasks!\");"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void archived(String s) {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tCurrent Tasks have been saved to \u0027\" + s + \"\u0027\");"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.line();"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Prints the Welcome Logo of Duke"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void welcome(Boolean t) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\tHello! I\u0027m Duke\\n\\tWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (!t) {"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            System.out.println(\"\\tYou have existing tasks to do!\\n\\tType \u0027load\u0027 to view existing tasks!\");"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.out.println(\"\\t____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 141
+    }
+  },
+  {
+    "path": "src/main/java/main/UITest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import org.junit.Assert;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.ByteArrayOutputStream;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.PrintStream;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "class UITest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    void dukePrintTest() {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        ByteArrayOutputStream outContent \u003d new ByteArrayOutputStream();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        System.setOut(new PrintStream(outContent));"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.dukePrint(\"\\tThis is a test Message to be printed by Duke!\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String expectedOutput \u003d \"\\tThis is a test Message to be printed by Duke!\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Assert.assertEquals(expectedOutput,outContent.toString());"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 23
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/AddCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Task;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class AddCommand extends Command\u003cTask\u003e {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Public Method to add Tasks into ArrayList and .txt file"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @param input the Task to be added"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @throws IOException IOException will be thrown of there is an error in writing to .txt"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public AddCommand(Task input) throws IOException {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.execute(input);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(Task input) throws IOException {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Tasks.add(input);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.addedCommand(input);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 31
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/ArchiveCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class ArchiveCommand extends Command {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public ArchiveCommand () throws IOException, DukeException {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        execute(null);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(Object ignored) throws DukeException, IOException {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Storage.archive();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.dukePrint(\"\\tI have successfully archived and cleared your current tasks!\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Tasks.clear();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 21
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/ByeCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.parsers.ParserText;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class ByeCommand extends Command\u003cString\u003e {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public ByeCommand(String input) {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.execute(input);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(String input) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.bye();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        ParserText.isTrue \u003d false;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 19
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/ClearCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class ClearCommand extends Command {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public ClearCommand() throws IOException, DukeException {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        execute(Tasks);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(Object input) throws DukeException, IOException {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Tasks.clear();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.clear();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 21
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.DukeException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "abstract public class Command\u003cT\u003e {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    abstract public void execute(T input) throws DukeException, IOException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 11
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/DeleteCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class DeleteCommand extends Command\u003cInteger\u003e {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public DeleteCommand(Integer input) throws DukeException {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.execute(input);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(Integer input) throws DukeException {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            Task t \u003d Tasks.get(input - 1);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            Tasks.remove(input - 1);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            UI.deletedCommand(t);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            UI.dukePrint(\"\\tI can\u0027t delete something that does not exist. Maybe try \u0027list\u0027 to list current tasks?\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 30
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/DoneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class DoneCommand extends Command\u003cString\u003e {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public DoneCommand(String input) throws DukeException {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.execute(input);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(String input) throws DukeException {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            int index \u003d Integer.valueOf(input) - 1;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            Tasks.get(index).Done();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            UI.completeTask(index);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            UI.dukePrint(\"\\t☹ OOPS!!! I don\u0027t seem to have this Task logged\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 27
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/FindCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.util.HashSet;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.Duke.Tasks;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class FindCommand extends Command {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private static final String INPUT_DELIMITER \u003d \" \";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public FindCommand(Object input) throws IOException, DukeException {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        execute(input);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private String[] parsesearch(Object input) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String searchstring \u003d input.toString();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String[] searchable \u003d searchstring.split(INPUT_DELIMITER);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return searchable;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private boolean searchMatch(String searchval, String[] searchable) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        for (String search : searchable) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            if (searchval.equals(search))"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                return true;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(Object input) throws DukeException, IOException {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Set\u003cTask\u003e seached_set \u003d new HashSet\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        for (Task task : Tasks) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            for (String searchval : task.getDescription().split(INPUT_DELIMITER)) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                if (searchMatch(searchval, parsesearch(input))) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    seached_set.add(task);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.listTasks(seached_set);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 50
+    }
+  },
+  {
+    "path": "src/main/java/main/commands/ListCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.UI;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class ListCommand extends Command\u003cString\u003e {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public ListCommand(String input) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.execute(input);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void execute(String input) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UI.listTasks(false);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 15
+    }
+  },
+  {
+    "path": "src/main/java/main/parsers/ParserText.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.parsers;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.DukeException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.commands.*;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Deadline;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Event;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.Task;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import main.taskLists.ToDo;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static main.UI.dukePrint;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class ParserText\u003cT\u003e {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private static final String OUTPUT_DELIMITER \u003d \"\\\\|\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private static final String INPUT_DELIMITER \u003d \" \";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static boolean isTrue;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public ParserText() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.isTrue \u003d true;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * This is a parser created for this application."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * The input parameters are parsed and the respective commands are called."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @param"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * input - User Input to the application"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @throws DukeException - catches Duke exceptions and returns a suitable message to the user"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @throws IOException"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static void parsetext(String input) throws DukeException, IOException {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String[] command \u003d input.split(INPUT_DELIMITER);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UtilityFunc parsedDate \u003d (Object n) -\u003e {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                return LocalDate.parse((CharSequence) n);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                return (String) n;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        };"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        //Parse the comment to the correct Command Action"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        switch (command[0].toUpperCase()) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"BYE\":"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                new ByeCommand(input);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"LIST\":"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                new ListCommand(input);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"CLEAR\":"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                new ClearCommand();"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"SAVE\":"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                new ArchiveCommand();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"LOADVIEW\":"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                Storage.loadview();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"LOAD\":"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    Storage.loadFile(Integer.parseInt(input.split(INPUT_DELIMITER)[1]));"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can\u0027t process this action without specifying the task!\");"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can only accept numerical values. Type `list` to see the values\");"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"FIND\":"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    new FindCommand(input.split(INPUT_DELIMITER, 2)[1]);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (ArrayIndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can\u0027t search the UnSearchable!\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"DELETE\":"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    new DeleteCommand(Integer.parseInt(input.split(INPUT_DELIMITER)[1]));"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can\u0027t process this action without specifying the task!\");"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I do not have the ability to parse words to numbers yet. \" +"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                            \"Please use a numerical value!\");"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"DONE\":"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    new DoneCommand(input.split(INPUT_DELIMITER)[1]);"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can\u0027t process this action without specifying the task!\");"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can only accept numerical values. Type `list` to see the values\");"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"DEADLINE\":"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    String deadlineDesc \u003d (input.split(INPUT_DELIMITER, 2)[1]).split(\"/by\")[0];"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    var subStringDeadline \u003d input.substring(input.lastIndexOf(\"/by\") + 3).trim();"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    Object doWhen \u003d (subStringDeadline.equalsIgnoreCase(input.substring(2))) ?"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                            \" No Deadline Given\" :  parsedDate.convert(subStringDeadline); //Parse Date here"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    Task deadline \u003d new Deadline\u003c\u003e(deadlineDesc, doWhen);"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    new AddCommand(deadline);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    System.out.println(\"\\t☹ OOPS!!! I can\u0027t process this action without specifying the task!\");"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"EVENT\":"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    String eventDesc \u003d (input.split(INPUT_DELIMITER, 2)[1]).split(\"/at\")[0];"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    var subStringEvent \u003d input.substring(input.lastIndexOf(\"/at\") + 3).trim();"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    Object doAt \u003d (subStringEvent.equalsIgnoreCase(input.substring(2))) ?"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                            \" No Location Given\" :  parsedDate.convert(subStringEvent); // Parse Date here"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    Task event \u003d new Event\u003c\u003e(eventDesc, doAt);"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    new AddCommand(event);"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can only accept numerical values. Type `list` to see the values\");"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            case \"TODO\":"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    String TodoDesc \u003d (input.split(INPUT_DELIMITER, 2)[1]);"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    Task todo \u003d new ToDo(TodoDesc);"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    new AddCommand(todo);"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    dukePrint(\"\\t☹ OOPS!!! I can\u0027t process this action without specifying the task!\");"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                dukePrint(\"\\t☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Returns a String Object that can be then be inserted into the text file."
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * This method only returns a String if it is able to parse the input provided"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @param"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *  Task Object that is to be Parsed"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *  String Object that is to be written to a text file."
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static String outputParse(Task input) {"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String parsedInput \u003d null;"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (input instanceof ToDo) {"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            parsedInput \u003d String.format(\"T|%s|%s\","
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    input.isDone() ? \"1\" : \"0\","
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    input.getDescription()"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            );"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else if (input instanceof Event) {"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            parsedInput \u003d String.format(\"E|%s|%s|%s\","
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    input.isDone() ? \"1\" : \"0\","
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    input.getDescription(),"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    ((Event) input).getAt()"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            );"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else if (input instanceof Deadline) {"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            parsedInput \u003d String.format(\"D|%s|%s|%s\","
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    input.isDone() ? \"1\" : \"0\","
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    input.getDescription(),"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                    ((Deadline) input).getBy()"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            );"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            dukePrint(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know how to Parse this\");"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return parsedInput;"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * This method Parses the input String into a Task Object"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @param input"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public static Task inputParse(String input) {"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        // Bad attempt at a Lamda Function"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        UtilityFunc parsedDate \u003d (Object n) -\u003e {"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                return LocalDate.parse((CharSequence) n);"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "                return (String) n;"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        };"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String task \u003d input.split(OUTPUT_DELIMITER)[0];"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Boolean status \u003d Boolean.parseBoolean(input.split(OUTPUT_DELIMITER)[1]);"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        String desc \u003d input.split(OUTPUT_DELIMITER)[2];"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        Task output \u003d null;"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        if (task.matches(\"T\")) {"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            output \u003d new ToDo(desc);"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            output.setStatus(status);"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else if (task.matches(\"D\")) {"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            output \u003d new Deadline\u003c\u003e(desc, parsedDate.convert(input.split(OUTPUT_DELIMITER)[3]));"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            output.setStatus(status);"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else if (task.matches(\"E\")) {"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            output \u003d new Event\u003c\u003e(desc, parsedDate.convert(input.split(OUTPUT_DELIMITER)[3]));"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            output.setStatus(status);"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            dukePrint(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know how to Parse this\");"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return output;"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 238
+    }
+  },
+  {
+    "path": "src/main/java/main/parsers/UtilityFunc.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.parsers;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " *  This is a functional interface and therefore be used as"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " *  the assignment target for a lamda expression or method reference."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " * @param \u003cT\u003e - the Type of the result to the function"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " * @param \u003cV\u003e - the Type of the input of the function"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "@FunctionalInterface"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public interface UtilityFunc\u003cT, V\u003e {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *  Applies this function to the given argument"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @param"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * Input is the function argument to be applied on"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     * is the function result"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    abstract T convert(V input);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 25
+    }
+  },
+  {
+    "path": "src/main/java/main/taskLists/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.taskLists;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class Deadline\u003cT\u003e extends Task {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private T by;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public Deadline(String description, T by) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public T getBy() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return this.by;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private String convert(LocalDate input) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        LocalDate clone \u003d input;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return clone.format(DateTimeFormatter.ofPattern(\"MMMM dd yyyy\"));"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            return \"[D]\" + \"[\" + this.getStatusIcon() + \"] \" + super.toString() + \" (by: \" + convert((LocalDate) by) + \")\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            return \"[D]\" + \"[\" + this.getStatusIcon() + \"] \" + super.toString() + \" (by: \" + this.by + \")\";"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 37
+    }
+  },
+  {
+    "path": "src/main/java/main/taskLists/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.taskLists;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class Event\u003cT\u003e extends Task {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private T At;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public Event(String description, T At) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.At \u003d At;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public T getAt() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return this.At;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    private String convert(LocalDate input) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return input.format(DateTimeFormatter.ofPattern(\"MMMM dd yyyy\"));"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            return \"[E]\" + \"[\" + this.getStatusIcon() + \"] \" + super.toString() + \" (At: \" + convert((LocalDate) At) + \")\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "            return \"[E]\" + \"[\" + this.getStatusIcon() + \"] \" + super.toString() + \" (At: \" + this.At + \")\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 33
+    }
+  },
+  {
+    "path": "src/main/java/main/taskLists/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.taskLists;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public abstract class Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void Done() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.isDone \u003d !this.isDone;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public void setStatus(Boolean input) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        this.isDone \u003d input;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public boolean isDone() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return this.isDone;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public String getDescription() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return this.description;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    ;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return this.description;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 39
+    }
+  },
+  {
+    "path": "src/main/java/main/taskLists/ToDo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package main.taskLists;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "public class ToDo extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public ToDo(String description) {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "        return \"[T]\" + \"[\" + this.getStatusIcon() + \"] \" + super.toString();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 14
+    }
+  },
+  {
+    "path": "src/main/java/test/UITest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "class UITest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 11
+    }
+  },
+  {
+    "path": "src/main/java/test/UITestDukePrint.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "class UITestDukePrint {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 7
+    }
+  },
+  {
+    "path": "src/main/java/test/UITestTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "package test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "class UITestTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Mr-YaRou"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Mr-YaRou": 7
+    }
+  }
+]

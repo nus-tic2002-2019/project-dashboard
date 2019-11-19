@@ -1,0 +1,151 @@
+{
+  "authorDailyContributionsMap": {
+    "thisisdax": [
+      {
+        "insertions": 53,
+        "deletions": 3,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "681a59c273e43c1a16e74c0d68a69bacddd5320b",
+            "messageTitle": "level 1 - echo",
+            "messageBody": "",
+            "insertions": 15,
+            "deletions": 0
+          },
+          {
+            "hash": "ea02f8d6fb36843522aafd02169e0c00ff29ca33",
+            "messageTitle": "level 2 - task list",
+            "messageBody": "",
+            "insertions": 38,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 62,
+        "deletions": 9,
+        "date": "2019-09-16",
+        "commitResults": [
+          {
+            "hash": "050b07274725976e541b7785da005c4248e57b6c",
+            "messageTitle": "level 3 - mark as done",
+            "messageBody": "",
+            "insertions": 62,
+            "deletions": 9
+          }
+        ]
+      },
+      {
+        "insertions": 255,
+        "deletions": 129,
+        "date": "2019-10-28",
+        "commitResults": [
+          {
+            "hash": "5daf3f62463a7e67bf43eea2ab8cfa9734f3a5dc",
+            "messageTitle": "level 4 - ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 236,
+            "deletions": 68
+          },
+          {
+            "hash": "2daa64376128c4fb4d2aae4908981291911091cc",
+            "messageTitle": "level 5 - Handle Errors",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 61
+          }
+        ]
+      },
+      {
+        "insertions": 187,
+        "deletions": 71,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "737f7676e8845e10edc89ba7b51d0611ce9ddd20",
+            "messageTitle": "level 6 \u0026 7 - delete \u0026 write to file",
+            "messageBody": "",
+            "insertions": 187,
+            "deletions": 71
+          }
+        ]
+      },
+      {
+        "insertions": 449,
+        "deletions": 194,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "dd46e80eb2f505aedaa4cb4c72f4acf432ccdbca",
+            "messageTitle": "level 8 - date, javadov, junit, OOP and packages",
+            "messageBody": "",
+            "insertions": 301,
+            "deletions": 178
+          },
+          {
+            "hash": "0a2358ce4b367077bede0a789d7d196575bf0e0e",
+            "messageTitle": "level 9 - find, sort, test",
+            "messageBody": "",
+            "insertions": 112,
+            "deletions": 12
+          },
+          {
+            "hash": "3f4bb52be5494a3b10741978c2811c48c2d242d7",
+            "messageTitle": "added test file",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 2
+          },
+          {
+            "hash": "0ca5cffa3319b81ddda3f9ee39076e2907630cfc",
+            "messageTitle": "jar file",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 17,
+        "deletions": 14,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "eabbee6c2dd6798e08a51d0d6fedaf196a917378",
+            "messageTitle": "Revert \"jar file\"",
+            "messageBody": "This reverts commit 0ca5cffa3319b81ddda3f9ee39076e2907630cfc.\n",
+            "insertions": 2,
+            "deletions": 13
+          },
+          {
+            "hash": "38fbb5280fde17fd38e406a0e67c58562256957b",
+            "messageTitle": "revert to fix some issues",
+            "messageBody": "added additional commands\nundo\n\nfixed minor ui bugs\n",
+            "insertions": 15,
+            "deletions": 1
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "thisisdax": 613
+  },
+  "authorFileTypeContributionMap": {
+    "thisisdax": {
+      "java": 610,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 3
+    }
+  },
+  "authorContributionVariance": {
+    "thisisdax": 7724.6772
+  },
+  "authorDisplayNameMap": {
+    "thisisdax": "TAN .. HUA"
+  }
+}

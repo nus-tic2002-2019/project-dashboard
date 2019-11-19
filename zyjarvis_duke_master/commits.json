@@ -1,0 +1,214 @@
+{
+  "authorDailyContributionsMap": {
+    "zyjarvis": [
+      {
+        "insertions": 157,
+        "deletions": 10,
+        "date": "2019-09-28",
+        "commitResults": [
+          {
+            "hash": "e4e0007c92a810031f9fc43163eda1f8f7d2424a",
+            "messageTitle": "Level 1: Greet, Echo, Exit",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 1
+          },
+          {
+            "hash": "976e2e7d239ceb76df129338434a91e976b2c65a",
+            "messageTitle": "Level 2: Add, List",
+            "messageBody": "",
+            "insertions": 15,
+            "deletions": 4
+          },
+          {
+            "hash": "12a9c4c4bd09c6432551a10516c920dd4ed068f2",
+            "messageTitle": "Level 3: Mark as Done",
+            "messageBody": "",
+            "insertions": 36,
+            "deletions": 4
+          },
+          {
+            "hash": "c067d733c8e06dd75d9c9c2be25eab99b465c4c9",
+            "messageTitle": "Level 4: ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 74,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 105,
+        "deletions": 35,
+        "date": "2019-10-23",
+        "commitResults": [
+          {
+            "hash": "2d4fa6fba44efbb661c27cc07eebe88c358c316e",
+            "messageTitle": "Level 5: Handle Errors",
+            "messageBody": "",
+            "insertions": 57,
+            "deletions": 24
+          },
+          {
+            "hash": "373d412cdff44e32c7ab0d6935f9253f4c8f2d77",
+            "messageTitle": "Level 6: Delete",
+            "messageBody": "",
+            "insertions": 48,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 98,
+        "deletions": 18,
+        "date": "2019-10-27",
+        "commitResults": [
+          {
+            "hash": "3c2c7a5eaaeacc28f37197f0e4989306d9c39191",
+            "messageTitle": "Level 7： Save",
+            "messageBody": "",
+            "insertions": 98,
+            "deletions": 18
+          }
+        ]
+      },
+      {
+        "insertions": 312,
+        "deletions": 205,
+        "date": "2019-10-30",
+        "commitResults": [
+          {
+            "hash": "1f5ce9eae2dc861445c4639e2aa9995cbe361ae8",
+            "messageTitle": "A-MoreOOP",
+            "messageBody": "",
+            "insertions": 263,
+            "deletions": 197
+          },
+          {
+            "hash": "35bab265a3d0641356cab55cb2765507642486c0",
+            "messageTitle": "A-Packages",
+            "messageBody": "",
+            "insertions": 49,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 209,
+        "deletions": 120,
+        "date": "2019-11-01",
+        "commitResults": [
+          {
+            "hash": "e3cd414508972380a33b0d8157f61fced647d1f3",
+            "messageTitle": "Level 8: Dates and Times",
+            "messageBody": "",
+            "insertions": 167,
+            "deletions": 95
+          },
+          {
+            "hash": "c8e816a6e6d1a98587d2c600d439effd38b9628d",
+            "messageTitle": "Level 9: Find",
+            "messageBody": "",
+            "insertions": 42,
+            "deletions": 25
+          }
+        ]
+      },
+      {
+        "insertions": 278,
+        "deletions": 117,
+        "date": "2019-11-02",
+        "commitResults": [
+          {
+            "hash": "4097258f8bfca477cf23a40356aa6f1789e5d3ac",
+            "messageTitle": "A-JavaDoc",
+            "messageBody": "",
+            "insertions": 229,
+            "deletions": 74
+          },
+          {
+            "hash": "374c6ef50932a93f0d34e4deb4668daec2e97d6b",
+            "messageTitle": "A-CodingStandard",
+            "messageBody": "",
+            "insertions": 49,
+            "deletions": 43
+          }
+        ]
+      },
+      {
+        "insertions": 73,
+        "deletions": 43,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "4dc574fbc3022b32b31a50667d6be12986eabe6d",
+            "messageTitle": "Individual feature: FlexibleDataSource",
+            "messageBody": "",
+            "insertions": 73,
+            "deletions": 43
+          }
+        ]
+      },
+      {
+        "insertions": 138,
+        "deletions": 70,
+        "date": "2019-11-07",
+        "commitResults": [
+          {
+            "hash": "60b7c5d5791ae703c1d25f797bb48e3b74c04e26",
+            "messageTitle": "A-JUnit",
+            "messageBody": "",
+            "insertions": 111,
+            "deletions": 41
+          },
+          {
+            "hash": "8e18050f4e4064b1b222b34c904a59b0c5566fe3",
+            "messageTitle": "  A-Assertions",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 25
+          },
+          {
+            "hash": "cd065c4d90b32cb9d3a7e87773c532b93571c179",
+            "messageTitle": "A-Jar",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 31,
+        "deletions": 29,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "4c93041f7703fdbcb93e4aa2b7664ad12b6907bc",
+            "messageTitle": "Final Version",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 29
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "zyjarvis": 760
+  },
+  "authorFileTypeContributionMap": {
+    "zyjarvis": {
+      "java": 755,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 5
+    }
+  },
+  "authorContributionVariance": {
+    "zyjarvis": 7680.085
+  },
+  "authorDisplayNameMap": {
+    "zyjarvis": "ZHAN.. YUN"
+  }
+}

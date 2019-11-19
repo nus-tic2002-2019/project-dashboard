@@ -1,0 +1,200 @@
+{
+  "authorDailyContributionsMap": {
+    "e0373972": [
+      {
+        "insertions": 21,
+        "deletions": 3,
+        "date": "2019-09-01",
+        "commitResults": [
+          {
+            "hash": "933a4790b4632767a96ee1e1730a0907f579fe2e",
+            "messageTitle": "Level 2. Add, List",
+            "messageBody": "",
+            "insertions": 21,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 25,
+        "deletions": 2,
+        "date": "2019-09-07",
+        "commitResults": [
+          {
+            "hash": "e39fa7ddd7df5fec6c5eb3de3ac36f088e9777f2",
+            "messageTitle": "ADD text-ui-text",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 55,
+        "deletions": 24,
+        "date": "2019-09-13",
+        "commitResults": [
+          {
+            "hash": "1e516dc2659637454f1f8a3f0f2239b7a5c76a4f",
+            "messageTitle": "Level 3. Mark as Done",
+            "messageBody": "",
+            "insertions": 55,
+            "deletions": 24
+          }
+        ]
+      },
+      {
+        "insertions": 94,
+        "deletions": 28,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "6bc0ef39e1f52bf8b31bcf6a15136cbf34a56ef6",
+            "messageTitle": "Level 4. ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 94,
+            "deletions": 28
+          }
+        ]
+      },
+      {
+        "insertions": 214,
+        "deletions": 116,
+        "date": "2019-10-06",
+        "commitResults": [
+          {
+            "hash": "5751b46b12de9cd45520108ceddb553c5fcee730",
+            "messageTitle": "Level 5. Handle Errors",
+            "messageBody": "",
+            "insertions": 194,
+            "deletions": 18
+          },
+          {
+            "hash": "8bebf2c1f1a716480005946cf3b6e3fb70f62326",
+            "messageTitle": "Level 6. Delete",
+            "messageBody": "",
+            "insertions": 20,
+            "deletions": 98
+          }
+        ]
+      },
+      {
+        "insertions": 577,
+        "deletions": 211,
+        "date": "2019-10-30",
+        "commitResults": [
+          {
+            "hash": "bebf7099d867684be325f22873b1afa2e4494b14",
+            "messageTitle": "Level 7. Save, A-MoreOOP: More OOP, A-Packages: Java Packages",
+            "messageBody": "",
+            "insertions": 577,
+            "deletions": 211
+          }
+        ]
+      },
+      {
+        "insertions": 61,
+        "deletions": 17,
+        "date": "2019-11-02",
+        "commitResults": [
+          {
+            "hash": "2d225d1cd650cc0db1a18d1eee4de49c042d5b3d",
+            "messageTitle": "Level-8: Dates and Time",
+            "messageBody": "",
+            "insertions": 61,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 300,
+        "deletions": 21,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "64df7c6f2d3b8f1992df38b05bf2e3ecc70ca913",
+            "messageTitle": "A-JavaDoc: JavaDoc, A-Gradle: Gradle",
+            "messageBody": "",
+            "insertions": 300,
+            "deletions": 21
+          }
+        ]
+      },
+      {
+        "insertions": 186,
+        "deletions": 55,
+        "date": "2019-11-04",
+        "commitResults": [
+          {
+            "hash": "4a23dc5e214d9cbc683be9815d02422d4362ba8d",
+            "messageTitle": "1.  Add individual feature 1: C-MassOps: 1 delete some specific items in one go. Format: (1) delete 1-5 (2) delete 2,3,5,7",
+            "messageBody": "     Add individual feature 1: C-MassOps: 2 mark done for some specific items in one go. Format: (1) done 1-5 (2) done 2,3,5,7\n\n    Add individual feature 1: ViewSchedules\n\n2.  Level-9: Find\n",
+            "insertions": 186,
+            "deletions": 8
+          },
+          {
+            "hash": "a9903d63962dbfccec045b92aef80b21ce1c9d05",
+            "messageTitle": "Improve code quality",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 47
+          }
+        ]
+      },
+      {
+        "insertions": 263,
+        "deletions": 186,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "6dafba244985dfb4ed4e0f92dc09f2f874f37313",
+            "messageTitle": "JUnit Testing",
+            "messageBody": "",
+            "insertions": 215,
+            "deletions": 134
+          },
+          {
+            "hash": "72d0fc6eaa8d53eba6515c28ddb03b412ebeffee",
+            "messageTitle": "A-CodingStandard : Coding Standard",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 40
+          },
+          {
+            "hash": "c8e99df1260db70c2bf45b6ee67aab6a5a4cfadd",
+            "messageTitle": "improve individual feature 1: C-MassOps: 1 delete some specific items in one go. Format: delete 2-1",
+            "messageBody": "improve individual feature 1: C-MassOps: 2 mark done for some specific items in one go. Format: 2-1\n",
+            "insertions": 28,
+            "deletions": 11
+          },
+          {
+            "hash": "bcbff5645a4f8597e10c1ab10b10b0eab5b5c7ed",
+            "messageTitle": "A-Assertions : Assertions",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 1
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "e0373972": 1160
+  },
+  "authorFileTypeContributionMap": {
+    "e0373972": {
+      "java": 1089,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 38,
+      "gradle": 29,
+      "txt": 4
+    }
+  },
+  "authorContributionVariance": {
+    "e0373972": 14590.374
+  },
+  "authorDisplayNameMap": {
+    "e0373972": "WANG..NWEI"
+  }
+}

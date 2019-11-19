@@ -1,0 +1,347 @@
+{
+  "authorDailyContributionsMap": {
+    "chunygL": [
+      {
+        "insertions": 10,
+        "deletions": 0,
+        "date": "2019-09-01",
+        "commitResults": [
+          {
+            "hash": "dbefd8c546ff0cbab4a40e26d4ebeb6a787851f6",
+            "messageTitle": "copy duke.java",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 27,
+        "deletions": 0,
+        "date": "2019-09-02",
+        "commitResults": [
+          {
+            "hash": "fc676d77835e5f22a5dd23a3a76fc52b665cee26",
+            "messageTitle": "Level-1: Greet, Echo, Exit",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 70,
+        "deletions": 4,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "287b78367a0b65e20d46fb2e3885a33bb716d2c9",
+            "messageTitle": "Level2",
+            "messageBody": "",
+            "insertions": 70,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 42,
+        "deletions": 89,
+        "date": "2019-09-05",
+        "commitResults": [
+          {
+            "hash": "2d79a376b7e60c7ed8acff9a7310ffad1afea72f",
+            "messageTitle": "Level2_Echo_Add_List_func",
+            "messageBody": "",
+            "insertions": 42,
+            "deletions": 79
+          },
+          {
+            "hash": "4cc89fc3ddeaf71d1017bc8e02c02eb7f28187c3",
+            "messageTitle": "Revert \"copy duke.java\"",
+            "messageBody": "This reverts commit dbefd8c546ff0cbab4a40e26d4ebeb6a787851f6.\n",
+            "insertions": 0,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 84,
+        "deletions": 20,
+        "date": "2019-09-12",
+        "commitResults": [
+          {
+            "hash": "c0a704702d8da2261d78b9b38cce38d381728035",
+            "messageTitle": "Level-3 and refactoring Level-1 \u0026 2",
+            "messageBody": "",
+            "insertions": 81,
+            "deletions": 17
+          },
+          {
+            "hash": "e6e96de776d1d34f7a2a1c84dd36af4eb6b8f6a3",
+            "messageTitle": "Level-3 and refactoring Level-1 \u0026 2",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 257,
+        "deletions": 117,
+        "date": "2019-09-25",
+        "commitResults": [
+          {
+            "hash": "cc3fe377f312f482b9fc8d06cda38b840ff39447",
+            "messageTitle": "Level - 4 backup",
+            "messageBody": "",
+            "insertions": 41,
+            "deletions": 0
+          },
+          {
+            "hash": "82a30fb3a25eb0e4974158af420c5bc6dd6c4a0d",
+            "messageTitle": "Level 4 backup",
+            "messageBody": "",
+            "insertions": 101,
+            "deletions": 21
+          },
+          {
+            "hash": "06e687eb275347367c60c6150ecc0ea1036e3927",
+            "messageTitle": "level-4 event class",
+            "messageBody": "",
+            "insertions": 17,
+            "deletions": 0
+          },
+          {
+            "hash": "06a808d42742b999c12eed2011d2429d96ff43d2",
+            "messageTitle": "Level-4 backup",
+            "messageBody": "",
+            "insertions": 77,
+            "deletions": 72
+          },
+          {
+            "hash": "965b7de719c7f51f0f956e0fa8ec87eb3d9132b6",
+            "messageTitle": "Level-4 - ToDos, Events, Deadlines and refactoring",
+            "messageBody": "",
+            "insertions": 21,
+            "deletions": 24
+          }
+        ]
+      },
+      {
+        "insertions": 51,
+        "deletions": 6,
+        "date": "2019-10-15",
+        "commitResults": [
+          {
+            "hash": "c38584ecf06695060c2eb6e8cc7df5e47d527bea",
+            "messageTitle": "Level 5-1",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
+          },
+          {
+            "hash": "20e69aaf79b6130f87cb13fa22f3dd2a6c9a7b65",
+            "messageTitle": "Level 5-2",
+            "messageBody": "",
+            "insertions": 49,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 134,
+        "deletions": 100,
+        "date": "2019-10-17",
+        "commitResults": [
+          {
+            "hash": "18c004f383b1191a4a974a43accda9a85af5fccf",
+            "messageTitle": "Level 5 Handle Errors Duke Exceptions for catch/ throw new error for incorrect input, catch errors for valid number and valid description input Refacfor isDone()",
+            "messageBody": "",
+            "insertions": 116,
+            "deletions": 82
+          },
+          {
+            "hash": "889a76f99c99ea66d2a43de7af483e0d644624c4",
+            "messageTitle": "Level 6 Deleting task and catch errors for invalid input and delete task number",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 18
+          }
+        ]
+      },
+      {
+        "insertions": 198,
+        "deletions": 142,
+        "date": "2019-10-21",
+        "commitResults": [
+          {
+            "hash": "88012c60453cff872bbaa71a7df7f5f1b286ef7d",
+            "messageTitle": "Level 7 Save",
+            "messageBody": "",
+            "insertions": 84,
+            "deletions": 27
+          },
+          {
+            "hash": "e3b42d879b230e2098786eea9a1c3b6ff23d46f5",
+            "messageTitle": "Revert \"Level 7 Save\"",
+            "messageBody": "This reverts commit 88012c60453cff872bbaa71a7df7f5f1b286ef7d.\n",
+            "insertions": 27,
+            "deletions": 84
+          },
+          {
+            "hash": "f5732ff8a7f3f6028b40cfec0c40a6ce3c4ef564",
+            "messageTitle": "Revert \"Revert \"Level 7 Save\"\"",
+            "messageBody": "This reverts commit e3b42d879b230e2098786eea9a1c3b6ff23d46f5.\n",
+            "insertions": 84,
+            "deletions": 27
+          },
+          {
+            "hash": "9bf1a6103b841c0cdb447020154ca7f848418851",
+            "messageTitle": "Level 7 Save task",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 460,
+        "deletions": 170,
+        "date": "2019-10-27",
+        "commitResults": [
+          {
+            "hash": "bb62d83a7c8a816fd2d2274f493db8c1527ae2ef",
+            "messageTitle": "A-MoreOOP: Added TaskList, Ui, and Task package(move Task to Task package). Refactor Class Level Method to Packages. WIP",
+            "messageBody": "",
+            "insertions": 312,
+            "deletions": 98
+          },
+          {
+            "hash": "c2776bb74397f682988c81c664aa4a719da9142d",
+            "messageTitle": "A-MoreOOP: Modified Ui (deleteTask, printDeleteEvent, doneTask, printEvent(Todo, Deadline, Event\u0027s tasks)",
+            "messageBody": "",
+            "insertions": 148,
+            "deletions": 72
+          }
+        ]
+      },
+      {
+        "insertions": 237,
+        "deletions": 381,
+        "date": "2019-10-29",
+        "commitResults": [
+          {
+            "hash": "610bdcaccb37c7d90886902ec790090b4a5061de",
+            "messageTitle": "A-MoreOOP: More OOP - Package (Exception, Parser, Ui, TaskList, Task)",
+            "messageBody": "",
+            "insertions": 237,
+            "deletions": 381
+          }
+        ]
+      },
+      {
+        "insertions": 65,
+        "deletions": 3,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "eb260363211c9d98ff8b025ec92917b783d73324",
+            "messageTitle": "Level 8 Dates and Times",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 2
+          },
+          {
+            "hash": "586ecaea4fcdb3ca63a56e25aec42b9b8bc9bc74",
+            "messageTitle": "Level 9 Find",
+            "messageBody": "",
+            "insertions": 20,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 253,
+        "deletions": 199,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "2e717456c830eb0f8287e27218209b8e4e1a5f1a",
+            "messageTitle": "A-JavaDoc: JavaDoc A-CodingStandard: Coding Standard",
+            "messageBody": "",
+            "insertions": 253,
+            "deletions": 199
+          }
+        ]
+      },
+      {
+        "insertions": 87,
+        "deletions": 69,
+        "date": "2019-11-11",
+        "commitResults": [
+          {
+            "hash": "ebc7b0ea103a4e8f604269152fb9027a01e92ad5",
+            "messageTitle": "Add individual features B-ViewSchedules \u0026 tidy up code",
+            "messageBody": "",
+            "insertions": 87,
+            "deletions": 69
+          }
+        ]
+      },
+      {
+        "insertions": 75,
+        "deletions": 7,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "48fca0a99559f9c6c1257aa7f52c7684fc46a120",
+            "messageTitle": "A-JUnit: JUnit Testing \u0026 A-Assertions: Assertions",
+            "messageBody": "",
+            "insertions": 75,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 81,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "70b70cff8bac610eccf986cee87b9d26b949ada3",
+            "messageTitle": "Final commit",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 37
+          },
+          {
+            "hash": "c8244e93512348d1c7eb9b687172e5cf376970af",
+            "messageTitle": "delete Task_old.java",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 44
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "chunygL": 674
+  },
+  "authorFileTypeContributionMap": {
+    "chunygL": {
+      "java": 670,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 4
+    }
+  },
+  "authorContributionVariance": {
+    "chunygL": 15667.663
+  },
+  "authorDisplayNameMap": {
+    "chunygL": "LIM ..YONG"
+  }
+}

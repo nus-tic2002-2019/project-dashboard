@@ -1,0 +1,6190 @@
+[
+  {
+    "path": "src/main/java/duke/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import parser.Parse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import storage.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import ui.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent a task scheduler using console for input of task and schedule"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * and output task list and its status to the console."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Duke{"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static ArrayList\u003cTask\u003e tasklist \u003d new ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static Parse parser \u003d new Parse();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static Storage store \u003d new Storage(\"D:\\\\output.txt\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        Boolean isExit \u003d false ;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        ui.welcome();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        store.loadFile(tasklist);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        while (!isExit){"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            parser.parser(tasklist);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            store.saveFile(tasklist);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            isExit \u003d parser.isExit();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 35
+    }
+  },
+  {
+    "path": "src/main/java/exceptions/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent custom exceptions."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class DukeException extends Exception{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 7
+    }
+  },
+  {
+    "path": "src/main/java/exceptions/ErrType.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent the class to check the validity of user\u0027s command"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class ErrType{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Returns the integer of the task serial number after converted from string"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * and check for validity including within current task list size."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param indexString : the task serial number in string type."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param taskSize : the current size of task list."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @return the task serial number in integer type."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     *         if serial number is invalid, it will"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     *         return -1 as an error flag."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static int toInteger(String indexString, Integer taskSize){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        int indexInteger; // user\u0027s required task serial number as integer type."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            indexInteger \u003d Integer.parseInt(indexString);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            if ( isTaskNumberValid(indexInteger, taskSize) ){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                return indexInteger; // return a valid index number"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (NumberFormatException e){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Please type a task number.\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (DukeException e){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Task number does not exist.\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        indexInteger \u003d -1; //to indicate user input an invalid number"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return indexInteger;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Returns a true boolean if task number is valid."
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param index : user\u0027s required task serial number."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param taskSize : current size of task list."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @return True when user\u0027s required task serial number"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     *         is within 1 \u003c\u003d index \u003c\u003d task size of task list."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @throws DukeException"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static Boolean isTaskNumberValid(int index, int taskSize) throws DukeException {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        if ( index \u003c 1 || index \u003e taskSize ){"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            throw new DukeException();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Returns a true boolean to when task description exists."
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param user_input : user\u0027s task description with schedule."
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @return True when there is a task description."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static Boolean isTask(String user_input){"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            String user_task \u003d user_input.split(\"/\")[0].split(\" \")[1];"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Missing task.\");"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Returns a true boolean to when task schedule exists."
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param user_input : user\u0027s task description with schedule."
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @return True when there is a task schedule."
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static Boolean isSchedule(String user_input){"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            String user_schedule \u003d user_input.split(\"/\")[1];"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Missing schedule.\");"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Returns a true boolean to when time exists in the schedule."
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param scheduleString : user\u0027s schedule ie yyyy-mm-dd hhmm"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @return True when there is a possibility of time component."
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static Boolean isTime(String scheduleString){"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            String user_time \u003d scheduleString.split(\" \")[1];"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            //System.out.println(\"\\tOops!! Missing time.\");"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 92
+    }
+  },
+  {
+    "path": "src/main/java/parser/Parse.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import exceptions.ErrType;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Deadline;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Event;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Todo;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import ui.Ui;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.DateTimeException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent class of Parse."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Make sense of user input and update data into the data structure."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Parse{"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static boolean isExit ;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static ErrType errorType \u003d new ErrType();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public Parse(){"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        this.isExit \u003d false;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static Boolean isExit(){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return isExit;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This method will take in an user command from the console and either"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * create new task item, update status or delete existing task."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param t : this is the data structure of user tasks."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public void parser(ArrayList\u003cTask\u003e t){"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        Integer idx \u003d 0;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String command \u003d \"\";"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String user_input \u003d \"\";"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String taskString \u003d \"\";"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String timeString \u003d \"\";"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        LocalDateTime resultDateTime \u003d null;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        LocalDateTime notDate \u003d LocalDateTime.parse(\"1900-01-01T00:00\"); //error flag"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        user_input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            command \u003d user_input.split(\" \")[0].toLowerCase();"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            command \u003d \"\"; // when user input \" \", program will crash. This code will catch it."
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        ui.line();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        switch (command){"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                ui.list(t, t.size());"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if ( errorType.isTask(user_input) ){"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    taskString \u003d user_input.replace(\"todo\", \"\").trim();"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    t.add(new Todo(taskString));"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    ui.added(t, t.size());"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if (errorType.isTask(user_input) \u0026\u0026 errorType.isSchedule(user_input) ){"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    taskString \u003d user_input.split(\"/\")[0].replace(\"deadline\", \"\").trim();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    timeString \u003d user_input.split(\"/\")[1].replace(\"by\", \"\").trim();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    resultDateTime \u003d dateParser(timeString);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    if ( !resultDateTime.equals(notDate) ){"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        t.add(new Deadline(taskString, resultDateTime));"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        ui.added(t, t.size());"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if ( errorType.isTask(user_input) \u0026\u0026 errorType.isSchedule(user_input) ){"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    taskString \u003d user_input.split(\"/\")[0].replace(\"event\",\"\").trim();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    timeString \u003d user_input.split(\"/\")[1].replace(\"at\", \"\").trim();"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    resultDateTime \u003d dateParser(timeString);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    if ( !resultDateTime.equals(notDate) ) {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        t.add(new Event(taskString, resultDateTime));"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        ui.added(t, t.size());"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if ( !(user_input.trim().length() \u003e 4) ) {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    ui.invalid();"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                idx \u003d errorType.toInteger(user_input.split(\"done\")[1].trim(), t.size());"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if (idx \u003d\u003d -1) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    System.out.println(\"\\tOops!! Please key a valid task number.\");"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                t.get(idx - 1).taskDone();"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                ui.done(t, idx);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if ( !(user_input.trim().length() \u003e 6) ) {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    ui.invalid();"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                idx \u003d errorType.toInteger(user_input.split(\"delete\")[1].trim(), t.size());"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if ( idx \u003d\u003d -1 ){"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    System.out.println(\"\\tOops!! Please key a valid task number.\");"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                ui.delete(t, idx);"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                t.remove(idx-1);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"find\":"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if ( errorType.isTask(user_input) ){"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    String wordToFind \u003d user_input.replace(\"find\", \"\").trim().toLowerCase();"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    findKeyword(t, wordToFind);"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"sort\":"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                sortTask(t);"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"help\":"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                ui.help();"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case \"bye\":"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                ui.bye();"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                this.isExit \u003d true; // loop will end after looping back to while()"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                ui.invalid(); // any other command will be considered as error"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        ui.line();"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Returns a LocalDateTime object from a date string. It checks"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * the format of date and time component. It checks for validity of date"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * and time ie no alphabet and numbers within valid range."
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * It accepts both yyyy-mm-dd hhmm and dd-mm-yyyy hhmm format."
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param date  a string which suppose to represent a date with time"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @return  LocalDateTime object of the format yyyy-mm-ddThh:mm"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static LocalDateTime dateParser(String date){"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        // \"1900-01-01T00:00\" represent date error flag"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        LocalDateTime resultDateTime \u003d LocalDateTime.parse(\"1900-01-01T00:00\");"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        LocalDate resultDate \u003d null;"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String dateTemp \u003d \"\";"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String timeTemp \u003d \"\";"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String dateReverse \u003d \"\";"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String timeMin \u003d \"\";"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String timeHrs \u003d \"\";"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        dateTemp \u003d date.split(\" \")[0];"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assert dateTemp.length()\u003d\u003d10:dateTemp.length(); //expected date of length 10chars"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        if ( errorType.isTime(date) ){ //check if there is a possible time"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            timeTemp \u003d date.split(\" \")[1];"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                timeHrs \u003d timeTemp.substring(0,2);"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                timeMin \u003d timeTemp.substring(2,4);"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            } catch (ArrayIndexOutOfBoundsException e1){"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                System.out.println(\"\\tOops!! Not a valid time of format hhmm.\");"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                return resultDateTime;"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            resultDate \u003d LocalDate.parse(dateTemp); //try original date form"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (DateTimeParseException e2){"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                // assume date format 31-12-2019 then change to this format 2019-12-31"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                dateReverse \u003d dateTemp.split(\"-\")[2] + \"-\" +"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                              dateTemp.split(\"-\")[1] + \"-\" +"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                              dateTemp.split(\"-\")[0];"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            } catch (ArrayIndexOutOfBoundsException e1){"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                System.out.println(\"\\tOops!! Not a valid date of format yyyy-mm-dd.\");"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                return resultDateTime;"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                resultDate \u003d LocalDate.parse(dateReverse);"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            catch (DateTimeParseException e3){"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                System.out.println(\"\\tOops!! Not a valid date format.\");"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                return resultDateTime;"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        // date format passed testing. to add time component behind date."
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            resultDateTime \u003d resultDate.atTime( Integer.parseInt(timeHrs),"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                                Integer.parseInt(timeMin) );"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (DateTimeException e4){"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Not a valid time.\");"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            //return resultDateTime;"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (NumberFormatException e5){"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Not a valid time\");"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            //return resultDateTime;"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return resultDateTime;"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This method find keyword/s within all the task list."
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param t : this is the data structure of user tasks"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param wordToFind : user\u0027s keyword/s to search task list."
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void findKeyword(ArrayList\u003cTask\u003e t, String wordToFind){"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        Boolean isFound \u003d false;"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        for ( int i\u003d0 ; i\u003ct.size() ; i++ ){"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            int n \u003d t.get(i).getDescription().toLowerCase().indexOf(wordToFind);"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            if (n\u003e\u003d0) {"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                ui.singleList(t,i);"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                isFound\u003dtrue;"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "       }"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        if ( !isFound ){"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Cannot find what you looking for.\");"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This is an individual feature 1."
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This method will bubble sort the dates of Deadline and Event."
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * The latest schedule will sort to the bottom of task list."
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Todo task will consolidate to the front of task list."
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Sorting is permanent."
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param t : this is the data structure of user tasks"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void sortTask(ArrayList\u003cTask\u003e t){"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        // sort [T} to the top first"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        int number_of_Todo_list \u003d 0;"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        for ( int i\u003d0 ; i\u003ct.size() ; i++ ){"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            String command \u003d t.get(i).toString().substring(1,2);"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            if ( command.equals(\"T\") ){"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                Collections.swap(t,number_of_Todo_list,i);"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                number_of_Todo_list +\u003d 1;"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        boolean isSwap \u003d false;"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        while (!isSwap){"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            isSwap \u003d true;"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            for ( int i\u003dnumber_of_Todo_list + 1 ; i\u003ct.size() ; i++ ){"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                if ( t.get(i-1).getDate().isAfter(t.get(i).getDate()) ){"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    Collections.swap(t,i-1,i);"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    isSwap \u003d false;"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        ui.list(t, t.size()); // display new list after sorting"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 267
+    }
+  },
+  {
+    "path": "src/main/java/storage/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package storage;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Deadline;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Event;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Todo;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.io.FileOutputStream;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.io.FileReader;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent class of saving and loading task list from the hard disk."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Storage{"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private static String filename;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public Storage(String filename){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        this.filename \u003d filename;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This method save user\u0027s task list to the hard disk."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param t : this is the data structure of user tasks."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void saveFile(ArrayList\u003cTask\u003e t){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            FileOutputStream fout \u003d new FileOutputStream(filename);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            for( int i\u003d0 ; i\u003ct.size() ; i++ ){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                // convert [T][X]Task/by:2019-12-31T23:59 to T|0|Task|2019-12-31T23:59"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                String s \u003d t.get(i).toString().replace(\"√\",\"1\" )."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                               replace(\"X\",\"0\")."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                               replaceAll(\"\\\\[\",\"\")."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                               replaceAll(\"]\",\"|\")."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                               replace(\"(by:\",\"|\")."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                               replace(\"(at:\",\"|\")."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                               replace(\")\",\"\") +"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                               System.lineSeparator();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                byte b[]\u003d s.getBytes();//converting string into byte array"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                fout.write(b);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            fout.close();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (IOException e){"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! Cannot save file !\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This method load user\u0027s task list from hard disk to memory."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param t : this is the data structure of user tasks."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void loadFile(ArrayList\u003cTask\u003e t){"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            BufferedReader br \u003d new BufferedReader(new FileReader(filename));"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            LocalDateTime resultDateTime \u003d null;"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            String loadString;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            Integer numberOfVerticalBar \u003d 0;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            while ( (loadString \u003d br.readLine()) !\u003d null ){"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                // Example loadString \u003d D|0|submit Java project|2018-01-30T14:30"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                //   command[x] --\u003e x \u003d 0|1|         2         |        3"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                String[] command \u003d loadString.split(\"\\\\|\",0);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                switch ( command[0] ){"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    case \"T\":"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        numberOfVerticalBar \u003d loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\")+1)+1);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        assert numberOfVerticalBar \u003d\u003d -1: numberOfVerticalBar;"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        t.add(new Todo(command[2].trim()));"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        if (command[1].equals(\"1\")){"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                            t.get(t.size() - 1).taskDone();"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    case \"E\":"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        numberOfVerticalBar \u003d loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\")+1)+1)+1);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        assert numberOfVerticalBar \u003d\u003d -1: numberOfVerticalBar;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        resultDateTime \u003d LocalDateTime.parse(command[3]);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        t.add(new Event(command[2].trim(),resultDateTime));"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        if ( command[1].equals(\"1\") ){"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                            t.get(t.size() - 1).taskDone();"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                    case \"D\":"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        numberOfVerticalBar \u003d loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\","
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                      loadString.indexOf(\"|\")+1)+1)+1);"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        assert numberOfVerticalBar \u003d\u003d -1: numberOfVerticalBar;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        resultDateTime \u003d LocalDateTime.parse(command[3]);"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        t.add(new Deadline(command[2].trim(),resultDateTime));"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        if ( command[1].equals(\"1\") ){"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                            t.get(t.size() - 1).taskDone();"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } catch (IOException e){"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\tOops!! File not found! Generate new file.\");"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 112
+    }
+  },
+  {
+    "path": "src/main/java/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent data structure to for Deadline command."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * It takes in a description and due date with time."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Deadline extends Task{"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    //private String description;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private LocalDateTime by;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public Deadline(String description, LocalDateTime by){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public LocalDateTime getDate(){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return by;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return \"[D]\" + super.toString() + \"(by:\" + by + \")\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 26
+    }
+  },
+  {
+    "path": "src/main/java/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent data structure to for Event command."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * It takes in a description and appointment date with time."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Event extends Task{"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    //private String description;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    private LocalDateTime at;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public Event(String description, LocalDateTime at){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public LocalDateTime getDate(){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return at;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return \"[E]\" + super.toString() + \"(at:\" + at + \")\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 26
+    }
+  },
+  {
+    "path": "src/main/java/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent the data structure to manage user\u0027s task list."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Task{"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    protected LocalDateTime date;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public Task(String description){"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    //public String getStatusIcon(){"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    //    return (isDone ? \"√\" : \"X\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    //}"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public String getDescription(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return description;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public LocalDateTime getDate(){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return date;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public void taskDone(){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return \"[\" + (isDone ? \"√\" : \"X\") + \"]\"+ description ;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 40
+    }
+  },
+  {
+    "path": "src/main/java/task/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent data structure to for Todo command."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * It takes in a description only."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Todo extends Task{"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    //private String description;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public Todo(String description){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 18
+    }
+  },
+  {
+    "path": "src/main/java/ui/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Represent a class of user interface."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " * Display results and affirmation of user\u0027s command."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public Ui(){"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public void welcome(){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        line();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tHello! I\u0027m duke.Duke\\n\\tWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tType help for help-page.\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        line();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This is an individual feature 2. It display a help page with all available"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * commands and description."
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void help(){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t Welcome to the help page!\");"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t Please use the following scheduler commands and format.\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d|\");"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| Command  | Task Description  | Separator |      Date and time |\");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d|\");"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| deadline | eg. submit report |   /by     |    2019-12-31 2359 |\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|          |                   |           | or 31-12-2019 2359 |\");"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|---------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| event    | eg. watch movie   |   /at     |    2019-12-31 2359 |\");"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|          |                   |           | or 31-12-2019 2359 |\");"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|---------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| todo     | eg. buy bread     |          not applicable        |\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|---------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| list     | example of a display list and its legend           |\");"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|          | 3.[E][X]watch movie(at:Nov 15 2019 04:30 PM)       |\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|          | 3  : task number. use this with helper functions   |\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|          | [E]: E,D and T denotes event, deadline and todo    |\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|          | [X]: X and √ denotes outstanding and completed task|\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|---------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t Example:\");"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t deadline submit industrial report /by 2019-12-31 2359\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t todo buy bread and butter\");"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t list\\n\");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t Additional helper commands.\");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d|\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| Command | Argument       | Description                      |\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d|\");"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| done    | Task number    | to mark a task as completed      |\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|-------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| delete  | Task number    | to delete a task                 |\");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|-------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| find    | keywords       | to find a keyword from task list |\");"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|-------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| sort    | not applicable | sort task list by date           |\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|-------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t| help    | not applicable | display all commands and usage   |\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t|-------------------------------------------------------------|\");"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t Example:\");"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t find watch movie\");"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t sort\");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t done 12\");"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void invalid(){"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tOops!! You have key an invalid command.\");"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void bye(){"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tBye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void added(ArrayList\u003cTask\u003e t, Integer index){"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tGot it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t\" + t.get(index-1)); //t[taskNo-1])"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tNow you have \" + index + \" tasks in the list\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void done(ArrayList\u003cTask\u003e t, Integer index){"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tNice! I marked this task as done\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t\" + t.get(index-1));"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void delete(ArrayList\u003cTask\u003e t, Integer index){"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tNoted! I have removed this task.\");"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t\" + t.get(index-1));"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tNow you have \" + (t.size()-1) + \" tasks in the list\");"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void list(ArrayList\u003cTask\u003e t, Integer index){"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\tHere are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        for ( int i \u003d 0; i \u003c index ; i++ ) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            singleList(t, i);"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void line() {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        System.out.println(\"\\t-------------------------------------------------------------\");"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * Returns a date string of format MMM d yyyy hh:mm a"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param timeString : date string of format yyyy-mm-dd hhmm"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @return date string of format MMM d yyyy hh:mm a"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static String customDate(String timeString){"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"MMM d yyyy hh:mm a\");"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        LocalDateTime dateString \u003d LocalDateTime.parse(timeString);"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        return dateString.format(formatter);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * This method displays a single line of task."
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param t : this is the data structure of user tasks"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     * @param index : user\u0027s required task serial number."
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    public static void singleList(ArrayList\u003cTask\u003e t, Integer index) {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String timeString \u003d \"\";"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String command \u003d t.get(index).toString().substring(1, 2);"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        switch (command) {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case (\"D\"):"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                timeString \u003d t.get(index).toString().split(\"by:\")[1].replace(\")\", \"\");"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            case (\"E\"):"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                timeString \u003d t.get(index).toString().split(\"at:\")[1].replace(\")\", \"\");"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        if (command.equals(\"T\")) {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\t\"+(index+1)+\".\"+t.get(index));"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "            System.out.println(\"\\t\"+(index+1)+\".\"+t.get(index)."
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                                  toString()."
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                                                  replace(timeString, customDate(timeString)));"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 150
+    }
+  },
+  {
+    "path": "src/test/java/duke/DukeTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class DukeTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void dummyTest(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 10
+    }
+  },
+  {
+    "path": "src/test/java/exceptions/ErrTypeTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertThrows;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class ErrTypeTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void toInteger(){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(1,ErrType.toInteger(\"1\",5));"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(5,ErrType.toInteger(\"5\",5));"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(-1,ErrType.toInteger(\"6\",5));"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void isTaskNumberValid() throws DukeException {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(true,ErrType.isTaskNumberValid(4,5));"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertThrows(DukeException.class,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                     ()-\u003e{ErrType.isTaskNumberValid(6,5);});"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void isTask(){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String correct_input \u003d \"deadline submit report /by 2019-10-10 2359\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String wrong_input \u003d \"deadline /by 2019-10-10 2359\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(true,ErrType.isTask(correct_input));"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertThrows(ArrayIndexOutOfBoundsException.class,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                     ()-\u003e{String user_task \u003d wrong_input.split(\"/\")[0].split(\" \")[1];});"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void isSchedule(){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String correct_input \u003d \"deadline submit report /2019-10-10 2359\";"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String wrong_input \u003d \"deadline submit report \";"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(true, ErrType.isSchedule(correct_input));"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertThrows(ArrayIndexOutOfBoundsException.class,"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                     ()-\u003e{String user_schedule \u003d wrong_input.split(\"/\")[1];});"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void isTime(){"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String correct1 \u003d \"2019-01-01 2359\";"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String correct2 \u003d \"2019-01-01 abcd\";"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        String scheduleString \u003d \"2019-01-01\";"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(true,ErrType.isTime(correct1));"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(true,ErrType.isTime(correct2));"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertThrows(ArrayIndexOutOfBoundsException.class,"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "                     ()-\u003e{String user_time \u003d scheduleString.split(\" \")[1];});"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 51
+    }
+  },
+  {
+    "path": "src/test/java/parser/ParseTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class ParseTest {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void dateParser(){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        LocalDateTime expected \u003d LocalDateTime.parse(\"2019-10-10T23:59\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        LocalDateTime expectedFlag \u003d LocalDateTime.parse(\"1900-01-01T00:00\");"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(expected,Parse.dateParser(\"2019-10-10 2359\"));"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(expected,Parse.dateParser(\"10-10-2019 2359\"));"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(expectedFlag,Parse.dateParser(\"2019-10-10 abcd\"));"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(expectedFlag,Parse.dateParser(\"9999-99-99 abcd\"));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(expectedFlag,Parse.dateParser(\"2019/10/10 2359\"));"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 20
+    }
+  },
+  {
+    "path": "src/test/java/ui/UiTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "package ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "public class UiTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    void customDate(){"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "        assertEquals(\"Oct 10 2019 11:59 PM\", Ui.customDate(\"2019-10-10T23:59\"));"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "kohks"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "kohks": 12
+    }
+  }
+]

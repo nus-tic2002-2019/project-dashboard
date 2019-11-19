@@ -1,0 +1,3429 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import javax.swing.*;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.io.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.temporal.ChronoUnit;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.nio.file.FileAlreadyExistsException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cString\u003e list \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cString\u003e type \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cBoolean\u003e mark \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cLocalDate\u003e dateS \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    //start of program"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static void main(String[] args) throws DukeException {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            load();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            while (printout(echo())) ;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    //check of the type of input, save if necessary"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static String echo() throws DukeException {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        String userInput;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        Scanner scan \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        userInput \u003d scan.nextLine();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        String[] splitStr;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (userInput.contains(\"done\")) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            splitStr \u003d userInput.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            mark.set(Integer.valueOf(splitStr[1]) - 1, true);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if ((!userInput.equals(\"list\")) \u0026\u0026 (!userInput.equals(\"bye\")) \u0026\u0026 (!userInput.contains(\"find\")) \u0026 (!userInput.contains(\"delete\"))) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String typeS \u003d getType(userInput);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            LocalDate dateL \u003dLocalDate.now();//LocalDate.parse(\"0000-00-00\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"todo \", \"\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"deadline \", \"\");"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"event \", \"\");"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if (userInput.isEmpty()) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"☹ OOPS!!! The description cannot be empty.\");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                throw new DukeException();"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                if (typeS \u003d\u003d \"E\" || typeS \u003d\u003d \"D\") {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    assert userInput.contains(\"/\") : \"Event and deadline should include /by followed by a date\";"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    splitStr \u003d userInput.split(\"/\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    String[] splitStr2 \u003d splitStr[1].split(\" \");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(splitStr2.length);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    //assert splitStr2.length \u003c 2 : \"Event and deadline should include a date(yyyy-mm-dd)\";"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    //assert splitStr2.length \u003e 2 : \"Event and deadline only support up to date\";"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    dateL \u003d LocalDate.parse(splitStr2[1]);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    userInput \u003d splitStr[0] + \"(\" + splitStr2[0];"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                list.add(userInput);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                mark.add(false);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                type.add(typeS);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                dateS.add(dateL);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        return userInput;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    //printout result"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static boolean printout(String userInput) throws DukeException {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (userInput.equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.equals(\"list\")) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            for (int i \u003d 0; i \u003c list.size(); i++) {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                if(type.get(i).contains(\"E\") || type.get(i).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(i + 1 + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i) + \" \" + dateS.get(i).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(i + 1 + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i));"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.contains(\"done\"))  {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            save();"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            // int index \u003d Integer.valueOf(userInput.substring(userInput.length() + 1)) - 1;"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String[] splitStr \u003d userInput.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int index \u003d Integer.valueOf(splitStr[1]) - 1;"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Nice! I\u0027ve marked this task as done: \");"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if(type.get(index).contains(\"E\") || type.get(index).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + getMark(mark.get(index)) + \"] \" + list.get(index) + \" \" + dateS.get(index).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + getMark(mark.get(index)) + \"] \" + list.get(index));"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.contains(\"delete\")) {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String[] splitStr \u003d userInput.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int index \u003d Integer.parseInt(splitStr[1]) - 1;"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Noted. I\u0027ve removed this task: \");"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if(type.get(index).contains(\"E\") || type.get(index).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(index) + \"][\" + getMark(mark.get(index)) + \"] \" + list.get(index) + \" \" + dateS.get(index).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(index) + \"][\" + getMark(mark.get(index)) + \"] \" + list.get(index));"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            list.remove(index);"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            type.remove(index);"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            mark.remove(index);"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            dateS.remove(index);"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            save();"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Now you have \" + list.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.contains(\"find\")) {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"find \", \"\");"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Here are the matching tasks in your list:\");"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int num \u003d 0;"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            for (int i \u003d 0; i \u003c list.size(); i++) {"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                if(list.get(i).contains(userInput)) {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    num++;"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    if(type.get(i).contains(\"E\") || type.get(i).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                        System.out.println(num + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i) + \" \" + dateS.get(i).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    else"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                        System.out.println(num  + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i));"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            save();"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int size \u003d list.size() - 1;"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if(type.get(size) \u003d\u003d \"E\" || type.get(size) \u003d\u003d \"D\") {"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"Got it. I\u0027ve added this task: \" + userInput + \" \" + dateS.get(size).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(size) + \"][\" + getMark(mark.get(size)) + \"] \" + list.get(size) + \" \" + dateS.get(size).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"Got it. I\u0027ve added this task: \" + userInput);"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(size) + \"][\" + getMark(mark.get(size)) + \"] \" + list.get(size));"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Now you have \" + type.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    //return marker"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static String getMark(boolean result) {"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (result \u003d\u003d true)"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"✓\";"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"X\";"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    //return type of input"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static String getType(String type) throws DukeException {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (type.contains(\"todo\"))"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"T\";"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else if (type.contains(\"deadline\"))"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"D\";"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else if (type.contains(\"event\"))"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"E\";"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            throw new DukeException();"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    //save record(s)"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static void save() throws DukeException {"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            FileOutputStream out \u003d new FileOutputStream(\"C:\\\\Users\\\\User\\\\Desktop\\\\output.txt\");"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String line2save;"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            for (int i \u003d 0; i \u003c list.size(); i++) {"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                line2save \u003d type.get(i) + \"|\" + mark.get(i) + \"|\" + list.get(i) + \"|\" + dateS.get(i);"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                line2save \u003d line2save + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                byte b[] \u003d line2save.getBytes();//converting string into byte array"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                out.write(b);"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            out.close();"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"File saved successfully.\");"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    //load record(s)"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static void load() throws DukeException {"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            BufferedReader br \u003d new BufferedReader(new FileReader(\"C:\\\\Users\\\\User\\\\Desktop\\\\output.txt\"));"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String i;"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String[] splitStr;"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            while ((i \u003d br.readLine()) !\u003d null) {"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                splitStr \u003d i.split(\"\\\\|\");"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                list.add(splitStr[2]);"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                mark.add(Boolean.parseBoolean(splitStr[1]));"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                type.add(splitStr[0]);"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                dateS.add(LocalDate.parse(splitStr[3]));"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Lowyanshuang": 215,
+      "-": 10
+    }
+  },
+  {
+    "path": "src/main/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "public class DukeException  extends Exception{"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Lowyanshuang": 3
+    }
+  },
+  {
+    "path": "src/test/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import javax.swing.*;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.io.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.temporal.ChronoUnit;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.nio.file.FileAlreadyExistsException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cString\u003e list \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cString\u003e type \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cBoolean\u003e mark \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cLocalDate\u003e dateS \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static void main(String[] args) throws DukeException {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            load();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            while (printout(echo())) ;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static String echo() throws DukeException {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        String userInput;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        Scanner scan \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        userInput \u003d scan.nextLine();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        String[] splitStr;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (userInput.contains(\"done\")) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            splitStr \u003d userInput.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            mark.set(Integer.valueOf(splitStr[1]) - 1, true);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if ((!userInput.equals(\"list\")) \u0026\u0026 (!userInput.equals(\"bye\")) \u0026\u0026 (!userInput.contains(\"find\"))) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String typeS \u003d getType(userInput);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            LocalDate dateL \u003dLocalDate.now();//LocalDate.parse(\"0000-00-00\");"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"todo \", \"\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"deadline \", \"\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"event \", \"\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if (userInput.isEmpty()) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"☹ OOPS!!! The description cannot be empty.\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                throw new DukeException();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                if (typeS \u003d\u003d \"E\" || typeS \u003d\u003d \"D\") {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    splitStr \u003d userInput.split(\"/\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    String[] splitStr2 \u003d splitStr[1].split(\" \");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    dateL \u003d LocalDate.parse(splitStr2[1]);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                /*    LocalDateTime datetime \u003d LocalDateTime.parse(\"2019-11-17 1800\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(datetime);//splitStr2[1] + \" \" + splitStr2[2]"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(datetime.format(DateTimeFormatter.ofPattern(\"MMM d yyyy hh:mm\")));"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(datetime.format(DateTimeFormatter.ofPattern(\"MMM d yyyy hh:mm a\")));*/"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    userInput \u003d splitStr[0] + \"(\" + splitStr2[0];"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                list.add(userInput);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                mark.add(false);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                type.add(typeS);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                dateS.add(dateL);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        return userInput;"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static boolean printout(String userInput) throws DukeException {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (userInput.equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.equals(\"list\")) {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            for (int i \u003d 0; i \u003c list.size(); i++) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                if(type.get(i).contains(\"E\") || type.get(i).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(i + 1 + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i) + \" \" + dateS.get(i).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    System.out.println(i + 1 + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i));"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.contains(\"done\"))  {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            save();"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            // int index \u003d Integer.valueOf(userInput.substring(userInput.length() + 1)) - 1;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String[] splitStr \u003d userInput.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int index \u003d Integer.valueOf(splitStr[1]) - 1;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Nice! I\u0027ve marked this task as done: \");"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if(type.get(index).contains(\"E\") || type.get(index).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + getMark(mark.get(index)) + \"] \" + list.get(index) + \" \" + dateS.get(index).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + getMark(mark.get(index)) + \"] \" + list.get(index));"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.contains(\"delete\")) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String[] splitStr \u003d userInput.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int index \u003d Integer.parseInt(splitStr[1]) - 1;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Noted. I\u0027ve removed this task: \");"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if(type.get(index).contains(\"E\") || type.get(index).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(index) + \"][\" + getMark(mark.get(index)) + \"] \" + list.get(index) + \" \" + dateS.get(index).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(index) + \"][\" + getMark(mark.get(index)) + \"] \" + list.get(index));"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            list.remove(index);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            type.remove(index);"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            mark.remove(index);"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            dateS.remove(index);"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            save();"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Now you have \" + list.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } else if (userInput.contains(\"find\")) {"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            userInput \u003d userInput.replace(\"find \", \"\");"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Here are the matching tasks in your list:\");"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int num \u003d 0;"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            for (int i \u003d 0; i \u003c list.size(); i++) {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                if(list.get(i).contains(userInput)) {"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    num++;"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    if(type.get(i).contains(\"E\") || type.get(i).contains(\"D\"))"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                        System.out.println(num + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i) + \" \" + dateS.get(i).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                    else"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                        System.out.println(num + \". [\" + type.get(i) + \"][\" + getMark(mark.get(i)) + \"] \" + list.get(i));"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            save();"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            int size \u003d list.size() - 1;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Got it. I\u0027ve added this task: \" + userInput);"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            if(type.get(size) \u003d\u003d \"E\" || type.get(size) \u003d\u003d \"D\")"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(size) + \"][\" + getMark(mark.get(size)) + \"] \" + list.get(size) + \" \" + dateS.get(size).format(DateTimeFormatter.ofPattern(\"MMM d yyyy\")) + \")\");"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                System.out.println(\"[\" + type.get(size) + \"][\" + getMark(mark.get(size)) + \"] \" + list.get(size));"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"Now you have \" + type.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static String getMark(boolean result) {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (result \u003d\u003d true)"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"✓\";"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"X\";"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static String getType(String type) throws DukeException {"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        if (type.contains(\"todo\"))"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"T\";"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else if (type.contains(\"deadline\"))"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"D\";"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else if (type.contains(\"event\"))"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            return \"E\";"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            throw new DukeException();"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static void save() throws DukeException {"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            FileOutputStream out \u003d new FileOutputStream(\"C:\\\\Users\\\\User\\\\Desktop\\\\output.txt\");"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String line2save;"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            for (int i \u003d 0; i \u003c list.size(); i++) {"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                line2save \u003d type.get(i) + \"|\" + mark.get(i) + \"|\" + list.get(i) + \"|\" + dateS.get(i);"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                line2save \u003d line2save + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                byte b[] \u003d line2save.getBytes();//converting string into byte array"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                out.write(b);"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            out.close();"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"File saved successfully.\");"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static void load() throws DukeException {"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            BufferedReader br \u003d new BufferedReader(new FileReader(\"C:\\\\Users\\\\User\\\\Desktop\\\\output.txt\"));"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String i;"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            String[] splitStr;"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            while ((i \u003d br.readLine()) !\u003d null) {"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                splitStr \u003d i.split(\"\\\\|\");"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                list.add(splitStr[2]);"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                mark.add(Boolean.parseBoolean(splitStr[1]));"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                type.add(splitStr[0]);"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "                dateS.add(LocalDate.parse(splitStr[3]));"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "            System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Lowyanshuang": 215
+    }
+  },
+  {
+    "path": "src/test/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "public class DukeException  extends Exception{"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Lowyanshuang": 3
+    }
+  },
+  {
+    "path": "src/test/java/DukeTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "public class DukeTest extends Duke{"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "   /* public static ArrayList\u003cString\u003e list \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cString\u003e type \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cBoolean\u003e mark \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public static ArrayList\u003cLocalDate\u003e dateS \u003d new ArrayList\u003c\u003e();*/"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    public void dummyTest() throws DukeException {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        Duke obj \u003d new Duke();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        Duke.list.add(\"return book\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        Duke.type.add(\"T\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        Duke.mark.add(false);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        Duke.dateS.add(LocalDate.parse(\"2019-12-01\"));"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        assertEquals(\"X\", Duke.getMark(mark.get(0)));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "       // assertEquals(\"✓\", Duke.getMark(true));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        assertEquals(\"T\", Duke.getType(\"todo\"));"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        assertEquals(\"D\", Duke.getType(\"deadline\"));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        assertEquals(\"E\", Duke.getType(\"event\"));"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        /*LocalDate today \u003d LocalDate.now();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        String org \u003d \"T|false|return book|\" + today.format(DateTimeFormatter.ofPattern(\"yyyy-MM-dd\"));"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "        assertEquals(\"hhjgyuggy\", Duke.save());*/"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Lowyanshuang"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Lowyanshuang": 37
+    }
+  }
+]

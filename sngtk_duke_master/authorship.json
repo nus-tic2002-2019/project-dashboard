@@ -1,0 +1,5953 @@
+[
+  {
+    "path": "data/taskList.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "T | 0 | buy food"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "T | 1 | buy computer"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "T | 0 | do housework"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "D | 1 | excercise | 12/12/2019 1100"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "T | 0 | borrow book"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "T | 0 | buy book"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "D | 0 | return book | 19/11/2019 1230"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 7
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import command.Command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.Parser;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class Duke{"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private TaskList taskList;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private UI ui;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public Duke(String filepath){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        ui \u003d new UI();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        storage \u003d new Storage(filepath);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            taskList \u003d new TaskList(storage.load());"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        } catch (DukeException e) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            //ui.showToUser(\"OOPS!!! Problem reading file. Starting with an empty task list\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            taskList \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void run() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        ui.showWelcomeMessage();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        boolean isExit \u003d false;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        while (!isExit) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                String fullCommand \u003d ui.readUserInput();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                Command c \u003d Parser.parseInput(fullCommand);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                c.execute(taskList, ui, storage);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                isExit \u003d c.isExit;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                ui.showError(e.getMessage());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        new Duke(\"data/taskList.txt\").run();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        //new Duke(\"C:\\\\Users\\\\AdminCOOP\\Documents\\\\2019 Year 3 Sem 1\\\\TIC2002\\\\sample.txt\").run();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private void exit() {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        ui.showGoodbyeMessage();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.exit(0);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 43,
+      "-": 3
+    }
+  },
+  {
+    "path": "src/main/java/command/AddDeadlineCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import command.Command;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeEmptyException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Deadline;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class AddDeadlineCommand extends Command {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"deadline\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private Deadline deadline;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public AddDeadlineCommand(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeEmptyException, DukeException, IOException{"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        int index \u003d 0;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if((input.substring(8).trim()).isEmpty()){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeEmptyException(\"deadline\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if(!input.contains(\"by\")){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The date of a deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        for (String word : input.split(\" \")){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            ++index;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if(word.equals(\"by\")){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                if(String.join(\" \", Arrays.copyOfRange(input.split(\" \"), index, input.split(\" \").length)).isEmpty()){"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    throw new DukeException(\"The date of a deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                else {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    //deadline \u003d new Deadline(String.join(\" \", Arrays.copyOfRange(input.split(\" \"), 1, index-1)), String.join(\" \", Arrays.copyOfRange(input.split(\" \"), index, input.split(\" \").length)));"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    String description \u003d String.join(\" \", Arrays.copyOfRange(input.split(\" \"), 1, index-1));"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    String date \u003d String.join(\" \", Arrays.copyOfRange(input.split(\" \"), index, input.split(\" \").length));"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    deadline \u003d new Deadline(description, stringToDate(date));"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    taskList.addToTaskList(deadline);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    ui.showOutputToUser(\"Got it. I\u0027ve added this task:\\n\\t \" + deadline.toString() + \"\\n\\t Now you have \" + taskList.getSize() + \" task in the list.\");"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    storage.saveToFile();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private LocalDateTime stringToDate(String date) throws DukeException{"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"d/MM/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            return LocalDateTime.parse(date, formatter);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (DateTimeParseException e) {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The format of the date and time must be in this format: dd/mm/yyyy hhss\");"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 60
+    }
+  },
+  {
+    "path": "src/main/java/command/AddEventCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command; /**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " * Constructs a new AddEventCommand and initialise with isExit boolean value"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeEmptyException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Event;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class AddEventCommand extends Command {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"event\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private Event event;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public AddEventCommand(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeEmptyException, DukeException, IOException{"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if((input.substring(5).trim()).isEmpty()){"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeEmptyException(\"event\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if(!input.contains(\"at\")){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The date of a event cannot be empty.\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        int index \u003d 0;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        for (String word : input.split(\" \")){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            ++index;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if(word.equals(\"at\")){"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                if(String.join(\" \", Arrays.copyOfRange(input.split(\" \"), index, input.split(\" \").length)).isEmpty()){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    throw new DukeException(\"The date of a event cannot be empty.\");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                else {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    //event \u003d new Event (String.join(\" \", Arrays.copyOfRange(input.split(\" \"), 1, index-1)), String.join(\" \", Arrays.copyOfRange(input.split(\" \"), index, input.split(\" \").length)));"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    String description \u003d String.join(\" \", Arrays.copyOfRange(input.split(\" \"), 1, index-1));"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    String date \u003d String.join(\" \", Arrays.copyOfRange(input.split(\" \"), index, input.split(\" \").length));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    event \u003d new Event(description, stringToDate(date));"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    taskList.addToTaskList(event);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    ui.showOutputToUser(\"Got it. I\u0027ve added this task:\\n\\t \" + event.toString() + \"\\n\\t Now you have \" + taskList.getSize() + \" task in the list.\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    storage.saveToFile();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private LocalDateTime stringToDate(String date) throws DukeException{"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"d/MM/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            return LocalDateTime.parse(date, formatter);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (DateTimeParseException e){"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The format of the date and time must be in this format: dd/mm/yyyy hhss\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 63
+    }
+  },
+  {
+    "path": "src/main/java/command/AddToDoCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import command.Command;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeEmptyException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.ToDo;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        //import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class AddToDoCommand extends Command {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"todo\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private ToDo todo;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public AddToDoCommand(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeEmptyException, DukeException, IOException{"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        int index \u003d 0;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if((input.substring(4).trim()).isEmpty()){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeEmptyException(\"todo\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        todo \u003d new ToDo(input.substring(5));"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        taskList.addToTaskList(todo);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        ui.showOutputToUser(\"Got it. I\u0027ve added this task:\\n\\t \" + todo.toString() + \"\\n\\t Now you have \" + taskList.getSize() + \" task in the list.\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        storage.saveToFile();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 32
+    }
+  },
+  {
+    "path": "src/main/java/command/ByeCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class ByeCommand extends Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"bye\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String MESSAGE_BYE_ACKNOWLEDGEMENT \u003d \"Bye. Hope to see you again soon!\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public ByeCommand(boolean isExit, String input) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        ui.showGoodbyeMessage();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 19
+    }
+  },
+  {
+    "path": "src/main/java/command/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeEmptyException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class Command{"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public boolean isExit;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    protected String input;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public Command(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.isExit \u003d isExit;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.input \u003d input;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeEmptyException, DukeException, IOException{"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        throw new UnsupportedOperationException(\"This method is to be implemented by child classes\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 23
+    }
+  },
+  {
+    "path": "src/main/java/command/DeleteCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class DeleteCommand extends Command{"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"delete\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String MESSAGE_DELETE_SUCCESS \u003d \"Noted. I\u0027ve removed this task:\\n\\t \";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public DeleteCommand(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException, IOException{"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        //if((input.substring(6).trim()).isEmpty())"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if(input.split(\" \")[1].trim().isEmpty()){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "           throw new DukeException(\"The selector of a delete cannot be empty.\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            index \u003d prepareIndex(input);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            ui.showOutputToUser(MESSAGE_DELETE_SUCCESS + taskList.getTask(index).toString());"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            taskList.deleteFromTaskList(index);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            storage.saveToFile();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The task selected must be a numerical value.\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The tasks list cannot be empty.\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private int prepareIndex(String args) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return Integer.parseInt(input.split(\" \")[1])-1;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 41
+    }
+  },
+  {
+    "path": "src/main/java/command/DoneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "       // import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class DoneCommand extends Command{"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"done\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String MESSAGE_DELETE_SUCCESS \u003d \"Noted. I\u0027ve marked this task as done:\\n\\t \";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public DoneCommand(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException, IOException{"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        //if((input.substring(4).trim()).isEmpty()){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if(input.split(\" \")[1].trim().isEmpty()){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The selector of a done cannot be empty.\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            index \u003d prepareIndex(input);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            (taskList.getTask(index)).setDone();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            ui.showOutputToUser(MESSAGE_DELETE_SUCCESS + taskList.getTask(index).toString());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            //taskList.deleteFromTaskList(index);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            storage.saveToFile();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The task selected must be a numerical value.\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The tasks list cannot be empty.\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private int prepareIndex(String args) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return Integer.parseInt(input.split(\" \")[1])-1;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 43
+    }
+  },
+  {
+    "path": "src/main/java/command/FindCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command; /**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " * subclass command to find or search for task using key words"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class FindCommand extends Command {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"find\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String MESSAGE_FIND_FAILURE \u003d \"There are no matching tasks in your list.\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final int DISPLAYED_INDEX_OFFSET \u003d 1;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static final String MESSAGE_INDEXED_LIST_ITEM \u003d \"%1$d. %2$s\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static String output;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public FindCommand(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if(input.split(\" \")[1].trim().isEmpty()){"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The selector of a find cannot be empty.\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        input \u003d input.substring(5);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        boolean isMatch \u003d false;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        List\u003cString\u003e matchedTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        int counter \u003d 1;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        output \u003d \"\";"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        for(int i \u003d 0; i\u003ctaskList.getSize(); i++){"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            Task task \u003d taskList.getTask(i);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if(task.getDescription().contains(input)){"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                matchedTasks.add(task.toString());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                isMatch \u003d true;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if(isMatch){"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            ui.showOutputToUser(showToUserAsIndexedList(matchedTasks));"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            ui.showOutputToUser(MESSAGE_FIND_FAILURE);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private String showToUserAsIndexedList(List\u003cString\u003e list) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return getIndexedListForViewing(list);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static String getIndexedListForViewing(List\u003cString\u003e listItems) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        int displayIndex \u003d 0 + DISPLAYED_INDEX_OFFSET;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        output +\u003d \" Here are the matching tasks in your list:\";"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        for (String listItem : listItems) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            output +\u003d \" \\n\\t\" + getIndexedListItem(displayIndex, listItem);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            displayIndex++;"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return output;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static String getIndexedListItem(int visibleIndex, String listItem){"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return String.format(MESSAGE_INDEXED_LIST_ITEM, visibleIndex, listItem);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 66
+    }
+  },
+  {
+    "path": "src/main/java/command/ListCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.TaskList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import ui.UI;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class ListCommand extends Command{"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static final String INPUT_WORD \u003d \"list\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static final int DISPLAYED_INDEX_OFFSET \u003d 1;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static final String MESSAGE_INDEXED_LIST_ITEM \u003d \"%1$d. %2$s\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static String output;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public ListCommand(boolean isExit, String input){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(isExit, input);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private String showTaskListView(TaskList taskList) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        output \u003d \"\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        List\u003cString\u003e formattedTask \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        for (int i\u003d0; i \u003c taskList.getSize(); i++){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            formattedTask.add(taskList.getTask(i).toString());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return showToUserAsIndexedList(formattedTask);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private String showToUserAsIndexedList(List\u003cString\u003e list) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return getIndexedListForViewing(list);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static String getIndexedListForViewing(List\u003cString\u003e listItems) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        int displayIndex \u003d 0 + DISPLAYED_INDEX_OFFSET;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        output +\u003d \"Here are the tasks in your list:\";"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        for (String listItem : listItems) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            output +\u003d \" \\n\\t\" + getIndexedListItem(displayIndex, listItem);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            displayIndex++;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return output;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static String getIndexedListItem(int visibleIndex, String listItem) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return String.format(MESSAGE_INDEXED_LIST_ITEM, visibleIndex, listItem);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void execute(TaskList taskList, UI ui, Storage storage) throws DukeException {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        if(taskList.getSize() \u003d\u003d 0){"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The tasks list cannot be empty.\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        ui.showOutputToUser(showTaskListView(taskList));"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 55
+    }
+  },
+  {
+    "path": "src/main/java/exceptions/DukeEmptyException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class DukeEmptyException extends Exception{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public DukeEmptyException(String taskName) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(\"The description of a \" + taskName + \" cannot be empty.\");"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 8
+    }
+  },
+  {
+    "path": "src/main/java/exceptions/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class DukeException extends Exception{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public DukeException(String message) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(message);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 8
+    }
+  },
+  {
+    "path": "src/main/java/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package task;//package subclass;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " * task with deadline, user to input with date and time"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    //protected String by;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    protected LocalDateTime by;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public Deadline(String description, LocalDateTime by) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \" + dateToString(by) + \")\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String dateToString(LocalDateTime dateTime){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"d/MM/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 28
+    }
+  },
+  {
+    "path": "src/main/java/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "//import java.util.Date;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    protected LocalDateTime at;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    //protected String at;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public Event(String description, LocalDateTime at) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (at: \" + dateToString(at) + \")\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String dateToString(LocalDateTime dateTime){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"d/MM/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 25
+    }
+  },
+  {
+    "path": "src/main/java/task/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class Storage{"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private String filePath;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private File file;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private Scanner fileReader;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public Storage(String filePath) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            this.file \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            fileReader \u003d new Scanner(file);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            createFileAndDirectory();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public ArrayList\u003cTask\u003e load () throws DukeException {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        ArrayList\u003cTask\u003e taskList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if(file.isFile() \u0026\u0026 file.exists() \u0026\u0026 file.canRead()) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                while(fileReader.hasNextLine()){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    String line \u003d fileReader.nextLine();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    String[] splitLine \u003d line.split(\" \\\\| \");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    switch(splitLine[0]) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                        case \"E\":"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            //Event newEvent \u003d new Event(splitLine[2], splitLine[3]);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            Event newEvent \u003d new Event(splitLine[2], stringToDate(splitLine[3]));"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            if(splitLine[1].equals(\"1\")) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                                newEvent.setDone();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            taskList.add(newEvent);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            break;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                        case \"D\":"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            //Deadline newDeadline \u003d new Deadline(splitLine[2], splitLine[3]);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            Deadline newDeadline \u003d new Deadline(splitLine[2], stringToDate(splitLine[3]));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            if(splitLine[1].equals(\"1\")) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                                newDeadline.setDone();"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            taskList.add(newDeadline);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            break;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                        case \"T\":"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            ToDo newTodo \u003d new ToDo(splitLine[2]);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            if(splitLine[1].equals(\"1\")) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                                newTodo.setDone();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                            taskList.add(newTodo);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                throw new IOException();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch(IOException | NullPointerException e) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            createFileAndDirectory();"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return taskList;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void createFileAndDirectory() {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if(file.getParentFile().mkdirs()) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if (file.createNewFile()){"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch(IOException e) {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            new IOException(\"The file \" + file.getAbsolutePath() + \" has encountered an error creating.\");"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void saveToFile() throws IOException{"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        FileWriter fileWriter \u003d new FileWriter(file.getAbsolutePath());"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        String toAdd \u003d \"\";"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        createFileAndDirectory();"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        for (int i\u003d0; i\u003c TaskList.getSize(); ++i) {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            Task task \u003d TaskList.getTask(i);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            String taskClass \u003d \"\";"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            int isDone \u003d 0;"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            String description \u003d task.description;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            String date \u003d \"\";"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if(task instanceof ToDo) {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                taskClass \u003d \"T\";"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            else if(task instanceof Event){"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                taskClass \u003d \"E\";"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                //date \u003d ((Event) task).at;"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                date \u003d dateToString(((Event) task).at);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            else if(task instanceof Deadline) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                taskClass \u003d \"D\";"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                //date \u003d ((Deadline) task).by;"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                date \u003d dateToString(((Deadline) task).by);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if (task.isDone) {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                isDone \u003d 1;"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                isDone \u003d 0;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            if (date.equals(\"\")){"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                toAdd +\u003d taskClass + \" | \" + Integer.toString(isDone) + \" | \" + description + \"\\n\";"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "                toAdd +\u003d taskClass + \" | \" + Integer.toString(isDone) + \" | \" + description + \" | \" + date + \"\\n\";"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            fileWriter.write(toAdd);"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            fileWriter.close();"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch(IOException e) {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            new IOException(\"The file \" + file.getAbsolutePath() + \" has encountered an error writing.\");"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private LocalDateTime stringToDate(String date) throws DukeException{"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"d/MM/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            return LocalDateTime.parse(date, formatter);"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        catch (DateTimeParseException e){"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            throw new DukeException(\"The date \" + date + \" loaded from the file is invalid.\");"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String dateToString(LocalDateTime dateTime){"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"d/MM/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return dateTime.format(formatter);"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 145
+    }
+  },
+  {
+    "path": "src/main/java/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " * task class to initiate a \"tick\" or \"cross\" for every task"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.description \u003d description.trim();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return (this.isDone ? \"\\u2713\" : \"\\u2718\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String getDescription() { return this.description; }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return getStatusIcon() + this.description;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void setDone() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    // public String setDelete() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    //   return \"Noted. I\u0027ve removed this task:\\n\\t \" + toString();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    //  }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 30
+    }
+  },
+  {
+    "path": "src/main/java/task/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class TaskList{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private static ArrayList\u003cTask\u003e taskList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public TaskList() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.taskList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public TaskList(ArrayList\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.taskList \u003d tasks;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void addToTaskList(Task task) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.taskList.add(task);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public Task deleteFromTaskList(int task) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return this.taskList.remove(task);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static int getSize() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return taskList.size();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static Task getTask(int task){"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return taskList.get(task);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public ArrayList\u003cTask\u003e getAllTask(){"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return taskList;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 31
+    }
+  },
+  {
+    "path": "src/main/java/task/ToDo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class ToDo extends Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public ToDo (String description) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return  \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 15
+    }
+  },
+  {
+    "path": "src/main/java/ui/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import command.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " * Represent Parse class"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " * Make sense of user input and update data into the data structure"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public static Command parseInput(String userInput) throws DukeException {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        String input \u003d userInput;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        switch (input.split(\" \")[0]) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case AddDeadlineCommand.INPUT_WORD: return new AddDeadlineCommand(false, input);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case AddEventCommand.INPUT_WORD: return new AddEventCommand(false, input);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case AddToDoCommand.INPUT_WORD: return new AddToDoCommand(false, input);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case ListCommand.INPUT_WORD: return new ListCommand(false, \"\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case DeleteCommand.INPUT_WORD: return new DeleteCommand(false, input);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case DoneCommand.INPUT_WORD: return new DoneCommand(false, input);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case ByeCommand.INPUT_WORD: return new ByeCommand(true, \"\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            case FindCommand.INPUT_WORD: return new FindCommand(false, input);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            default: throw new DukeException(\"I\u0027m sorry, but I don\u0027t know what does that mean: \");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 27
+    }
+  },
+  {
+    "path": "src/main/java/ui/UI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "package ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        import java.io.InputStream;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "public class UI{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private final Scanner in;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public UI(){"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this(System.in);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public UI(InputStream in) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        this.in \u003d new Scanner(in);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void showWelcomeMessage(){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(wrapString(\"Hello! I\u0027m Duke\\n\\tWhat can I do for you?\"));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(\"\\tPlease use the following format:\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(\"\\ttodo task description\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(\"\\tdeadline task description by dd/mm/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(\"\\tevent description at dd/mm/yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void showGoodbyeMessage(){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(wrapString(\"Bye. Hope to see you again soon!\"));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    private boolean shouldIgnore(String rawInputLine) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return rawInputLine.trim().isEmpty();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String wrapString(String string) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return \"\\t_______________\\n\\t\" + string + \"\\n\\t______________\";"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public String readUserInput() {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        String input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        while(shouldIgnore(input)) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "            input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        return input;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void showOutputToUser(String output) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(wrapString(output));"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    public void showError(String errorMessage) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "        System.out.println(wrapString(\"OOPS!!! \" + errorMessage));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "sngtk"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sngtk": 51
+    }
+  }
+]

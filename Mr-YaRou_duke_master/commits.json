@@ -1,0 +1,214 @@
+{
+  "authorDailyContributionsMap": {
+    "Mr-YaRou": [
+      {
+        "insertions": 71,
+        "deletions": 8,
+        "date": "2019-09-11",
+        "commitResults": [
+          {
+            "hash": "5ae59c5f0953c3b3bab55ef0dd26019ab327688c",
+            "messageTitle": "first commit w/ command line",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 0
+          },
+          {
+            "hash": "1d22d0de04898e6c6630aa3437f0d44ae4bbe16c",
+            "messageTitle": "Level 1 Completed",
+            "messageBody": "",
+            "insertions": 59,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 162,
+        "deletions": 34,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "b125e88ce9d4c2c421ad3f972f687515e8bca014",
+            "messageTitle": "Refactored Level 1, Completed Level 2/3",
+            "messageBody": "",
+            "insertions": 162,
+            "deletions": 34
+          }
+        ]
+      },
+      {
+        "insertions": 82,
+        "deletions": 38,
+        "date": "2019-10-16",
+        "commitResults": [
+          {
+            "hash": "bd98eb861707da3adb0f30fe21624d826d3f6609",
+            "messageTitle": "Bug Fixes on DukeResponses Class",
+            "messageBody": "",
+            "insertions": 43,
+            "deletions": 38
+          },
+          {
+            "hash": "14cf509a5fe263142129c5bb97674f610e8369cf",
+            "messageTitle": "Code Testing Branch Created v0.1",
+            "messageBody": "",
+            "insertions": 39,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 241,
+        "deletions": 194,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "5ec998d4ddbae80df7855d3ab43ad9406d9d2425",
+            "messageTitle": "code refactor level 4",
+            "messageBody": "",
+            "insertions": 240,
+            "deletions": 194
+          },
+          {
+            "hash": "3d46d4000fd40e7c0372d84ea1c137bcacc90761",
+            "messageTitle": "bug fix",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 262,
+        "deletions": 100,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "dd1cc4507f4a0f060c3fb732c9eff6b82abab4e1",
+            "messageTitle": "completed level 4 refactor",
+            "messageBody": "",
+            "insertions": 110,
+            "deletions": 26
+          },
+          {
+            "hash": "309291a7ddb0a1f4aa15191356a29417f8021239",
+            "messageTitle": "Completed Level 5",
+            "messageBody": "",
+            "insertions": 95,
+            "deletions": 72
+          },
+          {
+            "hash": "7908cf74a7fb31c6748e1246d40bae33244ba72a",
+            "messageTitle": "level 6 completed",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 1
+          },
+          {
+            "hash": "ea4ea5aa05d90a78ae01627489808ec8458e2f49",
+            "messageTitle": "completed level 7",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 0
+          },
+          {
+            "hash": "d4eb025c0c986c5a3663ba39ea6397077d2ad3ee",
+            "messageTitle": "level 7 completed",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 348,
+        "deletions": 104,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "2da6f7e74ef8cfd804c5a8ff93806b2a96820ff8",
+            "messageTitle": "level 7 completed",
+            "messageBody": "",
+            "insertions": 348,
+            "deletions": 104
+          }
+        ]
+      },
+      {
+        "insertions": 226,
+        "deletions": 134,
+        "date": "2019-11-13",
+        "commitResults": [
+          {
+            "hash": "53d0c3685aa3e938ad800541a3f1fa37302383bc",
+            "messageTitle": "level 8 completed",
+            "messageBody": "",
+            "insertions": 226,
+            "deletions": 134
+          }
+        ]
+      },
+      {
+        "insertions": 445,
+        "deletions": 259,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "26602ea0a881358e39c05c728ef78726502f7ba1",
+            "messageTitle": "level 9 completed",
+            "messageBody": "",
+            "insertions": 329,
+            "deletions": 210
+          },
+          {
+            "hash": "8f1d999af4c1e3d54553e00446b3a36884d33ec7",
+            "messageTitle": "addtional feature added",
+            "messageBody": "",
+            "insertions": 116,
+            "deletions": 49
+          }
+        ]
+      },
+      {
+        "insertions": 230,
+        "deletions": 97,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "87a8670a6c4385898e2ff2620783849b2ffc76bd",
+            "messageTitle": "Duke Completed",
+            "messageBody": "",
+            "insertions": 193,
+            "deletions": 87
+          },
+          {
+            "hash": "39092bb10014615bf376077981a31fe56e23a497",
+            "messageTitle": "Initial Release",
+            "messageBody": "",
+            "insertions": 37,
+            "deletions": 10
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Mr-YaRou": 1108
+  },
+  "authorFileTypeContributionMap": {
+    "Mr-YaRou": {
+      "java": 1021,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 84,
+      "gradle": 0,
+      "txt": 3
+    }
+  },
+  "authorContributionVariance": {
+    "Mr-YaRou": 15354.902
+  },
+  "authorDisplayNameMap": {
+    "Mr-YaRou": "GIMP..ADAY"
+  }
+}

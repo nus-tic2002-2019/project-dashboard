@@ -1,0 +1,4884 @@
+[
+  {
+    "path": "dukesave.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        [✘][T] read"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        [✓][D] do homework (by: no idea :-p)"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        [✘][E] project meeting (at: Mon 2-4pm)"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        [✘][D] return book (by: Sunday)"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 4
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Exception_Package.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Parser.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static String userInput;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        String[] userInputArray \u003d new String[100];"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Ui.welcome();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        userInputArray[0] \u003d \" \";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Scanner input \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"Please enter task\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        while (!userInputArray[0].equals(\"bye\") || !userInputArray[0].equals(\"exit\")) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                userInput \u003d input.nextLine();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                userInputArray \u003d userInput.split(\" \");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                Parser.parseTaskCommand(userInput);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                System.out.println(\"Please type exit if want to quit program\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            } catch (DukeException e) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                Ui.keywordError();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            } catch (StringIndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                Ui.keywordError();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 33,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 5
+    }
+  },
+  {
+    "path": "src/main/java/Exception_Package/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Exception_Package;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 5
+    }
+  },
+  {
+    "path": "src/main/java/Parser/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Exception_Package.DukeException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Task.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Task.Todo;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Task.Deadline;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Task.Event;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static Task t \u003d new Task(\"\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    private static String task_words, by_words \u003d \" \";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    private static int listPrint, listPrintFind, listNum \u003d 1, doneNumber \u003d 1;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    private static int task_stringIndex_After_taskWord \u003d 0;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param full_user_input full command and task keywords(event, deadline, todo, list, delete, done, save, find)"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *                        key-in by user in one line"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @throws DukeException  catch the DukeException"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void parseTaskCommand(String full_user_input) throws DukeException {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        String[] input \u003d new String[100];"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        input \u003d full_user_input.split(\" \");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        task_stringIndex_After_taskWord \u003d full_user_input.indexOf(\" \");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        int by_string \u003d full_user_input.indexOf(\"/\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        by_words \u003d full_user_input.substring(by_string + 3);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            switch (input[0]) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"todo\"):"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    if (input[1] !\u003d \"\") {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        task_words \u003d Parser.parseEventDeadlineTask(full_user_input);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        Task.addTask(new Todo(task_words));"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        Ui.printEvent(t);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.todoError();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"deadline\"):"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    if (input[1] !\u003d \"\") {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        task_words \u003d Parser.parseEventDeadlineTask(full_user_input);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        Task.addTask(new Deadline(task_words, by_words));"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        Ui.printEvent(t);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.deadlineDateError();"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"event\"):"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    if (input[1] !\u003d \"\") {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        task_words \u003d Parser.parseEventDeadlineTask(full_user_input);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        Task.addTask(new Event(task_words, by_words));"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        Ui.printEvent(t);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.eventDateError();"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"delete\"):"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    assert Integer.parseInt(input[1]) \u003e 0 : \"done number must be greater than 0\";"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    task_words \u003d Parser.parseEventDeadlineTask(full_user_input);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.deleteTask(Integer.parseInt(task_words.trim()));"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    System.out.println(\"Please enter which integer after delete \");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.deleteNumberOutOfList();"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (AssertionError e) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.doneNumberStartFrom1();"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"list\"):"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                int count_todo \u003d Ui.task_count;"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                System.out.println(Ui.seperatorLine2);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                for (listPrint \u003d 0; listPrint \u003c count_todo; listPrint++) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    System.out.println(\"        \" + listNum + \". \" + \"[\" + Ui.mark.get(listPrint) + \"]\" + TaskList.getTaskList(listPrint));"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    listNum++;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                listNum \u003d 1;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                System.out.println(Ui.seperatorLine2);"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"done\"):"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        assert Integer.parseInt(input[1]) \u003e 0 : \"done number must be greater than 0\";"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        task_words \u003d Parser.parseEventDeadlineTask(full_user_input);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        Ui.doneTask(Integer.parseInt(task_words.trim()), input[1]);"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.doneNumberEmptyError();"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.doneNumberInvalid();"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (AssertionError e) {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.doneNumberStartFrom1();"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"save\"):"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    FileWriter fw \u003d new FileWriter(\"/Volumes/Macintosh HD 1/Java Project-TIC2002-Duke/duke-project-chunygL/dukesave.txt\");"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    File f \u003d new File(\"dukesave.txt\");"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    for (int i \u003d 0; i \u003c TaskList.todoListArraySize(); i++) {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        fw.write(\"        \" + \"[\" + Ui.mark.get(i) + \"]\" + TaskList.getTaskList(i) + System.lineSeparator());"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    System.out.println(\"File save successfully\");"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    fw.close();"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    System.out.println(\"File not found\");"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    System.out.println(\"Something went wrong\" + e.getMessage());"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"find\"):"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                int count_todo_find \u003d Ui.task_count;"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                System.out.println(Ui.seperatorLine2);"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                System.out.println(\"Here are the matching task in your list\");"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                task_words \u003d Parser.parseEventDeadlineTask(full_user_input);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                task_words \u003d task_words.trim();"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                for (listPrintFind \u003d 0; listPrintFind \u003c count_todo_find; listPrintFind++) {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    if(TaskList.getTaskList(listPrintFind).contains(task_words)){"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        System.out.println(\"        \" + listNum + \". \" + \"[\" + Ui.mark.get(listPrintFind) + \"]\" + TaskList.getTaskList(listPrintFind));"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    listNum++;"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                listNum \u003d 1;"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                System.out.println(Ui.seperatorLine2);"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"view\"):"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                try{"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    if (input[1] !\u003d \"\") {"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    count_todo_find \u003d Ui.task_count;"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    System.out.println(Ui.seperatorLine2);"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    task_words \u003d Parser.parseEventDeadlineTask(full_user_input);"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    task_words \u003d task_words.trim();"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    for (listPrintFind \u003d 0; listPrintFind \u003c count_todo_find; listPrintFind++) {"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        if (TaskList.getTaskList(listPrintFind).contains(task_words)) {"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//                        System.out.println(\"Here are the matching schedule in your list\");"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                            System.out.println(\"        \" + listNum + \". \" + \"[\" + Ui.mark.get(listPrintFind) + \"]\" + TaskList.getTaskList(listPrintFind));"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                        listNum++;"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    listNum \u003d 1;"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    System.out.println(Ui.seperatorLine2);"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                } catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                    Ui.viewScheduleError();"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"bye\"):"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                Ui.byeMessage();"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            case (\"exit\"):"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                System.exit(0);"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                throw new DukeException();"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        } catch(StringIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            System.out.println(\"☹ OOPS!!! Please key in space after \" + input[0]);"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param full_user_input full command and task key in by user in one line"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @return return array with seperate words"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static String[] parseTask(String full_user_input) {"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        String[] input \u003d new String[100];"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        input \u003d full_user_input.split(\" \");"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        user_input \u003d input[0];"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return input;"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***Return a string where after task keywords for detect whether input from user include \"/\" or \"bye\" or others."
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param user_input when user input event and deadline task, detect the \"/\" or not include \" \","
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @return return the substring after task keywords."
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static String parseEventDeadlineTask (String user_input ){"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        int indexOfMultipleItems \u003d 0;"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        String task_words \u003d\"\", by_words \u003d \" \";"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        task_stringIndex_After_taskWord \u003d user_input.indexOf(\" \");"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        if (user_input.contains(\"/\")) {"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            int by_string \u003d user_input.indexOf(\"/\");"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            task_words \u003d user_input.substring(task_stringIndex_After_taskWord, by_string);"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        else if(user_input.contains(\"bye\")){"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            task_words \u003d user_input.substring(task_stringIndex_After_taskWord);"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return task_words;"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 226
+    }
+  },
+  {
+    "path": "src/main/java/Task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected boolean isDeadline;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected String by;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param description for deadline task description"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param by string enter by user after keyword /by"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public Deadline(String description, String by) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        isDeadline \u003d false;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @return Override the toString() method"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            String byDate \u003d by.trim();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            LocalDate d1 \u003d LocalDate.parse(byDate);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            byDate \u003d d1.format(DateTimeFormatter.ofPattern(\"MMM dd yyyy\"));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            return \"[D]\" + super.toString() + \"(by:\" + byDate + \")\";"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        } catch (DateTimeParseException e) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            Ui.dateTimeInvalidFormat();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return \"[D]\" + super.toString() +  \"(by:\" + by  + \")\" ;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 39
+    }
+  },
+  {
+    "path": "src/main/java/Task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected boolean isEvent;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected String at;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected Date date_by;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected String atDate;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    SimpleDateFormat format1 \u003d new SimpleDateFormat(\"dd-MMM-yy hh:mm a\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public Event(String description, String at) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        isEvent \u003d false;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            atDate  \u003d at.trim();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            int timeIndex \u003d atDate.indexOf(\" \");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            LocalDate d1 \u003d LocalDate.parse(atDate);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            atDate \u003d d1.format(DateTimeFormatter.ofPattern(\"MMM dd yyyy\"));"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            return \"[E]\" + super.toString() +  \"(at:\" + atDate + \")\" ;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        } catch (DateTimeParseException e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            Ui.dateTimeInvalidFormat();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return \"[E]\" + super.toString() +  \"(at:\" + at  + \")\" ;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 41
+    }
+  },
+  {
+    "path": "src/main/java/Task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    private static Task[] tasks_addTask \u003d new Task[100];  //*****"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    private static int taskCount_addTask \u003d 0;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * Task"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param description description for different Task - event, todo, deadline"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            this.description \u003d description;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param tasks add task (Todo Task, Deadline Task, Event Task)"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void addTask(Task tasks){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        tasks_addTask[taskCount_addTask] \u003d tasks;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        TaskList.addToTaskList(tasks_addTask[taskCount_addTask].toString());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        taskCount_addTask++;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public void markAsDone(){"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @return done return tick else return X symbols"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return description;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 49
+    }
+  },
+  {
+    "path": "src/main/java/Task/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    protected boolean isToDo;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public Todo(String description) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            super(description);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "            isToDo \u003d false;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public void setToDo() {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        this.isToDo \u003d true;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return \"[T]\" + description;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 21
+    }
+  },
+  {
+    "path": "src/main/java/TaskList/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package TaskList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    private  static ArrayList\u003cString\u003e todoListArray \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    String description;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * Adding task to Task List"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param addTaskToString adding task to To Do ArrayList"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void addToTaskList(String addTaskToString){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        todoListArray.add(addTaskToString);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***Return a integer of size for todo list array"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @return  return size of the todo list array"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static int todoListArraySize() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return todoListArray.size();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /*** Return a String object from getting specific task number from todo list array"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param task_counter get the exact task under todo list array"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @return  todo list array"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static String getTaskList(int task_counter) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return todoListArray.get(task_counter);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /*** Return a String object from remove specific task number from todo list array"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param removeTaskNumber support for deleting task from the list at certain task number"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @return todo list array"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static String removeTaskList(int removeTaskNumber) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        return todoListArray.remove(removeTaskNumber);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 42
+    }
+  },
+  {
+    "path": "src/main/java/Ui/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import Task.Task;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static String seperatorLine \u003d \"___________________________________________\\n\";"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static String seperatorLine2 \u003d \"________________________________________\\n\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static int task_count \u003d 0;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static Task task \u003d new Task(\"\");"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//    public static String[] mark \u003d new String[100];"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static ArrayList\u003cString\u003e mark \u003d new ArrayList\u003cString \u003e(Collections.nCopies(100,\"\\u2718\"));"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//    public static ArrayList\u003cString\u003e mark \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static int del_task_number \u003d0;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void welcome() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(seperatorLine);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\n\""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "                + \"What can I do for you\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(seperatorLine);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * print out error when Duke can\u0027t regconize the task keywords"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void keywordError() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\" ☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void byeMessage() {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(seperatorLine);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"       \" + \"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(seperatorLine);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void todoError() {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void deadlineDateError() {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"☹ OOPS!!! The description of a deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void eventDateError() {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"☹ OOPS!!! The event description cannot be empty.\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void doneNumberEmptyError() {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"☹ OOPS!!! The number of a done cannot be empty.\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void doneNumberInvalid() {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"Please enter which integer after delete \");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void doneNumberStartFrom1() {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"Re-enter number start from 1\");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void dateTimeInvalidFormat() {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"Or can enter the date format like yyyy-mm-dd (e.g., 2019-01-01) \");"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void viewScheduleError() {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"☹ OOPS!!! Please enter specific date at least in month or date or year(e.g., Oct 10 2019).\");"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void deleteNumberOutOfList() {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"☹ OOPS!!! Only have \"+task_count+ \" in the list. Duke only can delete less than this number:\" + task_count);"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * print out all the list and status when user enter list keywords"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param task_list"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void printEvent(Task task_list){"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(\"   \" + seperatorLine2);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"     \" + \"Got it. I\u0027ve added this task\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"        \" + \"[\" + task_list.getStatusIcon() + \"]\" + TaskList.getTaskList(task_count));"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"     \"+ \"Now you have \"+ (task_count + 1) + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(\"   \" + seperatorLine2);"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        task_count++;"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * printout mask task as done"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param done_task_number the number of the list need to be marked as done"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param userInput_taskWords the number of"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void doneTask(int done_task_number, String userInput_taskWords) {"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        task.markAsDone();"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(\"   \" + seperatorLine2);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"     \" + \"Nice! I\u0027ve marked this task as done:\");"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(\"        \" + \"[\" + task.getStatusIcon() + \"] \");"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        done_task_number \u003d Integer.parseInt(userInput_taskWords) - 1;"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(TaskList.getTaskList(done_task_number));"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        mark[done_task_number] \u003d task.getStatusIcon();"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        task.getStatusIcon();"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Ui.mark.add(done_task_number, task.getStatusIcon());"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(\"   \" + seperatorLine2);"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * this public method print_delete_event() will be called after deleteTask() been executed"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void print_delete_event(){"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(\"   \" + seperatorLine2);"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"     \" + \"Noted. I\u0027ve removed this task\");"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        System.out.println(\"        \" + \"[\" + task.getStatusIcon() + \"]\" + TaskList.getTaskList(Ui.del_task_number-1) );"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        System.out.println(\"        \" + \"[\" + mark[del_task_number-1] + \"]\" + TaskList.getTaskList(Ui.del_task_number-1) );"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        System.out.println(\"        \" + \"[\" + mark.get(Ui.del_task_number-1) + \"]\" + TaskList.getTaskList(Ui.del_task_number-1) );"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"        \" + \"[\" + Ui.mark.get(Ui.del_task_number-1)+ \"]\" + TaskList.getTaskList(Ui.del_task_number-1) );"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.println(\"     \"+ \"Now you have \"+ (task_count-1 ) + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        System.out.print(\"   \" + seperatorLine2);"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        task_count--;"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    /***"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * delete specific task from the list"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     * @param del_task_number the number of list need to be delete by user"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public static void deleteTask(int del_task_number) {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Ui.del_task_number \u003d del_task_number--;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        del_task_number--;"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        String remove_task \u003d TaskList.getTaskList(del_task_number);"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "//        System.out.println(del_task_number);"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Ui.mark.remove(Ui.del_task_number-1);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        print_delete_event();"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        TaskList.removeTaskList(del_task_number);"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 152
+    }
+  },
+  {
+    "path": "src/test/java/Task/DeadlineTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class DeadlineTest {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public void deadlineTest(){"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Deadline dealine \u003d new Deadline(\"duke project\",\"2019-11-17\");"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        assertEquals(\"[D]duke project(by:Nov 17 2019)\",dealine.toString());"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 13
+    }
+  },
+  {
+    "path": "src/test/java/Task/EventTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class EventTest {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public void eventTest(){"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Event event \u003d new Event (\"meeting\", \"2019-10-10\");"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        assertEquals(\"[E]meeting(at:Oct 10 2019)\", event.toString());"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 16
+    }
+  },
+  {
+    "path": "src/test/java/Task/TaskTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "public class TaskTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    Task task \u003d new Task(\"todo\");"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public void check_getStatusIconDefaultState(){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        assertEquals(\"\\u2718\", task.getStatusIcon());"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 15
+    }
+  },
+  {
+    "path": "src/test/java/Task/TodoTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "package Task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "class TodoTest {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    public void todoTest(){"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        Todo todo \u003d new Todo(\"prepare exam\");"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "        assertEquals(\"[T]prepare exam\", todo.toString());"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "chunygL"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "chunygL": 13
+    }
+  }
+]

@@ -1,0 +1,186 @@
+{
+  "authorDailyContributionsMap": {
+    "E0260261": [
+      {
+        "insertions": 18,
+        "deletions": 3,
+        "date": "2019-09-09",
+        "commitResults": [
+          {
+            "hash": "ae57e2f6b3b56661fc77aa2acee22d37887dd7d7",
+            "messageTitle": "Level 1",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 0
+          },
+          {
+            "hash": "133a715e9a903a8c929de4f9aee545b0326c0b4c",
+            "messageTitle": "Level 2",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 55,
+        "deletions": 12,
+        "date": "2019-09-24",
+        "commitResults": [
+          {
+            "hash": "67839934e0318e27ff43d4f0b70d3c749771db8a",
+            "messageTitle": "Parts of Level 3",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 0
+          },
+          {
+            "hash": "090ae9b2c9d422bfdc05563fcc10e8954222eaeb",
+            "messageTitle": "Level 3",
+            "messageBody": "",
+            "insertions": 35,
+            "deletions": 6
+          },
+          {
+            "hash": "bc305ee9e14a5ab56ac26b3f0434c8d4e466605d",
+            "messageTitle": "Additional optimizations for Level 3",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 5
+          },
+          {
+            "hash": "872d9984f5db70fa5053f23ea2b36e468866ba22",
+            "messageTitle": "Level 4",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 158,
+        "deletions": 13,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "73f37483243c671159e421f8199ec37f59abead2",
+            "messageTitle": "Level 5",
+            "messageBody": "",
+            "insertions": 109,
+            "deletions": 2
+          },
+          {
+            "hash": "2fad0af98c378f7226c6f09c447ef0f2da78c83c",
+            "messageTitle": "Bugfix for Stage 5 (Todo functionality fixes)",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 7
+          },
+          {
+            "hash": "c899ca18719ddaeed8f3404f4c764ce182ab5016",
+            "messageTitle": "Level 6",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 701,
+        "deletions": 407,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "fb260bae58ee1cce790a96bb9b0d57b262233c7d",
+            "messageTitle": "Half of Level 7 (Completed saving to file, reading from file incomplete)",
+            "messageBody": "",
+            "insertions": 11,
+            "deletions": 0
+          },
+          {
+            "hash": "f68b78061d4ca6f949d3d13c1d9ce1803868203c",
+            "messageTitle": "Level 7",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 1
+          },
+          {
+            "hash": "35d66e596076bf0cf6c43658ff462d6120a44cbc",
+            "messageTitle": "Level 8",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 6
+          },
+          {
+            "hash": "45afc221f983449debc8c8a1b6893a1d4daaedf1",
+            "messageTitle": "Level 9",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 0
+          },
+          {
+            "hash": "52fe9ddf324d774861721411e05b098735e8f9e3",
+            "messageTitle": "Individual Feature (B-FixedDurationTasks)",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 3
+          },
+          {
+            "hash": "2f914c834ae5602d99260a5e1ba80f0bcd3895dd",
+            "messageTitle": "Code cleanup and optimizations",
+            "messageBody": "",
+            "insertions": 91,
+            "deletions": 136
+          },
+          {
+            "hash": "2a48c7ac37598e26b74438eb823a543dfc391846",
+            "messageTitle": "A-Packages and A-MoreOOP",
+            "messageBody": "",
+            "insertions": 420,
+            "deletions": 13
+          },
+          {
+            "hash": "ab64f2c142b4560f62c7a637d79d18f114ac92ee",
+            "messageTitle": "A-CodingStandard",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 223
+          },
+          {
+            "hash": "6fe755d5d742487e50da6ba02af7df0d8b9a2f13",
+            "messageTitle": "A-JavaDoc",
+            "messageBody": "",
+            "insertions": 88,
+            "deletions": 1
+          },
+          {
+            "hash": "440c88b4828c03219e85875da64737b6f712efbc",
+            "messageTitle": "A-Assertions",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 24
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "E0260261": 504
+  },
+  "authorFileTypeContributionMap": {
+    "E0260261": {
+      "java": 504,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "E0260261": 15870.225
+  },
+  "authorDisplayNameMap": {
+    "E0260261": "CLIN..YUAN"
+  }
+}

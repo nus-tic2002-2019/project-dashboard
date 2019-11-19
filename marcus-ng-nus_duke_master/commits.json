@@ -1,0 +1,459 @@
+{
+  "authorDailyContributionsMap": {
+    "marcus-ng-nus": [
+      {
+        "insertions": 54,
+        "deletions": 19,
+        "date": "2019-09-02",
+        "commitResults": [
+          {
+            "hash": "60fc41b7e111f711c0fdf2cbc15aa4e83962e362",
+            "messageTitle": "Adding package subclass",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 0
+          },
+          {
+            "hash": "87df5cb31d6e1166943f8606b3447d144208ab95",
+            "messageTitle": "Adding import from subclass",
+            "messageBody": "",
+            "insertions": 11,
+            "deletions": 10
+          },
+          {
+            "hash": "7a09774cac4f42c6ead7f4b27dbfd98e68522b4f",
+            "messageTitle": "Level-3: Adding Icon",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 4
+          },
+          {
+            "hash": "feccd89e62037fa98a3f5631cf3958c9bf8a383f",
+            "messageTitle": "Level-3: Incomplete, mark as done with icon (only in output)",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 16,
+        "deletions": 16,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "9d75e6099d010833671af36447fbeba0225c3595",
+            "messageTitle": "Adding indentations to println",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 16
+          }
+        ]
+      },
+      {
+        "insertions": 46,
+        "deletions": 42,
+        "date": "2019-09-04",
+        "commitResults": [
+          {
+            "hash": "eaea767fc4e6c1c092194bcf50d856340baa516b",
+            "messageTitle": "Level-3 + Implementing methods on public class Task.",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 42
+          }
+        ]
+      },
+      {
+        "insertions": 150,
+        "deletions": 77,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "f2c73343bd7e112ca9bc328af2e2d25897ec02c2",
+            "messageTitle": "Level-4: Adding Deadline class and change output format. (Icon and class wrong position)",
+            "messageBody": "",
+            "insertions": 30,
+            "deletions": 8
+          },
+          {
+            "hash": "910af882be36726458e21648e882ff351111cc97",
+            "messageTitle": "Level-4: progress",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 1
+          },
+          {
+            "hash": "2a4c28b5b2d5f51ed32f0abba0b9da6863109fbe",
+            "messageTitle": "Level-4: changes done to \"by\"",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          },
+          {
+            "hash": "3c8cfcb18d2796cab84100433bac2dcebff2a57a",
+            "messageTitle": "Level-4: removed /by from description",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 7
+          },
+          {
+            "hash": "14a12457287b773ea50679e6614a000ff661c650",
+            "messageTitle": "Level-4: done",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 11
+          },
+          {
+            "hash": "d6d2ac489098dc41a620f1a9a1bbac2cd32ef03b",
+            "messageTitle": "Level-4: complete, added event.class",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 0
+          },
+          {
+            "hash": "d64c1853b2493558edaed25d559d3357e428a9dd",
+            "messageTitle": "Level-4: completed, add event",
+            "messageBody": "",
+            "insertions": 11,
+            "deletions": 2
+          },
+          {
+            "hash": "45e722354949c2c66e6511834d81a6376736d82a",
+            "messageTitle": "Level-5: added exception class, wip",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 0
+          },
+          {
+            "hash": "703ca572bc652c8917dc362c582bfca92f7c5c23",
+            "messageTitle": "Level-5: added exception class",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 3
+          },
+          {
+            "hash": "5a976f8afe8451db7d963b7fee4ef807b90ef519",
+            "messageTitle": "Level-5: wip",
+            "messageBody": "",
+            "insertions": 50,
+            "deletions": 44
+          }
+        ]
+      },
+      {
+        "insertions": 68,
+        "deletions": 43,
+        "date": "2019-09-11",
+        "commitResults": [
+          {
+            "hash": "840c3f147ba298dd62191f364c911eb4ac3c80b1",
+            "messageTitle": "Level-5: added exceptions when unknown commands thrown",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 41
+          },
+          {
+            "hash": "622fcc251cbdb6762d53da5d33c7ce36e34e0a61",
+            "messageTitle": "Level-5: exceptions",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 30,
+        "deletions": 20,
+        "date": "2019-09-16",
+        "commitResults": [
+          {
+            "hash": "419a4c1872d9c0f8fc752d86f67ff6a3c83ff43d",
+            "messageTitle": "Level-6: commit",
+            "messageBody": "",
+            "insertions": 30,
+            "deletions": 20
+          }
+        ]
+      },
+      {
+        "insertions": 12,
+        "deletions": 5,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "d1d198decbbf0d8a0733b9197584064e3afd7120",
+            "messageTitle": "Added new exception",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 3
+          },
+          {
+            "hash": "5683d40a40101cb2885ced31232008cfe8fd8cb7",
+            "messageTitle": "Added exception",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 126,
+        "deletions": 26,
+        "date": "2019-09-23",
+        "commitResults": [
+          {
+            "hash": "eff00b3ddc67fd49ae9dbef384b7fc92598fb487",
+            "messageTitle": "Level-7: WIP, added write to file",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 8
+          },
+          {
+            "hash": "5a3953644e7f4c512fdd4e90d43706f7070dcea9",
+            "messageTitle": "Level-7: write to file",
+            "messageBody": "",
+            "insertions": 50,
+            "deletions": 6
+          },
+          {
+            "hash": "a499fda8ed7d60c2af29fd3735b26f479d3c67fe",
+            "messageTitle": "Level-7: wip",
+            "messageBody": "",
+            "insertions": 51,
+            "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 73,
+        "deletions": 54,
+        "date": "2019-09-24",
+        "commitResults": [
+          {
+            "hash": "2a78ffbbc28e52f7ec720ae6feab86a1053fe809",
+            "messageTitle": "Level-7: removed unused methods",
+            "messageBody": "",
+            "insertions": 73,
+            "deletions": 54
+          }
+        ]
+      },
+      {
+        "insertions": 175,
+        "deletions": 123,
+        "date": "2019-10-02",
+        "commitResults": [
+          {
+            "hash": "979a1e265133edea49831a068d01b63e23fcf6a0",
+            "messageTitle": "Added A-MoreOOP",
+            "messageBody": "",
+            "insertions": 98,
+            "deletions": 49
+          },
+          {
+            "hash": "fa7bc3c75c76c1b29ee149d2aabd02fb33ba6cb7",
+            "messageTitle": "A-MoreOOP: Added Storage Class, pending Parser",
+            "messageBody": "",
+            "insertions": 74,
+            "deletions": 71
+          },
+          {
+            "hash": "4ce09271d89dd3eac34ab36964cd05679ace3e11",
+            "messageTitle": "tidy up code",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 38,
+        "deletions": 21,
+        "date": "2019-10-03",
+        "commitResults": [
+          {
+            "hash": "a139341195b844846db94e4aadb9d07d7489491f",
+            "messageTitle": "A-MoreOOP: Added simple Parser",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 13
+          },
+          {
+            "hash": "f173343d6c3fef5c83ff4795225ee830e1ea1140",
+            "messageTitle": "A-moreOOP",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 282,
+        "deletions": 14,
+        "date": "2019-10-08",
+        "commitResults": [
+          {
+            "hash": "8641efbc7b6c72824b9fd2696716175de1c2cb21",
+            "messageTitle": "A-MoreOOP: Added *command.java and new Parser for new duke",
+            "messageBody": "",
+            "insertions": 258,
+            "deletions": 10
+          },
+          {
+            "hash": "e831b4fb3b63184c198703d53ce18d70c421f4b2",
+            "messageTitle": "A-MoreOOP: Added Bye to parser",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 91,
+        "deletions": 166,
+        "date": "2019-10-15",
+        "commitResults": [
+          {
+            "hash": "d42226a70795c6d157955ae7e0c11287eed89e47",
+            "messageTitle": "A-MoreOOP: Added exceptions to *commands classes",
+            "messageBody": "",
+            "insertions": 91,
+            "deletions": 166
+          }
+        ]
+      },
+      {
+        "insertions": 81,
+        "deletions": 10,
+        "date": "2019-10-22",
+        "commitResults": [
+          {
+            "hash": "01c2de736d8ff5120d28c41bf3d83b4d50697ab3",
+            "messageTitle": "commit all files",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 0
+          },
+          {
+            "hash": "41459e5cde6f110f35567f11093e54eee82510fe",
+            "messageTitle": "Change storage file path",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 2
+          },
+          {
+            "hash": "78385fd4e27917032914af1082dd4a088a81f8b3",
+            "messageTitle": "Level-9: Find [WIP]",
+            "messageBody": "",
+            "insertions": 51,
+            "deletions": 2
+          },
+          {
+            "hash": "509d913a511a762e2047e7cb58934cbad018657f",
+            "messageTitle": "JUnit commit, wip",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 3
+          },
+          {
+            "hash": "d747487cfa6ad4d9c664e5e1ab86da5d837a4f3e",
+            "messageTitle": "Level-9: Added exceptions",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 53,
+        "deletions": 0,
+        "date": "2019-10-28",
+        "commitResults": [
+          {
+            "hash": "804ef21cca0ea16170c630562051a4776423d3e2",
+            "messageTitle": "C-Help: Adding simply help command",
+            "messageBody": "",
+            "insertions": 53,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 62,
+        "deletions": 20,
+        "date": "2019-10-29",
+        "commitResults": [
+          {
+            "hash": "198061a0a7001edeecf5c5c7e772015f6c836653",
+            "messageTitle": "Added A-JavaDoc for more classes",
+            "messageBody": "",
+            "insertions": 43,
+            "deletions": 1
+          },
+          {
+            "hash": "107c8cc4390307a8e0ed826558476a0e87267396",
+            "messageTitle": "JavaDoc",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 19
+          }
+        ]
+      },
+      {
+        "insertions": 44,
+        "deletions": 6,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "b8f6aea5dab936093dcd6deb456afc48c338c7c5",
+            "messageTitle": "Added some JUnit test case",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 5
+          },
+          {
+            "hash": "f06836b9373418da8ef11a99f729f830bf5bd7ac",
+            "messageTitle": "Added A-Assertions",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 39,
+        "deletions": 9,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "1501f409e99561fcc98e17e30a65911574a7e85f",
+            "messageTitle": "A-JavaDoc: Adding more doc comments",
+            "messageBody": "",
+            "insertions": 39,
+            "deletions": 9
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "marcus-ng-nus": 837
+  },
+  "authorFileTypeContributionMap": {
+    "marcus-ng-nus": {
+      "java": 821,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 16
+    }
+  },
+  "authorContributionVariance": {
+    "marcus-ng-nus": 4863.8936
+  },
+  "authorDisplayNameMap": {
+    "marcus-ng-nus": "NG S..RCUS"
+  }
+}

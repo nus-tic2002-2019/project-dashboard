@@ -1,0 +1,6068 @@
+[
+  {
+    "path": "src/main/java/AddCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class AddCommand {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/ByeCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class ByeCommand {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Command {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/DeleteCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class DeleteCommand {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.Exception.DukeException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.command.Command;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Parser;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    private Ui ui;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    private TaskList tasks;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param filePath  the path of the file where the data is going to store"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public Duke(String filePath) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        storage \u003d new Storage(filePath);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            tasks \u003d new TaskList(storage.load());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            ui.showLoadingError();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            tasks \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Main programme which runs continuously until user enters bye command"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    private void run() {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        ui.welcomeMessage();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        boolean isExit \u003d false;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        while (!isExit) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                String fullCommand \u003d ui.readCommand();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                ui.showLine(); // show the divider line (\"_______\")"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                Command c \u003d Parser.parse(fullCommand);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                c.execute(tasks, ui, storage);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                isExit \u003d c.isExit();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            } catch (DukeException e) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                ui.showError(e.getMessage());"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            } finally {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                ui.showLine();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        new Duke(\"data/tasks.txt\").run();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 52,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/doneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class doneCommand {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  },
+  {
+    "path": "src/main/java/duke/Exception/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.Exception;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class DukeException extends RuntimeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public DukeException(String errorMessage) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        super(errorMessage);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 9
+    }
+  },
+  {
+    "path": "src/main/java/duke/command/AddCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class AddCommand extends Command {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  int type;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public String des;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  String time;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public LocalDateTime localtime;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void execute(TaskList task, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        switch (type) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            case 1:"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                todo e \u003d new todo(des);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                task.addTasktoList(e);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                ui.addedTask(e,task.length());"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            case 2:"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                Deadline D  \u003d new Deadline(des,time,localtime);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                task.addTasktoList(D);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                ui.addedTask(D,task.length());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                Events E \u003d new Events(des,time,localtime);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                task.addTasktoList(E);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                ui.addedTask(E,task.length());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        storage.updateFile(task);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * AddCommand constructor when sending type, descritption , time as in string and time in LocalDateTime"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param type"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param des"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param time"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param localtime"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public AddCommand(int type, String des, String time,LocalDateTime localtime) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.type \u003d type;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.des \u003d des;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.time \u003d time;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.localtime\u003d localtime;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Constructor with only type and description"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param type"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param des"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public AddCommand(int type, String des) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.type \u003d type;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.des \u003d des;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.time\u003d null;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 65
+    }
+  },
+  {
+    "path": "src/main/java/duke/command/ByeCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class ByeCommand extends Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void execute(TaskList task, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        ui.byeMessage();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 21
+    }
+  },
+  {
+    "path": "src/main/java/duke/command/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public abstract class Command {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * abstract method execute . takes tasklist as input, UI for userinterface , storage for storing"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param ui"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public abstract void execute(TaskList task, Ui ui, Storage storage);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public abstract  boolean isExit();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 17
+    }
+  },
+  {
+    "path": "src/main/java/duke/command/DeleteCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.Exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class DeleteCommand extends Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public int number;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void execute(TaskList task, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        if(number \u003e\u003d task.length())"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            throw  new DukeException(\"☹ OOPS!!! Please enter a lesser number\");"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        ui.deleteMessage(task.myTaskList.get(this.number),task.length());"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        task.removeTaskfromList(this.number);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        storage.updateFile(task);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public DeleteCommand(int num) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            if(num \u003c\u003d 0)"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                throw new DukeException(\"☹ OOPS!!! Please enter a higher number\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            this.number\u003d num;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 32
+    }
+  },
+  {
+    "path": "src/main/java/duke/command/doneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.Exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Storage;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class doneCommand extends Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public int number;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Executes done command. Task will be marked as done"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param ui"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void execute(TaskList task, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"number sent\"+ this.number + \" total length is \"+task.length());"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        if( task.length() \u003c this.number){"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            throw new DukeException(\"☹ OOPS!!! Please enter a lesser number\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            task.myTaskList.get(number-1).isDone \u003d true;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            ui.doneMessage(task.myTaskList.get(number-1));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            storage.updateFile(task);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * constructor which initialize the number for which task is going to be marked done"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param number"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public doneCommand(int number) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.number \u003d number;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 42
+    }
+  },
+  {
+    "path": "src/main/java/duke/command/listCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Storage;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class listCommand extends Command {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void execute(TaskList task, Ui ui, Storage storage) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        ui.showlist(task);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public boolean isExit() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 19
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Deadline  extends  task{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    protected  String by;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    protected LocalDateTime time;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public Deadline(String description, String by,LocalDateTime time) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.time \u003d time;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  String toString(){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        DateTimeFormatter format \u003dDateTimeFormatter.ofPattern(\"MMM d yyyy hh:mm\");"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return \"[D] \"+super.toString()+\" (by: \"+time.format(format)+ \")\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  String forFile(){"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return \"D | \"+((super.isDone)?\"1\":\"0\")+\" | \"+super.description+\"|\"+by;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 24
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Events.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Events extends task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    protected  String by;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    protected LocalDateTime time;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public Events(String description, String by, LocalDateTime time) {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.time\u003dtime;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  String toString(){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return \"[E] \"+super.toString()+\" (at: \"+by+ \")\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  String forFile(){"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return \"E | \"+((super.isDone)?\"1\":\"0\")+\" | \"+super.description+\"|\"+by;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 23
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.Exception.DukeException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.command.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.nio.file.LinkOption;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.OffsetDateTime;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Parser   {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Parsing the external file for the first time when the programme is loaded"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * it converts the input text and interpret accordingly"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param inputText"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public static task parseInputFromExternalFile(String inputText){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        String des;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        String time;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        String done;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        String[] split1 \u003d{};"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            split1\u003d inputText.split(\"\\\\|\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            System.out.println(\"problem with split\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        String switchcase \u003d split1[0].trim();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        switch (switchcase){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            case \"E\":"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                des \u003d split1[2].trim();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                time \u003d split1[3].trim();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                LocalDateTime now\u003d LocalDateTime.parse(time, DateTimeFormatter.ofPattern(\"yyyy-MM-dd HHmm\"));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                Events events \u003d new Events(des,time,now);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                done \u003d split1[1].trim();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                if(done.equals(\"1\"))"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    events.isDone\u003dtrue ;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    events.isDone\u003dfalse;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                return  events;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            case \"D\":"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                des \u003d split1[2].trim();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                time \u003d split1[3].trim();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                LocalDateTime now1\u003d LocalDateTime.parse(time, DateTimeFormatter.ofPattern(\"yyyy-MM-dd HHmm\"));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                Deadline deadline \u003d new Deadline(des,time,now1);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                done \u003d split1[1].trim();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                if(done.equals(\"1\"))"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    deadline.isDone\u003dtrue ;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    deadline.isDone\u003dfalse;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                return  deadline;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            case \"T\":"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                des \u003d split1[2].trim();"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                todo todo \u003d new todo(des);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                done \u003d split1[1].trim();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                if(done.equals(\"1\"))"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    todo.isDone\u003dtrue ;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                else"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    todo.isDone\u003dfalse;;"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                return  todo;"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return  null;"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * it takes the input as string which is given by the use in the console"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * and try to extract meaning out of it and create task accordingly"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param fullCommand"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public static Command parse(String fullCommand) {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        if(fullCommand.equals(\"bye\")){"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            ByeCommand bye \u003d new ByeCommand();"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            return bye;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        else if(fullCommand.equals(\"list\")){"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            listCommand list \u003dnew listCommand();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            return list;"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            String[] toExtaction1 \u003d fullCommand.split(\" \",2);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            switch ( toExtaction1[0]){"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                case \"list\":"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    listCommand list \u003d new listCommand();"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    return list;"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                case \"done\":"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        if(toExtaction1.length\u003d\u003d1){"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            throw new DukeException(\"☹ OOPS!!! Please enter number.\");"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        try {"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            int number \u003d Integer.parseInt(toExtaction1[1]);"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            doneCommand done \u003d new doneCommand(number);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            return  done;"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        } catch ( DukeException e)"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            throw new DukeException(\"☹ OOPS!!! Please validnumber.\");"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                case \"todo\":"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    try{"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String des\u003d toExtaction1[1];"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        AddCommand t \u003d new AddCommand(1,des);"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        return t;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    catch(ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        throw new DukeException(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                case \"deadline\":"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    try{"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String temp \u003d  toExtaction1[1];"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    } catch (ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        throw  new DukeException(\"☹ OOPS!!! The description of a Deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    try{"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String[] split\u003d toExtaction1[1].split(\"/by\",2);"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String des \u003d split[0];"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String time \u003d split[1];"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        LocalDateTime now;"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        try {"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            time \u003d time.trim();"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            now\u003d LocalDateTime.parse(time, DateTimeFormatter.ofPattern(\"yyyy-MM-dd HHmm\"));"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        } catch (DateTimeParseException e){"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            throw  new DukeException(\"☹ OOPS!!! Please enter the date and time in YYYY-MM-dd HHMM formate\");"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        AddCommand D \u003d new AddCommand(2,des,time,now);"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        return D;"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    } catch(ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        throw new DukeException(\"☹ OOPS!!! The time of a Deadline cannot be empty.\");"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                case \"event\":"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    try{"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String temp\u003d toExtaction1[1];"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    } catch (ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        throw  new  DukeException(\"☹ OOPS!!! The description of a event cannot be empty.\");"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    try{"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String[] split1\u003d toExtaction1[1].split(\"/at\",2);"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String des1 \u003dsplit1[0];"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        String time \u003d split1[1];"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        LocalDateTime now;"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        try {"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            time \u003d time.trim();"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            now\u003d LocalDateTime.parse(time, DateTimeFormatter.ofPattern(\"yyyy-MM-dd HHmm\"));"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        } catch (DateTimeParseException e){"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                            throw  new DukeException(\"☹ OOPS!!! Please enter the date and time in YYYY-MM-dd HHMM formate\");"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        AddCommand E \u003d new AddCommand(3,des1,time,now);"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        return  E;"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    } catch (ArrayIndexOutOfBoundsException e)"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        throw  new DukeException(\"☹ OOPS!!! The time of a event cannot be empty.\");"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                case \"delete\":"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    try {"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        int num \u003d Integer.parseInt(toExtaction1[1]);"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        DeleteCommand delete \u003d new DeleteCommand(num-1);"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        return  delete;"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    catch (ArrayIndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                        throw new  DukeException(\"☹ OOPS!!! The number must be specified for deletion.\");"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                default:"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                    throw  new  DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 185
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.io.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    protected  String path;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    String directory \u003d System.getProperty(\"user.home\");"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * loading the external file"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * if already data is present in the external file conver the string data to the task and add it to the tasklist"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * retrun the final list of task"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public List\u003ctask\u003e load() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        List\u003ctask\u003e inputList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           //FileReader file \u003d new FileReader(path);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           File file \u003d new File(path);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           BufferedReader br \u003d new BufferedReader(new FileReader(file));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           String st;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           while ((st \u003d br.readLine()) !\u003d null){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "               System.out.println(st);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "               task task \u003d null;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "               task \u003d Parser.parseInputFromExternalFile(st);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "               inputList.add(task);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "       } catch (FileNotFoundException F) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           System.out.println(\"FIle not found creating a new file\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "       } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "           e.printStackTrace();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "       }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "       return  inputList;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * update the external file"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * tasklist is sent and the external file will be updated according to the input list sent"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void updateFile(TaskList task){"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        File file \u003d new File(path);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        FileWriter fr \u003d null;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            fr\u003d new FileWriter(file);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            for(int i \u003d 0 ;i \u003c task.length();i++){"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                //String message \u003d task.myTaskList.get(i).forFile();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                fr.write(task.myTaskList.get(i).forFile());"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                fr.write(System.getProperty(\"line.separator\"));"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        } finally {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                fr.close();"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                e.printStackTrace();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Storage constructor which sets the path"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param path"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public Storage(String path) {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.path \u003d directory+File.separator+path;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 75
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import duke.task.task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.util.concurrent.ConcurrentHashMap;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public List\u003ctask\u003e myTaskList ;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Tasklist constructor which takes the list of task which are already in the data file"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param incomingList"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public TaskList(List\u003ctask\u003e incomingList) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        myTaskList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        for (task temp : incomingList) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            myTaskList.add(temp);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * default constructor"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public TaskList() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        myTaskList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * returns the length of task elements present in the list"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public int length(){"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return myTaskList.size();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * adding task to the arraylist"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param e task"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  void addTasktoList(task e){"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.myTaskList.add(e);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Remove task from the list"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param e"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void removeTaskfromList(int e){"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.myTaskList.remove(e);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 55
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    String fullcommand;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @return string :-  read lines which user inputs"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public String readCommand(){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        String line;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        line \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return line;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * function just for showing loading error"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void showLoadingError(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Problem with loading\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Shows the welcome message"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void welcomeMessage(){"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  void showLine(){"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"________________________________________________________\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param message"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * print the error message which is sent."
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void  showError(String message){"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(message);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task print the task"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  void  showMessage(task task){"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(task.toString());"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param num"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * print message even ever a new task is added"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  void  addedTask(task task, int num){"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Got it. I\u0027ve added this task\");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.showMessage(task);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Now you have \" +num+ \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * Print the list of all task"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task whic is a tasklist type"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public void showlist(TaskList task){"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        int length \u003d task.length();"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        for(int i \u003d0; i\u003c length;i++){"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "            System.out.println((i+1)+\".\"+task.myTaskList.get(i).toString());"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * print bye message"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  void  byeMessage(){"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * print done message"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  void  doneMessage(task task){"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Nice! I\u0027ve marked this task as done: \");"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(task.toString());"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * print the delete message"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param task"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param num"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  void deleteMessage(task task, int num){"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Nice! I\u0027ve removed this task: \");"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(task.toString());"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"Now you have \" +(num-1)+ \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 112
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public  class task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public boolean isDone;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public task(String description) {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  String toString()  {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return getStatusIcon() + \" \"+this.description;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public String forFile() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        System.out.println(\"this function is calling\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return  null;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 25
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class todo extends  task{"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    protected  String by;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * todo class constructor"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @param description description for the task"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public todo(String description) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * returning the string"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @return the description value along with the symbol"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public  String toString(){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return \"[T] \"+super.toString();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * function  returns the string output as per the requirements for storing the data in the file"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    public String forFile() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "        return \"T | \"+((super.isDone)?\"1\":\"0\")+\" | \"+super.description;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 33
+    }
+  },
+  {
+    "path": "src/main/java/listCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "package PACKAGE_NAME;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "public class listCommand {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tanujah"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tanujah": 4
+    }
+  }
+]

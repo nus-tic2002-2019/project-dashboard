@@ -1,0 +1,214 @@
+{
+  "authorDailyContributionsMap": {
+    "aimee-ch4": [
+      {
+        "insertions": 65,
+        "deletions": 31,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "4836145ba11bedfa3f251c4bb9376d08016f00b1",
+            "messageTitle": "Level 1",
+            "messageBody": "",
+            "insertions": 47,
+            "deletions": 0
+          },
+          {
+            "hash": "0d74e6ff83c3ff773d62029ca8a1d023bf5c9eeb",
+            "messageTitle": "Level 2 - Add, List",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 31
+          }
+        ]
+      },
+      {
+        "insertions": 64,
+        "deletions": 8,
+        "date": "2019-09-14",
+        "commitResults": [
+          {
+            "hash": "a82d9e0c017aba272adc42611c95f9a307447420",
+            "messageTitle": "add new class Task, ability to mark tasks completed",
+            "messageBody": "",
+            "insertions": 64,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 5,
+        "deletions": 7,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "661354010dae0e3c3069691718ec952f84de97c2",
+            "messageTitle": "Refactoring",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 108,
+        "deletions": 15,
+        "date": "2019-09-23",
+        "commitResults": [
+          {
+            "hash": "1b5cb12a4af32b4380ba0ce2f2b003d69bf56a4c",
+            "messageTitle": "Added todo, deadline and event classes",
+            "messageBody": "",
+            "insertions": 108,
+            "deletions": 15
+          }
+        ]
+      },
+      {
+        "insertions": 226,
+        "deletions": 56,
+        "date": "2019-10-06",
+        "commitResults": [
+          {
+            "hash": "30b5300f3ffec3f2cc401cf504335d40173e11e9",
+            "messageTitle": "Refactoring all using ArrayList",
+            "messageBody": "",
+            "insertions": 166,
+            "deletions": 42
+          },
+          {
+            "hash": "7d5b03d317fd2f2bd6b8273a7f488aa37d7fb6a1",
+            "messageTitle": "Adding in the delete function",
+            "messageBody": "",
+            "insertions": 60,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 0,
+        "date": "2019-10-22",
+        "commitResults": [
+          {
+            "hash": "eb68f2ce400a57b468a0c21f5e1439fb56882e50",
+            "messageTitle": "to create file",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 173,
+        "deletions": 3,
+        "date": "2019-10-25",
+        "commitResults": [
+          {
+            "hash": "4ebd8e70c56930cb85cd87e384e70ca575e8be2e",
+            "messageTitle": "File management: Save and load",
+            "messageBody": "",
+            "insertions": 173,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 360,
+        "deletions": 277,
+        "date": "2019-10-31",
+        "commitResults": [
+          {
+            "hash": "6416eedbe7bb70b950e500f0451738e70293ba7f",
+            "messageTitle": "changing to OOP, refactor",
+            "messageBody": "",
+            "insertions": 360,
+            "deletions": 277
+          }
+        ]
+      },
+      {
+        "insertions": 23,
+        "deletions": 7,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "10182a99049dad02d923520f55aa604f12df0fed",
+            "messageTitle": "packages",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 272,
+        "deletions": 1,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "df1104c046631725432d3fbacad1a49243c067e0",
+            "messageTitle": "Package the classes and added the command interface",
+            "messageBody": "",
+            "insertions": 272,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 245,
+        "deletions": 192,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "f600a9d042e35c269d2d21bfcd675fa5a92cf001",
+            "messageTitle": "Load function, find function, refactor",
+            "messageBody": "",
+            "insertions": 218,
+            "deletions": 180
+          },
+          {
+            "hash": "6c294b5e1207ec084aae947ff1b1379e5da818e5",
+            "messageTitle": "added individual feature 1",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 404,
+        "deletions": 312,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "47c41df97cde2a71d4ed2af46fe75b5aec008f5b",
+            "messageTitle": "Includes JavaDocs and assertions. Preparing for JAR file",
+            "messageBody": "",
+            "insertions": 404,
+            "deletions": 312
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "aimee-ch4": 1043
+  },
+  "authorFileTypeContributionMap": {
+    "aimee-ch4": {
+      "java": 927,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 116
+    }
+  },
+  "authorContributionVariance": {
+    "aimee-ch4": 15466.073
+  },
+  "authorDisplayNameMap": {
+    "aimee-ch4": "KOH .. AMY"
+  }
+}

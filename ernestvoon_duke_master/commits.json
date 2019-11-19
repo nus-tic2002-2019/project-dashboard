@@ -1,0 +1,326 @@
+{
+  "authorDailyContributionsMap": {
+    "ernestvoon": [
+      {
+        "insertions": 39,
+        "deletions": 7,
+        "date": "2019-09-01",
+        "commitResults": [
+          {
+            "hash": "a99b0bb440cddcac170cff021a8d408a6e8b52b4",
+            "messageTitle": "committed Level-3 with A-Classes. included gradle into the project",
+            "messageBody": "",
+            "insertions": 38,
+            "deletions": 6
+          },
+          {
+            "hash": "f21c79f3d522bc2a236842b73f0dca5cec1bb32e",
+            "messageTitle": "fixed the issue with gradle unable to execute properly",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 108,
+        "deletions": 9,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "aa5330ff960dfa7e4f5a72b4ccb5a434ee3ba4ca",
+            "messageTitle": "included Level-4 and textUiTesting",
+            "messageBody": "",
+            "insertions": 66,
+            "deletions": 9
+          },
+          {
+            "hash": "6dda65e845a308fc7f18672ea6ce4f61e6f7511c",
+            "messageTitle": "added textUiTesting directory",
+            "messageBody": "",
+            "insertions": 42,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 43,
+        "deletions": 11,
+        "date": "2019-09-06",
+        "commitResults": [
+          {
+            "hash": "193046bdf2cd0045b798175b9506bccb82b66e19",
+            "messageTitle": "committed Level-5",
+            "messageBody": "",
+            "insertions": 43,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 47,
+        "deletions": 21,
+        "date": "2019-09-07",
+        "commitResults": [
+          {
+            "hash": "2fc7c89aae938a4f0c06345e5f29c63769080eef",
+            "messageTitle": "included changes to Level-5 with some issues of exceptions not being caught",
+            "messageBody": "",
+            "insertions": 47,
+            "deletions": 21
+          }
+        ]
+      },
+      {
+        "insertions": 61,
+        "deletions": 19,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "5cd9176c29cc900bd8d2064e9c3d61e9761a9c0b",
+            "messageTitle": "added Level-6 delete method and fixed description containing at issue",
+            "messageBody": "",
+            "insertions": 61,
+            "deletions": 19
+          }
+        ]
+      },
+      {
+        "insertions": 553,
+        "deletions": 208,
+        "date": "2019-09-24",
+        "commitResults": [
+          {
+            "hash": "93aa51933cba8fac2fbc5e8c7ee66235f4e66fa8",
+            "messageTitle": "added Level-7 and A-MoreOOP. refactored the code.",
+            "messageBody": "",
+            "insertions": 553,
+            "deletions": 208
+          }
+        ]
+      },
+      {
+        "insertions": 174,
+        "deletions": 40,
+        "date": "2019-09-27",
+        "commitResults": [
+          {
+            "hash": "c20febe6bdd3b699cd0c152129ea8fdcdacf9675",
+            "messageTitle": "included Level-8 and Level-9",
+            "messageBody": "",
+            "insertions": 174,
+            "deletions": 40
+          }
+        ]
+      },
+      {
+        "insertions": 300,
+        "deletions": 103,
+        "date": "2019-09-30",
+        "commitResults": [
+          {
+            "hash": "fc27ab0e8fb0400d6dcf312f80971dd63e1a565d",
+            "messageTitle": "included test cases for A-JUnit with gradle support and A-Packages.",
+            "messageBody": "",
+            "insertions": 300,
+            "deletions": 103
+          }
+        ]
+      },
+      {
+        "insertions": 245,
+        "deletions": 79,
+        "date": "2019-10-08",
+        "commitResults": [
+          {
+            "hash": "23dd28161914ed075de6a88c62b4dfbf80e1e99e",
+            "messageTitle": "included Level-9 and A-CodeQuality. included a minor implementaion of A-JavaDoc and A-CodingStandard.",
+            "messageBody": "",
+            "insertions": 245,
+            "deletions": 79
+          }
+        ]
+      },
+      {
+        "insertions": 380,
+        "deletions": 99,
+        "date": "2019-10-15",
+        "commitResults": [
+          {
+            "hash": "e578e6208e660a757ecba395eb2efb1a25f77235",
+            "messageTitle": "included Level-10, more JavaDocs and another test case.",
+            "messageBody": "",
+            "insertions": 380,
+            "deletions": 99
+          }
+        ]
+      },
+      {
+        "insertions": 186,
+        "deletions": 71,
+        "date": "2019-10-20",
+        "commitResults": [
+          {
+            "hash": "5fe3fd434acb4444b06ac573b5eef74657b33abd",
+            "messageTitle": "added and improved on javadocs.",
+            "messageBody": "",
+            "insertions": 186,
+            "deletions": 71
+          }
+        ]
+      },
+      {
+        "insertions": 14,
+        "deletions": 9,
+        "date": "2019-10-24",
+        "commitResults": [
+          {
+            "hash": "c022f333b4c7662835f45966b1cb84de12cb1aff",
+            "messageTitle": "fixed the issue when gradle is unable to build jar file with javafx.",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 9
+          }
+        ]
+      },
+      {
+        "insertions": 25,
+        "deletions": 36,
+        "date": "2019-10-25",
+        "commitResults": [
+          {
+            "hash": "47d95d8dcc33a4044095a7c8bae706c91f45b2e6",
+            "messageTitle": "refined on the coding standards",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 36
+          }
+        ]
+      },
+      {
+        "insertions": 142,
+        "deletions": 6,
+        "date": "2019-10-31",
+        "commitResults": [
+          {
+            "hash": "88f4b8a4b4fed284bd44ee027526bc82db86e8c0",
+            "messageTitle": "fixed an issue with commands not reading input. included B-ViewSchedules",
+            "messageBody": "",
+            "insertions": 142,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 26,
+        "deletions": 3,
+        "date": "2019-11-03",
+        "commitResults": [
+          {
+            "hash": "330b2a5d913273691d327183a58604aab55d09de",
+            "messageTitle": "improved exit included assertions",
+            "messageBody": "",
+            "insertions": 26,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 14,
+        "deletions": 10,
+        "date": "2019-11-04",
+        "commitResults": [
+          {
+            "hash": "d11f16d500c174e132d24c446abea98a56a3d26f",
+            "messageTitle": "updated javadocs",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 14,
+        "deletions": 6,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "345cb4da3803a6a663f0dee1131350ab5d650c21",
+            "messageTitle": "tweak assertions and GUI",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 32,
+        "deletions": 38,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "0607dd0bec23e9c10034676ae9aaf93fb4f19175",
+            "messageTitle": "improved code and deleted files that are not in used",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 27
+          },
+          {
+            "hash": "732af8e39ce11d72b679ab961e80307fef43dd06",
+            "messageTitle": "added more scenarios for Duke to handle",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 25,
+        "deletions": 33,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "48bac199de73b9fd16b604e988c6dd7760029fe6",
+            "messageTitle": "edited on visibility",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 33
+          }
+        ]
+      },
+      {
+        "insertions": 0,
+        "deletions": 0,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "83d313cce79e30f630b74ec24f2a6b4f02a06e18",
+            "messageTitle": "removed storage file",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 0
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "ernestvoon": 1676
+  },
+  "authorFileTypeContributionMap": {
+    "ernestvoon": {
+      "java": 1549,
+      "fxml": 38,
+      "sh": 34,
+      "bat": 17,
+      "gradle": 30,
+      "txt": 8
+    }
+  },
+  "authorContributionVariance": {
+    "ernestvoon": 14684.031
+  },
+  "authorDisplayNameMap": {
+    "ernestvoon": "ERNE..IANG"
+  }
+}

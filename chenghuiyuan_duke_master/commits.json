@@ -1,0 +1,95 @@
+{
+  "authorDailyContributionsMap": {
+    "chenghuiyuan": [
+      {
+        "insertions": 37,
+        "deletions": 0,
+        "date": "2019-09-21",
+        "commitResults": [
+          {
+            "hash": "ccf154824770b99e8b89492581afaa44e50622bd",
+            "messageTitle": "level1 and level2",
+            "messageBody": "",
+            "insertions": 33,
+            "deletions": 0
+          },
+          {
+            "hash": "4e570c2895fbcdbda46353f9229be58759f8241b",
+            "messageTitle": "Level3",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 1191,
+        "deletions": 180,
+        "date": "2019-11-11",
+        "commitResults": [
+          {
+            "hash": "6c0bd3a23746ee1d3581ca471fee98549a0dffe6",
+            "messageTitle": "final edit",
+            "messageBody": "",
+            "insertions": 1019,
+            "deletions": 47
+          },
+          {
+            "hash": "76080cdd6ef8cb6de152c482f5c55396375f3fa4",
+            "messageTitle": "Edited style",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 4
+          },
+          {
+            "hash": "4d31e4f6aa6d10e758e22d323f2225f7b9bc151b",
+            "messageTitle": "reformat code",
+            "messageBody": "",
+            "insertions": 129,
+            "deletions": 118
+          },
+          {
+            "hash": "4b526ed9a9b9a22d0ffefab94b9ee7dc51257220",
+            "messageTitle": "friendier syntax",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 41,
+        "deletions": 20,
+        "date": "2019-11-14",
+        "commitResults": [
+          {
+            "hash": "edb174052dae6f9ae41f6bd4faac865adce0e0e5",
+            "messageTitle": "Modified storage file path",
+            "messageBody": "",
+            "insertions": 41,
+            "deletions": 20
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "chenghuiyuan": 1079
+  },
+  "authorFileTypeContributionMap": {
+    "chenghuiyuan": {
+      "java": 1049,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 21,
+      "gradle": 0,
+      "txt": 9
+    }
+  },
+  "authorContributionVariance": {
+    "chenghuiyuan": 24746.11
+  },
+  "authorDisplayNameMap": {
+    "chenghuiyuan": "CHEN..YUAN"
+  }
+}

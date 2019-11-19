@@ -1,0 +1,326 @@
+{
+  "authorDailyContributionsMap": {
+    "Ruiting1": [
+      {
+        "insertions": 40,
+        "deletions": 3,
+        "date": "2019-09-02",
+        "commitResults": [
+          {
+            "hash": "43e4ac97e58c2348e004d37a7ccd338e3ce5b263",
+            "messageTitle": "level -1",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 0
+          },
+          {
+            "hash": "8163c1408c06caf2677cdec5e12b4f14c7181f8b",
+            "messageTitle": "level2",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 88,
+        "deletions": 10,
+        "date": "2019-09-24",
+        "commitResults": [
+          {
+            "hash": "3a7e3b9ae0473c6030ac4842118426443c8f3268",
+            "messageTitle": "level 3 Mark as Done",
+            "messageBody": "",
+            "insertions": 88,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 73,
+        "deletions": 2,
+        "date": "2019-09-25",
+        "commitResults": [
+          {
+            "hash": "ecd8f36fc28c2b4266f39ac03a5f1df34b830786",
+            "messageTitle": "level 4 todo,deadline,event",
+            "messageBody": "",
+            "insertions": 73,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 91,
+        "deletions": 77,
+        "date": "2019-09-26",
+        "commitResults": [
+          {
+            "hash": "c9ba292300af2ee33d74c4641465ad5b528ab212",
+            "messageTitle": "level 5",
+            "messageBody": "",
+            "insertions": 82,
+            "deletions": 75
+          },
+          {
+            "hash": "e4a9087e6b9db9efc91419eb1aad5b368671d180",
+            "messageTitle": "level 6",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 62,
+        "deletions": 1,
+        "date": "2019-10-29",
+        "commitResults": [
+          {
+            "hash": "a163656172446caba32eeab5efbacdd29573aff6",
+            "messageTitle": "draft",
+            "messageBody": "",
+            "insertions": 62,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 89,
+        "deletions": 7,
+        "date": "2019-11-01",
+        "commitResults": [
+          {
+            "hash": "3ec3ea52dcb3896911643034c3484293f888740b",
+            "messageTitle": "draft1",
+            "messageBody": "",
+            "insertions": 89,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 402,
+        "deletions": 58,
+        "date": "2019-11-04",
+        "commitResults": [
+          {
+            "hash": "d9fb92c0b97d7b693e5440e370c411b33ad279fc",
+            "messageTitle": "draft 3",
+            "messageBody": "",
+            "insertions": 275,
+            "deletions": 11
+          },
+          {
+            "hash": "aff97ee4c69b86de12ed77001328e9bb4350dabd",
+            "messageTitle": "draft 4",
+            "messageBody": "",
+            "insertions": 127,
+            "deletions": 47
+          }
+        ]
+      },
+      {
+        "insertions": 142,
+        "deletions": 19,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "d5c068416b0bfbeaad7bc0cc5eb39716480578ac",
+            "messageTitle": "draft 6",
+            "messageBody": "",
+            "insertions": 142,
+            "deletions": 19
+          }
+        ]
+      },
+      {
+        "insertions": 73,
+        "deletions": 26,
+        "date": "2019-11-06",
+        "commitResults": [
+          {
+            "hash": "fc505c9089b8ad928f02140c3be785daf7e4cf03",
+            "messageTitle": "draft 7",
+            "messageBody": "",
+            "insertions": 73,
+            "deletions": 26
+          }
+        ]
+      },
+      {
+        "insertions": 161,
+        "deletions": 35,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "0670e1a8d0ce872c43dc6ccec6c527a879f9475c",
+            "messageTitle": "level 7 Save, A-MoreOOP, A-packages",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 4
+          },
+          {
+            "hash": "0ac5f3edcfdc724a73f57e2d51625958a6c3786e",
+            "messageTitle": "level 8,date and time",
+            "messageBody": "",
+            "insertions": 74,
+            "deletions": 30
+          },
+          {
+            "hash": "cce596e1eff4fa1e430bf8bed808e3115ac6ebb9",
+            "messageTitle": "level9 find",
+            "messageBody": "",
+            "insertions": 79,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 260,
+        "deletions": 19,
+        "date": "2019-11-11",
+        "commitResults": [
+          {
+            "hash": "26befb3c478027196bd5ffb9b6523dcd079234ce",
+            "messageTitle": "draft8",
+            "messageBody": "",
+            "insertions": 158,
+            "deletions": 14
+          },
+          {
+            "hash": "a533e2f68f50993e2f2874fc9de0707d0398a9a7",
+            "messageTitle": "add Java Doc",
+            "messageBody": "",
+            "insertions": 102,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 132,
+        "deletions": 22,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "94b52d44207dddb2499d14f476bc581bd339f015",
+            "messageTitle": "draft10",
+            "messageBody": "",
+            "insertions": 89,
+            "deletions": 6
+          },
+          {
+            "hash": "209f3b97c56b097236a47724ed7a206b5a5ce772",
+            "messageTitle": "q",
+            "messageBody": "",
+            "insertions": 43,
+            "deletions": 16
+          }
+        ]
+      },
+      {
+        "insertions": 181,
+        "deletions": 49,
+        "date": "2019-11-13",
+        "commitResults": [
+          {
+            "hash": "635e783cd2996320c53bf14e256960d64f3f4ecd",
+            "messageTitle": "Add individual feature 1.C-DetectDuplicates, 2.C-Statistics",
+            "messageBody": "",
+            "insertions": 181,
+            "deletions": 49
+          }
+        ]
+      },
+      {
+        "insertions": 27,
+        "deletions": 8,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "e30a73efd43ed0aecf26b12144228dbfbe65d3e3",
+            "messageTitle": "w",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 53,
+        "deletions": 57,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "a6c04dad2e686d22c5e1b7d1537597f2cd9084d9",
+            "messageTitle": "change package",
+            "messageBody": "",
+            "insertions": 53,
+            "deletions": 57
+          }
+        ]
+      },
+      {
+        "insertions": 249,
+        "deletions": 34,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "b35d77300c8d9402b7a87839e874968fe94fda85",
+            "messageTitle": "A-Junit, A-CodingStandard, A-CodeQuality",
+            "messageBody": "",
+            "insertions": 129,
+            "deletions": 11
+          },
+          {
+            "hash": "096214675c7ae713e990873f774b9164a477f8bc",
+            "messageTitle": "A-Assertions",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 0
+          },
+          {
+            "hash": "b20ce5e01b180265e21318011846f29e1edd0ac4",
+            "messageTitle": "Add HelpCommand and ClearCommand features",
+            "messageBody": "",
+            "insertions": 83,
+            "deletions": 7
+          },
+          {
+            "hash": "77d04c7290a2261357a783c0ce84cd5aaa6a4a59",
+            "messageTitle": "Create directory when the path is not exist",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 5
+          },
+          {
+            "hash": "00b75688f47f3d8a1ca44595ffa5fc55b8148813",
+            "messageTitle": "fixed some UI",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 11
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Ruiting1": 1704
+  },
+  "authorFileTypeContributionMap": {
+    "Ruiting1": {
+      "java": 1657,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 21,
+      "gradle": 2,
+      "txt": 24
+    }
+  },
+  "authorContributionVariance": {
+    "Ruiting1": 6522.187
+  },
+  "authorDisplayNameMap": {
+    "Ruiting1": "NIE ..TING"
+  }
+}

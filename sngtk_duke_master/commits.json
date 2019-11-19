@@ -1,0 +1,207 @@
+{
+  "authorDailyContributionsMap": {
+    "sngtk": [
+      {
+        "insertions": 21,
+        "deletions": 1,
+        "date": "2019-09-02",
+        "commitResults": [
+          {
+            "hash": "3f634f9ddd8d81ce5a310d8a36302f7b8735d079",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 21,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 15,
+        "deletions": 10,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "96ca91d4d37990a9a02e29db975b83ceec1624f6",
+            "messageTitle": "comment",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          },
+          {
+            "hash": "3b44fe810da958c1fbcfecbd1c63d781756f3179",
+            "messageTitle": "level 2",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          },
+          {
+            "hash": "286f620425e53041cb0e24d07ad9ca1be2547d1f",
+            "messageTitle": "level 2",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 18,
+        "deletions": 14,
+        "date": "2019-09-14",
+        "commitResults": [
+          {
+            "hash": "748757c1add175992ad235a725bacab784d849cf",
+            "messageTitle": "level 2",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 45,
+        "deletions": 11,
+        "date": "2019-09-15",
+        "commitResults": [
+          {
+            "hash": "ec65522fa3eb27e90bd003c314507d7ee03583ab",
+            "messageTitle": "level 3",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 111,
+        "deletions": 38,
+        "date": "2019-10-13",
+        "commitResults": [
+          {
+            "hash": "c4d8d0bd7847f76f3d3576c59ab3790884350f95",
+            "messageTitle": "level 5",
+            "messageBody": "",
+            "insertions": 111,
+            "deletions": 38
+          }
+        ]
+      },
+      {
+        "insertions": 39,
+        "deletions": 13,
+        "date": "2019-10-16",
+        "commitResults": [
+          {
+            "hash": "c35ab8e8d5d7d365b7f1117baefd43ea55956779",
+            "messageTitle": "update level 5",
+            "messageBody": "",
+            "insertions": 39,
+            "deletions": 13
+          }
+        ]
+      },
+      {
+        "insertions": 41,
+        "deletions": 11,
+        "date": "2019-10-19",
+        "commitResults": [
+          {
+            "hash": "d6903c2714e405bde950c03b0c7a681313886787",
+            "messageTitle": "new changes level 6",
+            "messageBody": "",
+            "insertions": 41,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 44,
+        "deletions": 20,
+        "date": "2019-10-26",
+        "commitResults": [
+          {
+            "hash": "6cab26b37225a5f0c54163955f9a681e5ead7a45",
+            "messageTitle": "level 7 save",
+            "messageBody": "",
+            "insertions": 44,
+            "deletions": 20
+          }
+        ]
+      },
+      {
+        "insertions": 504,
+        "deletions": 165,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "5798764bf439014b7682032ad18be149ec86ac1b",
+            "messageTitle": "level 8",
+            "messageBody": "",
+            "insertions": 504,
+            "deletions": 165
+          }
+        ]
+      },
+      {
+        "insertions": 155,
+        "deletions": 25,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "ccfb2c32e0b1aa655013e48f2e1665bbd4af6919",
+            "messageTitle": "level 9 Find",
+            "messageBody": "",
+            "insertions": 155,
+            "deletions": 25
+          }
+        ]
+      },
+      {
+        "insertions": 32,
+        "deletions": 4,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "b96856bec49df6bfd93950360ab848e3361d75cd",
+            "messageTitle": "level 9 Find",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 118,
+        "deletions": 18,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "ddbe550e445d27bcb4c970d756f4beae6a5b767c",
+            "messageTitle": "A-jar",
+            "messageBody": "",
+            "insertions": 118,
+            "deletions": 18
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "sngtk": 820
+  },
+  "authorFileTypeContributionMap": {
+    "sngtk": {
+      "java": 813,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 7
+    }
+  },
+  "authorContributionVariance": {
+    "sngtk": 6524.486
+  },
+  "authorDisplayNameMap": {
+    "sngtk": "SNG ..EMUS"
+  }
+}

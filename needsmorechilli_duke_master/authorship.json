@@ -1,0 +1,236 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        String[] new_list \u003d new String[100];"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        String line;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        int i \u003d 0;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        line \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        while (!line.equals(\"bye\")){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "            new_list[i] \u003d line;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "            System.out.println(\"added: \" + line);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "            if (line.equals(\"list\")){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "                for (int a \u003d 0; a \u003c i; a++){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "                    System.out.println(new_list[a]);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "            i++;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "            line \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "needsmorechilli"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "needsmorechilli": 22,
+      "-": 10
+    }
+  }
+]

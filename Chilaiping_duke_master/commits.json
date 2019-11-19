@@ -1,0 +1,193 @@
+{
+  "authorDailyContributionsMap": {
+    "Chilaiping": [
+      {
+        "insertions": 2,
+        "deletions": 0,
+        "date": "2019-09-13",
+        "commitResults": [
+          {
+            "hash": "169cdff5b0af4bb31c65fa78d168ca3834f2f163",
+            "messageTitle": "testing",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 40,
+        "deletions": 6,
+        "date": "2019-09-15",
+        "commitResults": [
+          {
+            "hash": "f50a2f04aace7703efb93d3aff2c61f217fb9730",
+            "messageTitle": "Level_1",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 1
+          },
+          {
+            "hash": "155d9a28773e34ea64c208fabf9c8ce8ba3c9b21",
+            "messageTitle": "Level-2",
+            "messageBody": "",
+            "insertions": 27,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 107,
+        "deletions": 21,
+        "date": "2019-09-22",
+        "commitResults": [
+          {
+            "hash": "9035cc6c9b45bf38e50886fdbf6dc0f4072bc164",
+            "messageTitle": "Level-3",
+            "messageBody": "",
+            "insertions": 38,
+            "deletions": 17
+          },
+          {
+            "hash": "80482aa9c260002019a0dc048518d8855651b1ce",
+            "messageTitle": "Level 4. ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 69,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 43,
+        "deletions": 28,
+        "date": "2019-10-05",
+        "commitResults": [
+          {
+            "hash": "9e112ce2583e1d73962ce5dcb4b2e5e608d3e6f8",
+            "messageTitle": "Level-5: Handle Errors",
+            "messageBody": "",
+            "insertions": 43,
+            "deletions": 28
+          }
+        ]
+      },
+      {
+        "insertions": 192,
+        "deletions": 23,
+        "date": "2019-11-02",
+        "commitResults": [
+          {
+            "hash": "b19d995a714ca51e30bf1c71cae0cb41d940033e",
+            "messageTitle": "Level-6 : Delete",
+            "messageBody": "",
+            "insertions": 192,
+            "deletions": 23
+          }
+        ]
+      },
+      {
+        "insertions": 121,
+        "deletions": 84,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "11cec67d0980d1a9a0694dce000dd86c30ced056",
+            "messageTitle": "Level 7 - Save to File",
+            "messageBody": "",
+            "insertions": 121,
+            "deletions": 84
+          }
+        ]
+      },
+      {
+        "insertions": 96,
+        "deletions": 11,
+        "date": "2019-11-14",
+        "commitResults": [
+          {
+            "hash": "e21b9f952db16b271718b18c9b7d592afb67ad38",
+            "messageTitle": "Level-7: Save to File, Revised",
+            "messageBody": "",
+            "insertions": 96,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 400,
+        "deletions": 284,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "57373814d55e415ed3eda477078f3420d86e4ed3",
+            "messageTitle": "A-MoreOOP",
+            "messageBody": "",
+            "insertions": 303,
+            "deletions": 264
+          },
+          {
+            "hash": "a91d6fab6ec0a1204ec86903260d07c7bc2878f2",
+            "messageTitle": "A-JavaDoc",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 20
+          },
+          {
+            "hash": "2bc8edde5b076ad38ba825be716907a578016942",
+            "messageTitle": "Level-9: Find",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 325,
+        "deletions": 257,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "c78bf95d03c65112daffe2f9290ca76b3fbf3622",
+            "messageTitle": "Individual Features",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 33
+          },
+          {
+            "hash": "6bb9c0a93fb9edfc157b95be6c2e3140b043b121",
+            "messageTitle": "Coding Standard",
+            "messageBody": "",
+            "insertions": 238,
+            "deletions": 206
+          },
+          {
+            "hash": "071665b737ef83191edd83c2a3df7de58ee1b239",
+            "messageTitle": "Level-8: Date, unfinished",
+            "messageBody": "",
+            "insertions": 15,
+            "deletions": 18
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Chilaiping": 617
+  },
+  "authorFileTypeContributionMap": {
+    "Chilaiping": {
+      "java": 601,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 16
+    }
+  },
+  "authorContributionVariance": {
+    "Chilaiping": 11236.797
+  },
+  "authorDisplayNameMap": {
+    "Chilaiping": "CHI ..PING"
+  }
+}

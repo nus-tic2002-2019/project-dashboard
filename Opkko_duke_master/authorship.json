@@ -1,0 +1,8832 @@
+[
+  {
+    "path": "dukeTaskOuput.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "E|1 |read book | Sun, 20 Oct 2019 10:00 "
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 1
+    }
+  },
+  {
+    "path": "src/main/java/Commands/Command.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public abstract class Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public boolean exit \u003d false;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected String userInput;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected int idx;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Empty Constructor"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "      */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Command(){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Constructor for Command exit"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param exit"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Command(boolean exit){"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.exit \u003d exit;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Constructor for done Command"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param idx"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Command(int idx){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.idx \u003d idx;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Constructor for Todo Command"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param des"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Command(String des){"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.description \u003d des;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param input"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param exit"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Command(String input, boolean exit){"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.exit \u003d exit;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.userInput \u003d input;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public boolean isExit(){"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return this.exit;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public abstract void execute(TaskList tasklist, Ui ui, Storage storage);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 61
+    }
+  },
+  {
+    "path": "src/main/java/Commands/addByeCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class addByeCommand extends Command{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static final String COMMAND \u003d \"bye\";"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public addByeCommand(boolean exit){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(false);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void execute(TaskList taskList, Ui ui, Storage storage){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.showGoodBye();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 18
+    }
+  },
+  {
+    "path": "src/main/java/Commands/addDeadlineCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Deadlines;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class addDeadlineCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static final String COMMAND \u003d \"deadline\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private Date dte;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public addDeadlineCommand(String description, Date dte){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.dte \u003d dte;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void execute(TaskList tasklist, Ui ui, Storage storage){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Task newTask \u003d new Deadlines(description, dte);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        tasklist.addTask(newTask);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.newTask(newTask, tasklist);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 31
+    }
+  },
+  {
+    "path": "src/main/java/Commands/addDoneCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class addDoneCommand extends Command{"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static final String COMMAND \u003d \"done\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Constructor for Done Command"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param idx"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public addDoneCommand(int idx){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(idx);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void execute(TaskList tasklist, Ui ui, Storage storage) throws StringIndexOutOfBoundsException {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.newDone();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        tasklist.getTask(idx).markAsDone();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"       \" + tasklist.getTask(idx).getDescription());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.Line();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 27
+    }
+  },
+  {
+    "path": "src/main/java/Commands/addEventCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Events;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class addEventCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static final String COMMAND \u003d \"event\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private Date dte;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public addEventCommand(String description, Date dte){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.dte \u003d dte;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * To Show new Event."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param tasklist"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param ui"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param storage"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void execute(TaskList tasklist, Ui ui, Storage storage){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Task newTask \u003d new Events(description, dte);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        tasklist.addTask(newTask);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.newTask(newTask, tasklist);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 36
+    }
+  },
+  {
+    "path": "src/main/java/Commands/addListCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.Storage;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class addListCommand extends Command {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static final String COMMAND \u003d \"list\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public addListCommand(String input){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void execute(TaskList tasklist, Ui ui, Storage storage){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.displayTaskList(description, tasklist);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 19
+    }
+  },
+  {
+    "path": "src/main/java/Commands/addTodoCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Parser.Parser;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Parser.myMethods;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.Storage;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class addTodoCommand extends Command{"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static final String COMMAND \u003d \"todo\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public addTodoCommand(String des){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(des);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void execute(TaskList tasklist, Ui ui, Storage storage){"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String tmp \u003d new myMethods().parsed(description)[1];"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Task newTask \u003d new toDos(description);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        tasklist.addTask(newTask);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        ui.newTask(newTask, tasklist);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.newTodo(tasklist);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 26
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Commands.Command;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Parser.Parser;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.*;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.*;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Exceptions.*;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.*;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private TaskList tasklist;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private Ui ui;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private Parser parser;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Duke(){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        storage \u003d new Storage();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            storage.load();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            tasklist \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (FileNotFoundException e){"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            ui.showLoadingError();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            tasklist \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void runDuke(){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ui.Greet();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        boolean exit \u003d true;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\" WHAT IS THIS EXIT STATUS : \" + exit);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        int i \u003d 0;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        while(exit){"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                //exit \u003d parser.getExitStatus();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                String cmd \u003d  ui.readCommand();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                Command c \u003d Parser.parse(cmd,tasklist);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                c.execute(tasklist, ui, storage);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                storage.saveFile(tasklist.getAllTasks());"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                //exit \u003d c.isExit();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                if(!exit){"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                    exit \u003d c.exit;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                    //break;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                System.out.println(\" WHAT IS THIS EXIT STATUS : \" + exit);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            catch (Exception e){"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                ui.showLoadingError();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            finally {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                //ui.printLine();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //while(exit(echo()));"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //while (echo());"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        new Duke().runDuke();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "-": 4,
+      "Opkko": 78
+    }
+  },
+  {
+    "path": "src/main/java/Exceptions/DukeEmptyException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class DukeEmptyException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public DukeEmptyException(String input){"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(\"     ☹ OOPS!!! The description of a \" + input + \" cannot be empty.\");"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 8
+    }
+  },
+  {
+    "path": "src/main/java/Exceptions/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 5
+    }
+  },
+  {
+    "path": "src/main/java/Exceptions/DukeOutOfBoundsException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class DukeOutOfBoundsException extends  Exception{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public DukeOutOfBoundsException(String input){"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(\"     ☹ OOPS!!! The description of a \" + input + \" cannot be empty.\");"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 8
+    }
+  },
+  {
+    "path": "src/main/java/Exceptions/InvalidDateException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class InvalidDateException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public InvalidDateException(String msg){"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(\"     ☹ OOPS!!! Date : \" + msg + \"Syntax Wrong, Please use : DD-MMMM-YYYY(13-Oct-2019) HHmm (1000)\");"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 7
+    }
+  },
+  {
+    "path": "src/main/java/Parser/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Commands.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Exceptions.DukeEmptyException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Exceptions.DukeOutOfBoundsException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Exceptions.InvalidDateException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Storage.Storage;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.TaskList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Events;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Ui.Ui;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import javax.sound.midi.SysexMessage;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static boolean exit \u003d true;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static Command parse(String userInput, TaskList tasklist) throws DukeEmptyException,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            DukeOutOfBoundsException,"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            InvalidDateException, DukeException{"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String parsed \u003d parsed(userInput)[0].toLowerCase();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Storage storage \u003d new Storage();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            switch(parsed) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                case addByeCommand.COMMAND:"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    exit \u003d false;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return new addByeCommand(false);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                case  addListCommand.COMMAND:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return list(userInput, tasklist);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                case  addTodoCommand.COMMAND:"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return todo(userInput);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                case  addDoneCommand.COMMAND:"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return done(userInput, tasklist);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                case addDeadlineCommand.COMMAND:"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return deadline(userInput);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                case addEventCommand.COMMAND:"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return event(userInput);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                default:"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    throw new DukeException();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DukeEmptyException e){"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeEmptyException(e.getMessage());"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DukeOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeOutOfBoundsException(\"     ☹ OOPS!!! The task number must be within range.\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (InvalidDateException e){"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new InvalidDateException(e.getMessage());"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DukeException e){"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeException();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //return new addByeCommand(true);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public boolean getExitStatus(){"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return exit;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static Command list(String inputs, TaskList tasklist) throws DukeException{"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(tasklist.getSize() \u003d\u003d 0){"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeException();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            return new addListCommand(inputs);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DukeException e){"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            ui.Line();"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            System.out.println(\"     ☹ OOPS!!! The list is empty.\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            ui.Line();"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeException();"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * return a new todo Command for execution"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param inputs"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws DukeEmptyException"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws NumberFormatException"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws DukeException"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static Command todo(String inputs) throws DukeEmptyException,NumberFormatException, DukeException {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            String description \u003d inputs[1];"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            for(int i \u003d 2; i \u003c inputs.length - 1; i++){"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                System.out.println(inputs[i]);"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                description +\u003d \" \" + inputs[i];"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            }"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(inputs.substring(inputs.indexOf(\"todo\")).length() \u003d\u003d 4){"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeEmptyException(\"todo\");"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if((inputs.substring(inputs.indexOf(\"todo\")+5, inputs.length())).trim().equals(\"\")){"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeEmptyException(\"todo\");"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            return new addTodoCommand(new myMethods().parsed(inputs)[1]);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        } catch (DukeEmptyException e){"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeEmptyException(e.getMessage());"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        } catch (NumberFormatException e){"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            System.out.println(\"     ☹ OOPS!!! The task number must be a numerical value.\");"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new NumberFormatException(\"     ☹ OOPS!!! The task number must be a numerical value.\");"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        } catch (Exception e){"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeException();"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //return new addTodoCommand(new myMethods().parsed(inputs)[1]);"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * return a new Done Command for Execution"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param inputs"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param tasklist"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws DukeEmptyException"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws NumberFormatException"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws DukeOutOfBoundsException"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static Command done(String inputs, TaskList tasklist) throws DukeEmptyException, NumberFormatException, DukeOutOfBoundsException{"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String tmp \u003d \"\";"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        int storeTaskNo \u003d 0;"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        if(inputs.length() \u003d\u003d 4){"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            tmp \u003d \"\";"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            storeTaskNo \u003d 0;"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            tmp \u003d inputs.substring(inputs.indexOf(\"done\") + 5, inputs.length()).trim();"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if (!tmp.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                storeTaskNo \u003d Integer.parseInt(parsed(inputs)[1]);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(inputs.substring(inputs.indexOf(\"done\")).length() \u003d\u003d 4"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    || inputs.substring(inputs.indexOf(\"done\")+5, inputs.length()).trim().equals(\"\")){"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeEmptyException(\"done\");"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(tmp.equals(\"\")){"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeEmptyException(\"done\");"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            int t \u003d Integer.parseInt((inputs.substring(inputs.indexOf(\"done\")+5).trim()));"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(storeTaskNo \u003e tasklist.getSize() || storeTaskNo \u003e t || storeTaskNo \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeOutOfBoundsException(\"done\");"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(parsed(inputs)[1].toString()\u003d\u003dnull){"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new NumberFormatException();"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            return new addDoneCommand(storeTaskNo-1);"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (NumberFormatException e){"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new NumberFormatException(\"     ☹ OOPS!!! The task number must be a numerical value.\");"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            //ui.Line();"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DukeOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeOutOfBoundsException(\"     ☹ OOPS!!! The task number must be within range.\");"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }catch (DukeEmptyException e){"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeEmptyException(e.getMessage());"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            //ui.Line();"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * return a new Deadline command for Execution"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param inputs"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws DukeEmptyException"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws InvalidDateException"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static Command deadline(String inputs) throws DukeEmptyException, InvalidDateException {"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(inputs.substring(inputs.indexOf(\"deadline\")).length() \u003d\u003d 8"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    || inputs.substring(inputs.indexOf(\"deadline\")+9, inputs.length()).trim().equals(\"\")){"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeEmptyException(\"deadline\");"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            String des \u003d inputs.substring(inputs.indexOf(\"deadline\")+9, inputs.indexOf(\"by\")-1);"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            return new addDeadlineCommand(des, new myMethods().dteToString(inputs));"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DukeEmptyException e){"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeEmptyException(e.getMessage());"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            //ui.Line();"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (InvalidDateException e){"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new InvalidDateException(e.getMessage());"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static Command event(String inputs) throws DukeEmptyException, InvalidDateException{"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(inputs.substring(inputs.indexOf(\"event\")).length() \u003d\u003d 5"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "             || (inputs.substring(inputs.indexOf(\"event\")+5, inputs.length())).trim().equals(\"\")){"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                throw new DukeEmptyException(\"event\");"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            String des \u003d inputs.substring(inputs.indexOf(\"event\")+6, inputs.indexOf(\"at\")-1);"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            return new addEventCommand(des, new myMethods().dteToString(inputs));"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DukeEmptyException e){"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            ui.Line();"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new DukeEmptyException(e.getMessage() + ui.getLine());"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (NumberFormatException e){"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            throw new NumberFormatException(\"     ☹ OOPS!!! The task number must be a numerical value.\" + ui.getLine());"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static String[] parsed(String input){"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String[] act \u003d input.split(\" \",2);"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return act;"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String[] parsedInput(String input){"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String[] act \u003d input.split(\" \",2);"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return act;"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 242
+    }
+  },
+  {
+    "path": "src/main/java/Parser/myMethods.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Exceptions.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.security.spec.ECField;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.text.ParseException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.concurrent.ExecutionException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class myMethods {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String[] parseSpace(String input){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String[] act \u003d input.split(\" \",2);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return act;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String parseEvents(String input){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        int indexOfSlash \u003d input.indexOf(\"/\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String tmp0 \u003d input.substring(0, indexOfSlash);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return tmp0;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String parseSlash(String input){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        int indexOfSlash \u003d input.indexOf(\"/\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //String[] act \u003d input.split(\"/\",2);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //String tmp0 \u003d input.substring(7, indexOfSlash);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String tmp1 \u003d input.substring(indexOfSlash+1, indexOfSlash+3);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String tmp2 \u003d input.substring(indexOfSlash+3, input.length());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return \"(\" + tmp1 + \": \" + tmp2 + \")\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static void printLines(String k){"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(k);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String[] parsed(String input){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String[] act \u003d input.split(\" \",2);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return act;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Converts LDT Object to a string with d m y hhmm format"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param dateTime"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Date dteToString(String input) throws  InvalidDateException{"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String date \u003d input.substring(input.indexOf(\"/at\")+ 4, input.length()); // full date time."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String dte \u003d input.substring(input.indexOf(\"/at\")+ 4, input.length()-4); // date get date only"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        System.out.println(\"WHAT IS DTE LA : \" + dte);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        System.out.println(\"WHAT IS DATE LA : \" + date);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        SimpleDateFormat formatterMMDD \u003d new SimpleDateFormat(\"MMM-dd-yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        SimpleDateFormat formatterDDMM \u003d new SimpleDateFormat(\"dd-MMM-yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Date ddmmm \u003d new Date();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Date mmmdd \u003d new Date();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            if(chkDateFormat_DDMMYYYY(dte) || chkDateFormat_MMDDYYYY(dte) ){"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                if(chkDateFormat_DDMMYYYY(date)){"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    ddmmm \u003d formatterDDMM.parse(date);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return ddmmm;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                else if(chkDateFormat_MMDDYYYY(dte)){"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    System.out.println(\"COME HERE ANOT \");"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    SimpleDateFormat format1 \u003d new SimpleDateFormat(\"MMM-dd-yyyy HH:mm\");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    SimpleDateFormat format2 \u003d new SimpleDateFormat(\"dd-MMM-yyyy HH:mm\");"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    System.out.println(\"DATE HERE  : \" + date);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    Date tmpDte \u003d format1.parse(date);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    System.out.println(\"WHAT IS DATE TMP DTE : \" + tmpDte);"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    System.out.println(\"FORMATTED LEH : \" + format2.parse(tmpDte.toString()));"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    //DateTimeFormatter formatter \u003d DateTimeFormatter.ofPattern(\"MM-dd-yyyy HHmm\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    return format2.parse(tmpDte.toString());"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (DateTimeParseException | ParseException e){"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            //throw new InvalidDateException();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return ddmmm;"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * to check if date is MMDDYYYY"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param date"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public boolean chkDateFormat_MMDDYYYY(String date){"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /*"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         * Set preferred date format,"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         * For example MM-dd-yyyy, MM.dd.yyyy,dd.MM.yyyy etc.*/"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        SimpleDateFormat sdfrmt \u003d new SimpleDateFormat(\"MMM-dd-yyyy\");"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        sdfrmt.setLenient(false);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        // System.out.println(\" DATE HERE MMDD : \" + date);"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Date javaDate \u003d new Date();"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /* Create Date object"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         * parse the string into date"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         */"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            javaDate \u003d sdfrmt.parse(date);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            // System.out.println(date+\" is valid date format mmm dd yyyy : \");"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /* Date format is invalid */"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (ParseException e)"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            // System.out.println(date + \" is Invalid Date format mmm dd yyyy : \");"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /* Return true if date format is valid */"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * to check if date is DDMMYYYY"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param date"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public boolean chkDateFormat_DDMMYYYY(String date){"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /*"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         * Set preferred date format,"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         * For example MM-dd-yyyy, MM.dd.yyyy,dd.MM.yyyy etc.*/"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        SimpleDateFormat sdfrmt \u003d new SimpleDateFormat(\"dd-MMM-yyyy\");"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        sdfrmt.setLenient(false);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\" DATE HERE DDMM : \" + date);"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Date javaDate \u003d new Date();"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /* Create Date object"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         * parse the string into date"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "         */"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        try"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            //System.out.println(\" DATE HERE DDMM : \" + date);"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            javaDate \u003d sdfrmt.parse(date);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            //System.out.println(date+\" is valid date format dd mmm yyyy : \");"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /* Date format is invalid */"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        catch (ParseException e)"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            //System.out.println(date + \" is Invalid Date format dd mmm yyyy :\");"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        /* Return true if date format is valid */"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 159
+    }
+  },
+  {
+    "path": "src/main/java/Storage/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Storage;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Default path of file."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static final String DEFAULT_PATH \u003d \"D:/NUS_STUFF/Java_Mod/duke/data/dukeTaskOuput.txt\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Storage class Constructor"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Storage(){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String filename \u003d DEFAULT_PATH;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    public static void main(String[] arg) throws Exception{"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        FileWriter file \u003d new FileWriter(\"DEFAULT_PATH\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        for(int i \u003d 0; i \u003c )"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Read files from the default file path of duke, duke.txt whenever duke starts up."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param tasks The new task list created for this duke session to be throw into this function from the start of the program."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws IOException If the filepath has some problems."
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws DukeException If the file context is not in the duke\u0027s list format."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    public void readFile(TaskLists tasks) throws IOException, DukeException {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            BufferedReader s \u003d null;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            s \u003d new BufferedReader(new FileReader(DEFAULT_PATH));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            String input \u003d null;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            while ((input \u003d s.readLine()) !\u003d null) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                if (input.charAt(0) \u003d\u003d \u0027T\u0027 || input.charAt(0) \u003d\u003d \u0027E\u0027 || input.charAt(0) \u003d\u003d \u0027D\u0027 || input.charAt(0) \u003d\u003d \u0027A\u0027) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                    char status \u003d input.charAt(3);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                    switch (Character.toString(input.charAt(0))) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                        case \"T\":"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            input \u003d input.substring(6);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            tasks.addToDo(\"task \" + input);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            if (status \u003d\u003d \u00271\u0027) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                int index \u003d tasks.getSize() - 1;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                tasks.getList().get(index).setTaskDone();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            break;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                        case \"E\":"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            input \u003d input.substring(6);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            input \u003d input.replace(\"|\", \"/at\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            tasks.addEvent(\"event\" + input);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            if (status \u003d\u003d \u00271\u0027) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                int index \u003d tasks.getSize() - 1;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                tasks.getList().get(index).setTaskDone();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            break;"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                        case \"D\":"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            input \u003d input.substring(6);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            input \u003d input.replace(\"|\", \"/by\");"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            tasks.addDeadline(\"_deadline\" + input);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            if (status \u003d\u003d \u00271\u0027) {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                int index \u003d tasks.getSize() - 1;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                tasks.getList().get(index).setTaskDone();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            break;"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                        case \"A\":"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            input \u003d input.substring(6);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            input \u003d input.replace(\"|\", \"after\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            tasks.addDoAfter(\"_do\" + input);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            if (status \u003d\u003d \u00271\u0027) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                int index \u003d tasks.getSize() - 1;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                                tasks.getList().get(index).setTaskDone();"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            break;"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                        default:"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                            break;"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//                }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//            }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public ArrayList\u003cString\u003e load() throws FileNotFoundException {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        ArrayList\u003cString\u003e output \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        File f \u003d new File(DEFAULT_PATH);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Scanner scan \u003d new Scanner(f);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        while (scan.hasNextLine()) {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            output.add(scan.nextLine());"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        scan.close();"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return output;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void saveFile(ArrayList\u003cTask\u003e list) throws IOException {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        FileWriter file \u003d new FileWriter(\"dukeTaskOuput.txt\");"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String tmp \u003d \"\";"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        for (int i \u003d 0; i \u003c list.size(); i++){"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            tmp \u003d tmp + list.get(i).toString() + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            tmp \u003d tmp.replace(\"(by:\", \"|\").replace(\"(at:\", \"|\")."
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    replace(\")\", \"\").replaceAll(\"\\\\[\", \"\")."
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    replaceAll(\"]\", \"|\").replace(\"\\u2713\", \"1 \")."
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                    replace(\"\\u2718\", \"0 \").replace(\"after\", \"|\");"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        file.write(tmp);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        file.close();"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 119
+    }
+  },
+  {
+    "path": "src/main/java/TaskList/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package TaskList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Private Variable for Storing list of Tasks."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private ArrayList\u003cTask\u003e tasklist \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Empty Constructor"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public TaskList(){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Initialize new task list with specified tasks."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param tasks"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public TaskList(ArrayList\u003cTask\u003e tasks){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.tasklist \u003d tasks;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Getter for the size of the TaskList"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return the size of the TaskList"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public int getSize(){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return tasklist.size();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Getter for Object reference in TaskList Array"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Task getTask(int idx){"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return tasklist.get(idx);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Adding new task to the TaskList"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param item"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void addTask(Task item){"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.tasklist.add(item);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Returns all the task in ArrayList format."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public ArrayList\u003cTask\u003e getAllTasks(){"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return tasklist;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Delete existing task in the ArrayList"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param index"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return deleted task"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @throws IndexOutOfBoundsException"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Task deleteTask(int index) throws IndexOutOfBoundsException {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //what is a good habit return straight ? or not return straight?"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        Task to_be_Removed \u003d tasklist.remove(index);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return to_be_Removed;"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 71
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/Deadlines.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class Deadlines extends Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected Date date;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Deadlines(String description, Date date){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        isDone \u003d false;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.date \u003d date;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String printDeadlineDte(){"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        SimpleDateFormat formatter \u003d new SimpleDateFormat(\"E, dd MMM yyyy HH:mm\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\"WHAT IS THIS : \" + formatter);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String strDate \u003d formatter.format(this.date);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return strDate;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String getStatus() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super.getStatus();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\"[T]\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return \"[D]\";"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return \"[D]\" + this.getStatusIcon() + this.description + \" (by: \" + printDeadlineDte() + \")\";"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 42
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/Events.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Parser.myMethods;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.text.SimpleDateFormat;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class Events extends Task{"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected Date date;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Constructor for Events"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param description"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param date"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Events(String description, Date date){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        isDone \u003d false;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.date \u003d date;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    @Override"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    public String getDescription(){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        return getStatus() + getStatusIcon() + \" \" + new myMethods().parseEvents(description) + new myMethods().parseSlash(description);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * To convert Date back to String for Printing"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String printDeadlineDte(){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        SimpleDateFormat formatter \u003d new SimpleDateFormat(\"E, dd MMM yyyy HH:mm\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\"WHAT IS THIS : \" + formatter);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String strDate \u003d formatter.format(this.date);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return strDate;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String getStatus() {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super.getStatus();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\"[T]\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return \"[E]\";"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return \"[E]\" +  this.getStatusIcon() + this.description + \"(at: \" + printDeadlineDte() + \" )\";"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 54
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    protected char type;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "   // protected ArrayList\u003cString\u003e taskList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    //Getters"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Getters"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Returns the description of the task"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @return The description of the task in string."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String getDescription(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return getStatus() + getStatusIcon() + \" \" + this.description;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    //Setters"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void setDone(boolean done) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        isDone \u003d done;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return (isDone ? \"[\" + \"\\u2713\" + \"]\": \"[\"+\"\\u2718\"+\"]\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void markAsDone(){"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String getStatus(){return \"\";};"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void markAsUndone(){"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    /**"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     * Get the type of current Task, if it is a todo, event, deadline or DoAfter task."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     * todo \u003d \u0027T\u0027"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     * event \u003d \u0027E\u0027"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     * deadline \u003d \u0027D\u0027"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     * DpAfter \u003d \u0027A\u0027"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     *"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     * @return [T/E/D/A]"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//     */"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    public String getType() {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        return \"[\" + this.type + \"]\";"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return this.getStatusIcon() + this.description;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 65
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/toDos.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class toDos extends Task{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public toDos(String description){"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        this.description \u003d \"[T]\" +description;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        isDone \u003d false;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        super.getStatusIcon();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        return (isDone ? getStatus() + \"[\" + \"\\u2713\" + \"]\": \"[\"+\"\\u2718\"+\"]\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String getStatus() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        super.getStatus();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\"[T]\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return \"[T]\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return \"[T]\" +  this.getStatusIcon() + this.description;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 28
+    }
+  },
+  {
+    "path": "src/main/java/Ui/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "package Ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import TaskList.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "import Parser.*;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    private static final String line \u003d \"    ____________________________________________________________\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Prints welcome message of duke."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static void Greet(){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "//        String line \u003d ;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLines(line);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"     Hello! I\u0027m Duke\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"     What can I do for you?\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLines(line);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String userInput;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public Scanner scan \u003d new Scanner( System.in ); // To getting userinput"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * to Read user input"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String readCommand(){"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        userInput \u003d scan.nextLine();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return userInput;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param insert"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param store"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void newTask(Task insert, TaskList store){"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLines(line);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"      Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"       \" + insert.toString());"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"     Now you have \" +  Integer.toString(store.getSize()) +  \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLines(line);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * prints the Todo Messages"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * @param store"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void newTodo(TaskList store){"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"      Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"     \" + store.getTask(store.getSize()-1).getDescription());"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void newDone(){"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"     Nice! I\u0027ve marked this task as done:\");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        //System.out.println(\"      \" + store.getTask(new Parser().parsedInput())"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Show goodbye message"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void showGoodBye(){"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(userInput);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"     Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Return Loading error message"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void showLoadingError(){"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\" :(  Loading Error!\");"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    //Displaying Task class list"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void displayTaskList(String input,TaskList tasklist){"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(input);"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLines(line);"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(\"     Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        for(int i \u003d 0; i \u003c tasklist.getSize(); i++){"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            int idx \u003d i+1;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "            System.out.println(\"     \"+ idx + \". \" + tasklist.getTask(i).toString() );"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        printLines(line);"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     * Return UI of lines when invoked"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static void printLines(String k){"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(k);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public static void printLine(){"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(line);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public void Line(){"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        System.out.println(line);"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    public String getLine(){"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "        return line;"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Opkko"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Opkko": 124
+    }
+  }
+]

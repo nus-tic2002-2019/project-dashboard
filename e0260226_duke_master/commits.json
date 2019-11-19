@@ -1,0 +1,172 @@
+{
+  "authorDailyContributionsMap": {
+    "e0260226": [
+      {
+        "insertions": 22,
+        "deletions": 1,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "adbb09f4c05164525f248f1716900ec977c67587",
+            "messageTitle": "xxx",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 92,
+        "deletions": 5,
+        "date": "2019-09-18",
+        "commitResults": [
+          {
+            "hash": "0b25cfe898338a1beae56316790b8409d42b8a2c",
+            "messageTitle": "L3",
+            "messageBody": "",
+            "insertions": 92,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 133,
+        "deletions": 38,
+        "date": "2019-10-02",
+        "commitResults": [
+          {
+            "hash": "ffedd200c2986d563ab0c393714d329aa211bd09",
+            "messageTitle": "Level 4",
+            "messageBody": "",
+            "insertions": 133,
+            "deletions": 38
+          }
+        ]
+      },
+      {
+        "insertions": 272,
+        "deletions": 141,
+        "date": "2019-10-26",
+        "commitResults": [
+          {
+            "hash": "1a810d9130a7cf6abff1f42f9d01b48717a7f8f4",
+            "messageTitle": "unable to run properly yet for level 4",
+            "messageBody": "",
+            "insertions": 151,
+            "deletions": 60
+          },
+          {
+            "hash": "a973b857e9a2a4595f11bbb736aa9b2b920497f0",
+            "messageTitle": "Level 4 checked ok",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
+          },
+          {
+            "hash": "6d373bd7e0a1ff9d6dcd14e4fab617277a7b0f8b",
+            "messageTitle": "Level 5",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 59
+          },
+          {
+            "hash": "c90bc284030906873147539f24f5ac49dfbc2276",
+            "messageTitle": "Level 6",
+            "messageBody": "",
+            "insertions": 47,
+            "deletions": 21
+          },
+          {
+            "hash": "8b27da5ebcac985f9366fce525366e2dbed5596e",
+            "messageTitle": "Level 6",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 466,
+        "deletions": 57,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "fc07f4a78f7c18acf615b8e6a4c8ccd09d35cdb1",
+            "messageTitle": "Added the saved file feature",
+            "messageBody": "",
+            "insertions": 466,
+            "deletions": 57
+          }
+        ]
+      },
+      {
+        "insertions": 495,
+        "deletions": 39,
+        "date": "2019-11-12",
+        "commitResults": [
+          {
+            "hash": "92b1360a705726f0b73fd18c4159dff09cbdbd33",
+            "messageTitle": "More OOP",
+            "messageBody": "",
+            "insertions": 495,
+            "deletions": 39
+          }
+        ]
+      },
+      {
+        "insertions": 463,
+        "deletions": 156,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "5bcb4f169b1b8e06013659f39e7ec55459e238ad",
+            "messageTitle": "Fixed some errors and Date \u0026 Times",
+            "messageBody": "",
+            "insertions": 413,
+            "deletions": 156
+          },
+          {
+            "hash": "e382d2d8d55abf8eb181c7c5a5cf29e8917f6a79",
+            "messageTitle": "A-JUnit, A-JavaDoc",
+            "messageBody": "",
+            "insertions": 50,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 146,
+        "deletions": 582,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "f3c8cba22975b3726f2bb9922519bfcb1a8abb5a",
+            "messageTitle": "Submission for Jar",
+            "messageBody": "",
+            "insertions": 146,
+            "deletions": 582
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "e0260226": 1077
+  },
+  "authorFileTypeContributionMap": {
+    "e0260226": {
+      "java": 1075,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 2
+    }
+  },
+  "authorContributionVariance": {
+    "e0260226": 19970.979
+  },
+  "authorDisplayNameMap": {
+    "e0260226": "LIM ..BENG"
+  }
+}

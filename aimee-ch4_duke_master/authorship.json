@@ -1,0 +1,7566 @@
+[
+  {
+    "path": "data/Tasklist.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "T | false | finish up duke project"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "D | false | pay bills  | Nov 15 2019"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "T | true | finish reading a book"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "E | false | christmas party  | Dec 24 2019 | 6:00PM"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "E | false | database finals  | Nov 25 2019 | 9:00AM"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "D | false | return library book  | Nov 21 2019"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "T | false | JUnit testing"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "T | false | return book"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "T | false | jogging"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "T | false | eat dinner"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 10
+    }
+  },
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import exceptions.DukeException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import tasks.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private TaskList tasksList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private Ui ui;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private Storage storage;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Duke(String filePath) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        storage \u003d new Storage(filePath);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            tasksList \u003d new TaskList(storage.load());"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println(\"Loading Error\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            tasksList \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public boolean isBye(String actionType) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return (actionType.equals(\"bye\"));"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void run() {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        ui.showWelcome();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String[] output \u003d ui.takeUi();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        ArrayList\u003cTask\u003e userArr \u003d tasksList.getList();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int i \u003d userArr.size() ;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            while (!isBye(output[0])) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                switch (output[0]) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"todo\":"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        tasksList.addTasks(output[1]);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        storage.appendToFile(output[0], i, \" | \" + output[1]);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        i++;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"deadline\":"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        tasksList.addTasks(output[1], output[0], output[2]);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        storage.appendToFile(output[0], i, \" | \" + output[1] + \" | \" + (userArr.get(i)).getDate());"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        i++;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"event\":"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        tasksList.addTasks(output[1], output[0], output[2]);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        storage.appendToFile(output[0], i, \" | \" + output[1] + \" | \" + (userArr.get(i)).getDate() + \" | \" + (userArr.get(i)).getTime());"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        i++;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"list\":"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        tasksList.listTasks();"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"done\":"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        tasksList.setDone(output[1]);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        storage.replaceFile(\"done\", output[1]);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"delete\":"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        tasksList.deleteTasks(output[1]);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        storage.replaceFile(\"delete\", output[1]);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        i--;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"find\":"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        tasksList.findTasks(output[1]);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    default:"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                output \u003d ui.takeUi();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println(\"Commands not recognized\");"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        new Duke(\"data/TaskList.txt\").run();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 76,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.nio.file.Files;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.nio.file.Paths;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import tasks.*;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * Performs all the file handling"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private String filePath;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static ArrayList\u003cTask\u003e userArr;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static Map\u003cString, String\u003e map;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * Constructor for Storage class"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param filePath - the file path which the ArrayList will be loaded from or saved into."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Storage(String filePath) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        userArr \u003d new ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        map \u003d new HashMap();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        map.put(\"todo\", \"T\");"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        map.put(\"event\", \"E\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        map.put(\"deadline\", \"D\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public ArrayList\u003cTask\u003e load() throws IOException{"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String actionType;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String taskStatus;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String taskDesc;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        LocalDate taskDate;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        LocalTime taskTime;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            File f \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            Scanner s \u003d new Scanner(f);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            int i \u003d 0;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            s.useDelimiter(\"\\\\s*\\\\|\\\\s*|\\\\r\\\\n\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            DateTimeFormatter formatDate \u003d DateTimeFormatter.ofPattern(\"MMM d yyyy\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            DateTimeFormatter formatTime \u003d DateTimeFormatter.ofPattern(\"h:mma\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            while (s.hasNext()) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                actionType \u003d s.next();"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                taskStatus \u003d s.next();"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                //taskDesc \u003d \"\";"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                switch (actionType) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"T\":"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        taskDesc \u003d s.next();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        userArr.add(new Todo(taskDesc));"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"E\":"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        taskDesc \u003d s.next();"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        taskDate \u003d LocalDate.parse(s.next(),formatDate);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        taskTime \u003d LocalTime.parse(s.next(),formatTime);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        userArr.add(new Event(taskDesc, taskDate, taskTime));"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    case \"D\":"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        taskDesc \u003d s.next();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        taskDate \u003d LocalDate.parse(s.next(),formatDate);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        userArr.add(new Deadline(taskDesc, taskDate));"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    default:"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        System.out.println(\"Error\");"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                if (taskStatus.equals(\"true\")) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    userArr.get(i).isDone();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                i++;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            s.close();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println(\"IOException error - Module: loadFromFile\");"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return userArr;"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void writeToFile(String textToAdd) throws IOException {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        FileWriter fw \u003d new FileWriter(filePath);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        fw.write(textToAdd);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        fw.close();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void appendToFile(String actionType, int taskNo, String textToAppend) throws IOException {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String temp;"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int num \u003d userArr.size()-1;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (actionType.equals(\"done\") || actionType.equals(\"delete\")) {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            temp \u003d textToAppend + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            temp \u003d map.get(actionType) + \" | \" + userArr.get(num).getDone() + textToAppend + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        FileWriter fw \u003d new FileWriter(filePath, true);"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            fw.write(temp);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            fw.close();"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void replaceFile(String actionType, String taskNo) throws IOException{"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            Files.copy(Paths.get(filePath), Paths.get(\"data/tempTaskList.txt\"));"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            File f \u003d new File(\"data/tempTaskList.txt\");"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            Scanner s \u003d new Scanner(f);"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            int num \u003d Integer.parseInt(taskNo);"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            writeToFile(\"\");"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            int i \u003d 0;"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            while (i \u003c num-1) {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                appendToFile(actionType, i, s.nextLine());"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                i++;"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            if (actionType.equals(\"done\")) {"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                String a \u003d userArr.get(i).getClass().getSimpleName().toLowerCase();"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                String temp \u003d map.get(a) + \" | \" + userArr.get(i).getDone() + \" | \" + userArr.get(i).getTask();"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                if (a.equals(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    temp \u003d temp + \" | \" + userArr.get(i).getDate();"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                } else if (a.equals(\"event\")) {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    temp \u003d temp + \" | \" + userArr.get(i).getDate() + \" | \" + userArr.get(i).getTime();"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                appendToFile(actionType, i, temp);"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                i++;"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            s.nextLine();"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            while (i \u003c userArr.size()) {"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                appendToFile(actionType, i, s.nextLine());"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                i++;"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            s.close();"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            Files.delete(Paths.get(\"data/tempTaskList.txt\"));"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println(\"module: IOException\");"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 146
+    }
+  },
+  {
+    "path": "src/main/java/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import exceptions.*;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import uiParser.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * Interaction with User Input"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private String userInput;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static ArrayList\u003cString\u003e taskCommands;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Ui(){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        userInput \u003d \"\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"todo\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"event\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"deadline\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"done\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"delete\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"list\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"bye\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        taskCommands.add(\"find\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String[] takeUi() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        userInput \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String[] text \u003d new Parser().parseUi(userInput);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            validateCommand(text[0]);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } catch (InvalidAction e) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println(e);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return text;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void showWelcome() {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(\"Hello, I\u0027m Duke.\\nWhat can I do for you?\");"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void validateCommand(String actionType) throws InvalidAction {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (!taskCommands.contains(actionType)) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            throw new InvalidAction(\"Unrecognized command, please enter a command listed in the instructions.\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void validateTask(String task) throws NotNull {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (task.isEmpty()) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            throw new NotNull(\"The description field for a task cannot be empty.\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 61
+    }
+  },
+  {
+    "path": "src/main/java/exceptions/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public DukeException(String s) {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        super(s);"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 7
+    }
+  },
+  {
+    "path": "src/main/java/exceptions/InvalidAction.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class InvalidAction extends DukeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public InvalidAction(String s) {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        super(s);"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 7
+    }
+  },
+  {
+    "path": "src/main/java/exceptions/NotNull.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class NotNull extends DukeException {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public NotNull(String s) {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        super(s);"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 7
+    }
+  },
+  {
+    "path": "src/main/java/tasks/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * Deadline class is a child of Task class and"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * represent tasks with only task description and due date"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private LocalDate by;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * constructor for Deadline class"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param description task description"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param by due date of task"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Deadline(String description, LocalDate by) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getDate(){"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return by.format(DateTimeFormatter.ofPattern(\"MMM d yyyy\"));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getTime() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 38
+    }
+  },
+  {
+    "path": "src/main/java/tasks/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * Event class is a child of Task class and"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * represent tasks with task description, due date and timeline"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class Event extends Task{"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private LocalDate on;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private LocalTime at;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * constructor for Event class"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param description task description"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param on due date of task"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param at time the task is due"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Event(String description, LocalDate on, LocalTime at) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        this.on \u003d on;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getDate(){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return on.format(DateTimeFormatter.ofPattern(\"MMM d yyyy\"));"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getTime() {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return at.format(DateTimeFormatter.ofPattern(\"h:mma\"));"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (on: \" + getDate() + \" at: \" + getTime() + \")\";"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 40
+    }
+  },
+  {
+    "path": "src/main/java/tasks/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * Task class represent tasks and activities to be completed."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private String task;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private boolean done;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * constructor for Task class"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param task task description"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Task(String task) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        this.task \u003d task;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        this.done \u003d false;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getTask(){"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return task;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public boolean getDone(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return done;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void isDone() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        done \u003d true;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getDate(){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"\";"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getTime() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"\";"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return (done ? \"\\u2713\" : \"\\u2718\");"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"[\" + getStatusIcon() + \"] \" + getTask();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void print(){"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(this.toString());"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 50
+    }
+  },
+  {
+    "path": "src/main/java/tasks/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import uiParser.Parser;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " *  Represents an ArrayList of Tasks to be completed by the user."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " *  Return the ArrayList of Tasks"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static ArrayList\u003cTask\u003e userArr;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * Constructor for TaskList class if there is an existing file of tasks saved."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * Load the ArrayList with the data from the .txt file"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param loadfile the file to be loaded into the ArrayList"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public TaskList(ArrayList\u003cTask\u003e loadfile) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        userArr \u003d new ArrayList\u003cTask\u003e(loadfile);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * Constructor for TaskList class if there is no existing file of tasks."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public TaskList() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        userArr \u003d new ArrayList\u003cTask\u003e();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public ArrayList\u003cTask\u003e getList() {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return userArr;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void addTasks(String task) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        userArr.add(new Todo(task));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        printAdded();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void addTasks(String task, String actionType, String taskTime){"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        switch (actionType) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                LocalDate dateE \u003d new Parser().parseDate(taskTime);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                LocalTime time \u003d new Parser().parseTime(taskTime);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                if (!time.equals(null)) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    userArr.add(new Event(task, dateE, time));"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                    return;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                LocalDate dateD \u003d new Parser().parseDate(taskTime);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                userArr.add(new Deadline(task, dateD));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        printAdded();"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void printAdded() {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(\"Got it. I\u0027ve added this task:\\n  \" + userArr.get(userArr.size()-1));"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(\"Now you have \" + userArr.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void printDone(int taskNo) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(\"Nice! I\u0027ve marked this task as done:\\n \" + userArr.get(taskNo));"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void printDelete(int taskNo) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(\"Noted. I\u0027ve removed this task:\\n \" + userArr.get(taskNo));"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(\"Now you have \" + userArr.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void listTasks(){"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        System.out.println(\"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int i \u003d 0;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        for (Task t : userArr) {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println((i+1) + \".\" + t);"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            i++;"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void setDone(String taskNo){"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "         int num \u003d Integer.parseInt(taskNo) - 1;"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "         if (isTaskNoValid(num)) {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "             assert num \u003c userArr.size() : \"taskNo should be smaller than total no. of tasks\";"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "             userArr.get(num).isDone();"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "             printDone(num);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "         }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void deleteTasks(String taskNo){"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int num \u003d Integer.parseInt(taskNo) - 1;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (isTaskNoValid(num)) {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            assert num \u003c userArr.size() : \"taskNo should be smaller than total no. of tasks\";"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            userArr.remove(num);"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            printDelete(num);"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public boolean isTaskNoValid(int taskNo) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return (taskNo \u003c userArr.size()? true : false);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void findTasks(String keyword) {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int i \u003d 0;"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int count \u003d 0;"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        for (Task t : userArr) {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            if (t.getTask().contains(keyword)) {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                System.out.println((i+1) + \".\" + userArr.get(count));"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                i++;"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            count++;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (i \u003c 1) {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println(\"No tasks are found.\");"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 122
+    }
+  },
+  {
+    "path": "src/main/java/tasks/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * Todo class is a child of Task class and"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * represent tasks with only task description"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private boolean type \u003d false;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * constructor for Todo class"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param description task description"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Todo(String description) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getDate(){"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String getTime() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return \"[T]\" + super.toString();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 33
+    }
+  },
+  {
+    "path": "src/main/java/uiParser/DateValidator.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package uiParser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public interface DateValidator {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    boolean isDateValid(String dateStr);"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 5
+    }
+  },
+  {
+    "path": "src/main/java/uiParser/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "package uiParser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.text.DateFormatSymbols;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.format.DateTimeParseException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.*;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import exceptions.*;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " * Performs the parsing of all user inputs"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class Parser implements DateValidator {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private String actionType;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private int taskNo;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static Map\u003cString, String\u003e dateMap;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private DateTimeFormatter dateFormat;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public Parser() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap \u003d new HashMap();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap.put(\"Mon\", \"MONDAY\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap.put(\"Tue\", \"TUESDAY\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap.put(\"Wed\", \"WEDNESDAY\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap.put(\"Thu\", \"THURSDAY\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap.put(\"Fri\", \"FRIDAY\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap.put(\"Sat\", \"SATURDAY\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        dateMap.put(\"Sun\", \"SUNDAY\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * Parse userInput and return them into a String array d"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * d[0] - type of action to be taken"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * d[1] - task description/number on which the action is to be performed on"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * d[2] - due date/time of the task"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     * @param userInput the string text which user keys in"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public String[] parseUi(String userInput) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String[] d \u003d userInput.split(\" \");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String[] d1 \u003d {};"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        d[0] \u003d d[0].toLowerCase();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if ((!d[0].equals(\"bye\")) \u0026\u0026 (!d[0].equals(\"list\"))) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                validateTask(d);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            } catch (NotNull e) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                System.out.println(\"Not Null Exception: \" + e);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                return d;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (d[0].equals(\"bye\") || d[0].equals(\"list\")) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return d;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        d[1] \u003d userInput.substring(d[0].length()+1);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        for (int i\u003d2; i \u003c d.length; i++) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            d[i] \u003d null;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (d[0].equals(\"event\")) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            d1 \u003d d[1].split(\"/at \");"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } else if (d[0].equals(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            d1 \u003d d[1].split(\"/by \");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (d[0].equals(\"event\") || d[0].equals(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            d[1] \u003d d1[0];"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            d[2] \u003d d1[1];"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return d;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void validateTask(String[] task) throws NotNull {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (task.length \u003d\u003d 1) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            throw new NotNull(\"Task description or number field cannot be empty.\");"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public boolean isDateValid(String dateStr) {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            LocalDate.parse(dateStr, DateTimeFormatter.ofPattern(\"MMM d YYYY\"));"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } catch (DateTimeParseException e){"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public LocalDate parseDate(String datetime) {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String[] d \u003d datetime.split(\" \");"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String[] weekdays \u003d new DateFormatSymbols().getShortWeekdays();"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        List\u003cString\u003e listDays \u003d Arrays.asList(weekdays);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (d[0].equals(\"today\")) {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return LocalDate.now();"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } else if (d[0].equals(\"tomorrow\")) {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return LocalDate.now().plusDays(1);"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        if (!listDays.contains(d[0])) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            if (isDateValid(d[0])) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                return LocalDate.parse((d[0]));"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return (dateFromDay(d[0]));"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public LocalTime parseTime(String datetime) {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String[] d \u003d datetime.split(\" \");"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return LocalTime.parse(d[1]);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        } catch (DateTimeParseException | NullPointerException e) {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            System.out.println(\"Invalid time input: \" + d[1]);"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public LocalDate dateFromDay(String dayStr) {"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        LocalDate current \u003d LocalDate.now();"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int day \u003d DayOfWeek.from(current).getValue();"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        String temp \u003d dateMap.get(dayStr);"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int day2 \u003d DayOfWeek.valueOf(temp).getValue();"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        int num \u003d 7 - day + day2;"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        return current.plusDays(num);"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 132
+    }
+  },
+  {
+    "path": "src/main/out/production/main/expected.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Hello, I\u0027m Duke."
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "What can I do for you?"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] read book"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 1 tasks in the list."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 2 tasks in the list."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 3 tasks in the list."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Here are the tasks in your list:"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "1.[T][?] read book"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "2.[D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "3.[E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Nice! I\u0027ve marked this task as done:"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] read book"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] join sports club"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 4 tasks in the list."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] borrow book"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 5 tasks in the list."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Nice! I\u0027ve marked this task as done:"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] join sports club"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Here are the tasks in your list:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "1.[T][?] read book"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "2.[D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "3.[E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "4.[T][?] join sports club"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "5.[T][?] borrow book"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Bye. Hope to see you again soon!"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 32
+    }
+  },
+  {
+    "path": "src/main/out/production/main/input.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "todo read book"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "DEADLINE return book /by June 6th"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "eVeNT project meeting /at Aug 6th 2-4pm"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "list"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "done 1"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "join sports club"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "todo borrow book"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "done 4"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "list"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "bye"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 10
+    }
+  },
+  {
+    "path": "src/main/out/production/main/output-DESKTOP-4CUF533.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Hello, I\u0027m Duke."
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "What can I do for you?"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] read book"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 1 tasks in the list."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 2 tasks in the list."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 3 tasks in the list."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Here are the tasks in your list:"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "1.[T][?] read book"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "2.[D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "3.[E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Nice! I\u0027ve marked this task as done:"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] read book"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] join sports club"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 4 tasks in the list."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] borrow book"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 5 tasks in the list."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Nice! I\u0027ve marked this task as done:"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] join sports club"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Here are the tasks in your list:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "1.[T][?] read book"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "2.[D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "3.[E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "4.[T][?] join sports club"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "5.[T][?] borrow book"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Bye. Hope to see you again soon!"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 32
+    }
+  },
+  {
+    "path": "src/main/out/production/main/output.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Hello, I\u0027m Duke."
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "What can I do for you?"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] read book"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 1 tasks in the list."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 2 tasks in the list."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 3 tasks in the list."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Here are the tasks in your list:"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "1.[T][?] read book"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "2.[D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "3.[E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Nice! I\u0027ve marked this task as done:"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] read book"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] join sports club"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 4 tasks in the list."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] borrow book"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Now you have 5 tasks in the list."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Nice! I\u0027ve marked this task as done:"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "  [T][?] join sports club"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Here are the tasks in your list:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "1.[T][?] read book"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "2.[D][?] return book (by: June 6th)"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "3.[E][?] project meeting (at: Aug 6th 2-4pm)"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "4.[T][?] join sports club"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "5.[T][?] borrow book"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "Bye. Hope to see you again soon!"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 32
+    }
+  },
+  {
+    "path": "src/test/java/DeadlineTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import tasks.Deadline;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.LocalTime;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class DeadlineTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public static Deadline d;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public DeadlineTest() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        d \u003d new Deadline(\"Duke Project\", LocalDate.parse(\"2019-11-17\"));"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void testDateFormat(){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        //Event e \u003d new Event(\"Drone Training\", LocalDate.parse(\"2019-11-24\"), LocalTime.parse(\"09:00\"));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"Nov 17 2019\", d.getDate());"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 20
+    }
+  },
+  {
+    "path": "src/test/java/DukeTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class DukeTest {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void testRun(){"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 9
+    }
+  },
+  {
+    "path": "src/test/java/EventTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import tasks.Event;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class EventTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public static Event e;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public EventTest() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        e \u003d new Event(\"Drone Training\", LocalDate.parse(\"2019-11-24\"), LocalTime.parse(\"18:00\"));"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void testDateFormat(){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        //Event e \u003d new Event(\"Drone Training\", LocalDate.parse(\"2019-11-24\"), LocalTime.parse(\"09:00\"));"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"Nov 24 2019\", e.getDate());"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void testTimeFormat(){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        //Event e \u003d new Event(\"Drone Training\", LocalDate.parse(\"2019-11-24\"), LocalTime.parse(\"18:30\"));"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"6:30PM\", e.getTime());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 25
+    }
+  },
+  {
+    "path": "src/test/java/ParserTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import uiParser.Parser;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.text.DateFormatSymbols;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class ParserTest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static String strTodo;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static String strDeadline;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static String strEvent;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static Parser p;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static String[] temp;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public ParserTest() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        strTodo \u003d \"todo finish up duke project\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        strDeadline \u003d \"DEADLINE return library books /by 2019-11-21\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        strEvent \u003d \"EvEnt volunteer dinner /at 2019-11-23 18:00\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        p \u003d new Parser();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void parseUiTest() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        temp \u003d p.parseUi(strTodo);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals((\"todo - finish up duke project\"), (temp[0] + \" - \" + temp[1]));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        temp \u003d p.parseUi(strDeadline);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals((\"deadline - return library books , 2019-11-21\"), (temp[0] + \" - \" + temp[1] + \", \" + temp[2]));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        temp \u003d p.parseUi(strEvent);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals((\"event - volunteer dinner , 2019-11-23 18:00\"), (temp[0] + \" - \" + temp[1] + \", \" + temp[2]));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void parseDateTimeTest(){"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        temp \u003d p.parseUi(strEvent);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        LocalDate date1 \u003d new Parser().parseDate(temp[2]);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"2019-11-23\", date1.toString());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        LocalTime time1 \u003d new Parser().parseTime(temp[2]);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"18:00\", time1.toString());"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 47
+    }
+  },
+  {
+    "path": "src/test/java/TaskListTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import tasks.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.*;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class TaskListTest {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private TaskList tasksList \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    private static ArrayList\u003cTask\u003e testArray;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public TaskListTest() {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        testArray \u003d tasksList.getList();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        testArray.add(new Todo(\"return book\"));"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        testArray.add(new Deadline(\"Duke project\", LocalDate.parse(\"2019-11-17\")));"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        testArray.add(new Event(\"Drone Training\", LocalDate.parse(\"2019-11-24\"), LocalTime.parse(\"18:00\")));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void getListTest(){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"[[T][✘] return book, [D][✘] Duke project (by: 2019-11-17), [E][✘] Drone Training (on: Nov 24 2019 at: 6:00PM)]\","
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                tasksList.getList().toString());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void addTasksTest(){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        tasksList.addTasks(\"JUnit testing\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"JUnit testing\", testArray.get(3).getTask());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        tasksList.addTasks(\"return library books\", \"deadline\", \"2019-11-21\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals((\"return library books, \" + false + \", Nov 21 2019\"),"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                testArray.get(4).getTask() + \", \" + testArray.get(4).getDone() + \", \" + testArray.get(4).getDate());"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        tasksList.addTasks(\"volunteer dinner\", \"event\", \"2019-11-23 18:00\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals((\"volunteer dinner, \" + false + \", Nov 23 2019, 6:00PM\"),"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                testArray.get(5).getTask() + \", \" + testArray.get(5).getDone() + \", \""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "                        + testArray.get(5).getDate() + \", \" + testArray.get(5).getTime());"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void deleteTasksTest() {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        tasksList.deleteTasks(\"1\");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"Duke project, Nov 17 2019\", testArray.get(0).getTask() + \", \" + testArray.get(0).getDate());"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 46
+    }
+  },
+  {
+    "path": "src/test/java/TaskTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import tasks.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import java.time.LocalTime;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class TaskTest {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public static Todo t;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public static Deadline d;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public static Event e;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public TaskTest() {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        t \u003d new Todo(\"return book\");"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        d \u003d new Deadline(\"Duke project\", LocalDate.parse(\"2019-11-17\"));"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        e \u003d new Event(\"Drone Training\", LocalDate.parse(\"2019-11-24\"), LocalTime.parse(\"18:00\"));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void getTaskTest(){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"return book\", t.getTask());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"Duke project\", d.getTask());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(\"Drone Training\", e.getTask());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void doneStatusTest(){"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(false, t.getDone());"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        d.isDone();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(true, d.getDone());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(false, e.getDone());"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 33
+    }
+  },
+  {
+    "path": "src/test/java/TodoTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import tasks.Todo;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class TodoTest {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public static Todo t;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 8
+    }
+  },
+  {
+    "path": "src/test/java/UiTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "public class UiTest {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void dummyTest() {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "        assertEquals(2, 2);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    public void test1(){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aimee-ch4"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "aimee-ch4": 15
+    }
+  }
+]

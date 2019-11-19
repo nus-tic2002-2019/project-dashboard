@@ -1,0 +1,242 @@
+{
+  "authorDailyContributionsMap": {
+    "BearTeddy": [
+      {
+        "insertions": 43,
+        "deletions": 4,
+        "date": "2019-09-02",
+        "commitResults": [
+          {
+            "hash": "72e08820fbc83b95993b26c56946e5167dbdeb0c",
+            "messageTitle": "Start of Level 0, changing format of the greeting message.",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 38,
+            "deletions": 1
+          },
+          {
+            "hash": "398e3c480e09c76cef8fd8380c21f28f4162a0ce",
+            "messageTitle": "Level 1, Greet Echo Exit",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 5,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 36,
+        "deletions": 6,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "cfdbde1e14556d640990669f99d473568847344e",
+            "messageTitle": "Level 1, Greet Echo Exit",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 3,
+            "deletions": 3
+          },
+          {
+            "hash": "0a5059f2ee05f47e9173eb67e1c7c74ec8c051c4",
+            "messageTitle": "Level 2 Add, TaskList Class",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 30,
+            "deletions": 0
+          },
+          {
+            "hash": "1cb54c5b76c93c9c533711eb12ce7d9a93aef205",
+            "messageTitle": "Level 2 Add, TaskList Class",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 3,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 32,
+        "deletions": 6,
+        "date": "2019-09-09",
+        "commitResults": [
+          {
+            "hash": "03d178dda16917630f7ffc4d2bca56a5e4f1a16c",
+            "messageTitle": "Resolving Bug between Lvl 2 and Lvl 3",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 30,
+            "deletions": 5
+          },
+          {
+            "hash": "5041fed7b929c4af3abbd0961c108a32a0b37205",
+            "messageTitle": "Task String Resolved",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 2,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 40,
+        "deletions": 81,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "06aa0e33271f5522175cdf5704b83c313ba79019",
+            "messageTitle": "Working Task 3 version with Try-Catch for ArrayList Out of Bound Exception",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 18,
+            "deletions": 11
+          },
+          {
+            "hash": "d6c9fc86a57cdb857c87275ca63fdda18c3a7914",
+            "messageTitle": "Commit back to master",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 68
+          },
+          {
+            "hash": "e8c8f938ded94ada9c4f734dbeeace25db93415d",
+            "messageTitle": "Working Task 3 version with ArrayList Size comparison",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 17,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 39,
+        "deletions": 6,
+        "date": "2019-09-21",
+        "commitResults": [
+          {
+            "hash": "88fdb2dcdfb855beaf3b3d981af953ebab2db9e0",
+            "messageTitle": "Final Task 3 with Symbols.",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 39,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 8,
+        "deletions": 0,
+        "date": "2019-10-08",
+        "commitResults": [
+          {
+            "hash": "b76021f00156f720a23bcbcd282f4ddf0ea88359",
+            "messageTitle": "changes made for inheritance",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 184,
+        "deletions": 90,
+        "date": "2019-10-31",
+        "commitResults": [
+          {
+            "hash": "69c548ebd62807f561ecd20a3bc131fda85dd83e",
+            "messageTitle": "Finished Up to Level 6 Delete",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 139,
+            "deletions": 78
+          },
+          {
+            "hash": "2eab44e9cd7faf563175210585ab315eb2a74a04",
+            "messageTitle": "Finished Up to Level 6 Delete",
+            "messageBody": "Signed-off-by: BearTeddy \u003cbearteddy.dvplr@gmail.com\u003e\n",
+            "insertions": 45,
+            "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 462,
+        "deletions": 317,
+        "date": "2019-11-08",
+        "commitResults": [
+          {
+            "hash": "dc81d3af0bb9f8ee6bf032a63d2fd59c6a087811",
+            "messageTitle": "changes made for the file structures, java oop objects , java docs",
+            "messageBody": "",
+            "insertions": 453,
+            "deletions": 253
+          },
+          {
+            "hash": "3dfee7c2174c02e3186644730e05c94b8f9c8a05",
+            "messageTitle": "Fixed File Erros",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 64
+          }
+        ]
+      },
+      {
+        "insertions": 370,
+        "deletions": 41,
+        "date": "2019-11-10",
+        "commitResults": [
+          {
+            "hash": "3f23058936b087c59d1bff83939ddaee61dad44e",
+            "messageTitle": "Datetime using Apache.commons.lang Find using time and datetime",
+            "messageBody": "",
+            "insertions": 328,
+            "deletions": 26
+          },
+          {
+            "hash": "874b1421e3557b698550f5fc1cfe6abef08f3aee",
+            "messageTitle": "fixed searching",
+            "messageBody": "",
+            "insertions": 21,
+            "deletions": 8
+          },
+          {
+            "hash": "e754f69d873c7158622b849a39e4183cfe940cf6",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 21,
+            "deletions": 6
+          },
+          {
+            "hash": "447070749865e93c372434eccb06d4345d493809",
+            "messageTitle": "commit",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 12,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "1646453ae40a973fb754b1338dcf61dc9952d99f",
+            "messageTitle": "no message",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 12
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "BearTeddy": 776
+  },
+  "authorFileTypeContributionMap": {
+    "BearTeddy": {
+      "java": 757,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 6,
+      "txt": 13
+    }
+  },
+  "authorContributionVariance": {
+    "BearTeddy": 10674.678
+  },
+  "authorDisplayNameMap": {
+    "BearTeddy": "HTUN..MYAT"
+  }
+}

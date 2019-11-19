@@ -1,0 +1,165 @@
+{
+  "authorDailyContributionsMap": {
+    "JKooyh": [
+      {
+        "insertions": 53,
+        "deletions": 16,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "0ad3da3326c260ff0351056ffb7892bc30c5e240",
+            "messageTitle": "Level-1",
+            "messageBody": "",
+            "insertions": 21,
+            "deletions": 6
+          },
+          {
+            "hash": "9bd5a876c85d0166707aebb1b53c81bcf7c78b76",
+            "messageTitle": "Level-2",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 51,
+        "deletions": 12,
+        "date": "2019-09-15",
+        "commitResults": [
+          {
+            "hash": "ee302c1c03ddd223080a9b429f752da00e5db1dd",
+            "messageTitle": "Level-3",
+            "messageBody": "",
+            "insertions": 51,
+            "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 144,
+        "deletions": 6,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "aacc223879ae0eb830180adc1f41da78f821a006",
+            "messageTitle": "Level-4",
+            "messageBody": "",
+            "insertions": 144,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 45,
+        "deletions": 15,
+        "date": "2019-09-30",
+        "commitResults": [
+          {
+            "hash": "35410670ddcc77c05011de6caa28571e2f7aeff3",
+            "messageTitle": "Level 5. Handle Errors",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 15
+          }
+        ]
+      },
+      {
+        "insertions": 53,
+        "deletions": 17,
+        "date": "2019-10-04",
+        "commitResults": [
+          {
+            "hash": "9b4e026e00aac575ea653aa64f0aec233376f660",
+            "messageTitle": "Level-6",
+            "messageBody": "",
+            "insertions": 53,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 176,
+        "deletions": 78,
+        "date": "2019-10-19",
+        "commitResults": [
+          {
+            "hash": "c0c0b34c5524eae6ad216b551925ddf3ef1d8f60",
+            "messageTitle": "Level-7",
+            "messageBody": "",
+            "insertions": 176,
+            "deletions": 78
+          }
+        ]
+      },
+      {
+        "insertions": 748,
+        "deletions": 254,
+        "date": "2019-11-02",
+        "commitResults": [
+          {
+            "hash": "fe45b39eedbdd5de3bea6879d358c4a20dca1960",
+            "messageTitle": "A-MoreOOP, A-Packages",
+            "messageBody": "",
+            "insertions": 748,
+            "deletions": 254
+          }
+        ]
+      },
+      {
+        "insertions": 1112,
+        "deletions": 210,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "c8823f0774623208e34a6d395dba2f6522248b94",
+            "messageTitle": "Project Sibmission",
+            "messageBody": "",
+            "insertions": 1084,
+            "deletions": 196
+          },
+          {
+            "hash": "e892f83995bafaa8e4b80b0f334fef7438851260",
+            "messageTitle": "final-corrected",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 10
+          },
+          {
+            "hash": "79d75b504a5f6103b85407dce693ca43bcba27d5",
+            "messageTitle": "modified minor/cosmetic changes - Final submission",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 4
+          },
+          {
+            "hash": "dc444ba818d0908ec697cc1fc30711eecc8f4ab6",
+            "messageTitle": "include JAR and data",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 0
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "JKooyh": 1784
+  },
+  "authorFileTypeContributionMap": {
+    "JKooyh": {
+      "java": 1767,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 17
+    }
+  },
+  "authorContributionVariance": {
+    "JKooyh": 35145.1
+  },
+  "authorDisplayNameMap": {
+    "JKooyh": "JON ..HENG"
+  }
+}

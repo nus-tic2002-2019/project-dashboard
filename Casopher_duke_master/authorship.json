@@ -1,0 +1,884 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke{"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        welcome();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        String line \u003d \"\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        Todo[] Tasks \u003d new Todo[100];"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        int index \u003d 0;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        "
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        while ( true ){"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            line \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            if (line.contains(\" \")){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                String[] words \u003d line.split(\" \",0);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                if ( words[0].equals(\"done\")){"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                    int x \u003d Integer.parseInt(words[1]);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                    if ( x \u003c\u003d index ) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                        Tasks[x-1].markAsDone();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                        response(\"Nice! I\u0027ve marked this task as done:\\n\\t\\t\" + printTask(Tasks[x-1]));"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                        continue;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            if ( line.toLowerCase().equals(\"bye\") ){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                exit();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            if ( line.toLowerCase().equals(\"list\")){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                printTasks(Tasks);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            } else {  "
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                if ( index \u003c 100 ){"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                    Tasks[index] \u003d new Todo(line);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                    index +\u003d 1;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                    response(\"added:\" + line);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                    response(\"You cannot add any more items. You have exceeded the maximum numer of items on the list.\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "                "
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public static void printTasks(Todo Tasks[]){"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        for ( int i \u003d 0; Tasks[i] !\u003d null; i++ ){"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "            System.out.printf(\"\\t%d. %s\\n\",i+1,printTask(Tasks[i]));"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public static void printLine(){"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        System.out.println(\"\\t____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public static void welcome(){"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        System.out.println(\"\\tHello! I\u0027m Duke\\n\\tWhat can I do for you?\\n\");"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public static void exit(){"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        response(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public static void response(String line){"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        System.out.printf(\"\\t%s\\n\",line);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        printLine();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public static String printTask(Todo t){"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        return(\"[\" + t.getStatusIcon() + \"]\" + t.getDescription());"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Casopher": 72,
+      "-": 11
+    }
+  },
+  {
+    "path": "src/main/java/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "public class Task{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public Task(String description){"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public void setDescription(String description){"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "       this.description \u003d description;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    public String getDescription(){"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        return this.description;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Casopher": 17
+    }
+  },
+  {
+    "path": "src/main/java/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "public class Todo extends Task{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  private boolean isDone;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  "
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  public Todo (String description){"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    super(description);"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  "
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  public void markAsDone (){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  "
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  public boolean isDone (){"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "    return this.isDone;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  "
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Casopher"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Casopher": 22
+    }
+  }
+]

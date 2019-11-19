@@ -1,0 +1,480 @@
+{
+  "repoSenseVersion": "816bb1a856",
+  "reportGeneratedTime": "Tue Nov 19 20:40:05 2019 UTC+08:00",
+  "repos": [
+    {
+      "location": {
+        "location": "https://github.com/needsmorechilli/duke.git",
+        "repoName": "duke",
+        "organization": "needsmorechilli"
+      },
+      "branch": "master",
+      "displayName": "needsmorechilli/duke[master]",
+      "outputFolderName": "needsmorechilli_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Chilaiping/duke.git",
+        "repoName": "duke",
+        "organization": "Chilaiping"
+      },
+      "branch": "master",
+      "displayName": "Chilaiping/duke[master]",
+      "outputFolderName": "Chilaiping_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/asmaww/duke.git",
+        "repoName": "duke",
+        "organization": "asmaww"
+      },
+      "branch": "master",
+      "displayName": "asmaww/duke[master]",
+      "outputFolderName": "asmaww_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/marcus-ng-nus/duke.git",
+        "repoName": "duke",
+        "organization": "marcus-ng-nus"
+      },
+      "branch": "master",
+      "displayName": "marcus-ng-nus/duke[master]",
+      "outputFolderName": "marcus-ng-nus_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/tanujah/duke.git",
+        "repoName": "duke",
+        "organization": "tanujah"
+      },
+      "branch": "master",
+      "displayName": "tanujah/duke[master]",
+      "outputFolderName": "tanujah_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/eunicekwang/duke.git",
+        "repoName": "duke",
+        "organization": "eunicekwang"
+      },
+      "branch": "master",
+      "displayName": "eunicekwang/duke[master]",
+      "outputFolderName": "eunicekwang_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/derrickyap/duke.git",
+        "repoName": "duke",
+        "organization": "derrickyap"
+      },
+      "branch": "master",
+      "displayName": "derrickyap/duke[master]",
+      "outputFolderName": "derrickyap_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/e0260226/duke.git",
+        "repoName": "duke",
+        "organization": "e0260226"
+      },
+      "branch": "master",
+      "displayName": "e0260226/duke[master]",
+      "outputFolderName": "e0260226_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/sngtk/duke.git",
+        "repoName": "duke",
+        "organization": "sngtk"
+      },
+      "branch": "master",
+      "displayName": "sngtk/duke[master]",
+      "outputFolderName": "sngtk_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/stenleyho/duke.git",
+        "repoName": "duke",
+        "organization": "stenleyho"
+      },
+      "branch": "master",
+      "displayName": "stenleyho/duke[master]",
+      "outputFolderName": "stenleyho_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/e0260237/duke.git",
+        "repoName": "duke",
+        "organization": "e0260237"
+      },
+      "branch": "master",
+      "displayName": "e0260237/duke[master]",
+      "outputFolderName": "e0260237_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/ernestvoon/duke.git",
+        "repoName": "duke",
+        "organization": "ernestvoon"
+      },
+      "branch": "master",
+      "displayName": "ernestvoon/duke[master]",
+      "outputFolderName": "ernestvoon_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/chengxiangpng/duke.git",
+        "repoName": "duke",
+        "organization": "chengxiangpng"
+      },
+      "branch": "master",
+      "displayName": "chengxiangpng/duke[master]",
+      "outputFolderName": "chengxiangpng_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/e0260253/duke.git",
+        "repoName": "duke",
+        "organization": "e0260253"
+      },
+      "branch": "master",
+      "displayName": "e0260253/duke[master]",
+      "outputFolderName": "e0260253_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/kohks/duke.git",
+        "repoName": "duke",
+        "organization": "kohks"
+      },
+      "branch": "master",
+      "displayName": "kohks/duke[master]",
+      "outputFolderName": "kohks_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Juntong31/duke.git",
+        "repoName": "duke",
+        "organization": "Juntong31"
+      },
+      "branch": "master",
+      "displayName": "Juntong31/duke[master]",
+      "outputFolderName": "Juntong31_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/E0260261/duke.git",
+        "repoName": "duke",
+        "organization": "E0260261"
+      },
+      "branch": "master",
+      "displayName": "E0260261/duke[master]",
+      "outputFolderName": "E0260261_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/JKooyh/duke.git",
+        "repoName": "duke",
+        "organization": "JKooyh"
+      },
+      "branch": "master",
+      "displayName": "JKooyh/duke[master]",
+      "outputFolderName": "JKooyh_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/TanChiaChun/duke.git",
+        "repoName": "duke",
+        "organization": "TanChiaChun"
+      },
+      "branch": "master",
+      "displayName": "TanChiaChun/duke[master]",
+      "outputFolderName": "TanChiaChun_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Casopher/duke.git",
+        "repoName": "duke",
+        "organization": "Casopher"
+      },
+      "branch": "master",
+      "displayName": "Casopher/duke[master]",
+      "outputFolderName": "Casopher_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/e0373895/duke.git",
+        "repoName": "duke",
+        "organization": "e0373895"
+      },
+      "branch": "master",
+      "displayName": "e0373895/duke[master]",
+      "outputFolderName": "e0373895_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/kuamqunyan/duke.git",
+        "repoName": "duke",
+        "organization": "kuamqunyan"
+      },
+      "branch": "master",
+      "displayName": "kuamqunyan/duke[master]",
+      "outputFolderName": "kuamqunyan_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/BearTeddy/duke.git",
+        "repoName": "duke",
+        "organization": "BearTeddy"
+      },
+      "branch": "master",
+      "displayName": "BearTeddy/duke[master]",
+      "outputFolderName": "BearTeddy_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/LeanneLee97/duke.git",
+        "repoName": "duke",
+        "organization": "LeanneLee97"
+      },
+      "branch": "master",
+      "displayName": "LeanneLee97/duke[master]",
+      "outputFolderName": "LeanneLee97_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/yinyin924/duke.git",
+        "repoName": "duke",
+        "organization": "yinyin924"
+      },
+      "branch": "master",
+      "displayName": "yinyin924/duke[master]",
+      "outputFolderName": "yinyin924_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/KaydenKhor/duke.git",
+        "repoName": "duke",
+        "organization": "KaydenKhor"
+      },
+      "branch": "master",
+      "displayName": "KaydenKhor/duke[master]",
+      "outputFolderName": "KaydenKhor_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/chenghuiyuan/duke.git",
+        "repoName": "duke",
+        "organization": "chenghuiyuan"
+      },
+      "branch": "master",
+      "displayName": "chenghuiyuan/duke[master]",
+      "outputFolderName": "chenghuiyuan_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/e0373972/duke.git",
+        "repoName": "duke",
+        "organization": "e0373972"
+      },
+      "branch": "master",
+      "displayName": "e0373972/duke[master]",
+      "outputFolderName": "e0373972_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/YangShuogeng/duke.git",
+        "repoName": "duke",
+        "organization": "YangShuogeng"
+      },
+      "branch": "master",
+      "displayName": "YangShuogeng/duke[master]",
+      "outputFolderName": "YangShuogeng_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/zyjarvis/duke.git",
+        "repoName": "duke",
+        "organization": "zyjarvis"
+      },
+      "branch": "master",
+      "displayName": "zyjarvis/duke[master]",
+      "outputFolderName": "zyjarvis_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Badfr0g/duke.git",
+        "repoName": "duke",
+        "organization": "Badfr0g"
+      },
+      "branch": "master",
+      "displayName": "Badfr0g/duke[master]",
+      "outputFolderName": "Badfr0g_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/chunygL/duke.git",
+        "repoName": "duke",
+        "organization": "chunygL"
+      },
+      "branch": "master",
+      "displayName": "chunygL/duke[master]",
+      "outputFolderName": "chunygL_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/ivanhlb/duke.git",
+        "repoName": "duke",
+        "organization": "ivanhlb"
+      },
+      "branch": "master",
+      "displayName": "ivanhlb/duke[master]",
+      "outputFolderName": "ivanhlb_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Opkko/duke.git",
+        "repoName": "duke",
+        "organization": "Opkko"
+      },
+      "branch": "master",
+      "displayName": "Opkko/duke[master]",
+      "outputFolderName": "Opkko_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/thisisdax/duke.git",
+        "repoName": "duke",
+        "organization": "thisisdax"
+      },
+      "branch": "master",
+      "displayName": "thisisdax/duke[master]",
+      "outputFolderName": "thisisdax_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Mr-YaRou/duke.git",
+        "repoName": "duke",
+        "organization": "Mr-YaRou"
+      },
+      "branch": "master",
+      "displayName": "Mr-YaRou/duke[master]",
+      "outputFolderName": "Mr-YaRou_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Elxyng/duke.git",
+        "repoName": "duke",
+        "organization": "Elxyng"
+      },
+      "branch": "master",
+      "displayName": "Elxyng/duke[master]",
+      "outputFolderName": "Elxyng_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Ruiting1/duke.git",
+        "repoName": "duke",
+        "organization": "Ruiting1"
+      },
+      "branch": "master",
+      "displayName": "Ruiting1/duke[master]",
+      "outputFolderName": "Ruiting1_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/cheralynwsw/duke.git",
+        "repoName": "duke",
+        "organization": "cheralynwsw"
+      },
+      "branch": "master",
+      "displayName": "cheralynwsw/duke[master]",
+      "outputFolderName": "cheralynwsw_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Lowyanshuang/duke.git",
+        "repoName": "duke",
+        "organization": "Lowyanshuang"
+      },
+      "branch": "master",
+      "displayName": "Lowyanshuang/duke[master]",
+      "outputFolderName": "Lowyanshuang_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/spencernah/duke.git",
+        "repoName": "duke",
+        "organization": "spencernah"
+      },
+      "branch": "master",
+      "displayName": "spencernah/duke[master]",
+      "outputFolderName": "spencernah_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/Icynopeople/duke.git",
+        "repoName": "duke",
+        "organization": "Icynopeople"
+      },
+      "branch": "master",
+      "displayName": "Icynopeople/duke[master]",
+      "outputFolderName": "Icynopeople_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/aimee-ch4/duke.git",
+        "repoName": "duke",
+        "organization": "aimee-ch4"
+      },
+      "branch": "master",
+      "displayName": "aimee-ch4/duke[master]",
+      "outputFolderName": "aimee-ch4_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/sohwkjames/duke.git",
+        "repoName": "duke",
+        "organization": "sohwkjames"
+      },
+      "branch": "master",
+      "displayName": "sohwkjames/duke[master]",
+      "outputFolderName": "sohwkjames_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/kitcatkai/duke.git",
+        "repoName": "duke",
+        "organization": "kitcatkai"
+      },
+      "branch": "master",
+      "displayName": "kitcatkai/duke[master]",
+      "outputFolderName": "kitcatkai_duke_master"
+    },
+    {
+      "location": {
+        "location": "https://github.com/ahjimomo/duke.git",
+        "repoName": "duke",
+        "organization": "ahjimomo"
+      },
+      "branch": "master",
+      "displayName": "ahjimomo/duke[master]",
+      "outputFolderName": "ahjimomo_duke_master"
+    }
+  ],
+  "errorList": [
+    {
+      "repoName": "NuriIrfaniMasri/duke[master]",
+      "errorMessage": "Failed to clone from https://github.com/NuriIrfaniMasri/duke.git"
+    },
+    {
+      "repoName": "e0262191/duke[master]",
+      "errorMessage": "Failed to clone from https://github.com/e0262191/duke.git"
+    }
+  ],
+  "sinceDate": "2019-09-01",
+  "untilDate": "2019-11-19",
+  "isSinceDateProvided": true,
+  "isUntilDateProvided": false
+}

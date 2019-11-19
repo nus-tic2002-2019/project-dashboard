@@ -1,0 +1,130 @@
+{
+  "authorDailyContributionsMap": {
+    "Opkko": [
+      {
+        "insertions": 78,
+        "deletions": 6,
+        "date": "2019-09-09",
+        "commitResults": [
+          {
+            "hash": "6875a034aeb4f8e1e4324ceee751c40ca5467315",
+            "messageTitle": "Level 1 Completion + Readme Update",
+            "messageBody": "",
+            "insertions": 50,
+            "deletions": 1
+          },
+          {
+            "hash": "6cb965fee44772ea640d0dd7fe03fb3867bec514",
+            "messageTitle": "Level 2. Add, List Completed",
+            "messageBody": "",
+            "insertions": 28,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 92,
+        "deletions": 28,
+        "date": "2019-09-12",
+        "commitResults": [
+          {
+            "hash": "f2d3448eade77a1b19ffbf72ecec6db3dff72216",
+            "messageTitle": "Level 3. Mark as Done, Completed (Yet to Refactor)",
+            "messageBody": "",
+            "insertions": 92,
+            "deletions": 28
+          }
+        ]
+      },
+      {
+        "insertions": 115,
+        "deletions": 33,
+        "date": "2019-09-22",
+        "commitResults": [
+          {
+            "hash": "fada2bbd018f1d6b9e1f8aa285bb526bb3a71c22",
+            "messageTitle": "Level_4 Todo Completed",
+            "messageBody": "",
+            "insertions": 115,
+            "deletions": 33
+          }
+        ]
+      },
+      {
+        "insertions": 108,
+        "deletions": 26,
+        "date": "2019-11-01",
+        "commitResults": [
+          {
+            "hash": "2753b31ab0ff86f297d784831cdce817e9329d4e",
+            "messageTitle": "Level 4 Done LK",
+            "messageBody": "",
+            "insertions": 108,
+            "deletions": 26
+          }
+        ]
+      },
+      {
+        "insertions": 229,
+        "deletions": 20,
+        "date": "2019-11-09",
+        "commitResults": [
+          {
+            "hash": "108e3d0539ea8e897e91bf68f0c867059514d5cf",
+            "messageTitle": "Level 5 Exceptions (Except for Deadline) -LK",
+            "messageBody": "",
+            "insertions": 203,
+            "deletions": 18
+          },
+          {
+            "hash": "67aacc727a348ff77f015092280afb0df48bf680",
+            "messageTitle": "Level 5 Exception Handling (Will add more Exceptions next week) -Lk",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 0
+          },
+          {
+            "hash": "db821d9d3df0262b10f59124424fbc02aa8b288e",
+            "messageTitle": "Level 6 Delete Functionality done. -LK (yet to add exceptions for delete)",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 1076,
+        "deletions": 362,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "9729274b64176614be9e2e2b292b049e90b2f36d",
+            "messageTitle": "Added A-JavaDocs, More-OOP, Level 7(Half) \u0026 Level 8(Half)",
+            "messageBody": "",
+            "insertions": 1076,
+            "deletions": 362
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "Opkko": 1229
+  },
+  "authorFileTypeContributionMap": {
+    "Opkko": {
+      "java": 1228,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 1
+    }
+  },
+  "authorContributionVariance": {
+    "Opkko": 27315.684
+  },
+  "authorDisplayNameMap": {
+    "Opkko": "LIM ..KANG"
+  }
+}

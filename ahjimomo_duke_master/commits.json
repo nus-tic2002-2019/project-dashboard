@@ -1,0 +1,116 @@
+{
+  "authorDailyContributionsMap": {
+    "ahjimomo": [
+      {
+        "insertions": 47,
+        "deletions": 4,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "3f818d401e6e46b62c492d67f3d0bda561b8d708",
+            "messageTitle": "Greet, Exit and Echo!",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 1
+          },
+          {
+            "hash": "2fcbe35fea8f10256bbe57b9e7190ddd44dca2f6",
+            "messageTitle": "Command for adding, listing and bye!",
+            "messageBody": "",
+            "insertions": 37,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 152,
+        "deletions": 16,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "aa3f585bf60010d937a72598cfdb086a8ee46e80",
+            "messageTitle": "Level 3 : Mark As Done",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 6
+          },
+          {
+            "hash": "3cfcb44afe9b6a8e3e4cdb4b215afbacf85ce86a",
+            "messageTitle": "Class Task",
+            "messageBody": "",
+            "insertions": 31,
+            "deletions": 2
+          },
+          {
+            "hash": "2301ae99f10b8d9f25d45f0e34e1c09543101d84",
+            "messageTitle": "Level 4. ToDos, Events, Deadlines",
+            "messageBody": "",
+            "insertions": 87,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 55,
+        "deletions": 3,
+        "date": "2019-10-06",
+        "commitResults": [
+          {
+            "hash": "a8019da78ab04d6473234544f60ac49208da8011",
+            "messageTitle": "Level 5: Handle Errors",
+            "messageBody": "",
+            "insertions": 55,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 12,
+        "deletions": 11,
+        "date": "2019-10-08",
+        "commitResults": [
+          {
+            "hash": "6927a82305c3e09e3e3f9bbecf009393aa3191be",
+            "messageTitle": "Level 5b : Implementing ArrayList\u003c\u003e",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 128,
+        "deletions": 13,
+        "date": "2019-10-15",
+        "commitResults": [
+          {
+            "hash": "7910faf3a73978d49755cab698fd04428297cf10",
+            "messageTitle": "level 6. delete",
+            "messageBody": "",
+            "insertions": 128,
+            "deletions": 13
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "ahjimomo": 349
+  },
+  "authorFileTypeContributionMap": {
+    "ahjimomo": {
+      "java": 349,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "ahjimomo": 1117.2709
+  },
+  "authorDisplayNameMap": {
+    "ahjimomo": "NG K..WOON"
+  }
+}

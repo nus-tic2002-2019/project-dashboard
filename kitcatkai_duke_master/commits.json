@@ -1,0 +1,235 @@
+{
+  "authorDailyContributionsMap": {
+    "kitcatkai": [
+      {
+        "insertions": 45,
+        "deletions": 4,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "351991bd6e164c1285d34e2e347febbcd20eac73",
+            "messageTitle": "done with echo and termination",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 0
+          },
+          {
+            "hash": "34501b3ef8694a4cc31aba968837fd4018f899eb",
+            "messageTitle": "task2 implement list",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 54,
+        "deletions": 23,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "8eeb89eca25ccb1679cf14c8e4a77cb5730bd037",
+            "messageTitle": "create new Task class",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 2
+          },
+          {
+            "hash": "79b9237d445889c1a77ca6588bd077f2d37cda52",
+            "messageTitle": "woohoo created to-do list with nice tick",
+            "messageBody": "",
+            "insertions": 38,
+            "deletions": 21
+          }
+        ]
+      },
+      {
+        "insertions": 56,
+        "deletions": 6,
+        "date": "2019-09-11",
+        "commitResults": [
+          {
+            "hash": "60d150a86d1cc5b8851833cfd7d7173742f20eb7",
+            "messageTitle": "fixed text-ui-test issue and also move scanner to global variable",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 3
+          },
+          {
+            "hash": "229c82ede2a23acb4212eb09ba5dd18767a2721d",
+            "messageTitle": "fix indentation issue",
+            "messageBody": "",
+            "insertions": 51,
+            "deletions": 2
+          },
+          {
+            "hash": "b7297ad1645a4082e6e073fbfc9bc208cfb23fda",
+            "messageTitle": "fix indentation issue",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 159,
+        "deletions": 69,
+        "date": "2019-09-17",
+        "commitResults": [
+          {
+            "hash": "78c33a5e8474de631022144789173c0ac9a426b1",
+            "messageTitle": "added todo deadline event",
+            "messageBody": "",
+            "insertions": 33,
+            "deletions": 0
+          },
+          {
+            "hash": "d0a66b9f932ff277c9f6a34e0e9982da665ff717",
+            "messageTitle": "refactor print statement to each individual class",
+            "messageBody": "",
+            "insertions": 85,
+            "deletions": 19
+          },
+          {
+            "hash": "ea8af20852dd53d00ee23534eb38c8fc67cd8bf6",
+            "messageTitle": "added error exception for illegalstring",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 36
+          },
+          {
+            "hash": "b4bbf16343eb8e49b9715cf240236e4a61ecdf79",
+            "messageTitle": "refactor listeningEvents() and also change print method to toString()",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 39,
+        "deletions": 18,
+        "date": "2019-10-07",
+        "commitResults": [
+          {
+            "hash": "8b16b566d45b1c9572ec1663cd4ed20445757708",
+            "messageTitle": "refactor by replacing Task[] with ArrayList\u003cTask\u003e and also added new delete feature",
+            "messageBody": "",
+            "insertions": 39,
+            "deletions": 18
+          }
+        ]
+      },
+      {
+        "insertions": 997,
+        "deletions": 221,
+        "date": "2019-10-29",
+        "commitResults": [
+          {
+            "hash": "f036a68749a70b415604cbe57a716ea850681d30",
+            "messageTitle": "added package",
+            "messageBody": "",
+            "insertions": 495,
+            "deletions": 136
+          },
+          {
+            "hash": "2402950a0dbeb5d2c38b0d62e2c8521433e3ae16",
+            "messageTitle": "added docs",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 0
+          },
+          {
+            "hash": "170b4e297886d915bd89cf9133576be31e1e052d",
+            "messageTitle": "added java docs",
+            "messageBody": "",
+            "insertions": 338,
+            "deletions": 64
+          },
+          {
+            "hash": "28b5f391facf04990324866c648284bf0518303a",
+            "messageTitle": "added test file",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 1
+          },
+          {
+            "hash": "646c712b610b30cb00dc54a4a66f1eb274531d1b",
+            "messageTitle": "added find feature",
+            "messageBody": "",
+            "insertions": 142,
+            "deletions": 20
+          }
+        ]
+      },
+      {
+        "insertions": 603,
+        "deletions": 291,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "358128442361ce79c65f5c3b51fa2af30e1a3f2d",
+            "messageTitle": "add priority features and refactor the code",
+            "messageBody": "",
+            "insertions": 394,
+            "deletions": 178
+          },
+          {
+            "hash": "c27a5d680bbd7ca9340573000f906c5f47bbb76e",
+            "messageTitle": "add new assertion to check file not empty",
+            "messageBody": "",
+            "insertions": 200,
+            "deletions": 102
+          },
+          {
+            "hash": "e9ae4c0b40eef756a0d9b58cf3c0047a57a7f9b4",
+            "messageTitle": "code quality issue *",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 11
+          },
+          {
+            "hash": "3862ce4f10383e266fbbcf68c7a962607a2fe7d6",
+            "messageTitle": "fix todo bug that can only take one word, added new change feature",
+            "messageBody": "",
+            "insertions": 4,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 100,
+        "deletions": 7,
+        "date": "2019-11-06",
+        "commitResults": [
+          {
+            "hash": "61c64e1194b06762a99f2e2a9a75c83136ead39b",
+            "messageTitle": "last change",
+            "messageBody": "",
+            "insertions": 100,
+            "deletions": 7
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "kitcatkai": 1420
+  },
+  "authorFileTypeContributionMap": {
+    "kitcatkai": {
+      "java": 1315,
+      "fxml": 0,
+      "sh": 34,
+      "bat": 0,
+      "gradle": 21,
+      "txt": 50
+    }
+  },
+  "authorContributionVariance": {
+    "kitcatkai": 33633.64
+  },
+  "authorDisplayNameMap": {
+    "kitcatkai": "TAN .. WEI"
+  }
+}

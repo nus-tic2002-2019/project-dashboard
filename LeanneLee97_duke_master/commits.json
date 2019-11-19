@@ -1,0 +1,522 @@
+{
+  "authorDailyContributionsMap": {
+    "LeanneLee97": [
+      {
+        "insertions": 35,
+        "deletions": 6,
+        "date": "2019-09-04",
+        "commitResults": [
+          {
+            "hash": "e88c3ce0777d0d5f579984c84eb72f7746a853ec",
+            "messageTitle": "Update Duke.java",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 1
+          },
+          {
+            "hash": "1a6c036cfd9a97d6c18d1c80e951c01ec964dfc3",
+            "messageTitle": "Level-2",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 47,
+        "deletions": 13,
+        "date": "2019-09-09",
+        "commitResults": [
+          {
+            "hash": "1c80c77b43fa298687056cf413de5b6a88b0409b",
+            "messageTitle": "Level-2: Add, List",
+            "messageBody": "Task Class added",
+            "insertions": 18,
+            "deletions": 0
+          },
+          {
+            "hash": "332e6a3f4a4a883544927b527db66894841d2ea1",
+            "messageTitle": "Level-2",
+            "messageBody": "",
+            "insertions": 11,
+            "deletions": 8
+          },
+          {
+            "hash": "4ff699025ff08ca9d891d9ab9c433bfcf87937a0",
+            "messageTitle": "Level-3",
+            "messageBody": "",
+            "insertions": 10,
+            "deletions": 3
+          },
+          {
+            "hash": "861fa9ac279f071e58934ed50b90b7bf1c18748d",
+            "messageTitle": "Level-3 Mark as Done",
+            "messageBody": "",
+            "insertions": 8,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 273,
+        "deletions": 120,
+        "date": "2019-11-13",
+        "commitResults": [
+          {
+            "hash": "c7000168f3d60db33506d5d5b5fa7b7be07bffde",
+            "messageTitle": "Level-4: ToDo, Event, Deadline",
+            "messageBody": "Level-4: ToDo, Event, Deadline",
+            "insertions": 46,
+            "deletions": 1
+          },
+          {
+            "hash": "57363d039ae4c9d9d8bba05e19ceb88e70383dbc",
+            "messageTitle": "Create a DukeTasks folder to store Task.java",
+            "messageBody": "",
+            "insertions": 69,
+            "deletions": 0
+          },
+          {
+            "hash": "ce86856c0ff1dda99abe8bce3fbbff80d97da036",
+            "messageTitle": "Delete Task.java, moved to DukeTasks folder",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 69
+          },
+          {
+            "hash": "e25987c256f9771ce778221816f0f04365419714",
+            "messageTitle": "Level-5: Handle Errors",
+            "messageBody": "Level-5: Handle Errors",
+            "insertions": 68,
+            "deletions": 26
+          },
+          {
+            "hash": "075c257db989776710cc088a7a87a54e88b90e24",
+            "messageTitle": "Level-5: Handle Errors",
+            "messageBody": "Level-5: Handle Errors",
+            "insertions": 53,
+            "deletions": 0
+          },
+          {
+            "hash": "cf52d7ff14c2dcfc77555e8abdab4d37edeefaec",
+            "messageTitle": "Level-6: Delete",
+            "messageBody": "Level-6: Delete",
+            "insertions": 6,
+            "deletions": 0
+          },
+          {
+            "hash": "9e9bd2779120a47283cc23c78a133f0dc98ca268",
+            "messageTitle": "Added exceptions to handle Delete",
+            "messageBody": "Added exceptions to handle Delete",
+            "insertions": 7,
+            "deletions": 3
+          },
+          {
+            "hash": "24077c031fdb3c2d5acc9e3778324e4369bc38d5",
+            "messageTitle": "Added Delete exception handling",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 21
+          }
+        ]
+      },
+      {
+        "insertions": 965,
+        "deletions": 364,
+        "date": "2019-11-14",
+        "commitResults": [
+          {
+            "hash": "691918ca35ff6092ad01af1f4eca7f6da4c96c27",
+            "messageTitle": "removed non public Task classes",
+            "messageBody": "removed non public Task classes\r\nreturn correct tick or X symbols",
+            "insertions": 1,
+            "deletions": 42
+          },
+          {
+            "hash": "45b5ad4bd131fc8c4cf10bdaa1547954d59d4396",
+            "messageTitle": "Separated tasks into public classes of their own",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 0
+          },
+          {
+            "hash": "2b9ee0fc5a628cf8c6f4f1b4593aae5c4d68e632",
+            "messageTitle": "DukeCommands/",
+            "messageBody": "Changed if-else control flow to single command statements",
+            "insertions": 322,
+            "deletions": 0
+          },
+          {
+            "hash": "72cad3eeac7490c4a98392533261e9614697082a",
+            "messageTitle": "Revert \"DukeCommands/\"",
+            "messageBody": "This reverts commit 2b9ee0fc5a628cf8c6f4f1b4593aae5c4d68e632.\n",
+            "insertions": 0,
+            "deletions": 322
+          },
+          {
+            "hash": "096e71061b7f121da7445db6498065dc77dba16e",
+            "messageTitle": "Changed if-else control flow to DukeCommands",
+            "messageBody": "Changed if-else control flow to DukeCommands",
+            "insertions": 17,
+            "deletions": 0
+          },
+          {
+            "hash": "de39f4773db4f0def8f0c8b41096d3c060f94174",
+            "messageTitle": "Added other Commands",
+            "messageBody": "",
+            "insertions": 305,
+            "deletions": 0
+          },
+          {
+            "hash": "5bc285a00d9fc2aceaf17b212e276ab892c14f36",
+            "messageTitle": "Level-7: Save",
+            "messageBody": "Added Storage to save",
+            "insertions": 87,
+            "deletions": 0
+          },
+          {
+            "hash": "155ae1f790fbc43b9c9c6665aebb601630e00b09",
+            "messageTitle": "A-MoreOOP: More OOP",
+            "messageBody": "Minimal: Extract the following classes: \r\nUi: deals with interactions with the user\r\nStorage: deals with loading tasks from the file and saving tasks in the file\r\nParser: deals with making sense of the user command\r\nTaskList: contains the task list e.g., it has operations to add/delete tasks in the list",
+            "insertions": 188,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 21,
+        "deletions": 23,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "cbb71a45ded6431509a58ebf696245c824c7e354",
+            "messageTitle": "added task type and task parameter",
+            "messageBody": "previously missed out",
+            "insertions": 4,
+            "deletions": 4
+          },
+          {
+            "hash": "3fc491803a872ee0015fd5dd8b863331f36670bf",
+            "messageTitle": "Updated Parser to parse ONLY task description",
+            "messageBody": "previously included \u0027deadline\u0027 and \u0027event\u0027 in description",
+            "insertions": 2,
+            "deletions": 2
+          },
+          {
+            "hash": "5afcbfe71b8741e1e3c7d57d73891564c432dd86",
+            "messageTitle": "A-MoreOOP - added load tasks",
+            "messageBody": "Storage: deals with loading tasks from the file and saving tasks in the file",
+            "insertions": 8,
+            "deletions": 11
+          },
+          {
+            "hash": "00031f448dc648c0e1c053c092e41843385facef",
+            "messageTitle": "Level-8: Dates and Times",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 69,
+        "deletions": 101,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "7fa25941450b356faf3ac02464362e1b5b89ba02",
+            "messageTitle": "Refactored Duke into newDuke to run and parse",
+            "messageBody": "Refactored Duke into newDuke to run and parse\r\nRepackaged as newDuke",
+            "insertions": 69,
+            "deletions": 101
+          }
+        ]
+      },
+      {
+        "insertions": 752,
+        "deletions": 299,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "91991830749e7781514f1b758d796593adf6c1a2",
+            "messageTitle": "A-JUnit: JUnit Testing",
+            "messageBody": "A-JUnit: JUnit Testing \r\nDeadline class",
+            "insertions": 23,
+            "deletions": 0
+          },
+          {
+            "hash": "f8e1a33e88edbffb1860d0af7fb1992afcee5ccf",
+            "messageTitle": "Revert \"A-JUnit: JUnit Testing \"",
+            "messageBody": "This reverts commit 91991830749e7781514f1b758d796593adf6c1a2.\n",
+            "insertions": 0,
+            "deletions": 23
+          },
+          {
+            "hash": "fd8a207a842959038f89fe26fa67a2202a26525a",
+            "messageTitle": "A-JUnit: JUnit Testing",
+            "messageBody": "Deadline class",
+            "insertions": 23,
+            "deletions": 0
+          },
+          {
+            "hash": "7d240b4c814bba78c09077511d982bf80bba5fc0",
+            "messageTitle": "A-JUnit: JUnit Testing - event test",
+            "messageBody": "",
+            "insertions": 23,
+            "deletions": 0
+          },
+          {
+            "hash": "93b65efebf4e71ebaf124c92636bde3b200a7a7b",
+            "messageTitle": "Level-9: Find",
+            "messageBody": "Level-9: Find",
+            "insertions": 48,
+            "deletions": 0
+          },
+          {
+            "hash": "320c9cd79910415f0a7a9ef2f0f098b6206b0cde",
+            "messageTitle": "Updated FindCommand for B-Snooze",
+            "messageBody": "B-Snooze\r\nUser must Task using Task number\r\nSnooze task number",
+            "insertions": 5,
+            "deletions": 4
+          },
+          {
+            "hash": "40f36292a7b65e74f5cdb827386ce4474044ed7d",
+            "messageTitle": "Update ByeCommand.java",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 6
+          },
+          {
+            "hash": "493d5d9082c5b0c9b7a4637d70c8c4f4836f9ec9",
+            "messageTitle": "Update Command.java",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 5
+          },
+          {
+            "hash": "31647fe4a5781de74b75a74f6760c060e46dd821",
+            "messageTitle": "Update DeadlineCommand.java",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 20
+          },
+          {
+            "hash": "d8d0ad1f577d375ac1dd068ef0d9049debfbb3b5",
+            "messageTitle": "added Exception handling",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 7
+          },
+          {
+            "hash": "dde7f0a5b33074ea6586b369e5dbcc89b129c3f1",
+            "messageTitle": "Added exception handling",
+            "messageBody": "",
+            "insertions": 28,
+            "deletions": 15
+          },
+          {
+            "hash": "ad63565549222dda28e1d070b3026b7d826c9d08",
+            "messageTitle": "Added exception handling",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 16
+          },
+          {
+            "hash": "428012881340a2853d30961f34969df4ad82bafc",
+            "messageTitle": "Update FindCommand.java",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 7
+          },
+          {
+            "hash": "bf070ef00791f95ec72c411f8e5bacba5f73fddd",
+            "messageTitle": "added Printing of Overdue tasks",
+            "messageBody": "",
+            "insertions": 29,
+            "deletions": 6
+          },
+          {
+            "hash": "181106c2958e0de50527f723649472c15e84ebce",
+            "messageTitle": "Level-9 B-Snooze",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 0
+          },
+          {
+            "hash": "335a66f28fc008bc34b4047cababe22eae0bf691",
+            "messageTitle": "Update StartCommand.java",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 5
+          },
+          {
+            "hash": "2523ee514275fa3ac6f94f9b11c750c031c7802b",
+            "messageTitle": "Added Exception handling",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 15
+          },
+          {
+            "hash": "1ca43a4bacb3e4ac3fc098aa01a00c4fe21a75c7",
+            "messageTitle": "Update UnknownCommand.java",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 6
+          },
+          {
+            "hash": "61036edf1c9ec8162d2edefce2443ffef446115a",
+            "messageTitle": "added new exceptions",
+            "messageBody": "",
+            "insertions": 40,
+            "deletions": 31
+          },
+          {
+            "hash": "06427b1eea97e19a0a246e5b2fcfc630aa5e93f8",
+            "messageTitle": "added toSave and getDate fxn",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 5
+          },
+          {
+            "hash": "b1770f194b9bd044edf9bf6b89fcce9a70a54697",
+            "messageTitle": "Added javaDocs",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 3
+          },
+          {
+            "hash": "0a2a756ba7fb90675e6139c6289cb5fea04fa0e4",
+            "messageTitle": "Added javaDocs",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 5
+          },
+          {
+            "hash": "e93f9602b1a648be43ffbab71dcdec788600700c",
+            "messageTitle": "added javaDocs",
+            "messageBody": "",
+            "insertions": 17,
+            "deletions": 7
+          },
+          {
+            "hash": "acee367c9d7b1a9ac5ea89006420a48fa8c6facb",
+            "messageTitle": "Added javaDocs",
+            "messageBody": "",
+            "insertions": 88,
+            "deletions": 20
+          },
+          {
+            "hash": "b1e7cbfaaecec114c3ec23c126aafafbe88d233e",
+            "messageTitle": "added Snooze",
+            "messageBody": "",
+            "insertions": 70,
+            "deletions": 43
+          },
+          {
+            "hash": "b5834e0d45d28e2c2caeafb25cf484f2e468d436",
+            "messageTitle": "added javaDocs",
+            "messageBody": "",
+            "insertions": 51,
+            "deletions": 7
+          },
+          {
+            "hash": "b52c93cacd2488f580d392bce45b81fbf34aa984",
+            "messageTitle": "added javaDocs and new features",
+            "messageBody": "",
+            "insertions": 35,
+            "deletions": 11
+          },
+          {
+            "hash": "1f35795552fa9858f5ed2b7379b7c1b54b9f6d76",
+            "messageTitle": "added new Snooze UI",
+            "messageBody": "",
+            "insertions": 28,
+            "deletions": 10
+          },
+          {
+            "hash": "1f11c53b401b8b40d887567dfe4cc876b4fa6e46",
+            "messageTitle": "deleted debugging comments",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 7
+          },
+          {
+            "hash": "6ca29b772ecc8d923511342216decec722817b2f",
+            "messageTitle": "removed getDate",
+            "messageBody": "",
+            "insertions": 0,
+            "deletions": 8
+          },
+          {
+            "hash": "df8b2eb4fdd0879f630509637cefb7784a37b833",
+            "messageTitle": "added javaDoc for getDate",
+            "messageBody": "",
+            "insertions": 14,
+            "deletions": 7
+          }
+        ]
+      },
+      {
+        "insertions": 138,
+        "deletions": 116,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "a717047ae59bab22c0c78e2bc188b841864851be",
+            "messageTitle": "fixed a bug",
+            "messageBody": "to only read deadline tasks NOT all task",
+            "insertions": 2,
+            "deletions": 1
+          },
+          {
+            "hash": "009da10ffe43c946c0e12241ab8ffd5a0a0b716f",
+            "messageTitle": "fixed a bug",
+            "messageBody": "Previously: not able to read description and date/venue with more than 1 word\r\nNow: able to read multiple keywords",
+            "insertions": 51,
+            "deletions": 32
+          },
+          {
+            "hash": "0594c4520eb7a93b5c00f96fe34ac0f78cd66cd0",
+            "messageTitle": "fixed a bug",
+            "messageBody": "previously: no task description exception bypassed",
+            "insertions": 23,
+            "deletions": 26
+          },
+          {
+            "hash": "9ddf6fef65c07ab64b65262cc4736199150ec675",
+            "messageTitle": "added getDate and setDate",
+            "messageBody": "",
+            "insertions": 52,
+            "deletions": 52
+          },
+          {
+            "hash": "439bd72ee4b36b909428d4c751343a3841798098",
+            "messageTitle": "Updated SnoozeCommand",
+            "messageBody": "forgot to import array list",
+            "insertions": 10,
+            "deletions": 5
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "LeanneLee97": 1268
+  },
+  "authorFileTypeContributionMap": {
+    "LeanneLee97": {
+      "java": 1268,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 0
+    }
+  },
+  "authorContributionVariance": {
+    "LeanneLee97": 37779.047
+  },
+  "authorDisplayNameMap": {
+    "LeanneLee97": "LEE ..YING"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "authorDailyContributionsMap": {
+    "eunicekwang": [
+      {
+        "insertions": 40,
+        "deletions": 5,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "c9ce65f1cc9888c3093e7024ab10d0a0078fc72b",
+            "messageTitle": "updated code lvl2",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          },
+          {
+            "hash": "eaebc7d94c265bc4c8218e9f10fb014c178ed56f",
+            "messageTitle": "new",
+            "messageBody": "",
+            "insertions": 38,
+            "deletions": 3
+          },
+          {
+            "hash": "2739108b17ae564f9794f20d861831d486acc88d",
+            "messageTitle": "added in duke word",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 117,
+        "deletions": 36,
+        "date": "2019-09-10",
+        "commitResults": [
+          {
+            "hash": "56c00ae4518a10c264572973d8f47237f29641ab",
+            "messageTitle": "task3",
+            "messageBody": "",
+            "insertions": 117,
+            "deletions": 36
+          }
+        ]
+      },
+      {
+        "insertions": 65,
+        "deletions": 9,
+        "date": "2019-09-18",
+        "commitResults": [
+          {
+            "hash": "dcb4d357093bc204b0b58337a79092db32ccb657",
+            "messageTitle": "task4",
+            "messageBody": "",
+            "insertions": 65,
+            "deletions": 9
+          }
+        ]
+      },
+      {
+        "insertions": 51,
+        "deletions": 45,
+        "date": "2019-09-25",
+        "commitResults": [
+          {
+            "hash": "21ce3200f25d8c1f77329dff9e99e15981ef582e",
+            "messageTitle": "task 5",
+            "messageBody": "",
+            "insertions": 51,
+            "deletions": 45
+          }
+        ]
+      },
+      {
+        "insertions": 22,
+        "deletions": 14,
+        "date": "2019-10-02",
+        "commitResults": [
+          {
+            "hash": "63898a83fceed6027f721e52b0d28da43c829f03",
+            "messageTitle": "update task 6",
+            "messageBody": "",
+            "insertions": 22,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 80,
+        "deletions": 27,
+        "date": "2019-10-04",
+        "commitResults": [
+          {
+            "hash": "2179feea338d7241d927a586d72089caebda8f1a",
+            "messageTitle": "task 7",
+            "messageBody": "",
+            "insertions": 73,
+            "deletions": 22
+          },
+          {
+            "hash": "1f8e88d50713b3dc1e9b3c6f3b714de356054ccc",
+            "messageTitle": "task 7 update",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 7,
+        "deletions": 17,
+        "date": "2019-10-07",
+        "commitResults": [
+          {
+            "hash": "f487cc257f0d3a8988724b3801d6ea7767c96212",
+            "messageTitle": "task 7",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 17
+          }
+        ]
+      },
+      {
+        "insertions": 440,
+        "deletions": 99,
+        "date": "2019-10-14",
+        "commitResults": [
+          {
+            "hash": "5aa45a939d46b4b4c7c407852940d7f69ea82128",
+            "messageTitle": "Task 8",
+            "messageBody": "",
+            "insertions": 440,
+            "deletions": 99
+          }
+        ]
+      },
+      {
+        "insertions": 5,
+        "deletions": 13,
+        "date": "2019-10-16",
+        "commitResults": [
+          {
+            "hash": "61b78e883ab947d5bb3e3bce17995a0922606bfa",
+            "messageTitle": "lvl 8 Added date time",
+            "messageBody": "",
+            "insertions": 5,
+            "deletions": 13
+          }
+        ]
+      },
+      {
+        "insertions": 165,
+        "deletions": 33,
+        "date": "2019-10-21",
+        "commitResults": [
+          {
+            "hash": "8078b63af4804a989333da702b3e923a825c99c3",
+            "messageTitle": "update",
+            "messageBody": "",
+            "insertions": 92,
+            "deletions": 33
+          },
+          {
+            "hash": "3a3cee1c2181e79d8d2d4db80bc6d95ca25ee3d0",
+            "messageTitle": "added in lvl 9 find",
+            "messageBody": "",
+            "insertions": 73,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 102,
+        "deletions": 12,
+        "date": "2019-10-25",
+        "commitResults": [
+          {
+            "hash": "0874aee73904a6dcea4ecfc22abf1384a41ffac8",
+            "messageTitle": "Add junit test",
+            "messageBody": "",
+            "insertions": 101,
+            "deletions": 9
+          },
+          {
+            "hash": "674606ff9f57f7ef0a903a341a7644fd17d3101e",
+            "messageTitle": "Updated the task.txt",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 34,
+        "deletions": 30,
+        "date": "2019-10-30",
+        "commitResults": [
+          {
+            "hash": "719f0f64381538ef8dab4bcf46239e13bb588d88",
+            "messageTitle": "individual task update and include junit for update",
+            "messageBody": "",
+            "insertions": 34,
+            "deletions": 30
+          }
+        ]
+      },
+      {
+        "insertions": 324160,
+        "deletions": 0,
+        "date": "2019-11-05",
+        "commitResults": [
+          {
+            "hash": "fe4e0ed157f9ebf85980b8fb31cf407969d57858",
+            "messageTitle": "individual task part2 recurring",
+            "messageBody": "",
+            "insertions": 324160,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 46,
+        "deletions": 80,
+        "date": "2019-11-15",
+        "commitResults": [
+          {
+            "hash": "deffd9b0388f1839c66243dac862e2e7f3c5055e",
+            "messageTitle": "Updated assertion and java doc",
+            "messageBody": "",
+            "insertions": 46,
+            "deletions": 80
+          }
+        ]
+      },
+      {
+        "insertions": 290,
+        "deletions": 116,
+        "date": "2019-11-16",
+        "commitResults": [
+          {
+            "hash": "b160c105b8ed8a2a8c9a434c790b61f6eed30a60",
+            "messageTitle": "package the command. final copy",
+            "messageBody": "",
+            "insertions": 290,
+            "deletions": 116
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "eunicekwang": 325096
+  },
+  "authorFileTypeContributionMap": {
+    "eunicekwang": {
+      "java": 325090,
+      "fxml": 0,
+      "sh": 0,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 6
+    }
+  },
+  "authorContributionVariance": {
+    "eunicekwang": 1.34673638E9
+  },
+  "authorDisplayNameMap": {
+    "eunicekwang": "EUNI..TING"
+  }
+}

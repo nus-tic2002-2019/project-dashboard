@@ -1,0 +1,158 @@
+{
+  "authorDailyContributionsMap": {
+    "ivanhlb": [
+      {
+        "insertions": 31,
+        "deletions": 8,
+        "date": "2019-09-03",
+        "commitResults": [
+          {
+            "hash": "32cdf176837e2cddad7ee4c6bf320154f6530f73",
+            "messageTitle": "Level 1 first implementation.",
+            "messageBody": "gitignore update\n\nfix for gitignore\n\ntest\n",
+            "insertions": 18,
+            "deletions": 7
+          },
+          {
+            "hash": "1c28a485df43f66ad47ef62c8223740b476a72bd",
+            "messageTitle": "implemented Level 2",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 58,
+        "deletions": 18,
+        "date": "2019-09-24",
+        "commitResults": [
+          {
+            "hash": "30ca2f780ff99a210fc68ba0751a7b25bd97232e",
+            "messageTitle": "WIP for level 3",
+            "messageBody": "",
+            "insertions": 42,
+            "deletions": 3
+          },
+          {
+            "hash": "6a5afbc42ed2cef3a59f511e9604a41323760f46",
+            "messageTitle": "implemented level 3",
+            "messageBody": "",
+            "insertions": 16,
+            "deletions": 15
+          }
+        ]
+      },
+      {
+        "insertions": 174,
+        "deletions": 31,
+        "date": "2019-09-26",
+        "commitResults": [
+          {
+            "hash": "223f994d5ae89410ae3053360e4cf583953235b4",
+            "messageTitle": "Working version of text-ui-test on dev environment.",
+            "messageBody": "",
+            "insertions": 36,
+            "deletions": 2
+          },
+          {
+            "hash": "52e6b8688ab1664f3f499c913f8fcc916118e4d2",
+            "messageTitle": "Minor refactoring, WIP for Level 4",
+            "messageBody": "",
+            "insertions": 72,
+            "deletions": 18
+          },
+          {
+            "hash": "524942d34443ef7031c59a8d20acb202fcea5bde",
+            "messageTitle": "Working version of Level 4",
+            "messageBody": "",
+            "insertions": 66,
+            "deletions": 11
+          }
+        ]
+      },
+      {
+        "insertions": 98,
+        "deletions": 64,
+        "date": "2019-09-27",
+        "commitResults": [
+          {
+            "hash": "7ff3c86cd31d8b55719f008b92eea363920b6b37",
+            "messageTitle": "Basic working Level-5, might have to do refactoring a bit later.",
+            "messageBody": "",
+            "insertions": 98,
+            "deletions": 64
+          }
+        ]
+      },
+      {
+        "insertions": 65,
+        "deletions": 49,
+        "date": "2019-09-29",
+        "commitResults": [
+          {
+            "hash": "7f8e97fc51747f125c9f68ff228a2508e465643e",
+            "messageTitle": "refactored code for better readability.",
+            "messageBody": "",
+            "insertions": 32,
+            "deletions": 28
+          },
+          {
+            "hash": "3b310f1dff67e61bd86772d8207acb1092ef93f4",
+            "messageTitle": "working version of level-6",
+            "messageBody": "",
+            "insertions": 33,
+            "deletions": 21
+          }
+        ]
+      },
+      {
+        "insertions": 394,
+        "deletions": 142,
+        "date": "2019-11-17",
+        "commitResults": [
+          {
+            "hash": "e760b4a3c6613c762ebc8725a8c839184b110c33",
+            "messageTitle": "Implemented A-Packages and A-MoreOOP",
+            "messageBody": "",
+            "insertions": 394,
+            "deletions": 142
+          }
+        ]
+      },
+      {
+        "insertions": 95,
+        "deletions": 31,
+        "date": "2019-11-18",
+        "commitResults": [
+          {
+            "hash": "35d9f8c9c198f713d7e49efac5aaf4432e3a0f58",
+            "messageTitle": "working Level 7",
+            "messageBody": "",
+            "insertions": 95,
+            "deletions": 31
+          }
+        ]
+      }
+    ]
+  },
+  "authorFinalContributionMap": {
+    "ivanhlb": 582
+  },
+  "authorFileTypeContributionMap": {
+    "ivanhlb": {
+      "java": 544,
+      "fxml": 0,
+      "sh": 34,
+      "bat": 0,
+      "gradle": 0,
+      "txt": 4
+    }
+  },
+  "authorContributionVariance": {
+    "ivanhlb": 4705.0845
+  },
+  "authorDisplayNameMap": {
+    "ivanhlb": "IVAN..BOON"
+  }
+}
