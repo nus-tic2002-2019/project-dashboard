@@ -133,24 +133,45 @@
             "deletions": 31
           }
         ]
+      },
+      {
+        "insertions": 231,
+        "deletions": 47,
+        "date": "2019-11-19",
+        "commitResults": [
+          {
+            "hash": "2dfa4443f96d2c664b34158e57e45a3217adb08a",
+            "messageTitle": "preliminary commit for Level-8",
+            "messageBody": "",
+            "insertions": 156,
+            "deletions": 27
+          },
+          {
+            "hash": "1b233f6b62153b8e75073a0e8bb72afc8aac2336",
+            "messageTitle": "implemented A-JavaDoc",
+            "messageBody": "",
+            "insertions": 75,
+            "deletions": 20
+          }
+        ]
       }
     ]
   },
   "authorFinalContributionMap": {
-    "ivanhlb": 582
+    "ivanhlb": 766
   },
   "authorFileTypeContributionMap": {
     "ivanhlb": {
-      "java": 544,
+      "java": 730,
       "fxml": 0,
       "sh": 34,
       "bat": 0,
       "gradle": 0,
-      "txt": 4
+      "txt": 2
     }
   },
   "authorContributionVariance": {
-    "ivanhlb": 4705.0845
+    "ivanhlb": 5494.0854
   },
   "authorDisplayNameMap": {
     "ivanhlb": "IVAN..BOON"

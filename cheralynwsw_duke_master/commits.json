@@ -121,8 +121,8 @@
         ]
       },
       {
-        "insertions": 161,
-        "deletions": 0,
+        "insertions": 187,
+        "deletions": 1,
         "date": "2019-11-16",
         "commitResults": [
           {
@@ -138,26 +138,40 @@
             "messageBody": "",
             "insertions": 70,
             "deletions": 0
+          },
+          {
+            "hash": "a52649359e983eeaa7d22a213cb86b3f5450a6f3",
+            "messageTitle": "Updated changes",
+            "messageBody": "",
+            "insertions": 24,
+            "deletions": 1
+          },
+          {
+            "hash": "413f62f82116df843d6b7a7478f4d38dba163d39",
+            "messageTitle": "Updated changes",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
           }
         ]
       }
     ]
   },
   "authorFinalContributionMap": {
-    "cheralynwsw": 1231
+    "cheralynwsw": 1256
   },
   "authorFileTypeContributionMap": {
     "cheralynwsw": {
-      "java": 1103,
+      "java": 1126,
       "fxml": 0,
       "sh": 0,
       "bat": 100,
       "gradle": 28,
-      "txt": 0
+      "txt": 2
     }
   },
   "authorContributionVariance": {
-    "cheralynwsw": 37098.465
+    "cheralynwsw": 37197.613
   },
   "authorDisplayNameMap": {
     "cheralynwsw": "CHER.. WEN"

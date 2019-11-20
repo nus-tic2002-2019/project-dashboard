@@ -191,6 +191,29 @@
     }
   },
   {
+    "path": "data/duke_test.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "T | 0 | a"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "E | 0 | b | 1420048800000"
+      }
+    ],
+    "authorContributionMap": {
+      "cheralynwsw": 2
+    }
+  },
+  {
     "path": "gradlew.bat",
     "fileType": "bat",
     "lines": [
@@ -1162,7 +1185,7 @@
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "        "
+        "content": ""
       },
       {
         "lineNumber": 35,
@@ -1176,66 +1199,80 @@
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "        ui.printFancy(\"\" +"
+        "content": "        //ui.scenarioStart();"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "                \"Hello! I\u0027m Duke\\n\" +"
+        "content": "        System.out.println(\"\\n\");"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "                \"What can I do for you?\");"
+        "content": "        ui.printFancy(\"\" +"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "    "
+        "content": "                \"Hello! I\u0027m Duke\\n\" +"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "        while (true) {"
+        "content": "                \"What can I do for you?\");"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "            ui.print(\"\\n\");"
+        "content": "    "
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "            parser.processCommand(ui.readLine());"
+        "content": "        while (true) {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "        }"
+        "content": "            ui.print(\"\\n\");"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "cheralynwsw"
         },
-        "content": "    }"
+        "content": "            parser.processCommand(ui.readLine());"
       },
       {
         "lineNumber": 45,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
         "author": {
           "gitId": "cheralynwsw"
         },
@@ -1243,7 +1280,7 @@
       }
     ],
     "authorContributionMap": {
-      "cheralynwsw": 45
+      "cheralynwsw": 47
     }
   },
   {
@@ -8317,11 +8354,158 @@
         "author": {
           "gitId": "cheralynwsw"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "    /*public void scenarioStart(){"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "        System.out.println(\"    3 Commands : Todo - todo {query} - Task which you want to do later on and record it down \\n\"+"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"                 Deadline - deadline {query} /by {dd.MM.yyyy} HHmm - Task which is going to be due soon with the date and time recorded down\\n\" +"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"                 Event - event {query} /at {dd.MM.yyyy} HHmm - Task which will be happening and dont want to miss it\\n\\n\" +"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    Or else : User might enter a wrong input which will prompt them an ERROR MESSAGE \u0026/or can choose to END Chatbot by \u0027Bye\u0027\\n\\n\" +"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    For a start, there is no data stored into the List, so if the user type \u0027list\u0027 there wont be any result shown just an ERROR MESSAGE to notify user.\\n\" +"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    Once User is ready to add a task, they can key in a todo, deadline or any event task command. \\n\\n\" +"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    Scenario                  : If User wish to read a book later, they can add it into their Task List as a reminder - \u0027todo read book\u0027.\\n\" +"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"                                When the task is added, it is Mark with a cross [X] as you haven done the task yet.\\n\\n\" +"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    Successful Syntax         : [T] - Todo , [D] - Deadline  \u0026 [E] - Event\\n\" +"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"                                [✓] - Mark task is done \u0026 [X] - Task is not done\\n\\n\" +"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    View Task Added           : User can type \u0027list\u0027 to view the task they have added earlier on.\\n\\n\" +"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    Mark Task Done/Delete     : User can enter \u0027done {number}\u0027 / \u0027delete {number}\\n\\n\" +"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    Find Task                 : With the keyword \u0027find {query}\u0027 \u0026 return you the result - based on description only\\n\\n\" +"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"    Find Task (Better Search) : With the keyword + regex express \u0027-r\u0027 -\u003e Like an arguement flag which says we want to search in regular expressions mode.\\n\" +"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "                            \"                                User can easily search on tasks based on the whole task - Example : \u0027find -r {date}\u0027. -\u003e This cannot be done in normal find function\");"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
+        "content": "    }*/"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "cheralynwsw"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "cheralynwsw": 67
+      "cheralynwsw": 88
     }
   },
   {

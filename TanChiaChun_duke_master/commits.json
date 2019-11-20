@@ -217,24 +217,66 @@
             "deletions": 36
           }
         ]
+      },
+      {
+        "insertions": 239,
+        "deletions": 89,
+        "date": "2019-11-20",
+        "commitResults": [
+          {
+            "hash": "e073e36246802ca7a343cfc70b8650dbb1c92cdf",
+            "messageTitle": "Individual Feature 1",
+            "messageBody": "",
+            "insertions": 114,
+            "deletions": 45
+          },
+          {
+            "hash": "fb67723c0d1245f02bcab9493c46dc7e28c3c924",
+            "messageTitle": "Level 9: Find",
+            "messageBody": "",
+            "insertions": 45,
+            "deletions": 1
+          },
+          {
+            "hash": "af98f0d6aec489aec5361ca66b203b15fbb552be",
+            "messageTitle": "A-CodingStandard",
+            "messageBody": "",
+            "insertions": 52,
+            "deletions": 38
+          },
+          {
+            "hash": "5fceaf812762f3f70d084238553bfc01e08c5e81",
+            "messageTitle": "A-Assertions",
+            "messageBody": "",
+            "insertions": 9,
+            "deletions": 0
+          },
+          {
+            "hash": "745286d4e2846b1028e5136e4fbb4af76c309806",
+            "messageTitle": "Fix incorrect index input for Done and Delete.",
+            "messageBody": "",
+            "insertions": 19,
+            "deletions": 5
+          }
+        ]
       }
     ]
   },
   "authorFinalContributionMap": {
-    "TanChiaChun": 1076
+    "TanChiaChun": 1226
   },
   "authorFileTypeContributionMap": {
     "TanChiaChun": {
-      "java": 1073,
+      "java": 1225,
       "fxml": 0,
       "sh": 0,
       "bat": 0,
       "gradle": 0,
-      "txt": 3
+      "txt": 1
     }
   },
   "authorContributionVariance": {
-    "TanChiaChun": 22269.895
+    "TanChiaChun": 23052.037
   },
   "authorDisplayNameMap": {
     "TanChiaChun": "TAN ..CHUN"
